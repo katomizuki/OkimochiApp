@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810209272CF2CA003C7850 /* AppDelegate.swift */; };
 		D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381020B272CF2CA003C7850 /* SceneDelegate.swift */; };
-		D381020E272CF2CA003C7850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381020D272CF2CA003C7850 /* ViewController.swift */; };
-		D3810211272CF2CA003C7850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D381020F272CF2CA003C7850 /* Main.storyboard */; };
+		D381020E272CF2CA003C7850 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381020D272CF2CA003C7850 /* LoginController.swift */; };
+		D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D381020F272CF2CA003C7850 /* Auth.storyboard */; };
 		D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3810212272CF2CB003C7850 /* Assets.xcassets */; };
 		D3810216272CF2CB003C7850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */; };
+		D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810224272CF4E0003C7850 /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3810206272CF2CA003C7850 /* OkimochiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkimochiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3810209272CF2CA003C7850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D381020B272CF2CA003C7850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D381020D272CF2CA003C7850 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3810210272CF2CA003C7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D381020D272CF2CA003C7850 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D3810210272CF2CA003C7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D3810212272CF2CB003C7850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3810215272CF2CB003C7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3810217272CF2CB003C7850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3810224272CF4E0003C7850 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,7 @@
 				D381021D272CF2E6003C7850 /* Views */,
 				D3810209272CF2CA003C7850 /* AppDelegate.swift */,
 				D381020B272CF2CA003C7850 /* SceneDelegate.swift */,
-				D381020D272CF2CA003C7850 /* ViewController.swift */,
-				D381020F272CF2CA003C7850 /* Main.storyboard */,
+				D381020F272CF2CA003C7850 /* Auth.storyboard */,
 				D3810212272CF2CB003C7850 /* Assets.xcassets */,
 				D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */,
 				D3810217272CF2CB003C7850 /* Info.plist */,
@@ -97,6 +98,8 @@
 		D3810220272CF2F6003C7850 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D381020D272CF2CA003C7850 /* LoginController.swift */,
+				D3810224272CF4E0003C7850 /* RegisterController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 			files = (
 				D3810216272CF2CB003C7850 /* LaunchScreen.storyboard in Resources */,
 				D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */,
-				D3810211272CF2CA003C7850 /* Main.storyboard in Resources */,
+				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D381020E272CF2CA003C7850 /* ViewController.swift in Sources */,
+				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
+				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 			);
@@ -195,12 +199,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D381020F272CF2CA003C7850 /* Main.storyboard */ = {
+		D381020F272CF2CA003C7850 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D3810210272CF2CA003C7850 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */ = {
@@ -342,7 +346,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,7 +374,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
