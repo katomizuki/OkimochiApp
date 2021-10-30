@@ -3,35 +3,56 @@ import UIKit
 
 class RegisterController: UIViewController {
 
-    
-    @IBOutlet weak var mailTextField: UITextField! {
+    // MARK: - Properties
+    @IBOutlet private weak var mailTextField: UITextField! {
         didSet {
             updateLeftView(mailTextField, imagename: "mail.fill")
         }
     }
-    @IBOutlet weak var passwordTextField: UITextField! {
+    @IBOutlet private weak var passwordTextField: UITextField! {
         didSet {
             updateLeftView(passwordTextField, imagename: "lock.fill")
         }
     }
-    @IBOutlet weak var nameTextField: UITextField! {
+    @IBOutlet private weak var nameTextField: UITextField! {
         didSet {
             updateLeftView(nameTextField, imagename: "person.fill")
         }
     }
-    @IBOutlet weak var gotoRegisterButton: UIButton! {
+    @IBOutlet private weak var gotoRegisterButton: UIButton! {
         didSet {
             let attibutedString = updateAuthAttibutedString(explain:"既にアカウントを持っている方はこちらへ" ,
                                           pageName: "ログイン画面へ")
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
+        setupUI()
     }
-    @IBAction func gotoLogin(_ sender: Any) {
+    // MARK: - SetupMethod
+    private func setupUI() {
+        navigationController?.navigationBar.isHidden = true
+        mailTextField.delegate = self
+        passwordTextField.delegate = self
+        nameTextField.delegate = self
+    }
+    // MARK: - IBAction
+    @IBAction private func gotoLogin(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+}
+// MARK: - TextFieldDelegate
+extension RegisterController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField {
+        case mailTextField:print(textField.text)
+        case passwordTextField:print(textField.text)
+        case nameTextField:print(textField.text)
+        default:break
+        }
+        return true
+    }
 }

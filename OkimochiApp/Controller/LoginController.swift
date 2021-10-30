@@ -1,8 +1,7 @@
-
 import UIKit
 
 class LoginController: UIViewController {
-
+    // MARK: - Properties
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             updateLeftView(emailTextField, imagename: "mail.fill")
@@ -21,11 +20,11 @@ class LoginController: UIViewController {
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
-    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    // MARK: - IBAction
     @IBAction func didTapLoginButton(_ sender: Any) {
         print(#function)
     }
@@ -36,6 +35,15 @@ class LoginController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
-
+// MARK: - TextFieldDelegate
+extension LoginController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField {
+        case emailTextField: print(textField.text)
+        case passwordTextField: print(textField.text)
+        default:break
+        }
+        return true
+    }
+}
