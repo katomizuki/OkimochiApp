@@ -18,6 +18,14 @@
 		D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022A272D0359003C7850 /* Views-Extension.swift.swift */; };
 		D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */; };
 		D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */; };
+		D3810233272D0FFD003C7850 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810232272D0FFD003C7850 /* MainTab.storyboard */; };
+		D3810236272D106A003C7850 /* TimeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810235272D106A003C7850 /* TimeLineController.swift */; };
+		D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810237272D1148003C7850 /* PostLetter.storyboard */; };
+		D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810239272D115F003C7850 /* UserProfile.storyboard */; };
+		D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381023D272D11BE003C7850 /* PostLetterController.swift */; };
+		D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381023F272D11D4003C7850 /* UserProfileController.swift */; };
+		D3810242272D1991003C7850 /* User.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810241272D1991003C7850 /* User.swift.swift */; };
+		D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810243272D1BE4003C7850 /* Letter.swift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,14 @@
 		D381022A272D0359003C7850 /* Views-Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views-Extension.swift.swift"; sourceTree = "<group>"; };
 		D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift.swift; sourceTree = "<group>"; };
 		D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift.swift; sourceTree = "<group>"; };
+		D3810232272D0FFD003C7850 /* MainTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTab.storyboard; sourceTree = "<group>"; };
+		D3810235272D106A003C7850 /* TimeLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineController.swift; sourceTree = "<group>"; };
+		D3810237272D1148003C7850 /* PostLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLetter.storyboard; sourceTree = "<group>"; };
+		D3810239272D115F003C7850 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		D381023D272D11BE003C7850 /* PostLetterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterController.swift; sourceTree = "<group>"; };
+		D381023F272D11D4003C7850 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		D3810241272D1991003C7850 /* User.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift.swift; sourceTree = "<group>"; };
+		D3810243272D1BE4003C7850 /* Letter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,8 @@
 		D381021E272CF2EA003C7850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3810241272D1991003C7850 /* User.swift.swift */,
+				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +125,9 @@
 		D3810220272CF2F6003C7850 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D381023C272D11A7003C7850 /* UserProfile */,
+				D381023B272D119D003C7850 /* PostLetter */,
+				D3810234272D104F003C7850 /* TimeLine */,
 				D3810231272D0FB1003C7850 /* Authentication */,
 				D3810230272D0F81003C7850 /* Storyboard */,
 			);
@@ -141,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				D381020F272CF2CA003C7850 /* Auth.storyboard */,
+				D3810232272D0FFD003C7850 /* MainTab.storyboard */,
+				D3810237272D1148003C7850 /* PostLetter.storyboard */,
+				D3810239272D115F003C7850 /* UserProfile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -152,6 +176,30 @@
 				D3810224272CF4E0003C7850 /* RegisterController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D3810234272D104F003C7850 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				D3810235272D106A003C7850 /* TimeLineController.swift */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		D381023B272D119D003C7850 /* PostLetter */ = {
+			isa = PBXGroup;
+			children = (
+				D381023D272D11BE003C7850 /* PostLetterController.swift */,
+			);
+			path = PostLetter;
+			sourceTree = "<group>";
+		};
+		D381023C272D11A7003C7850 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D381023F272D11D4003C7850 /* UserProfileController.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3810216272CF2CB003C7850 /* LaunchScreen.storyboard in Resources */,
+				D3810233272D0FFD003C7850 /* MainTab.storyboard in Resources */,
 				D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */,
+				D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */,
+				D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */,
 				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,10 +280,15 @@
 				D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
+				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
+				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
+				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
+				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
+				D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +442,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +470,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
