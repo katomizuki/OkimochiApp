@@ -5,40 +5,19 @@ class LoginController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            let leftView = UIView()
-            let imageView = UIImageView()
-            leftView.setDimensions(height: 40, width: 40)
-            emailTextField.leftView = leftView
-            emailTextField.leftViewMode = .always
-            let image = UIImage(systemName: "mail.fill")
-            imageView.image = image
-            imageView.tintColor = .systemOrange
-            leftView.addSubview(imageView)
-            imageView.setDimensions(height: 40, width: 40)
+            updateLeftView(emailTextField, imagename: "mail.fill")
         }
     }
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
-            let imageView = UIImageView()
-            let leftView = UIView()
-            leftView.setDimensions(height: 40, width: 40)
-            passwordTextField.leftView = leftView
-            passwordTextField.leftViewMode = .always
-            let image = UIImage(systemName: "lock.fill")
-            imageView.image = image
-            imageView.tintColor = .systemOrange
-            leftView.addSubview(imageView)
-            imageView.setDimensions(height: 40, width: 40)
-
+            updateLeftView(passwordTextField, imagename: "lock.fill")
         }
     }
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var gotoRegisterButton: UIButton! {
         didSet {
-            let attibutedString = NSMutableAttributedString(string: "まだアカウントを持ってない方はこちらへ\n",
-                                                     attributes: [.font : UIFont.systemFont(ofSize: 14),.foregroundColor:UIColor.systemGray])
-            attibutedString.append(NSAttributedString(string: "新規登録ページへ",
-                                                      attributes: [.font : UIFont.boldSystemFont(ofSize: 14),.foregroundColor:UIColor.systemGray]))
+            let attibutedString = updateAuthAttibutedString(explain:"まだアカウントを持ってない方はこちらへ" ,
+                                          pageName: "新規登録ページへ")
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
