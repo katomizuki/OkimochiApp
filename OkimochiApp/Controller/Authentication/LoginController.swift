@@ -12,7 +12,12 @@ class LoginController: UIViewController {
             updateLeftView(passwordTextField, imagename: "lock.fill")
         }
     }
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton! {
+        didSet {
+            loginButton.layer.cornerRadius = 10
+            loginButton.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var gotoRegisterButton: UIButton! {
         didSet {
             let attibutedString = updateAuthAttibutedString(explain:"まだアカウントを持ってない方はこちらへ" ,
@@ -20,9 +25,12 @@ class LoginController: UIViewController {
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
+    private var viewModel = LoginViewModel()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     // MARK: - IBAction
     @IBAction func didTapLoginButton(_ sender: Any) {
@@ -40,10 +48,12 @@ class LoginController: UIViewController {
 extension LoginController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case emailTextField: print(textField.text)
-        case passwordTextField: print(textField.text)
+        case emailTextField: viewModel.email = textField.text
+        case passwordTextField: viewModel.password = textField.text
         default:break
         }
+        loginButton.isEnabled = viewModel.isValid
+        loginButton.backgroundColor = viewModel.isValid ? .systemOrange : .systemGray
         return true
     }
 }

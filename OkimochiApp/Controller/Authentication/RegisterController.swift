@@ -26,6 +26,13 @@ class RegisterController: UIViewController {
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
+    @IBOutlet private weak var registerButton: UIButton! {
+        didSet {
+            registerButton.layer.cornerRadius = 10
+            registerButton.layer.masksToBounds = true
+        }
+    }
+    private var viewModel = RegisterViewModel()
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +55,13 @@ class RegisterController: UIViewController {
 extension RegisterController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case mailTextField:print(textField.text)
-        case passwordTextField:print(textField.text)
-        case nameTextField:print(textField.text)
+        case mailTextField: viewModel.email = textField.text
+        case passwordTextField: viewModel.password = textField.text
+        case nameTextField: viewModel.name = textField.text
         default:break
         }
+        registerButton.isEnabled = viewModel.isValid
+        registerButton.backgroundColor = viewModel.isValid ? .systemOrange : .systemGray
         return true
     }
 }

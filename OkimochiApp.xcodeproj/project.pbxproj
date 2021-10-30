@@ -74,7 +74,6 @@
 				D381021D272CF2E6003C7850 /* Views */,
 				D3810209272CF2CA003C7850 /* AppDelegate.swift */,
 				D381020B272CF2CA003C7850 /* SceneDelegate.swift */,
-				D381020F272CF2CA003C7850 /* Auth.storyboard */,
 				D3810212272CF2CB003C7850 /* Assets.xcassets */,
 				D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */,
 				D3810217272CF2CB003C7850 /* Info.plist */,
@@ -108,8 +107,8 @@
 		D3810220272CF2F6003C7850 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D381020D272CF2CA003C7850 /* LoginController.swift */,
-				D3810224272CF4E0003C7850 /* RegisterController.swift */,
+				D3810231272D0FB1003C7850 /* Authentication */,
+				D3810230272D0F81003C7850 /* Storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +135,23 @@
 				D381022A272D0359003C7850 /* Views-Extension.swift.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D3810230272D0F81003C7850 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D381020F272CF2CA003C7850 /* Auth.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D3810231272D0FB1003C7850 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D381020D272CF2CA003C7850 /* LoginController.swift */,
+				D3810224272CF4E0003C7850 /* RegisterController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
