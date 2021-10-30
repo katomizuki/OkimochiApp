@@ -56,6 +56,12 @@
 		D3810208272CF2CA003C7850 /* OkimochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				D3810222272CF300003C7850 /* Utility */,
+				D3810221272CF2FC003C7850 /* API */,
+				D3810220272CF2F6003C7850 /* Controller */,
+				D381021F272CF2EF003C7850 /* ViewModel */,
+				D381021E272CF2EA003C7850 /* Model */,
+				D381021D272CF2E6003C7850 /* Views */,
 				D3810209272CF2CA003C7850 /* AppDelegate.swift */,
 				D381020B272CF2CA003C7850 /* SceneDelegate.swift */,
 				D381020D272CF2CA003C7850 /* ViewController.swift */,
@@ -65,6 +71,48 @@
 				D3810217272CF2CB003C7850 /* Info.plist */,
 			);
 			path = OkimochiApp;
+			sourceTree = "<group>";
+		};
+		D381021D272CF2E6003C7850 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D381021E272CF2EA003C7850 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D381021F272CF2EF003C7850 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3810220272CF2F6003C7850 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3810221272CF2FC003C7850 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D3810222272CF300003C7850 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
