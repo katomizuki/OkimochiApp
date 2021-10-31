@@ -36,26 +36,80 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="g43-Fu-Mej"/>
                     </constraints>
+                    <color key="tintColor" systemColor="systemOrangeColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="編集する"/>
                     <connections>
                         <action selector="didTapUpdateButton:" destination="Vuq-7l-Y8B" eventType="touchUpInside" id="1rf-x4-vp3"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-yn-F8v">
+                    <rect key="frame" x="0.0" y="120" width="381" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciG-fo-5vj">
+                            <rect key="frame" x="0.0" y="0.0" width="127" height="30"/>
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="お気に入り"/>
+                            <connections>
+                                <action selector="didTapOptionsButton:" destination="Vuq-7l-Y8B" eventType="touchUpInside" id="v0V-S7-Dcc"/>
+                                <action selector="didTapProfileOptionsButton:" destination="-1" eventType="touchUpInside" id="mmC-sc-ZLv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-KI-ddy">
+                            <rect key="frame" x="127" y="0.0" width="127" height="30"/>
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="過去閲覧"/>
+                            <connections>
+                                <action selector="didTapOptionsButton:" destination="Vuq-7l-Y8B" eventType="touchUpInside" id="M0Y-hZ-965"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E5-Pp-j6Z">
+                            <rect key="frame" x="254" y="0.0" width="127" height="30"/>
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="基本情報"/>
+                            <connections>
+                                <action selector="didTapOptionsButton:" destination="Vuq-7l-Y8B" eventType="touchUpInside" id="xfj-JF-Fy9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XMj-x1-32Y"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xg-JA-aoo">
+                    <rect key="frame" x="0.0" y="148" width="127" height="2"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="gE7-mM-xwy"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="YD5-0X-ns7"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="YD5-0X-ns7" firstAttribute="bottom" secondItem="lVk-wA-k1U" secondAttribute="bottom" constant="30" id="Dco-zy-bXb"/>
+                <constraint firstItem="5Xg-JA-aoo" firstAttribute="bottom" secondItem="YD5-0X-ns7" secondAttribute="bottom" id="7Uu-vf-NR6"/>
+                <constraint firstItem="ZOL-4k-yzH" firstAttribute="bottom" secondItem="lVk-wA-k1U" secondAttribute="bottom" constant="-10" id="Dco-zy-bXb"/>
+                <constraint firstItem="ChK-yn-F8v" firstAttribute="bottom" secondItem="YD5-0X-ns7" secondAttribute="bottom" id="FY3-bn-dnL"/>
+                <constraint firstItem="5Xg-JA-aoo" firstAttribute="width" secondItem="ciG-fo-5vj" secondAttribute="width" id="Gxd-9G-Jme"/>
                 <constraint firstItem="LeP-mq-zqS" firstAttribute="top" secondItem="ZOL-4k-yzH" secondAttribute="top" id="HHv-Sq-cn9"/>
                 <constraint firstItem="ZOL-4k-yzH" firstAttribute="centerY" secondItem="Vuq-7l-Y8B" secondAttribute="centerY" id="Ubv-3P-MSa"/>
                 <constraint firstItem="LeP-mq-zqS" firstAttribute="leading" secondItem="ZOL-4k-yzH" secondAttribute="trailing" constant="20" id="Vbo-ze-HPo"/>
+                <constraint firstItem="ChK-yn-F8v" firstAttribute="leading" secondItem="YD5-0X-ns7" secondAttribute="leading" id="YRW-Yc-gus"/>
                 <constraint firstItem="ZOL-4k-yzH" firstAttribute="leading" secondItem="YD5-0X-ns7" secondAttribute="leading" constant="15" id="bRx-It-bux"/>
                 <constraint firstItem="YD5-0X-ns7" firstAttribute="trailing" secondItem="lVk-wA-k1U" secondAttribute="trailing" constant="25" id="mvK-dU-cuH"/>
+                <constraint firstItem="ChK-yn-F8v" firstAttribute="trailing" secondItem="YD5-0X-ns7" secondAttribute="trailing" id="xX7-9e-trE"/>
+                <constraint firstItem="5Xg-JA-aoo" firstAttribute="leading" secondItem="YD5-0X-ns7" secondAttribute="leading" id="ya1-kq-css"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="favButton" destination="ciG-fo-5vj" id="ymr-cB-eQN"/>
+                <outlet property="myInfoButton" destination="3E5-Pp-j6Z" id="l6f-5v-sEB"/>
                 <outlet property="nameLabel" destination="LeP-mq-zqS" id="F2W-Fg-OHL"/>
+                <outlet property="orangeUnderLineConstaraint" destination="ya1-kq-css" id="KXA-6A-vhT"/>
+                <outlet property="pastSeenButton" destination="ZSE-KI-ddy" id="pgp-1h-SuY"/>
                 <outlet property="profileImageView" destination="ZOL-4k-yzH" id="lii-Cr-Hg6"/>
                 <outlet property="updateButton" destination="lVk-wA-k1U" id="pkm-Sx-7EA"/>
             </connections>

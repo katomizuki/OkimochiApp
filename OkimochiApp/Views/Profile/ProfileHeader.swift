@@ -1,8 +1,8 @@
 
 import Foundation
 import UIKit
-class ProfileHeader: UICollectionReusableView {
-    private let profileFileter = ProfileFilter(frame: .zero)
+class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
+    
     static let id = "ProfileHeader"
     @IBOutlet weak var profileImageView: UIImageView! {
         didSet {
@@ -10,19 +10,19 @@ class ProfileHeader: UICollectionReusableView {
             profileImageView.layer.masksToBounds = true
         }
     }
+    @IBOutlet weak var orangeUnderLineConstaraint: NSLayoutConstraint!
+    private let underLine:UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        return view
+    }()
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var pastSeenButton: UIButton!
+    @IBOutlet weak var myInfoButton: UIButton!
+    @IBOutlet weak var favButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        addSubview(profileFileter)
-        profileFileter.anchor(top: updateButton.bottomAnchor,
-                              left: leftAnchor,
-                              right: rightAnchor,
-                              paddingTop: 0,
-                              paddingLeft:0,
-                              paddingBottom: 10,
-                              paddingRight: 0)
-        
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +35,33 @@ class ProfileHeader: UICollectionReusableView {
     }
     @IBAction func didTapUpdateButton(_ sender: Any) {
         print(#function)
-        print(profileFileter)
+    }
+    @IBAction func didTapOptionsButton(_ sender: UIButton) {
+        let width = UIScreen.main.bounds.width
+        print(#function)
+            switch sender {
+            case myInfoButton:
+                UIView.animate(withDuration: 0.5) {
+                    self.orangeUnderLineConstaraint.constant = width * 2 / 3
+                }
+                myInfoButton.tintColor = .systemOrange
+                pastSeenButton.tintColor = .systemGray
+                favButton.tintColor = .systemGray
+            case pastSeenButton:
+                UIView.animate(withDuration: 0.5) {
+                    self.orangeUnderLineConstaraint.constant = width * 1 / 3
+                }
+                pastSeenButton.tintColor = .systemOrange
+                myInfoButton.tintColor = .systemGray
+                favButton.tintColor = .systemGray
+            case favButton:
+                UIView.animate(withDuration: 0.5) {
+                self.orangeUnderLineConstaraint.constant = 0
+            }
+                favButton.tintColor = .systemOrange
+                myInfoButton.tintColor = .systemGray
+                pastSeenButton.tintColor = .systemGray
+            default: break
+        }
     }
 }
