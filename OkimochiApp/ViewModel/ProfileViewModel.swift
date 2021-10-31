@@ -4,10 +4,10 @@ enum ProfileFilterOptions :Int,CaseIterable {
     case fav
     case past
     case info
-    var description: String{
+    var description: String {
         switch self {
-        case .fav: return "お気に入りレター"
-        case .past: return "過去閲覧した手紙"
+        case .fav: return "お気に入り"
+        case .past: return "過去閲覧"
         case .info: return "基本情報"
         }
     }

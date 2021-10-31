@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 class ProfileHeader: UICollectionReusableView {
-   private let profileFileter = ProfileFilter()
+    private let profileFileter = ProfileFilter(frame: .zero)
     static let id = "ProfileHeader"
     @IBOutlet weak var profileImageView: UIImageView! {
         didSet {
@@ -14,15 +14,13 @@ class ProfileHeader: UICollectionReusableView {
     @IBOutlet weak var updateButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .blue
         addSubview(profileFileter)
-        profileFileter.backgroundColor = .systemPink
         profileFileter.anchor(top: updateButton.bottomAnchor,
                               left: leftAnchor,
                               right: rightAnchor,
-                              paddingTop: 5,
+                              paddingTop: 0,
                               paddingLeft:0,
-                              paddingBottom: 5,
+                              paddingBottom: 10,
                               paddingRight: 0)
         
     }
