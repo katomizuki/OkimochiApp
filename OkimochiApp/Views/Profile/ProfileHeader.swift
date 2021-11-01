@@ -4,7 +4,7 @@ protocol ProfileHeaderDelegate: AnyObject {
     func didTapUpdateButton()
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
 }
-class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
+class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     static let id = "ProfileHeader"
     weak var delegate:ProfileHeaderDelegate?
@@ -25,14 +25,14 @@ class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
     @IBOutlet weak var pastSeenButton: UIButton!
     @IBOutlet weak var myInfoButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
+    //　カスタムクラスに指定しているためinitは使えない。requiredinitは呼ばれる。why?
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+        print("ssosos")
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        print("sss")
     }
     static func nib()->UINib {
         return UINib(nibName: "ProfileHeader", bundle: nil)

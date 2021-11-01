@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
+		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
+		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
 		D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */; };
 		D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */; };
 		D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
+		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
+		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
 		D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfile.storyboard; sourceTree = "<group>"; };
 		D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileController.swift; sourceTree = "<group>"; };
 		D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDetailController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */,
 				D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */,
 				D3B5F068272E876A006F6881 /* ProfileViewModel.swift */,
+				D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 			children = (
 				D3B91B33272E703A0048FC75 /* ProfileCell.swift */,
 				D3B91B31272E6D810048FC75 /* ProfileHeader.swift */,
+				D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			children = (
 				D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */,
 				D3B91B34272E703A0048FC75 /* ProfileCell.xib */,
+				D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 				D3810233272D0FFD003C7850 /* MainTab.storyboard in Resources */,
 				D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */,
 				D3B91B30272E6D5D0048FC75 /* ProfileHeader.xib in Resources */,
+				D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */,
 				D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */,
 				D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */,
 				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
@@ -322,6 +332,7 @@
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
 				D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
+				D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
@@ -332,6 +343,7 @@
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
+				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,

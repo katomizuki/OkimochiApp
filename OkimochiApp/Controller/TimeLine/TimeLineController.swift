@@ -23,7 +23,6 @@ extension TimeLineController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
     }
-    
 }
 // MARK: - CollectionViewDataSource
 extension TimeLineController: UICollectionViewDataSource {

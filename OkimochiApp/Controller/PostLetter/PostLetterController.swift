@@ -6,6 +6,4 @@ class PostLetterController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
     }
-  
-
 }
