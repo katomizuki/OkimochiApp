@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */; };
+		D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */; };
+		D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */; };
 		D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810209272CF2CA003C7850 /* AppDelegate.swift */; };
 		D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381020B272CF2CA003C7850 /* SceneDelegate.swift */; };
 		D381020E272CF2CA003C7850 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381020D272CF2CA003C7850 /* LoginController.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfile.storyboard; sourceTree = "<group>"; };
+		D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileController.swift; sourceTree = "<group>"; };
+		D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDetailController.swift; sourceTree = "<group>"; };
 		D3810206272CF2CA003C7850 /* OkimochiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkimochiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3810209272CF2CA003C7850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D381020B272CF2CA003C7850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				D3810232272D0FFD003C7850 /* MainTab.storyboard */,
 				D3810237272D1148003C7850 /* PostLetter.storyboard */,
 				D3810239272D115F003C7850 /* UserProfile.storyboard */,
+				D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -211,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				D381023F272D11D4003C7850 /* UserProfileController.swift */,
+				D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */,
+				D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 				D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */,
 				D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */,
 				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
+				D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +321,7 @@
 			files = (
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
 				D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */,
+				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
@@ -323,6 +334,7 @@
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
+				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
 				D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */,
 			);

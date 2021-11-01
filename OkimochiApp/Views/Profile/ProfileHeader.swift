@@ -1,9 +1,13 @@
-
 import Foundation
 import UIKit
+protocol ProfileHeaderDelegate: AnyObject {
+    func didTapUpdateButton()
+    func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
+}
 class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
-    
+    // MARK: - Properties
     static let id = "ProfileHeader"
+    weak var delegate:ProfileHeaderDelegate?
     @IBOutlet weak var profileImageView: UIImageView! {
         didSet {
             profileImageView.layer.cornerRadius = 35
@@ -35,6 +39,7 @@ class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
     }
     @IBAction func didTapUpdateButton(_ sender: Any) {
         print(#function)
+        self.delegate?.didTapUpdateButton()
     }
     @IBAction func didTapOptionsButton(_ sender: UIButton) {
         let width = UIScreen.main.bounds.width
@@ -47,6 +52,7 @@ class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
                 myInfoButton.tintColor = .systemOrange
                 pastSeenButton.tintColor = .systemGray
                 favButton.tintColor = .systemGray
+                self.delegate?.didTapProfileOptionsButton(.info)
             case pastSeenButton:
                 UIView.animate(withDuration: 0.5) {
                     self.orangeUnderLineConstaraint.constant = width * 1 / 3
@@ -54,6 +60,7 @@ class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
                 pastSeenButton.tintColor = .systemOrange
                 myInfoButton.tintColor = .systemGray
                 favButton.tintColor = .systemGray
+                self.delegate?.didTapProfileOptionsButton(.past)
             case favButton:
                 UIView.animate(withDuration: 0.5) {
                 self.orangeUnderLineConstaraint.constant = 0
@@ -61,6 +68,7 @@ class ProfileHeader: UICollectionReusableView, UICollectionViewDelegate {
                 favButton.tintColor = .systemOrange
                 myInfoButton.tintColor = .systemGray
                 pastSeenButton.tintColor = .systemGray
+                self.delegate?.didTapProfileOptionsButton(.fav)
             default: break
         }
     }

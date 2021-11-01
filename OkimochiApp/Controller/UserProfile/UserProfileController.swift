@@ -17,14 +17,15 @@ class UserProfileController: UIViewController {
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
     }
-
-
 }
 
 // MARK: - collectionViewDelegate
 extension UserProfileController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
+        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LetterDetailController") as! LetterDetailController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
@@ -39,6 +40,7 @@ extension UserProfileController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id, for: indexPath) as? ProfileHeader else { fatalError() }
+        header.delegate = self
         return header
     }
 }
@@ -49,5 +51,16 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 200)
+    }
+}
+// MARK: - ProfileHeaderDelegate
+extension UserProfileController: ProfileHeaderDelegate {
+    func didTapUpdateButton() {
+        print(#function)
+        performSegue(withIdentifier: "gotoUpdateProfileController", sender: nil)
+    }
+    
+    func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
+        print(#function)
     }
 }
