@@ -54,6 +54,7 @@
                         <outlet property="profileCollectionView" destination="08i-3w-kvD" id="KAl-pm-fbD"/>
                         <segue destination="KRd-AC-nAf" kind="presentation" identifier="gotoUpdateProfileController" modalPresentationStyle="fullScreen" id="GqV-M4-iJM"/>
                         <segue destination="L9y-Yj-hmi" kind="show" id="SVL-HW-edC"/>
+                        <segue destination="Dvb-C9-eAu" kind="show" id="9py-Lm-4fD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,6 +84,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d09-nR-6hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746" y="98"/>
+        </scene>
+        <!--Search Friends Controller-->
+        <scene sceneID="w6V-Zk-f2r">
+            <objects>
+                <viewController storyboardIdentifier="SearchFriendsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dvb-C9-eAu" customClass="SearchFriendsController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCU-gz-dj0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Csy-pc-9Ac"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zxu-Mx-lH9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Jt-JJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="888"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i3C-Y7-boX">

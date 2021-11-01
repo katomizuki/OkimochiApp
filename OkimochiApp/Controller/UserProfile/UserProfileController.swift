@@ -6,7 +6,9 @@ class UserProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearchButton))
         setupCollectionView()
+        navigationItem.rightBarButtonItem?.tintColor = .systemOrange
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {
@@ -16,6 +18,12 @@ class UserProfileController: UIViewController {
         profileCollectionView.dataSource = self
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
+    }
+    @objc private func didTapSearchButton() {
+        print(#function)
+        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SearchFriendsController") as! SearchFriendsController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -50,7 +58,7 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width, height: 100)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 150)
     }
 }
 // MARK: - ProfileHeaderDelegate
