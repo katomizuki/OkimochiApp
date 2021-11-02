@@ -110,11 +110,98 @@
                     <navigationItem key="navigationItem" id="Zxu-Mx-lH9"/>
                     <connections>
                         <outlet property="tableView" destination="tsk-Cp-E9k" id="JeG-JH-Fwt"/>
+                        <segue destination="rQG-4u-zOT" kind="presentation" identifier="FriedDetailController" modalPresentationStyle="fullScreen" id="7uC-fb-8YK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Jt-JJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="888"/>
+            <point key="canvasLocation" x="1745" y="889"/>
+        </scene>
+        <!--Fried Detail Controller-->
+        <scene sceneID="SVJ-tS-nkK">
+            <objects>
+                <viewController storyboardIdentifier="FriedDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQG-4u-zOT" customClass="FriedDetailController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DeO-Ci-SMM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-8y-pKW">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Pta-s8-WeB"/>
+                                    <constraint firstAttribute="height" constant="150" id="fuZ-Jp-edS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2L-iI-Ze2">
+                                <rect key="frame" x="137.5" y="478.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FGy-ES-clJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="q6W-Fl-5bg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="友達申請"/>
+                                <connections>
+                                    <action selector="didTapPlusFrinedButton:" destination="rQG-4u-zOT" eventType="touchUpInside" id="irK-kX-bfj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加藤瑞樹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-Gq-89U">
+                                <rect key="frame" x="152.5" y="208.5" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tCl-ah-n4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="良いサービスだと思います" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDL-oZ-CRg">
+                                <rect key="frame" x="83.5" y="428.5" width="208" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="E35-Qs-Pcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILG-LS-k3B">
+                                <rect key="frame" x="10" y="10" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="axB-6d-H12"/>
+                                    <constraint firstAttribute="width" constant="80" id="xzJ-gt-d2o"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="もどる"/>
+                                <connections>
+                                    <action selector="didTapDismissButton:" destination="rQG-4u-zOT" eventType="touchUpInside" id="wWr-5J-6bf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4D9-r8-bYA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rlw-8y-pKW" firstAttribute="centerY" secondItem="DeO-Ci-SMM" secondAttribute="centerY" id="6DU-fO-hAi"/>
+                            <constraint firstItem="JDL-oZ-CRg" firstAttribute="centerX" secondItem="DeO-Ci-SMM" secondAttribute="centerX" id="7xi-Ta-MoL"/>
+                            <constraint firstItem="T2L-iI-Ze2" firstAttribute="centerX" secondItem="DeO-Ci-SMM" secondAttribute="centerX" id="KCO-3G-XQi"/>
+                            <constraint firstItem="JDL-oZ-CRg" firstAttribute="top" secondItem="rlw-8y-pKW" secondAttribute="bottom" constant="20" id="MVl-Mr-hVq"/>
+                            <constraint firstItem="gNG-Gq-89U" firstAttribute="centerX" secondItem="DeO-Ci-SMM" secondAttribute="centerX" id="RID-cp-DFa"/>
+                            <constraint firstItem="rlw-8y-pKW" firstAttribute="top" secondItem="gNG-Gq-89U" secondAttribute="bottom" constant="20" id="UoF-Xf-Ypq"/>
+                            <constraint firstItem="T2L-iI-Ze2" firstAttribute="top" secondItem="JDL-oZ-CRg" secondAttribute="bottom" constant="20" id="jMJ-pN-mfK"/>
+                            <constraint firstItem="rlw-8y-pKW" firstAttribute="centerX" secondItem="DeO-Ci-SMM" secondAttribute="centerX" id="pJF-8S-dH8"/>
+                            <constraint firstItem="ILG-LS-k3B" firstAttribute="top" secondItem="4D9-r8-bYA" secondAttribute="top" constant="10" id="pl0-xM-Cou"/>
+                            <constraint firstItem="ILG-LS-k3B" firstAttribute="leading" secondItem="4D9-r8-bYA" secondAttribute="leading" constant="10" id="wKv-iK-7Mb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="JDL-oZ-CRg" id="Lq6-BN-uLz"/>
+                        <outlet property="friendImageView" destination="rlw-8y-pKW" id="BOE-NZ-a3h"/>
+                        <outlet property="nameLabel" destination="gNG-Gq-89U" id="zMg-KP-fO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWG-EQ-KS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i3C-Y7-boX">

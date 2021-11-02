@@ -40,6 +40,7 @@ extension SearchFriendsController : UISearchResultsUpdating {
 extension SearchFriendsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
+        performSegue(withIdentifier: "FriedDetailController", sender: nil)
     }
 }
 // MARK: - UITableViewDataSource
