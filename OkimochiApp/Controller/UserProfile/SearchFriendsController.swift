@@ -1,29 +1,30 @@
-//
-//  SearchFriendsController.swift
-//  OkimochiApp
-//
-//  Created by ミズキ on 2021/11/01.
-//
-
 import UIKit
 
 class SearchFriendsController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupSearchController()
+    }
+    private func setupSearchController() {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchResultsUpdater = self
+        controller.obscuresBackgroundDuringPresentation = false
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = controller
+            navigationItem.hidesSearchBarWhenScrolling = true
+            
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+// MARK: - UISearchResultsUpdating
+extension SearchFriendsController :UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        print(#function)
     }
-    */
-
 }
