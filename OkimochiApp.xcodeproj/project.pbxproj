@@ -11,6 +11,8 @@
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
 		D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB89272FF93A0030CA79 /* SearchFriendsController.swift */; };
+		D375CC172731627E0030CA79 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CC152731627E0030CA79 /* FriendCell.swift */; };
+		D375CC182731627E0030CA79 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CC162731627E0030CA79 /* FriendCell.xib */; };
 		D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */; };
 		D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */; };
 		D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */; };
@@ -45,6 +47,8 @@
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
 		D375CB89272FF93A0030CA79 /* SearchFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsController.swift; sourceTree = "<group>"; };
+		D375CC152731627E0030CA79 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		D375CC162731627E0030CA79 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfile.storyboard; sourceTree = "<group>"; };
 		D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileController.swift; sourceTree = "<group>"; };
 		D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDetailController.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 			children = (
 				D3B91B33272E703A0048FC75 /* ProfileCell.swift */,
 				D3B91B31272E6D810048FC75 /* ProfileHeader.swift */,
+				D375CC152731627E0030CA79 /* FriendCell.swift */,
 				D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */,
 			);
 			path = Profile;
@@ -250,6 +255,7 @@
 				D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */,
 				D3B91B34272E703A0048FC75 /* ProfileCell.xib */,
 				D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */,
+				D375CC162731627E0030CA79 /* FriendCell.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				D3810233272D0FFD003C7850 /* MainTab.storyboard in Resources */,
 				D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */,
 				D3B91B30272E6D5D0048FC75 /* ProfileHeader.xib in Resources */,
+				D375CC182731627E0030CA79 /* FriendCell.xib in Resources */,
 				D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */,
 				D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */,
 				D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */,
@@ -343,6 +350,7 @@
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
+				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,

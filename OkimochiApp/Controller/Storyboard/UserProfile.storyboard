@@ -92,10 +92,25 @@
                     <view key="view" contentMode="scaleToFill" id="UCU-gz-dj0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tsk-Cp-E9k">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Csy-pc-9Ac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Csy-pc-9Ac" firstAttribute="trailing" secondItem="tsk-Cp-E9k" secondAttribute="trailing" id="2w6-HA-XFU"/>
+                            <constraint firstItem="Csy-pc-9Ac" firstAttribute="bottom" secondItem="tsk-Cp-E9k" secondAttribute="bottom" id="boG-cf-C5U"/>
+                            <constraint firstItem="tsk-Cp-E9k" firstAttribute="top" secondItem="Csy-pc-9Ac" secondAttribute="top" id="cHf-zo-hwI"/>
+                            <constraint firstItem="tsk-Cp-E9k" firstAttribute="leading" secondItem="Csy-pc-9Ac" secondAttribute="leading" id="pmU-Fb-5zR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zxu-Mx-lH9"/>
+                    <connections>
+                        <outlet property="tableView" destination="tsk-Cp-E9k" id="JeG-JH-Fwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Jt-JJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

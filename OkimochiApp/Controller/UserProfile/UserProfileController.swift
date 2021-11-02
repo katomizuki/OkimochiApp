@@ -1,7 +1,7 @@
 import UIKit
 
 class UserProfileController: UIViewController {
-
+    private var viewModel:ProfileViewModel?
     @IBOutlet weak var profileCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,5 +70,14 @@ extension UserProfileController: ProfileHeaderDelegate {
     
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
         print(#function)
+        switch selectOptions {
+        case .fav:
+            print("fav")
+        case .past:
+            print("past")
+        case .info:
+            print("info")
+            
+        }
     }
 }

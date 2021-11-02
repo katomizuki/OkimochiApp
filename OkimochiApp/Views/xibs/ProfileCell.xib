@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProfileCell" customModule="OkimochiApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="231" height="101"/>
+            <rect key="frame" x="0.0" y="0.0" width="379" height="101"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="231" height="101"/>
+                <rect key="frame" x="0.0" y="0.0" width="379" height="101"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-KS-Msx">
-                        <rect key="frame" x="0.0" y="0.0" width="231" height="101"/>
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="101"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１０年後の自分へｗｗｗ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhR-b9-hXd">
                                 <rect key="frame" x="30" y="20.5" width="191" height="21"/>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dcg-zj-xs9">
-                                <rect key="frame" x="101" y="20.5" width="100" height="60"/>
+                                <rect key="frame" x="249" y="20.5" width="100" height="60"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Ye6-nD-DhH"/>
@@ -43,13 +43,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F81-9c-Ldy">
+                                <rect key="frame" x="20" y="20.5" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="J9v-u8-3KC"/>
+                                    <constraint firstAttribute="height" constant="60" id="qOo-ec-ZYs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="F81-9c-Ldy" firstAttribute="leading" secondItem="SGI-KS-Msx" secondAttribute="leading" constant="20" id="14V-M5-I2E"/>
                             <constraint firstItem="rhR-b9-hXd" firstAttribute="leading" secondItem="SGI-KS-Msx" secondAttribute="leading" constant="30" id="5Bz-0n-OQ2"/>
                             <constraint firstItem="rhR-b9-hXd" firstAttribute="top" secondItem="Dcg-zj-xs9" secondAttribute="top" id="9hM-dk-qca"/>
                             <constraint firstAttribute="trailing" secondItem="Dcg-zj-xs9" secondAttribute="trailing" constant="30" id="B7s-IP-ylj"/>
                             <constraint firstItem="mEv-LF-vfg" firstAttribute="bottom" secondItem="Dcg-zj-xs9" secondAttribute="bottom" id="IPa-VY-PYG"/>
+                            <constraint firstItem="F81-9c-Ldy" firstAttribute="centerY" secondItem="SGI-KS-Msx" secondAttribute="centerY" id="KSL-Pi-TQI"/>
                             <constraint firstItem="mEv-LF-vfg" firstAttribute="leading" secondItem="SGI-KS-Msx" secondAttribute="leading" constant="30" id="hjk-DQ-wzR"/>
                             <constraint firstItem="Dcg-zj-xs9" firstAttribute="centerY" secondItem="SGI-KS-Msx" secondAttribute="centerY" id="v0q-5X-qpT"/>
                         </constraints>
@@ -63,13 +73,14 @@
                 <constraint firstAttribute="trailing" secondItem="SGI-KS-Msx" secondAttribute="trailing" id="tFh-JC-g0g"/>
                 <constraint firstItem="SGI-KS-Msx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zpa-x6-ry4"/>
             </constraints>
-            <size key="customSize" width="231" height="101"/>
+            <size key="customSize" width="379" height="101"/>
             <connections>
+                <outlet property="friendImageView" destination="F81-9c-Ldy" id="TOp-BG-8ag"/>
                 <outlet property="letterImageView" destination="Dcg-zj-xs9" id="cBs-xg-FJG"/>
                 <outlet property="timeLabel" destination="mEv-LF-vfg" id="sJK-GQ-bmJ"/>
                 <outlet property="titleLabel" destination="rhR-b9-hXd" id="SxW-Fd-jjL"/>
             </connections>
-            <point key="canvasLocation" x="268.84057971014494" y="96.763392857142847"/>
+            <point key="canvasLocation" x="376.08695652173918" y="96.763392857142847"/>
         </collectionViewCell>
     </objects>
     <resources>

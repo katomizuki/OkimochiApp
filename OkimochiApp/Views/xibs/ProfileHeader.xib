@@ -69,7 +69,7 @@
                             <rect key="frame" x="254" y="0.0" width="127" height="30"/>
                             <color key="tintColor" systemColor="systemGrayColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="基本情報"/>
+                            <buttonConfiguration key="configuration" style="plain" title="友だち"/>
                             <connections>
                                 <action selector="didTapOptionsButton:" destination="Vuq-7l-Y8B" eventType="touchUpInside" id="xfj-JF-Fy9"/>
                             </connections>
