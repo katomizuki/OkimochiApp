@@ -20,6 +20,7 @@ class UpdateProfileTableCell: UITableViewCell {
     }
     private func setupUI() {
         print(#function)
+        
     }
     
 }

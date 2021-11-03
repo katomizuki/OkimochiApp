@@ -2,6 +2,11 @@ import UIKit
 
 class LetterWhoTypeCell: UITableViewCell {
     static let id = "LetterWhoTypeCell"
+    var whoType: SendWhoType! {
+        didSet {
+            setupUI()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -12,6 +17,9 @@ class LetterWhoTypeCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    private func setupUI() {
+        self.textLabel?.text = whoType.description
     }
     
 }

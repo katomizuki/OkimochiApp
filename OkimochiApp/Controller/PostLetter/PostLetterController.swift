@@ -16,12 +16,23 @@ class PostLetterController: UIViewController {
         whoTypeTableView.register(nib, forCellReuseIdentifier: LetterWhoTypeCell.id)
         whoTypeTableView.rowHeight = 33
         whoTypeTableView.isScrollEnabled = false
+        whoTypeTableView.allowsMultipleSelection = false
     }
 }
 // MARK: - UITableViewDelegate
 extension PostLetterController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
+        let cell = tableView.cellForRow(at: indexPath) as! LetterWhoTypeCell
+        if indexPath.row == 1 {
+            performSegue(withIdentifier: "LetterFriendController", sender: nil)
+        } else {
+            cell.accessoryType =  .checkmark
+    }
+}
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .none
     }
 }
 // MARK: - UITableViewDataSource
@@ -31,8 +42,9 @@ extension PostLetterController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LetterWhoTypeCell.id, for: indexPath) as? LetterWhoTypeCell else { fatalError() }
-        cell.textLabel?.text = SendWhoType(rawValue: indexPath.row)?.description
+        cell.whoType = SendWhoType(rawValue: indexPath.row)
         return cell
     }
+
     
 }
