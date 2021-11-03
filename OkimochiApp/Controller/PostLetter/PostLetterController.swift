@@ -1,16 +1,9 @@
 import UIKit
 
 class PostLetterController: UIViewController {
-
-    @IBOutlet weak var placeName: UITextField!
-    @IBOutlet weak var datePIcker: UIDatePicker! {
-        didSet {
-            datePIcker.locale = Locale(identifier: "ja-JA")
-        }
-    }
-    @IBOutlet weak var contentTextView: UITextView!
+ 
     @IBOutlet weak var whoTypeTableView: UITableView!
-    @IBOutlet weak var titleTextFiled: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

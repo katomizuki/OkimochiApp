@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */; };
 		D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */; };
+		D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC0273228B000FBE5AF /* LetterContentController.swift */; };
+		D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC2273228C100FBE5AF /* LetterMapController.swift */; };
+		D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */; };
+		D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -48,6 +52,10 @@
 /* Begin PBXFileReference section */
 		D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterWhoTypeCell.swift; sourceTree = "<group>"; };
 		D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterWhoTypeCell.xib; sourceTree = "<group>"; };
+		D30E6EC0273228B000FBE5AF /* LetterContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentController.swift; sourceTree = "<group>"; };
+		D30E6EC2273228C100FBE5AF /* LetterMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterMapController.swift; sourceTree = "<group>"; };
+		D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTimeController.swift; sourceTree = "<group>"; };
+		D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendController.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				D381023D272D11BE003C7850 /* PostLetterController.swift */,
+				D30E6EC0273228B000FBE5AF /* LetterContentController.swift */,
+				D30E6EC2273228C100FBE5AF /* LetterMapController.swift */,
+				D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */,
+				D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */,
 			);
 			path = PostLetter;
 			sourceTree = "<group>";
@@ -353,6 +365,7 @@
 				D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
 				D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */,
+				D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */,
 				D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */,
@@ -363,8 +376,11 @@
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
+				D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
+				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
+				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
