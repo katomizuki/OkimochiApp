@@ -10,7 +10,6 @@ class UpdateProfileTableCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-//        backgroundColor = .systemPurple
     }
     static func nib()->UINib {
         return UINib(nibName: "UpdateProfileTableCell", bundle: nil)

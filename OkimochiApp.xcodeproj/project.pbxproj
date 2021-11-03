@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */; };
+		D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterWhoTypeCell.swift; sourceTree = "<group>"; };
+		D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterWhoTypeCell.xib; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				D3B91B31272E6D810048FC75 /* ProfileHeader.swift */,
 				D375CC152731627E0030CA79 /* FriendCell.swift */,
 				D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */,
+				D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				D3B91B34272E703A0048FC75 /* ProfileCell.xib */,
 				D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */,
 				D375CC162731627E0030CA79 /* FriendCell.xib */,
+				D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				D381023A272D115F003C7850 /* UserProfile.storyboard in Resources */,
 				D3810238272D1148003C7850 /* PostLetter.storyboard in Resources */,
 				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
+				D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */,
 				D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +359,7 @@
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
+				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,

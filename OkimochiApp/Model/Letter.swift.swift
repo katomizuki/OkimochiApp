@@ -1,8 +1,15 @@
 import Foundation
-enum SendWhoType: Int {
+enum SendWhoType: Int,CaseIterable {
     case me
     case you
     case all
+    var description:String {
+        switch self {
+        case .me: return "自分に送る"
+        case .you: return "友だちに送る"
+        case .all: return "全員に送る"
+        }
+    }
 }
 struct Letter {
     var title: String
