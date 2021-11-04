@@ -30,7 +30,8 @@ class UserProfileController: UIViewController {
     @objc private func didTapLogoutButton() {
         do {
             try Auth.auth().signOut()
-            
+            let vc = tabBarController?.viewControllers?[0]
+            tabBarController?.selectedViewController = vc
         } catch {
             print(error)
         }
