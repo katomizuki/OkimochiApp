@@ -35,6 +35,15 @@ class LoginController: UIViewController {
     // MARK: - IBAction
     @IBAction func didTapLoginButton(_ sender: Any) {
         print(#function)
+        guard let email = viewModel.email else { return }
+        guard let password = viewModel.password else { return }
+        AuthService.login(email: email, password: password) { result, error in
+            if let error = error {
+                print(error)
+                return
+            }
+//            self.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func gotoRegister(_ sender: Any) {
         print(#function)

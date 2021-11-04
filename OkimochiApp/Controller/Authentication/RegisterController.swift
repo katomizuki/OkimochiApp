@@ -1,4 +1,3 @@
-
 import UIKit
 
 class RegisterController: UIViewController {
@@ -60,6 +59,23 @@ class RegisterController: UIViewController {
         picker.allowsEditing = false
         present(picker, animated: true, completion: nil)
     }
+    @IBAction func didTapRegisterButton(_ sender: Any) {
+        print(#function)
+        guard let email = viewModel.email else { return }
+        guard let password = viewModel.password else { return }
+        guard let name = viewModel.name else { return }
+        guard let image = viewModel.image else { return }
+        print(email)
+        let credential = Credential(email: email, name: name, password: password, profileImage: image)
+        AuthService.register(credential: credential) { error in
+            if let error = error {
+                print(error)
+                return
+            }
+//            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
 // MARK: - TextFieldDelegate
 extension RegisterController: UITextFieldDelegate {
@@ -79,6 +95,7 @@ extension RegisterController:UIImagePickerControllerDelegate,UINavigationControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         imageButton.setImage(image, for: .normal)
+        viewModel.image = image
         dismiss(animated: true, completion: nil)
     }
 }

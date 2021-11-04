@@ -13,8 +13,8 @@ struct StorageServie {
                 return
             }
             ref.downloadURL { url, erorr in
-                if let error = error {
-                    print(erorr?.localizedDescription)
+                if let erorr = erorr {
+                    print(erorr)
                     return
                 }
                 guard  let urlString = url?.absoluteString else { return }

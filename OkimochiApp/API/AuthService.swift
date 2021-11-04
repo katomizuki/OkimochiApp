@@ -10,7 +10,7 @@ struct Credential {
 
 
 struct AuthService {
-    static func register(credential:Credential,completion:@escaping(Error)->Void) {
+    static func register(credential:Credential,completion:@escaping(Error?)->Void) {
         StorageServie.uploadImage(image: credential.profileImage) { urlString in
             Auth.auth().createUser(withEmail: credential.email, password: credential.email) { result, error in
                 if let error = error {
@@ -25,5 +25,8 @@ struct AuthService {
                 userRef.document(uid).setData(dic,completion: completion)
             }
         }
+    }
+    static func login(email:String,password:String,completion:AuthDataResultCallback?) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
 }

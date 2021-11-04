@@ -72,11 +72,20 @@
                         <outlet property="collectionView" destination="ZkU-Th-zW6" id="Oii-w5-rFN"/>
                         <outlet property="mapView" destination="JPn-bf-jcI" id="cNU-3D-6hJ"/>
                         <outlet property="tableView" destination="OGx-Fr-YAo" id="BHo-Lg-aQc"/>
+                        <segue destination="Z21-uY-F1O" kind="presentation" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="80.50974512743629"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="srG-vG-iG5">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginController" storyboardName="Auth" id="Z21-uY-F1O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OL-iR-tEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="-134"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kuj-wY-jkc">
@@ -84,6 +93,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JEA-3B-SxL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m9x-Y4-ktB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
