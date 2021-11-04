@@ -1,6 +1,7 @@
 import UIKit
-
+import FirebaseAuth
 class TimeLineController: UIViewController {
+    var user:User?
     private let collectionCell = "collectionCell"
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: UIView!
@@ -8,6 +9,15 @@ class TimeLineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        checkLogin()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "LoginController", sender: nil)
+            }
+        }
     }
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
@@ -17,6 +27,19 @@ class TimeLineController: UIViewController {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionCell)
         collectionView.collectionViewLayout = layout
     }
+    private func checkLogin() {
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "LoginController", sender: nil)
+            }
+        } else {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            UserService.fetchUser(uid: uid) { user in
+                self.user = user
+            }
+        }
+    }
+    
 }
 // MARK: - CollectionViewDelegate
 extension TimeLineController: UICollectionViewDelegate {

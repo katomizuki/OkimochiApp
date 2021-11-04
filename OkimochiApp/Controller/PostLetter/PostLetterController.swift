@@ -18,6 +18,7 @@ class PostLetterController: UIViewController {
         whoTypeTableView.isScrollEnabled = false
         whoTypeTableView.allowsMultipleSelection = false
     }
+
 }
 // MARK: - UITableViewDelegate
 extension PostLetterController: UITableViewDelegate {

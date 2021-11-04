@@ -18,6 +18,7 @@
 		D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F422733EF1200FBE5AF /* AuthService.swift */; };
 		D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F442733F5F300FBE5AF /* StorageService.swift */; };
 		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
+		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -67,6 +68,7 @@
 		D30E6F422733EF1200FBE5AF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D30E6F442733F5F300FBE5AF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
+		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				D30E6F422733EF1200FBE5AF /* AuthService.swift */,
 				D30E6F442733F5F300FBE5AF /* StorageService.swift */,
 				D30E6F462733F87D00FBE5AF /* Ref.swift */,
+				D30E6F482734031B00FBE5AF /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
+				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
 				D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */,
@@ -627,7 +631,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,7 +660,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

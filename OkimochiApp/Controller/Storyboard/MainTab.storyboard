@@ -72,7 +72,7 @@
                         <outlet property="collectionView" destination="ZkU-Th-zW6" id="Oii-w5-rFN"/>
                         <outlet property="mapView" destination="JPn-bf-jcI" id="cNU-3D-6hJ"/>
                         <outlet property="tableView" destination="OGx-Fr-YAo" id="BHo-Lg-aQc"/>
-                        <segue destination="Z21-uY-F1O" kind="presentation" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
+                        <segue destination="Z21-uY-F1O" kind="presentation" identifier="LoginController" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

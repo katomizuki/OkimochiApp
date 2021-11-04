@@ -1,5 +1,6 @@
 import UIKit
-
+import Firebase
+import FirebaseAuth
 class UserProfileController: UIViewController {
     private var viewModel:ProfileViewModel?
     @IBOutlet weak var profileCollectionView: UICollectionView!
@@ -9,6 +10,7 @@ class UserProfileController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearchButton))
         setupCollectionView()
         navigationItem.rightBarButtonItem?.tintColor = .systemOrange
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(didTapLogoutButton))
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {
@@ -24,6 +26,14 @@ class UserProfileController: UIViewController {
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "SearchFriendsController") as! SearchFriendsController
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    @objc private func didTapLogoutButton() {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch {
+            print(error)
+        }
     }
 }
 
