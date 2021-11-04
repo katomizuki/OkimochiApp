@@ -45,6 +45,4 @@ extension PostLetterController: UITableViewDataSource {
         cell.whoType = SendWhoType(rawValue: indexPath.row)
         return cell
     }
-
-    
 }

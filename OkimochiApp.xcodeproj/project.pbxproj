@@ -13,6 +13,7 @@
 		D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC2273228C100FBE5AF /* LetterMapController.swift */; };
 		D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */; };
 		D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */; };
+		D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -56,6 +57,7 @@
 		D30E6EC2273228C100FBE5AF /* LetterMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterMapController.swift; sourceTree = "<group>"; };
 		D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTimeController.swift; sourceTree = "<group>"; };
 		D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendController.swift; sourceTree = "<group>"; };
+		D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				D3810212272CF2CB003C7850 /* Assets.xcassets */,
 				D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */,
 				D3810217272CF2CB003C7850 /* Info.plist */,
+				D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */,
 			);
 			path = OkimochiApp;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				D3810211272CF2CA003C7850 /* Auth.storyboard in Resources */,
 				D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */,
 				D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */,
+				D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
