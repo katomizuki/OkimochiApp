@@ -3,6 +3,7 @@ import UIKit
 
 class RegisterController: UIViewController {
 
+    @IBOutlet weak var imageButton: UIButton!
     // MARK: - Properties
     @IBOutlet private weak var mailTextField: UITextField! {
         didSet {
@@ -44,12 +45,21 @@ class RegisterController: UIViewController {
         mailTextField.delegate = self
         passwordTextField.delegate = self
         nameTextField.delegate = self
+        imageButton.clipsToBounds = true
+        imageButton.layer.cornerRadius = 50
     }
     // MARK: - IBAction
     @IBAction private func gotoLogin(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func didTapImageButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false
+        present(picker, animated: true, completion: nil)
+    }
 }
 // MARK: - TextFieldDelegate
 extension RegisterController: UITextFieldDelegate {
@@ -63,5 +73,12 @@ extension RegisterController: UITextFieldDelegate {
         registerButton.isEnabled = viewModel.isValid
         registerButton.backgroundColor = viewModel.isValid ? .systemOrange : .systemGray
         return true
+    }
+}
+extension RegisterController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        imageButton.setImage(image, for: .normal)
+        dismiss(animated: true, completion: nil)
     }
 }

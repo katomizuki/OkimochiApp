@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40356B8C44FAFBF80E9960F /* Pods_OkimochiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD2CBD11212DF12E503117D /* Pods_OkimochiApp.framework */; };
 		D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */; };
 		D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */; };
 		D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC0273228B000FBE5AF /* LetterContentController.swift */; };
@@ -14,6 +15,9 @@
 		D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */; };
 		D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */; };
 		D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */; };
+		D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F422733EF1200FBE5AF /* AuthService.swift */; };
+		D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F442733F5F300FBE5AF /* StorageService.swift */; };
+		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -51,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C37A3416DA78F6B43EA59F64 /* Pods-OkimochiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.release.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.release.xcconfig"; sourceTree = "<group>"; };
+		CAD2CBD11212DF12E503117D /* Pods_OkimochiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkimochiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterWhoTypeCell.swift; sourceTree = "<group>"; };
 		D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterWhoTypeCell.xib; sourceTree = "<group>"; };
 		D30E6EC0273228B000FBE5AF /* LetterContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,9 @@
 		D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTimeController.swift; sourceTree = "<group>"; };
 		D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendController.swift; sourceTree = "<group>"; };
 		D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D30E6F422733EF1200FBE5AF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D30E6F442733F5F300FBE5AF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +103,7 @@
 		D3B91B31272E6D810048FC75 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		D3B91B33272E703A0048FC75 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		D3B91B34272E703A0048FC75 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,17 +111,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40356B8C44FAFBF80E9960F /* Pods_OkimochiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A79C92035B0B309CD072B67E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD2CBD11212DF12E503117D /* Pods_OkimochiApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA54CBA7C0FB471F020DC8D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */,
+				C37A3416DA78F6B43EA59F64 /* Pods-OkimochiApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D38101FD272CF2CA003C7850 = {
 			isa = PBXGroup;
 			children = (
 				D3810208272CF2CA003C7850 /* OkimochiApp */,
 				D3810207272CF2CA003C7850 /* Products */,
+				BA54CBA7C0FB471F020DC8D5 /* Pods */,
+				A79C92035B0B309CD072B67E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +216,9 @@
 		D3810221272CF2FC003C7850 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D30E6F422733EF1200FBE5AF /* AuthService.swift */,
+				D30E6F442733F5F300FBE5AF /* StorageService.swift */,
+				D30E6F462733F87D00FBE5AF /* Ref.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -291,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D381021A272CF2CB003C7850 /* Build configuration list for PBXNativeTarget "OkimochiApp" */;
 			buildPhases = (
+				F8A63623915E5C39CD7D739D /* [CP] Check Pods Manifest.lock */,
 				D3810202272CF2CA003C7850 /* Sources */,
 				D3810203272CF2CA003C7850 /* Frameworks */,
 				D3810204272CF2CA003C7850 /* Resources */,
+				30DCE58221792E02829EB2B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,6 +395,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30DCE58221792E02829EB2B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8A63623915E5C39CD7D739D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkimochiApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3810202272CF2CA003C7850 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -376,7 +453,9 @@
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
+				D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
+				D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
@@ -389,6 +468,7 @@
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
+				D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
@@ -536,6 +616,7 @@
 		};
 		D381021B272CF2CB003C7850 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,7 +627,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,6 +645,7 @@
 		};
 		D381021C272CF2CB003C7850 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37A3416DA78F6B43EA59F64 /* Pods-OkimochiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,7 +656,7 @@
 				INFOPLIST_FILE = OkimochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MainTab;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
