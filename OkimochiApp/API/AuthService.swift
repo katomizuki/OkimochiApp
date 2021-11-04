@@ -12,7 +12,7 @@ struct Credential {
 struct AuthService {
     static func register(credential:Credential,completion:@escaping(Error?)->Void) {
         StorageServie.uploadImage(image: credential.profileImage) { urlString in
-            Auth.auth().createUser(withEmail: credential.email, password: credential.email) { result, error in
+            Auth.auth().createUser(withEmail: credential.email, password: credential.password) { result, error in
                 if let error = error {
                     print(error)
                     return

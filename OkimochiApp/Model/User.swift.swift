@@ -10,7 +10,7 @@ struct User {
         self.uid = uid
         self.email = dic["email"] as? String ?? ""
         self.name = dic["name"] as? String ?? ""
-        if let urlString = dic["profileUrl"] as? String {
+        if let urlString = dic["profileImage"] as? String {
             if let url = URL(string: urlString) {
             self.profileUrl = url
             }

@@ -17,6 +17,7 @@ class UserProfileController: UIViewController {
         setupCollectionView()
         navigationItem.rightBarButtonItem?.tintColor = .systemOrange
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(didTapLogoutButton))
+        setupUserData()
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {

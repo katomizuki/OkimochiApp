@@ -1,7 +1,6 @@
 import UIKit
 
 class RegisterController: UIViewController {
-
     @IBOutlet weak var imageButton: UIButton!
     // MARK: - Properties
     @IBOutlet private weak var mailTextField: UITextField! {
@@ -61,11 +60,13 @@ class RegisterController: UIViewController {
     }
     @IBAction func didTapRegisterButton(_ sender: Any) {
         print(#function)
-        guard let email = viewModel.email else { return }
-        guard let password = viewModel.password else { return }
-        guard let name = viewModel.name else { return }
+        guard let email = mailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let name = nameTextField.text else { return }
         guard let image = viewModel.image else { return }
         print(email)
+        print(password)
+        print(name)
         let credential = Credential(email: email, name: name, password: password, profileImage: image)
         AuthService.register(credential: credential) { error in
             if let error = error {

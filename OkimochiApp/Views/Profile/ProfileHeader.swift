@@ -18,6 +18,7 @@ class ProfileHeader: UICollectionReusableView {
         didSet {
             profileImageView.layer.cornerRadius = 35
             profileImageView.layer.masksToBounds = true
+            profileImageView.contentMode = .scaleAspectFill
         }
     }
     @IBOutlet weak var orangeUnderLineConstaraint: NSLayoutConstraint!
@@ -34,11 +35,9 @@ class ProfileHeader: UICollectionReusableView {
     //　カスタムクラスに指定しているためinitは使えない。requiredinitは呼ばれる。why?
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("ssosos")
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        print("sss")
     }
     static func nib()->UINib {
         return UINib(nibName: "ProfileHeader", bundle: nil)
