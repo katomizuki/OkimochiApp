@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SDWebImage
 protocol ProfileHeaderDelegate: AnyObject {
     func didTapUpdateButton()
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
@@ -8,6 +9,11 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     static let id = "ProfileHeader"
     weak var delegate:ProfileHeaderDelegate?
+    var viewModel:ProfileHeaderViewModel? {
+        didSet {
+            setupUI()
+        }
+    }
     @IBOutlet weak var profileImageView: UIImageView! {
         didSet {
             profileImageView.layer.cornerRadius = 35
@@ -71,5 +77,9 @@ class ProfileHeader: UICollectionReusableView {
                 self.delegate?.didTapProfileOptionsButton(.fav)
             default: break
         }
+    }
+    private func setupUI() {
+        nameLabel.text = viewModel?.user.name
+        profileImageView.sd_setImage(with: viewModel?.user.profileUrl, completed: nil)
     }
 }

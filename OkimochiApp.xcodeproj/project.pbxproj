@@ -19,6 +19,7 @@
 		D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F442733F5F300FBE5AF /* StorageService.swift */; };
 		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
+		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -69,6 +70,7 @@
 		D30E6F442733F5F300FBE5AF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */,
 				D3B5F068272E876A006F6881 /* ProfileViewModel.swift */,
 				D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */,
+				D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */,
+				D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,

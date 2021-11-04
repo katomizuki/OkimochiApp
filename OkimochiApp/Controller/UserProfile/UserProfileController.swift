@@ -2,7 +2,13 @@ import UIKit
 import Firebase
 import FirebaseAuth
 class UserProfileController: UIViewController {
+    
     private var viewModel:ProfileViewModel?
+    var user:User? {
+        didSet {
+            profileCollectionView.reloadData()
+        }
+    }
     @IBOutlet weak var profileCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,12 @@ class UserProfileController: UIViewController {
         profileCollectionView.dataSource = self
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
+    }
+    private func setupUserData() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserService.fetchUser(uid: uid) { user in
+            self.user = user
+        }
     }
     @objc private func didTapSearchButton() {
         print(#function)
@@ -60,6 +72,9 @@ extension UserProfileController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id, for: indexPath) as? ProfileHeader else { fatalError() }
         header.delegate = self
+        if let user = user {
+            header.viewModel = ProfileHeaderViewModel(user: user)
+        }
         return header
     }
 }

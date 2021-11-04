@@ -42,7 +42,7 @@ class LoginController: UIViewController {
                 print(error)
                 return
             }
-//            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     @IBAction func gotoRegister(_ sender: Any) {
