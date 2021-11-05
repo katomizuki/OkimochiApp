@@ -20,6 +20,7 @@
 		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
 		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */; };
+		D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -71,6 +72,7 @@
 		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendCellViewModel.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				D3B5F068272E876A006F6881 /* ProfileViewModel.swift */,
 				D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */,
 				D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */,
+				D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
+				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,

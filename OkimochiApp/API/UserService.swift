@@ -9,8 +9,22 @@ struct UserService {
                 return
             }
             guard let dic = snapShot?.data() else { return }
-            let user = User(uid: uid, dic: dic)
+            let user = User(dic: dic)
             completion(user)
         }
+    }
+    static func fetchUsers(completion:@escaping([User])->Void) {
+        userRef.getDocuments { snapShot, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            guard let snapShot = snapShot else { return }
+            let users = snapShot.documents.map({ User(dic: $0.data()) })
+            completion(users)
+        }
+    }
+    static func saveMatch(me:User,you:User) {
+        matchRef.document(me.uid).collection("match_user").document(you.uid).setData([:])
     }
 }

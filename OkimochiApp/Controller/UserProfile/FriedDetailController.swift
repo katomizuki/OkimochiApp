@@ -1,5 +1,5 @@
 import UIKit
-
+import SDWebImage
 class FriedDetailController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -10,9 +10,10 @@ class FriedDetailController: UIViewController {
             friendImageView.layer.masksToBounds = true
         }
     }
+    var user:User?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
     }
     @IBAction func didTapDismissButton(_ sender: Any) {
         print(#function)
@@ -21,6 +22,10 @@ class FriedDetailController: UIViewController {
     
     @IBAction func didTapPlusFrinedButton(_ sender: Any) {
         print(#function)
+    }
+    private func setupUI() {
+        nameLabel.text = user?.name
+        friendImageView.sd_setImage(with: user?.profileUrl, completed: nil)
     }
     
   
