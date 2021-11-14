@@ -1,9 +1,15 @@
 import UIKit
 
 class PostLetterController: UIViewController {
- 
+    // MARK: Properties
     @IBOutlet weak var whoTypeTableView: UITableView!
-
+    @IBOutlet weak var nextButton: UIButton! {
+        didSet {
+            nextButton.layer.cornerRadius = 15
+            nextButton.layer.masksToBounds = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -14,11 +20,16 @@ class PostLetterController: UIViewController {
         whoTypeTableView.dataSource = self
         let nib = LetterWhoTypeCell.nib()
         whoTypeTableView.register(nib, forCellReuseIdentifier: LetterWhoTypeCell.id)
-        whoTypeTableView.rowHeight = 33
+        whoTypeTableView.rowHeight = 50
         whoTypeTableView.isScrollEnabled = false
         whoTypeTableView.allowsMultipleSelection = false
     }
 
+    @IBAction func didTapNextButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LetterContentController") as! LetterContentController
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 // MARK: - UITableViewDelegate
 extension PostLetterController: UITableViewDelegate {

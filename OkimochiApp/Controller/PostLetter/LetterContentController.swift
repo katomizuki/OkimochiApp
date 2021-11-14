@@ -1,29 +1,25 @@
-//
-//  LetterContentController.swift
-//  OkimochiApp
-//
-//  Created by ミズキ on 2021/11/03.
-//
 
 import UIKit
 
 class LetterContentController: UIViewController {
 
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var nextButton: UIButton! {
+        didSet {
+            nextButton.layer.cornerRadius = 15
+            nextButton.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var titleTextFiled: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapNextButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LetterTimeController") as! LetterTimeController
+        navigationController?.pushViewController(controller, animated: true)
     }
-    */
-
+    
 }
