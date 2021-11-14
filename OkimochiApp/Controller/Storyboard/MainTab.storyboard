@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZkU-Th-zW6">
-                                <rect key="frame" x="20" y="488" width="335" height="120"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="478" width="375" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="XmZ-9A-oJF"/>
                                 </constraints>
@@ -40,27 +40,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPn-bf-jcI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JPn-bf-jcI" secondAttribute="trailing" id="1fa-SF-d33"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JPn-bf-jcI" secondAttribute="bottom" id="LmW-5P-WB6"/>
-                            <constraint firstItem="ZkU-Th-zW6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MLb-gw-1J8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZkU-Th-zW6" secondAttribute="trailing" constant="20" id="VZO-PR-6zX"/>
-                            <constraint firstItem="JPn-bf-jcI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XBo-l2-emX"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZkU-Th-zW6" secondAttribute="bottom" constant="10" id="h3A-om-KMt"/>
-                            <constraint firstItem="JPn-bf-jcI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ntC-Qn-2jm"/>
+                            <constraint firstItem="ZkU-Th-zW6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TY0-X7-MAE"/>
+                            <constraint firstItem="ZkU-Th-zW6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="em7-1s-wsK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZkU-Th-zW6" secondAttribute="bottom" constant="20" id="hsT-G5-7r8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="メイン" image="mappin.and.ellipse" catalog="system" id="dWu-cc-wKw"/>
                     <connections>
                         <outlet property="collectionView" destination="ZkU-Th-zW6" id="Oii-w5-rFN"/>
-                        <outlet property="mapView" destination="JPn-bf-jcI" id="cNU-3D-6hJ"/>
                         <segue destination="Z21-uY-F1O" kind="presentation" identifier="LoginController" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
                     </connections>
                 </viewController>
