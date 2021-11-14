@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseAuth
+import MapKit
 import GoogleMaps
 class TimeLineController: UIViewController {
     var user:User?
