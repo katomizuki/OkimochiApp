@@ -14,4 +14,5 @@ pod 'SDWebImage', '~> 5.0'
 pod 'PKHUD', '~> 5.0'
 pod 'lottie-ios'
 pod 'GoogleMaps'
+pod 'GooglePlaces'
 end

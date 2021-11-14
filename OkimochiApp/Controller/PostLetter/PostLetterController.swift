@@ -12,7 +12,8 @@ class PostLetterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        navigationItem.backButtonDisplayMode = .minimal
+        
         setupTableView()
     }
     private func setupTableView() {

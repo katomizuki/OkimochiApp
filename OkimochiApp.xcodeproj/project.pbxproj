@@ -21,6 +21,10 @@
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
 		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */; };
 		D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */; };
+		D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */; };
+		D312C1E5274129FF00DF7E83 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E4274129FF00DF7E83 /* Place.swift */; };
+		D312C1E727412A9000DF7E83 /* PlaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E627412A9000DF7E83 /* PlaceError.swift */; };
+		D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E82741352200DF7E83 /* ResultsMapController.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -73,6 +77,10 @@
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendCellViewModel.swift; sourceTree = "<group>"; };
+		D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceManager.swift; sourceTree = "<group>"; };
+		D312C1E4274129FF00DF7E83 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D312C1E627412A9000DF7E83 /* PlaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceError.swift; sourceTree = "<group>"; };
+		D312C1E82741352200DF7E83 /* ResultsMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsMapController.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -141,6 +149,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D312C1E12741280C00DF7E83 /* GoogleAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */,
+			);
+			path = GoogleAPI;
+			sourceTree = "<group>";
+		};
 		D38101FD272CF2CA003C7850 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +178,7 @@
 		D3810208272CF2CA003C7850 /* OkimochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				D312C1E12741280C00DF7E83 /* GoogleAPI */,
 				D3810222272CF300003C7850 /* Utility */,
 				D3810221272CF2FC003C7850 /* API */,
 				D3810220272CF2F6003C7850 /* Controller */,
@@ -192,6 +209,8 @@
 			children = (
 				D3810241272D1991003C7850 /* User.swift.swift */,
 				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
+				D312C1E4274129FF00DF7E83 /* Place.swift */,
+				D312C1E627412A9000DF7E83 /* PlaceError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +305,7 @@
 				D30E6EC2273228C100FBE5AF /* LetterMapController.swift */,
 				D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */,
 				D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */,
+				D312C1E82741352200DF7E83 /* ResultsMapController.swift */,
 			);
 			path = PostLetter;
 			sourceTree = "<group>";
@@ -469,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D312C1E727412A9000DF7E83 /* PlaceError.swift in Sources */,
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
 				D381022B272D0359003C7850 /* Views+Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
@@ -478,10 +499,12 @@
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */,
 				D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */,
+				D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
 				D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */,
+				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
 				D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
@@ -493,6 +516,7 @@
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
+				D312C1E5274129FF00DF7E83 /* Place.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
