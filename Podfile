@@ -13,4 +13,5 @@ pod 'Firebase/Core'
 pod 'SDWebImage', '~> 5.0'
 pod 'PKHUD', '~> 5.0'
 pod 'lottie-ios'
+pod 'GoogleMaps'
 end

@@ -3,7 +3,6 @@ import FirebaseAuth
 class TimeLineController: UIViewController {
     var user:User?
     private let collectionCell = "collectionCell"
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {

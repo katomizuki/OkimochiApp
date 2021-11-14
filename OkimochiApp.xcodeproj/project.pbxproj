@@ -38,8 +38,8 @@
 		D3810213272CF2CB003C7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3810212272CF2CB003C7850 /* Assets.xcassets */; };
 		D3810216272CF2CB003C7850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810214272CF2CB003C7850 /* LaunchScreen.storyboard */; };
 		D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810224272CF4E0003C7850 /* RegisterController.swift */; };
-		D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810226272CFDD9003C7850 /* Anchor-Extension.swift.swift */; };
-		D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022A272D0359003C7850 /* Views-Extension.swift.swift */; };
+		D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810226272CFDD9003C7850 /* Anchor+Extension.swift.swift */; };
+		D381022B272D0359003C7850 /* Views+Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022A272D0359003C7850 /* Views+Extension.swift.swift */; };
 		D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */; };
 		D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */; };
 		D3810233272D0FFD003C7850 /* MainTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3810232272D0FFD003C7850 /* MainTab.storyboard */; };
@@ -92,8 +92,8 @@
 		D3810215272CF2CB003C7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3810217272CF2CB003C7850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3810224272CF4E0003C7850 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		D3810226272CFDD9003C7850 /* Anchor-Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchor-Extension.swift.swift"; sourceTree = "<group>"; };
-		D381022A272D0359003C7850 /* Views-Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views-Extension.swift.swift"; sourceTree = "<group>"; };
+		D3810226272CFDD9003C7850 /* Anchor+Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchor+Extension.swift.swift"; sourceTree = "<group>"; };
+		D381022A272D0359003C7850 /* Views+Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views+Extension.swift.swift"; sourceTree = "<group>"; };
 		D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift.swift; sourceTree = "<group>"; };
 		D381022E272D06E6003C7850 /* RegisterViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift.swift; sourceTree = "<group>"; };
 		D3810232272D0FFD003C7850 /* MainTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTab.storyboard; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		D3810228272CFE03003C7850 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D3810226272CFDD9003C7850 /* Anchor-Extension.swift.swift */,
-				D381022A272D0359003C7850 /* Views-Extension.swift.swift */,
+				D3810226272CFDD9003C7850 /* Anchor+Extension.swift.swift */,
+				D381022A272D0359003C7850 /* Views+Extension.swift.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -338,6 +338,7 @@
 				D3810203272CF2CA003C7850 /* Frameworks */,
 				D3810204272CF2CA003C7850 /* Resources */,
 				30DCE58221792E02829EB2B7 /* [CP] Embed Pods Frameworks */,
+				96CF4495AF51C3E5DC916977 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,6 +423,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96CF4495AF51C3E5DC916977 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F8A63623915E5C39CD7D739D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,7 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
-				D381022B272D0359003C7850 /* Views-Extension.swift.swift in Sources */,
+				D381022B272D0359003C7850 /* Views+Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
 				D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */,
 				D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */,
@@ -480,7 +498,7 @@
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */,
-				D3810227272CFDD9003C7850 /* Anchor-Extension.swift.swift in Sources */,
+				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
