@@ -2,6 +2,7 @@ import UIKit
 import FirebaseAuth
 import MapKit
 import GoogleMaps
+import CoreLocation
 class TimeLineController: UIViewController {
     var user:User?
     private let collectionCell = "collectionCell"
@@ -12,7 +13,7 @@ class TimeLineController: UIViewController {
         super.viewDidLoad()
         let bounds = UIScreen.main.bounds.size
         let frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        let mapView = GMSMapView(frame: frame)
+        let mapView = MKMapView(frame: frame)
         mapView.center = CGPoint(x:self.view.frame.width/2,y:self.view.frame.height/2)
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)

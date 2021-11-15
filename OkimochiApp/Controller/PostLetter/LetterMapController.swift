@@ -1,6 +1,9 @@
 import UIKit
-
+import CoreLocation
+import MapKit
 class LetterMapController: UIViewController {
+    // MARK: - Properties
+    @IBOutlet weak var mapView: MKMapView!
     var searchController = UISearchController(searchResultsController: ResultMapController())
     @IBOutlet weak var postLetterButton: UIButton! {
         didSet {
@@ -8,6 +11,7 @@ class LetterMapController: UIViewController {
             postLetterButton.layer.masksToBounds = true
         }
     }
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
@@ -22,7 +26,7 @@ class LetterMapController: UIViewController {
             navigationItem.hidesSearchBarWhenScrolling = true
         }
     }
-    
+    // MARK: - IBAction
     @IBAction func didTapPostLetterButton(_ sender: Any) {
         print(#function)
     }
@@ -31,10 +35,12 @@ class LetterMapController: UIViewController {
 extension LetterMapController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(#function)
-        
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
-        let resultVC = searchController.searchResultsUpdater as? ResultMapController else { return }
+        let resultVC = searchController.searchResultsController as? ResultMapController else {
+            return }
+        if query.count <= 3 { return }
+        resultVC.delegate = self
         GooglePlacesManager.shared.findPlaces(query: query) { results in
             switch results {
             case .success(let places):
@@ -46,5 +52,20 @@ extension LetterMapController: UISearchResultsUpdating {
                 print(error)
             }
         }
+    }
+}
+// MARK: - ResultMapControllerDelegate
+extension LetterMapController: ResultMapControllerDelegate {
+    func didTapPlace(coordinator: CLLocationCoordinate2D) {
+        searchController.searchBar.resignFirstResponder()
+        let annotions = mapView.annotations
+        mapView.removeAnnotations(annotions)
+        print(#function)
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinator
+        mapView.addAnnotation(pin)
+        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let region = MKCoordinateRegion(center: coordinator, span: span)
+        mapView.setRegion(region, animated: true)
     }
 }

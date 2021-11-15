@@ -1,10 +1,3 @@
-//
-//  GooglePlaceManager.swift
-//  OkimochiApp
-//
-//  Created by ミズキ on 2021/11/14.
-//
-
 import Foundation
 import GooglePlaces
 import CoreLocation
@@ -35,7 +28,7 @@ final class GooglePlacesManager {
                           placeFields: .coordinate,
                           sessionToken: nil) { place, error in
             guard let place = place, error == nil else {
-                completion(.failure(Googl))
+                completion(.failure(PlacesError.failedToCoordinator2D))
                 return
             }
             let coordinatate = CLLocationCoordinate2D(latitude: place.coordinate.latitude,
