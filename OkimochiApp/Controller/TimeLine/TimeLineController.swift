@@ -59,12 +59,18 @@ class TimeLineController: UIViewController {
         locationManager.delegate = self
         mapView.userTrackingMode = .followWithHeading
     }
-    @IBAction func unwind(_ unwindSegue: UIStoryboardSegue) {
-        print(#function,"ss")
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        print(#function)
+        let storyboard = UIStoryboard(name: "MainTab", bundle: nil)
+        guard let tabController = storyboard.instantiateInitialViewController() as? UITabBarController else { return }
+        print(tabController)
         let segue = UnwindSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
         segue.perform()
     }
-    
+    @IBAction func prepareForUnwind(unwindSegue :UIStoryboardSegue) {
+        print(#function)
+
+    }
 }
 // MARK: - CollectionViewDelegate
 extension TimeLineController: UICollectionViewDelegate {
