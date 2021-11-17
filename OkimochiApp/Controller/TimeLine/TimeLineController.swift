@@ -57,7 +57,6 @@ class TimeLineController: UIViewController {
     }
     private func checkLocationAndAddPin() {
         locationManager.delegate = self
-//        mapView.delegate = self
         mapView.userTrackingMode = .followWithHeading
     }
 }
@@ -96,10 +95,6 @@ extension TimeLineController: CLLocationManagerDelegate {
                                         longitudeDelta: 0.01)
             let region = MKCoordinateRegion(center: center, span: span)
             mapView.setRegion(region, animated: true)
-//            let pin = MKPointAnnotation()
-//            pin.coordinate = center
-//            pin.title = "現在地"
-//            mapView.addAnnotation(pin)
             mapView.setCenter(mapView.userLocation.coordinate, animated: true)
             
         }
@@ -111,7 +106,6 @@ extension TimeLineController: CLLocationManagerDelegate {
              case .restricted, .denied:
                  break
              case .authorizedAlways, .authorizedWhenInUse:
-                 print("sss")
                  manager.startUpdatingLocation()
                  break
              default:

@@ -53,11 +53,12 @@
                     <connections>
                         <outlet property="collectionView" destination="ZkU-Th-zW6" id="Oii-w5-rFN"/>
                         <segue destination="Z21-uY-F1O" kind="presentation" identifier="LoginController" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
+                        <segue destination="CLs-dT-2xI" kind="show" id="tmI-i7-ARG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="80.50974512743629"/>
+            <point key="canvasLocation" x="1106" y="93"/>
         </scene>
         <!--Auth-->
         <scene sceneID="srG-vG-iG5">
@@ -66,6 +67,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4OL-iR-tEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740" y="-134"/>
+        </scene>
+        <!--Current Letter Detail Controller-->
+        <scene sceneID="P7J-Lh-dj0">
+            <objects>
+                <viewController storyboardIdentifier="CurrentLetterDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CLs-dT-2xI" customClass="CurrentLetterDetailController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VW5-YL-7Zj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UMJ-SV-QpP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f3x-DF-x45"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWe-BW-f8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="-612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kuj-wY-jkc">
