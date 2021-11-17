@@ -57,7 +57,7 @@ class TimeLineController: UIViewController {
     }
     private func checkLocationAndAddPin() {
         locationManager.delegate = self
-        mapView.delegate = self
+//        mapView.delegate = self
         mapView.userTrackingMode = .followWithHeading
     }
 }
@@ -120,6 +120,3 @@ extension TimeLineController: CLLocationManagerDelegate {
          }
 }
 // MARK: - MKMapViewDelegate
-extension TimeLineController: MKMapViewDelegate {
-   
-}
