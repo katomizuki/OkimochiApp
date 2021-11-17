@@ -19,6 +19,9 @@ class CustomSegue:UIStoryboardSegue {
         } completion: { result in
             toVC.modalPresentationStyle = .fullScreen
             fromVC.present(toVC, animated: false, completion: nil)
+            print(#function)
         }
     }
 }
+
+

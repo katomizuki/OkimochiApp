@@ -59,15 +59,18 @@ class TimeLineController: UIViewController {
         locationManager.delegate = self
         mapView.userTrackingMode = .followWithHeading
     }
+    @IBAction func unwind(_ unwindSegue: UIStoryboardSegue) {
+        print(#function,"ss")
+        let segue = UnwindSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
+        segue.perform()
+    }
+    
 }
 // MARK: - CollectionViewDelegate
 extension TimeLineController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-        let storyboard:UIStoryboard = UIStoryboard(name: "MainTab", bundle: nil)
-        guard let controller = storyboard.instantiateViewController(withIdentifier: "OpenLetterController") as? OpenLetterController else { return }
         performSegue(withIdentifier: "OpenLetterController", sender: nil)
-        
     }
 }
 // MARK: - CollectionViewDataSource

@@ -84,12 +84,13 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpb-JX-NnO">
-                                <rect key="frame" x="264" y="206" width="67" height="31"/>
+                                <rect key="frame" x="264" y="206" width="64" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="didTapDismissButton:" destination="CLs-dT-2xI" eventType="touchUpInside" id="Rp5-cl-z8J"/>
+                                    <action selector="prepareForUnwindWithSegue:" destination="CLs-dT-2xI" eventType="touchUpInside" id="PXd-qd-yh9"/>
+                                    <segue destination="dBb-bk-tPa" kind="unwind" identifier="exit" customClass="UnwindSegue" customModule="OkimochiApp" customModuleProvider="target" unwindAction="unwind:" id="uP7-4A-isH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +100,7 @@
                     <navigationItem key="navigationItem" id="f3x-DF-x45"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWe-BW-f8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dBb-bk-tPa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1104.8" y="-635.53223388305855"/>
         </scene>

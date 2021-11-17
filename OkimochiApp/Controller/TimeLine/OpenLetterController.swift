@@ -9,9 +9,11 @@ class OpenLetterController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func didTapDismissButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func prepareForUnwind(segue :UIStoryboardSegue) {
+        print(#function)
+        performSegue(withIdentifier: "exit", sender: nil)
     }
+    
     
     
 
