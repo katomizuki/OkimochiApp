@@ -29,6 +29,9 @@ class LetterMapController: UIViewController {
     // MARK: - IBAction
     @IBAction func didTapPostLetterButton(_ sender: Any) {
         print(#function)
+        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "FinishLetterController") as? FinishLetterController else { return }
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 // MARK: - UISearchResultsUpdating
