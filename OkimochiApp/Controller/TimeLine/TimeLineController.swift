@@ -64,6 +64,10 @@ class TimeLineController: UIViewController {
 extension TimeLineController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
+        let storyboard:UIStoryboard = UIStoryboard(name: "MainTab", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "OpenLetterController") as? OpenLetterController else { return }
+        performSegue(withIdentifier: "OpenLetterController", sender: nil)
+        
     }
 }
 // MARK: - CollectionViewDataSource

@@ -53,7 +53,7 @@
                     <connections>
                         <outlet property="collectionView" destination="ZkU-Th-zW6" id="Oii-w5-rFN"/>
                         <segue destination="Z21-uY-F1O" kind="presentation" identifier="LoginController" modalPresentationStyle="fullScreen" id="wbl-fh-ON4"/>
-                        <segue destination="CLs-dT-2xI" kind="show" id="tmI-i7-ARG"/>
+                        <segue destination="CLs-dT-2xI" kind="custom" identifier="OpenLetterController" customClass="CustomSegue" customModule="OkimochiApp" customModuleProvider="target" id="hMW-6X-8a5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,13 +68,31 @@
             </objects>
             <point key="canvasLocation" x="1740" y="-134"/>
         </scene>
-        <!--Current Letter Detail Controller-->
+        <!--Open Letter Controller-->
         <scene sceneID="P7J-Lh-dj0">
             <objects>
-                <viewController storyboardIdentifier="CurrentLetterDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CLs-dT-2xI" customClass="CurrentLetterDetailController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpenLetterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CLs-dT-2xI" customClass="OpenLetterController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VW5-YL-7Zj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4S-tM-URn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="DpQ-gX-0hf"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpb-JX-NnO">
+                                <rect key="frame" x="264" y="206" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapDismissButton:" destination="CLs-dT-2xI" eventType="touchUpInside" id="Rp5-cl-z8J"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UMJ-SV-QpP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -82,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWe-BW-f8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="-612"/>
+            <point key="canvasLocation" x="1104.8" y="-635.53223388305855"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kuj-wY-jkc">
