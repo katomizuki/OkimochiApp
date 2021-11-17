@@ -28,6 +28,7 @@
 		D312C2AA2744BFC300DF7E83 /* OpenLetterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C2A92744BFC300DF7E83 /* OpenLetterController.swift */; };
 		D312C2AE2744C90200DF7E83 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C2AD2744C90200DF7E83 /* CustomSegue.swift */; };
 		D312C2B02744D29F00DF7E83 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C2AF2744D29F00DF7E83 /* UnwindSegue.swift */; };
+		D312C2B22744F2C500DF7E83 /* FinishLetterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C2B12744F2C500DF7E83 /* FinishLetterController.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */; };
@@ -87,6 +88,7 @@
 		D312C2A92744BFC300DF7E83 /* OpenLetterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterController.swift; sourceTree = "<group>"; };
 		D312C2AD2744C90200DF7E83 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		D312C2AF2744D29F00DF7E83 /* UnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		D312C2B12744F2C500DF7E83 /* FinishLetterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishLetterController.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */,
 				D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */,
 				D312C1E82741352200DF7E83 /* ResultsMapController.swift */,
+				D312C2B12744F2C500DF7E83 /* FinishLetterController.swift */,
 			);
 			path = PostLetter;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
+				D312C2B22744F2C500DF7E83 /* FinishLetterController.swift in Sources */,
 				D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */,
 				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,

@@ -312,11 +312,28 @@
                     <connections>
                         <outlet property="mapView" destination="vwS-HA-qQz" id="Gq3-hh-gEc"/>
                         <outlet property="postLetterButton" destination="aX6-Zi-5SD" id="Rlx-g7-Csx"/>
+                        <segue destination="ayK-IQ-fgL" kind="show" id="he7-JR-ZIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymk-nc-HIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3199" y="98"/>
+        </scene>
+        <!--Finish Letter Controller-->
+        <scene sceneID="3vR-hK-gmx">
+            <objects>
+                <viewController storyboardIdentifier="FinishLetterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ayK-IQ-fgL" customClass="FinishLetterController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PaH-Og-m8p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KCD-ke-gDH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p3K-e9-wim"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfP-NI-prZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4030" y="98"/>
         </scene>
         <!--Result Map Controller-->
         <scene sceneID="Ru4-XV-TDj">
