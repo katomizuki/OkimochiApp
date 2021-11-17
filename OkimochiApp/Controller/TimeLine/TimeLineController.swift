@@ -9,16 +9,15 @@ class TimeLineController: UIViewController {
     private let collectionCell = "collectionCell"
     @IBOutlet weak var collectionView: UICollectionView!
     private let locationManager = CLLocationManager()
-    private lazy var mapView:MKMapView = {
-        let bounds = UIScreen.main.bounds.size
-        let frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        let mapView = MKMapView(frame: frame)
-        mapView.center = CGPoint(x:self.view.frame.width/2,y:self.view.frame.height/2)
-        return mapView
-    }()
+    var mapView:MKMapView!
+  
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bounds = UIScreen.main.bounds.size
+        let frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+        mapView = MKMapView(frame: frame)
+        mapView.center = CGPoint(x:self.view.frame.width/2,y:self.view.frame.height/2)
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
         setupCollectionView()
@@ -61,11 +60,11 @@ class TimeLineController: UIViewController {
     }
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         print(#function)
-        let storyboard = UIStoryboard(name: "MainTab", bundle: nil)
-        guard let tabController = storyboard.instantiateInitialViewController() as? UITabBarController else { return }
-        print(tabController)
-        let segue = UnwindSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
-        segue.perform()
+//        let storyboard = UIStoryboard(name: "MainTab", bundle: nil)
+//        guard let tabController = storyboard.instantiateInitialViewController() as? UITabBarController else { return }
+//        print(tabController)
+//        let segue = UnwindSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
+//        segue.perform()
     }
     @IBAction func prepareForUnwind(unwindSegue :UIStoryboardSegue) {
         print(#function)

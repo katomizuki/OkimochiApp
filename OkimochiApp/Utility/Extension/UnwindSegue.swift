@@ -11,7 +11,6 @@ class UnwindSegue:UIStoryboardSegue {
     func scale() {
         let storyboard = UIStoryboard(name: "MainTab", bundle: nil)
         guard let tabController = storyboard.instantiateInitialViewController() as? UITabBarController else { return }
-//        let toVC = self.destination
         let fromVC = self.source
         fromVC.view.superview?.insertSubview(tabController.view, at: 0)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
