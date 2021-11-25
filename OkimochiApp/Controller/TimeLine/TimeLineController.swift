@@ -14,6 +14,7 @@ class TimeLineController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        TestService.getUser()
         let bounds = UIScreen.main.bounds.size
         let frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
         mapView = MKMapView(frame: frame)

@@ -485,8 +485,9 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.0)
+  - JWTDecode (2.6.3)
+  - KeychainSwift (19.0.0)
   - leveldb-library (1.22.1)
-  - lottie-ios (3.2.3)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -505,7 +506,8 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleMaps
   - GooglePlaces
-  - lottie-ios
+  - JWTDecode (~> 2.6)
+  - KeychainSwift (~> 19.0)
   - PKHUD (~> 5.0)
   - SDWebImage (~> 5.0)
 
@@ -529,8 +531,9 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - JWTDecode
+    - KeychainSwift
     - leveldb-library
-    - lottie-ios
     - nanopb
     - PKHUD
     - PromisesObjC
@@ -555,13 +558,14 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  JWTDecode: 33e5e26e5ddbd21b2065820894c08fef0cad9509
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
-  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
 
-PODFILE CHECKSUM: 2790742f30c4614534fa806e5959f21bd1d6353e
+PODFILE CHECKSUM: 68946c02271190b1b2bae44f35d2c84164b9df55
 
 COCOAPODS: 1.11.2

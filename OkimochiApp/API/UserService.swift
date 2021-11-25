@@ -1,5 +1,6 @@
 import Foundation
 import FirebaseFirestore
+import Alamofire
 struct UserService {
     
     static func fetchUser(uid:String,completion:@escaping(User)->Void) {
