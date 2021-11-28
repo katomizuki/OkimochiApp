@@ -1,6 +1,5 @@
 import UIKit
-import Firebase
-import FirebaseAuth
+
 class UserProfileController: UIViewController {
     
     private var viewModel:ProfileViewModel?
@@ -29,10 +28,7 @@ class UserProfileController: UIViewController {
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
     }
     private func setupUserData() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        UserService.fetchUser(uid: uid) { user in
-//            self.user = user
-//        }
+   
     }
     @objc private func didTapSearchButton() {
         print(#function)
@@ -41,13 +37,13 @@ class UserProfileController: UIViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     @objc private func didTapLogoutButton() {
-        do {
-            try Auth.auth().signOut()
-            let vc = tabBarController?.viewControllers?[0]
-            tabBarController?.selectedViewController = vc
-        } catch {
-            print(error)
-        }
+//        do {
+//            try Auth.auth().signOut()
+//            let vc = tabBarController?.viewControllers?[0]
+//            tabBarController?.selectedViewController = vc
+//        } catch {
+//            print(error)
+//        }
     }
 }
 

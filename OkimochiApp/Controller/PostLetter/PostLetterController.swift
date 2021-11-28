@@ -2,8 +2,8 @@ import UIKit
 
 class PostLetterController: UIViewController {
     // MARK: Properties
-    @IBOutlet weak var whoTypeTableView: UITableView!
-    @IBOutlet weak var nextButton: UIButton! {
+    @IBOutlet private weak var whoTypeTableView: UITableView!
+    @IBOutlet private weak var nextButton: UIButton! {
         didSet {
             nextButton.layer.cornerRadius = 15
             nextButton.layer.masksToBounds = true
@@ -26,7 +26,7 @@ class PostLetterController: UIViewController {
         whoTypeTableView.allowsMultipleSelection = false
     }
 
-    @IBAction func didTapNextButton(_ sender: Any) {
+    @IBAction private func didTapNextButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LetterContentController") as! LetterContentController
         navigationController?.pushViewController(controller, animated: true)

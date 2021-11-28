@@ -4,7 +4,7 @@ import CoreLocation
 protocol ResultMapControllerDelegate:AnyObject {
     func didTapPlace(coordinator: CLLocationCoordinate2D)
 }
-class ResultMapController: UITableViewController {
+final class ResultMapController: UITableViewController {
     // MARK: - Properties
     private var places = [Place]()
     weak var delegate: ResultMapControllerDelegate?

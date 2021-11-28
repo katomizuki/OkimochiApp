@@ -1,6 +1,6 @@
 import UIKit
 
-class FinishLetterController: UIViewController {
+final class FinishLetterController: UIViewController {
     // MARK: - Properties
     @IBOutlet private var letterImageView: UIImageView!
     // MARK: - Lifecycle
@@ -9,7 +9,7 @@ class FinishLetterController: UIViewController {
         shakeLetter()
     }
     // MARK: -  IBAction
-    @IBAction func didTapfinishButton(_ sender: Any) {
+    @IBAction private func didTapfinishButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     func shakeLetter() {

@@ -1,9 +1,9 @@
 import UIKit
 
-class LetterFriendController: UIViewController {
+final class LetterFriendController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var navigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()

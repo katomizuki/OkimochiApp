@@ -1,5 +1,4 @@
 import UIKit
-import FirebaseAuth
 import MapKit
 //import GoogleMaps
 import CoreLocation
@@ -26,11 +25,11 @@ class TimeLineController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if Auth.auth().currentUser == nil {
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "LoginController", sender: nil)
-            }
-        }
+//        if Auth.auth().currentUser == nil {
+//            DispatchQueue.main.async {
+//                self.performSegue(withIdentifier: "LoginController", sender: nil)
+//            }
+//        }
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {
@@ -43,15 +42,16 @@ class TimeLineController: UIViewController {
     }
     // MARK: - checkMethod
     private func checkLogin() {
-        if Auth.auth().currentUser == nil {
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "LoginController", sender: nil)
+        guard let token = UserRepositry.shared.getToken() else { return }
+        UserService.getUser(token: token) { result in
+            switch result {
+            case .success(let user):
+                self.user = user
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "LoginController", sender: nil)
+                }
             }
-        } else {
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-//            UserService.fetchUser(uid: uid) { user in
-//                self.user = user
-//            }
         }
     }
     private func checkLocationAndAddPin() {

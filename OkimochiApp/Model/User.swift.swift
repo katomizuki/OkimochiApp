@@ -1,15 +1,15 @@
 import Foundation
 import UIKit
-import FirebaseAuth
-struct User {
+
+struct User:Codable {
     var name: String
     var email: String
     var profileUrl:URL?
     var uid: String
     var haveLetters = [Letter]()
-    var isCurrentUser:Bool {
-        return Auth.auth().currentUser?.uid == uid
-    }
+//    var isCurrentUser:Bool {
+//        return Auth.auth().currentUser?.uid == uid
+//    }
     var isReadyMatch = false
     var isFriend = false
     init(dic: [String:Any]) {

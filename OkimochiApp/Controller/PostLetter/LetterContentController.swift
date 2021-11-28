@@ -1,10 +1,10 @@
 
 import UIKit
 
-class LetterContentController: UIViewController {
+final class LetterContentController: UIViewController {
 
     // MARK: - Properties
-    @IBOutlet weak var contentTextView: UITextView! {
+    @IBOutlet private weak var contentTextView: UITextView! {
         didSet {
             contentTextView.layer.cornerRadius = 15
             contentTextView.layer.masksToBounds = true
@@ -12,7 +12,7 @@ class LetterContentController: UIViewController {
             contentTextView.layer.borderWidth = 2
         }
     }
-    @IBOutlet weak var nextButton: UIButton! {
+    @IBOutlet private weak var nextButton: UIButton! {
         didSet {
             nextButton.layer.cornerRadius = 15
             nextButton.layer.masksToBounds = true
@@ -25,7 +25,7 @@ class LetterContentController: UIViewController {
         label.font = .systemFont(ofSize: 16)
         return label
     }()
-    @IBOutlet weak var titleTextFiled: UITextField! {
+    @IBOutlet private weak var titleTextFiled: UITextField! {
         didSet {
             titleTextFiled.layer.cornerRadius = 15
             titleTextFiled.layer.masksToBounds = true
@@ -44,7 +44,7 @@ class LetterContentController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeTextView), name: UITextView.textDidChangeNotification, object: nil)
     }
     
-    @IBAction func didTapNextButton(_ sender: Any) {
+    @IBAction private func didTapNextButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LetterTimeController") as! LetterTimeController
         navigationController?.pushViewController(controller, animated: true)

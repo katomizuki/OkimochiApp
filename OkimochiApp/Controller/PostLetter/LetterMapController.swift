@@ -1,11 +1,11 @@
 import UIKit
 import CoreLocation
 import MapKit
-class LetterMapController: UIViewController {
+final class LetterMapController: UIViewController {
     // MARK: - Properties
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private weak var mapView: MKMapView!
     var searchController = UISearchController(searchResultsController: ResultMapController())
-    @IBOutlet weak var postLetterButton: UIButton! {
+    @IBOutlet private weak var postLetterButton: UIButton! {
         didSet {
             postLetterButton.layer.cornerRadius = 15
             postLetterButton.layer.masksToBounds = true

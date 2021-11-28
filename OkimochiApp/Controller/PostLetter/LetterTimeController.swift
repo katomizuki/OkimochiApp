@@ -1,13 +1,13 @@
 import UIKit
 
-class LetterTimeController: UIViewController {
+final class LetterTimeController: UIViewController {
 
-    @IBOutlet weak var postTimePicker: UIDatePicker! {
+    @IBOutlet private weak var postTimePicker: UIDatePicker! {
         didSet {
             postTimePicker.locale = Locale(identifier: "ja_JP")
         }
     }
-    @IBOutlet weak var nextButton: UIButton! {
+    @IBOutlet private weak var nextButton: UIButton! {
         didSet {
             nextButton.layer.cornerRadius = 15
             nextButton.layer.masksToBounds = true
@@ -18,7 +18,7 @@ class LetterTimeController: UIViewController {
         navigationItem.backButtonDisplayMode = .minimal
     }
   
-    @IBAction func didTapNextButton(_ sender: Any) {
+    @IBAction private func didTapNextButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LetterMapController") as! LetterMapController
         navigationController?.pushViewController(controller, animated: true)
