@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B40356B8C44FAFBF80E9960F /* Pods_OkimochiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD2CBD11212DF12E503117D /* Pods_OkimochiApp.framework */; };
+		D3074C8B2753A1D300A84358 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8A2753A1D300A84358 /* Credential.swift */; };
+		D3074C8D2753A3F800A84358 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8C2753A3F800A84358 /* APIError.swift */; };
+		D3074C8F2753A61F00A84358 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8E2753A61F00A84358 /* AuthResponse.swift */; };
 		D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */; };
 		D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */; };
 		D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC0273228B000FBE5AF /* LetterContentController.swift */; };
@@ -15,7 +18,6 @@
 		D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */; };
 		D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */; };
 		D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */; };
-		D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F422733EF1200FBE5AF /* AuthService.swift */; };
 		D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F442733F5F300FBE5AF /* StorageService.swift */; };
 		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
@@ -60,7 +62,7 @@
 		D3810242272D1991003C7850 /* User.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810241272D1991003C7850 /* User.swift.swift */; };
 		D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810243272D1BE4003C7850 /* Letter.swift.swift */; };
 		D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5F068272E876A006F6881 /* ProfileViewModel.swift */; };
-		D3B72D23274A75F900253933 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B72D22274A75F800253933 /* TestService.swift */; };
+		D3B72D23274A75F900253933 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B72D22274A75F800253933 /* AuthService.swift */; };
 		D3B91B30272E6D5D0048FC75 /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */; };
 		D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B31272E6D810048FC75 /* ProfileHeader.swift */; };
 		D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B33272E703A0048FC75 /* ProfileCell.swift */; };
@@ -70,6 +72,9 @@
 /* Begin PBXFileReference section */
 		C37A3416DA78F6B43EA59F64 /* Pods-OkimochiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.release.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.release.xcconfig"; sourceTree = "<group>"; };
 		CAD2CBD11212DF12E503117D /* Pods_OkimochiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkimochiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3074C8A2753A1D300A84358 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		D3074C8C2753A3F800A84358 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D3074C8E2753A61F00A84358 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterWhoTypeCell.swift; sourceTree = "<group>"; };
 		D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterWhoTypeCell.xib; sourceTree = "<group>"; };
 		D30E6EC0273228B000FBE5AF /* LetterContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentController.swift; sourceTree = "<group>"; };
@@ -77,7 +82,6 @@
 		D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTimeController.swift; sourceTree = "<group>"; };
 		D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendController.swift; sourceTree = "<group>"; };
 		D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D30E6F422733EF1200FBE5AF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D30E6F442733F5F300FBE5AF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		D3810241272D1991003C7850 /* User.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift.swift; sourceTree = "<group>"; };
 		D3810243272D1BE4003C7850 /* Letter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift.swift; sourceTree = "<group>"; };
 		D3B5F068272E876A006F6881 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		D3B72D22274A75F800253933 /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
+		D3B72D22274A75F800253933 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
 		D3B91B31272E6D810048FC75 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		D3B91B33272E703A0048FC75 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -192,7 +196,6 @@
 			children = (
 				D312C1E12741280C00DF7E83 /* GoogleAPI */,
 				D3810222272CF300003C7850 /* Utility */,
-				D3810221272CF2FC003C7850 /* API */,
 				D3810220272CF2F6003C7850 /* Controller */,
 				D381021F272CF2EF003C7850 /* ViewModel */,
 				D381021E272CF2EA003C7850 /* Model */,
@@ -219,10 +222,14 @@
 		D381021E272CF2EA003C7850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3810221272CF2FC003C7850 /* API */,
 				D3810241272D1991003C7850 /* User.swift.swift */,
 				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
 				D312C1E4274129FF00DF7E83 /* Place.swift */,
 				D312C1E627412A9000DF7E83 /* PlaceError.swift */,
+				D3074C8A2753A1D300A84358 /* Credential.swift */,
+				D3074C8C2753A3F800A84358 /* APIError.swift */,
+				D3074C8E2753A61F00A84358 /* AuthResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,11 +262,10 @@
 		D3810221272CF2FC003C7850 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D30E6F422733EF1200FBE5AF /* AuthService.swift */,
 				D30E6F442733F5F300FBE5AF /* StorageService.swift */,
 				D30E6F462733F87D00FBE5AF /* Ref.swift */,
 				D30E6F482734031B00FBE5AF /* UserService.swift */,
-				D3B72D22274A75F800253933 /* TestService.swift */,
+				D3B72D22274A75F800253933 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -520,17 +526,18 @@
 				D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */,
 				D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */,
 				D375CB86272FDC250030CA79 /* UpdateProfileViewModel.swift in Sources */,
+				D3074C8D2753A3F800A84358 /* APIError.swift in Sources */,
 				D312C2AE2744C90200DF7E83 /* CustomSegue.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */,
 				D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */,
+				D3074C8F2753A61F00A84358 /* AuthResponse.swift in Sources */,
 				D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
 				D312C2B22744F2C500DF7E83 /* FinishLetterController.swift in Sources */,
-				D3B72D23274A75F900253933 /* TestService.swift in Sources */,
-				D30E6F432733EF1200FBE5AF /* AuthService.swift in Sources */,
+				D3B72D23274A75F900253933 /* AuthService.swift in Sources */,
 				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
 				D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */,
@@ -550,6 +557,7 @@
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */,
+				D3074C8B2753A1D300A84358 /* Credential.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,

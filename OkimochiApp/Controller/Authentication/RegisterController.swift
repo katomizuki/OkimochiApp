@@ -64,16 +64,14 @@ class RegisterController: UIViewController {
         guard let password = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
         guard let image = viewModel.image else { return }
-        print(email)
-        print(password)
-        print(name)
-        let credential = Credential(email: email, name: name, password: password, profileImage: image)
-        AuthService.register(credential: credential) { error in
-            if let error = error {
+        let credential = Credential(name: name, email: email, password: password)
+        AuthService.register(credential: credential) { result in
+            switch result {
+            case .success:
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
                 print(error)
-                return
             }
-            self.dismiss(animated: true, completion: nil)
         }
     }
     
