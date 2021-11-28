@@ -6,14 +6,10 @@ target 'OkimochiApp' do
   use_frameworks!
 
   # Pods for OkimochiApp
-pod 'Firebase/Firestore'
-pod 'Firebase/Auth'
-pod 'Firebase/Storage'
-pod 'Firebase/Core'
+
 pod 'SDWebImage', '~> 5.0'
 pod 'PKHUD', '~> 5.0'
 pod 'KeychainSwift', '~> 19.0'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
-pod 'JWTDecode', '~> 2.6'
 end

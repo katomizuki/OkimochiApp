@@ -37,14 +37,16 @@ class LoginController: UIViewController {
         print(#function)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-//        AuthService.login(email: email, password: password) { result, error in
-//            if let error = error {
-//                print(error)
-//                return
-//            }
-            self.dismiss(animated: true, completion: nil)
+        AuthService.login(email: email, password: password) { result in
+            switch result {
+            case .success(let authResponse):
+                UserRepositry.shared.saveToken(token: authResponse.token)
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                print(error)
+            }
         }
-//    }
+    }
     @IBAction func gotoRegister(_ sender: Any) {
         print(#function)
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)

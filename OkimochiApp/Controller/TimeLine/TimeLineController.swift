@@ -49,9 +49,9 @@ class TimeLineController: UIViewController {
             }
         } else {
             guard let uid = Auth.auth().currentUser?.uid else { return }
-            UserService.fetchUser(uid: uid) { user in
-                self.user = user
-            }
+//            UserService.fetchUser(uid: uid) { user in
+//                self.user = user
+//            }
         }
     }
     private func checkLocationAndAddPin() {

@@ -30,9 +30,9 @@ class UserProfileController: UIViewController {
     }
     private func setupUserData() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        UserService.fetchUser(uid: uid) { user in
-            self.user = user
-        }
+//        UserService.fetchUser(uid: uid) { user in
+//            self.user = user
+//        }
     }
     @objc private func didTapSearchButton() {
         print(#function)

@@ -34,10 +34,10 @@ class SearchFriendsController: UIViewController {
         tableView.rowHeight = 80
     }
     private func setupUserData() {
-        UserService.fetchUsers { users in
-            self.users = users
-            self.tableView.reloadData()
-        }
+//        UserService.fetchUsers { users in
+//            self.users = users
+//            self.tableView.reloadData()
+//        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriedDetailController" {

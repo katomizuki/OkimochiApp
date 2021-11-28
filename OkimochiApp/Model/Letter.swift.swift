@@ -1,5 +1,5 @@
 import Foundation
-enum SendWhoType: Int,CaseIterable {
+enum SendWhoType: Int,CaseIterable,Codable {
     case me
     case you
     case all
@@ -11,7 +11,7 @@ enum SendWhoType: Int,CaseIterable {
         }
     }
 }
-struct Letter {
+struct Letter:Codable {
     var title: String
     var text: String
     var isOpen = true

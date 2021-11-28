@@ -1,31 +1,16 @@
 import Foundation
 import FirebaseFirestore
 import Alamofire
+
 struct UserService {
-    
-    static func fetchUser(uid:String,completion:@escaping(User)->Void) {
-        userRef.document(uid).getDocument { snapShot, error in
-            if let error = error {
-                print(error)
-                return
+    //    Authorization
+    static func getUser(token:String) {
+            let baseURL = "https://kobajun029.sakura.ne.jp/laravel1/api/get_user"
+            let parameter:[String:Any] =
+            ["token": "\(token)"]
+            let headers:HTTPHeaders = ["Contenttype": "application/json"]
+            AF.request(baseURL, method: .get, parameters: parameter,headers: headers).responseJSON { response in
+
             }
-            guard let dic = snapShot?.data() else { return }
-            let user = User(dic: dic)
-            completion(user)
         }
-    }
-    static func fetchUsers(completion:@escaping([User])->Void) {
-        userRef.getDocuments { snapShot, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            guard let snapShot = snapShot else { return }
-            let users = snapShot.documents.map({ User(dic: $0.data()) })
-            completion(users)
-        }
-    }
-    static func saveMatch(me:User,you:User) {
-        matchRef.document(me.uid).collection("match_user").document(you.uid).setData([:])
-    }
 }

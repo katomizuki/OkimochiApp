@@ -11,6 +11,8 @@
 		D3074C8B2753A1D300A84358 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8A2753A1D300A84358 /* Credential.swift */; };
 		D3074C8D2753A3F800A84358 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8C2753A3F800A84358 /* APIError.swift */; };
 		D3074C8F2753A61F00A84358 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C8E2753A61F00A84358 /* AuthResponse.swift */; };
+		D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C912753A92E00A84358 /* UserRepositry.swift */; };
+		D3074C942753ACB400A84358 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074C932753ACB400A84358 /* PostService.swift */; };
 		D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */; };
 		D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */; };
 		D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC0273228B000FBE5AF /* LetterContentController.swift */; };
@@ -18,8 +20,6 @@
 		D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */; };
 		D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */; };
 		D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */; };
-		D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F442733F5F300FBE5AF /* StorageService.swift */; };
-		D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F462733F87D00FBE5AF /* Ref.swift */; };
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
 		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */; };
 		D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */; };
@@ -75,6 +75,8 @@
 		D3074C8A2753A1D300A84358 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		D3074C8C2753A3F800A84358 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		D3074C8E2753A61F00A84358 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D3074C912753A92E00A84358 /* UserRepositry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositry.swift; sourceTree = "<group>"; };
+		D3074C932753ACB400A84358 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		D30E6EBC2732245D00FBE5AF /* LetterWhoTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterWhoTypeCell.swift; sourceTree = "<group>"; };
 		D30E6EBD2732245D00FBE5AF /* LetterWhoTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterWhoTypeCell.xib; sourceTree = "<group>"; };
 		D30E6EC0273228B000FBE5AF /* LetterContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentController.swift; sourceTree = "<group>"; };
@@ -82,8 +84,6 @@
 		D30E6EC4273228D000FBE5AF /* LetterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTimeController.swift; sourceTree = "<group>"; };
 		D30E6EC627322A1F00FBE5AF /* LetterFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendController.swift; sourceTree = "<group>"; };
 		D30E6F402733ECE900FBE5AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D30E6F442733F5F300FBE5AF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		D30E6F462733F87D00FBE5AF /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendCellViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +165,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D3074C902753A91700A84358 /* UserRepositry */ = {
+			isa = PBXGroup;
+			children = (
+				D3074C912753A92E00A84358 /* UserRepositry.swift */,
+			);
+			path = UserRepositry;
+			sourceTree = "<group>";
+		};
 		D312C1E12741280C00DF7E83 /* GoogleAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +230,7 @@
 		D381021E272CF2EA003C7850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3074C902753A91700A84358 /* UserRepositry */,
 				D3810221272CF2FC003C7850 /* API */,
 				D3810241272D1991003C7850 /* User.swift.swift */,
 				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
@@ -262,10 +271,9 @@
 		D3810221272CF2FC003C7850 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D30E6F442733F5F300FBE5AF /* StorageService.swift */,
-				D30E6F462733F87D00FBE5AF /* Ref.swift */,
 				D30E6F482734031B00FBE5AF /* UserService.swift */,
 				D3B72D22274A75F800253933 /* AuthService.swift */,
+				D3074C932753ACB400A84358 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -522,6 +530,7 @@
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
 				D381022B272D0359003C7850 /* Views+Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
+				D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */,
 				D312C2AA2744BFC300DF7E83 /* OpenLetterController.swift in Sources */,
 				D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */,
 				D30E6EC3273228C100FBE5AF /* LetterMapController.swift in Sources */,
@@ -540,7 +549,6 @@
 				D3B72D23274A75F900253933 /* AuthService.swift in Sources */,
 				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
-				D30E6F472733F87D00FBE5AF /* Ref.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
@@ -548,6 +556,7 @@
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
+				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
 				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D312C1E5274129FF00DF7E83 /* Place.swift in Sources */,
@@ -556,7 +565,6 @@
 				D3B5F069272E876A006F6881 /* ProfileViewModel.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
-				D30E6F452733F5F300FBE5AF /* StorageService.swift in Sources */,
 				D3074C8B2753A1D300A84358 /* Credential.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
