@@ -25,11 +25,6 @@ class TimeLineController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        if Auth.auth().currentUser == nil {
-//            DispatchQueue.main.async {
-//                self.performSegue(withIdentifier: "LoginController", sender: nil)
-//            }
-//        }
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {
@@ -47,7 +42,7 @@ class TimeLineController: UIViewController {
             switch result {
             case .success(let user):
                 self.user = user
-            case .failure(let error):
+            case .failure:
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "LoginController", sender: nil)
                 }

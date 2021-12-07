@@ -135,7 +135,7 @@
                                     <constraint firstAttribute="height" constant="100" id="ttn-hx-pfm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="noImages"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ch"/>
                                 <connections>
                                     <action selector="didTapImageButton:" destination="Da5-NW-MWp" eventType="touchUpInside" id="2yU-zj-82F"/>
                                 </connections>
@@ -188,7 +188,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="noImages" width="340" height="340"/>
+        <image name="ch" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
