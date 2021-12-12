@@ -67,6 +67,11 @@
 		D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B31272E6D810048FC75 /* ProfileHeader.swift */; };
 		D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B33272E703A0048FC75 /* ProfileCell.swift */; };
 		D3B91B36272E703A0048FC75 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B34272E703A0048FC75 /* ProfileCell.xib */; };
+		D3C8A96D2764BADB008EFB53 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D3C8A96C2764BADB008EFB53 /* Realm */; };
+		D3C8A96F2764BADB008EFB53 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3C8A96E2764BADB008EFB53 /* RealmSwift */; };
+		D3C8A9722764BBCE008EFB53 /* LetterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9712764BBCE008EFB53 /* LetterObject.swift */; };
+		D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9742764BD26008EFB53 /* Keychain.swift */; };
+		D3C8A9772764C007008EFB53 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9762764C007008EFB53 /* UserObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +137,9 @@
 		D3B91B31272E6D810048FC75 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		D3B91B33272E703A0048FC75 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		D3B91B34272E703A0048FC75 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		D3C8A9712764BBCE008EFB53 /* LetterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterObject.swift; sourceTree = "<group>"; };
+		D3C8A9742764BD26008EFB53 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OkimochiApp/Model/realmData/Keychain.swift; sourceTree = SOURCE_ROOT; };
+		D3C8A9762764C007008EFB53 /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C8A96F2764BADB008EFB53 /* RealmSwift in Frameworks */,
+				D3C8A96D2764BADB008EFB53 /* Realm in Frameworks */,
 				B40356B8C44FAFBF80E9960F /* Pods_OkimochiApp.framework in Frameworks */,
 				D37E3163274CA51700E89E46 /* Alamofire in Frameworks */,
 			);
@@ -230,6 +240,8 @@
 		D381021E272CF2EA003C7850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3C8A9732764BD10008EFB53 /* Keychain */,
+				D3C8A9702764BBBD008EFB53 /* realmData */,
 				D3074C902753A91700A84358 /* UserRepositry */,
 				D3810221272CF2FC003C7850 /* API */,
 				D3810241272D1991003C7850 /* User.swift.swift */,
@@ -377,6 +389,23 @@
 			path = xibs;
 			sourceTree = "<group>";
 		};
+		D3C8A9702764BBBD008EFB53 /* realmData */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8A9712764BBCE008EFB53 /* LetterObject.swift */,
+				D3C8A9762764C007008EFB53 /* UserObject.swift */,
+			);
+			path = realmData;
+			sourceTree = "<group>";
+		};
+		D3C8A9732764BD10008EFB53 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8A9742764BD26008EFB53 /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +427,8 @@
 			name = OkimochiApp;
 			packageProductDependencies = (
 				D37E3162274CA51700E89E46 /* Alamofire */,
+				D3C8A96C2764BADB008EFB53 /* Realm */,
+				D3C8A96E2764BADB008EFB53 /* RealmSwift */,
 			);
 			productName = OkimochiApp;
 			productReference = D3810206272CF2CA003C7850 /* OkimochiApp.app */;
@@ -429,6 +460,7 @@
 			mainGroup = D38101FD272CF2CA003C7850;
 			packageReferences = (
 				D37E3161274CA51700E89E46 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D3C8A96B2764BADB008EFB53 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = D3810207272CF2CA003C7850 /* Products */;
 			projectDirPath = "";
@@ -543,10 +575,12 @@
 				D3074C8F2753A61F00A84358 /* AuthResponse.swift in Sources */,
 				D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
+				D3C8A9772764C007008EFB53 /* UserObject.swift in Sources */,
 				D3810236272D106A003C7850 /* TimeLineController.swift in Sources */,
 				D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */,
 				D312C2B22744F2C500DF7E83 /* FinishLetterController.swift in Sources */,
 				D3B72D23274A75F900253933 /* AuthService.swift in Sources */,
+				D3C8A9722764BBCE008EFB53 /* LetterObject.swift in Sources */,
 				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
 				D30E6EBE2732245D00FBE5AF /* LetterWhoTypeCell.swift in Sources */,
 				D381022F272D06E6003C7850 /* RegisterViewModel.swift.swift in Sources */,
@@ -558,6 +592,7 @@
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
 				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
+				D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D312C1E5274129FF00DF7E83 /* Place.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
@@ -802,6 +837,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D3C8A96B2764BADB008EFB53 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -809,6 +852,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D37E3161274CA51700E89E46 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D3C8A96C2764BADB008EFB53 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C8A96B2764BADB008EFB53 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		D3C8A96E2764BADB008EFB53 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C8A96B2764BADB008EFB53 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
