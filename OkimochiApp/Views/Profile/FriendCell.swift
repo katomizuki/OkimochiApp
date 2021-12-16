@@ -10,7 +10,7 @@ class FriendCell: UITableViewCell {
             frinedImageView.contentMode = .scaleAspectFill
         }
     }
-    var viewModel:FrinedCellViewModel? {
+    var viewModel:FrinedCellViewData? {
         didSet {
             setupUI()
         }

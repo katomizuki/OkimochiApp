@@ -2,7 +2,7 @@ import UIKit
 
 class UserProfileController: UIViewController {
     
-    private var viewModel:ProfileViewModel?
+    private var viewModel:ProfileViewData?
     var user:User? {
         didSet {
             profileCollectionView.reloadData()
@@ -70,7 +70,7 @@ extension UserProfileController: UICollectionViewDataSource {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id, for: indexPath) as? ProfileHeader else { fatalError() }
         header.delegate = self
         if let user = user {
-            header.viewModel = ProfileHeaderViewModel(user: user)
+            header.viewModel = ProfileHeaderViewData(user: user)
         }
         return header
     }

@@ -31,7 +31,7 @@ class RegisterController: UIViewController {
             registerButton.layer.masksToBounds = true
         }
     }
-    private var viewModel = RegisterViewModel()
+    private var viewModel = RegisterViewData()
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

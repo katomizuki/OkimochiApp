@@ -1,6 +1,6 @@
 import Foundation
 
-struct LoginViewModel: AuthProtocol {
+struct LoginViewData: AuthProtocol {
     var email: String?
     var password: String?
     var isValid: Bool {

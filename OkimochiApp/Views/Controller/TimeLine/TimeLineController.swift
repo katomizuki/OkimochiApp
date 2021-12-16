@@ -37,7 +37,7 @@ class TimeLineController: UIViewController {
     }
     // MARK: - checkMethod
     private func checkLogin() {
-        guard let token = UserRepositry.shared.getToken() else { return }
+        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         UserService.getUser(token: token) { result in
             switch result {
             case .success(let user):

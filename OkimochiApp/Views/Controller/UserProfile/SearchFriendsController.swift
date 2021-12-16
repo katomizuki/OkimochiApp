@@ -69,7 +69,7 @@ extension SearchFriendsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.id, for: indexPath) as? FriendCell else { fatalError() }
         let user = isSearched ? filterUsers[indexPath.row] : users[indexPath.row]
-        let viewModel = FrinedCellViewModel(user: user)
+        let viewModel = FrinedCellViewData(user: user)
         cell.viewModel = viewModel
         return cell
     }

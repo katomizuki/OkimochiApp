@@ -1,8 +1,8 @@
 
 import Foundation
 
-struct UserRepositry {
-    static let shared = UserRepositry()
+struct UserDefaultsRepositry {
+    static let shared = UserDefaultsRepositry()
     
     func saveUserDefaults<T:Codable>(element:T,key:String) {
         do {

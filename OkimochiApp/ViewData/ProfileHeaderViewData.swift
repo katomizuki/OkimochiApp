@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProfileHeaderViewModel {
+struct ProfileHeaderViewData {
     
     var user:User
     init(user:User) {

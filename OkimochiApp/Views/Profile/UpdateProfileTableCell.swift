@@ -3,7 +3,7 @@ import UIKit
 
 class UpdateProfileTableCell: UITableViewCell {
     static let id = "UpdateProfileTableCell"
-    var viewModel:UpdateProfileViewModel? {
+    var viewModel:UpdateProfileViewData? {
         didSet {
             setupUI()
         }

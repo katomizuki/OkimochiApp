@@ -9,7 +9,7 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     static let id = "ProfileHeader"
     weak var delegate:ProfileHeaderDelegate?
-    var viewModel:ProfileHeaderViewModel? {
+    var viewModel:ProfileHeaderViewData? {
         didSet {
             setupUI()
         }

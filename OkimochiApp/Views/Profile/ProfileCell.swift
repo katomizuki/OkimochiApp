@@ -11,7 +11,7 @@ class ProfileCell: UICollectionViewCell {
     }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var letterImageView: UIImageView!
-    var viewModel:ProfileViewModel? {
+    var viewModel:ProfileViewData? {
         didSet {
             setupUI()
         }

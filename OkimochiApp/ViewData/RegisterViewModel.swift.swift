@@ -3,7 +3,7 @@ import UIKit
 protocol AuthProtocol {
     var isValid:Bool { get }
 }
-struct RegisterViewModel: AuthProtocol {
+struct RegisterViewData: AuthProtocol {
     var email: String?
     var name: String?
     var password: String?

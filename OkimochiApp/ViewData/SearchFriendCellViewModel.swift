@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct FrinedCellViewModel {
+struct FrinedCellViewData {
     
     var user:User
     var nameAttributedText:NSAttributedString {

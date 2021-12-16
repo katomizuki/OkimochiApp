@@ -13,7 +13,7 @@ enum ProfileFilterOptions :Int,CaseIterable {
     }
 }
 
-struct ProfileViewModel {
+struct ProfileViewData {
     let options: ProfileFilterOptions
     let user:User
     let letter:Letter

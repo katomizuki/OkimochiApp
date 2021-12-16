@@ -20,7 +20,7 @@ enum UpdateProfileSection:Int,CaseIterable {
     }
 }
 
-struct UpdateProfileViewModel {
+struct UpdateProfileViewData {
     private let user: User
     private let sections: UpdateProfileSection
     

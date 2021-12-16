@@ -25,7 +25,7 @@ class LoginController: UIViewController {
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
-    private var viewModel = LoginViewModel()
+    private var viewModel = LoginViewData()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class LoginController: UIViewController {
         AuthService.login(email: email, password: password) { result in
             switch result {
             case .success(let authResponse):
-                UserRepositry.shared.saveToken(token: authResponse.token)
+                UserDefaultsRepositry.shared.saveToken(token: authResponse.token)
                 self.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print(error)

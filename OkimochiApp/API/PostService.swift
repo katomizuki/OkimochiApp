@@ -4,7 +4,7 @@ import Alamofire
 struct PostService {
     static func fetchMyPost(completion:@escaping (Result<[Letter],Error>)->Void) {
         let baseUrl = "https://kobajun029.sakura.ne.jp/laravel1/api/posts"
-        guard let token = UserRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
+        guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
             return
         }
         let parameter:[String:Any] = ["token":"\(token)"]
