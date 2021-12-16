@@ -215,7 +215,7 @@
 				D312C1E12741280C00DF7E83 /* GoogleAPI */,
 				D3810222272CF300003C7850 /* Utility */,
 				D3810220272CF2F6003C7850 /* Controller */,
-				D381021F272CF2EF003C7850 /* ViewModel */,
+				D381021F272CF2EF003C7850 /* ViewData */,
 				D381021E272CF2EA003C7850 /* Model */,
 				D381021D272CF2E6003C7850 /* Views */,
 				D3810209272CF2CA003C7850 /* AppDelegate.swift */,
@@ -240,22 +240,18 @@
 		D381021E272CF2EA003C7850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D39C79D9276B6555008A09E6 /* Entity */,
 				D3C8A9732764BD10008EFB53 /* Keychain */,
 				D3C8A9702764BBBD008EFB53 /* realmData */,
 				D3074C902753A91700A84358 /* UserRepositry */,
 				D3810221272CF2FC003C7850 /* API */,
-				D3810241272D1991003C7850 /* User.swift.swift */,
-				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
-				D312C1E4274129FF00DF7E83 /* Place.swift */,
-				D312C1E627412A9000DF7E83 /* PlaceError.swift */,
-				D3074C8A2753A1D300A84358 /* Credential.swift */,
 				D3074C8C2753A3F800A84358 /* APIError.swift */,
 				D3074C8E2753A61F00A84358 /* AuthResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D381021F272CF2EF003C7850 /* ViewModel */ = {
+		D381021F272CF2EF003C7850 /* ViewData */ = {
 			isa = PBXGroup;
 			children = (
 				D381022C272D06DC003C7850 /* LoginViewModel.swift.swift */,
@@ -265,7 +261,7 @@
 				D30E6F4A273409D200FBE5AF /* ProfileHeaderViewModel.swift */,
 				D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 		D3810220272CF2F6003C7850 /* Controller */ = {
@@ -363,6 +359,18 @@
 				D375CC1927316B7F0030CA79 /* FriedDetailController.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		D39C79D9276B6555008A09E6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D3810241272D1991003C7850 /* User.swift.swift */,
+				D3810243272D1BE4003C7850 /* Letter.swift.swift */,
+				D312C1E4274129FF00DF7E83 /* Place.swift */,
+				D312C1E627412A9000DF7E83 /* PlaceError.swift */,
+				D3074C8A2753A1D300A84358 /* Credential.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D3B5F063272E8072006F6881 /* Profile */ = {
