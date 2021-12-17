@@ -22,6 +22,7 @@ final class UserProfilePresentar: UserProfilePresentable {
         self.router = DI.router
         self.interactor = DI.interactor
         self.view = DI.view
+        print("通った")
     }
     func viewDidLoad() {
         
@@ -32,7 +33,8 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     
     func onTapUpdateButton() {
-        
+        print(#function)
+        router.transitionUpdateUserProfile()
     }
     
     func onTapPastButton() {

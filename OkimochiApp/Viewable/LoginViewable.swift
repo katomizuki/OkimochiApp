@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol LoginViewable:AnyObject {
+protocol LoginViewable:AnyObject,Transitioner {
     
 }

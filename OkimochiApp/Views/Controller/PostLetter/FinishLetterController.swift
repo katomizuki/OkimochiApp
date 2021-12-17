@@ -3,6 +3,7 @@ import UIKit
 final class FinishLetterController: UIViewController {
     // MARK: - Properties
     @IBOutlet private var letterImageView: UIImageView!
+    static let id = String(describing: self)
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

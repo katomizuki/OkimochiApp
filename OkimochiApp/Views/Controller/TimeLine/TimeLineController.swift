@@ -2,13 +2,15 @@ import UIKit
 import MapKit
 //import GoogleMaps
 import CoreLocation
-class TimeLineController: UIViewController {
+class TimeLineController: UIViewController,TimeLineViewable{
     // MARK: - Properties
     var user:User?
     private let collectionCell = "collectionCell"
     @IBOutlet weak var collectionView: UICollectionView!
     private let locationManager = CLLocationManager()
     var mapView:MKMapView!
+    var presentar:TimeLinePresentar?
+    static let id = String(describing: self)
   
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,6 +27,14 @@ class TimeLineController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+    }
+    init(presentar:TimeLinePresentar) {
+        self.presentar = presentar
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {

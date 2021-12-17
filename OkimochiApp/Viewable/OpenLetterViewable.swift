@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol OpenLetterViewable:AnyObject {
+protocol OpenLetterViewable:AnyObject,Transitioner {
     
 }

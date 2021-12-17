@@ -8,6 +8,7 @@ final class ResultMapController: UITableViewController {
     // MARK: - Properties
     private var places = [Place]()
     weak var delegate: ResultMapControllerDelegate?
+    static let id = String(describing: self)
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

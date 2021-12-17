@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchFriendsController: UIViewController {
+class SearchFriendsController: UIViewController,SearchFriendsViewable {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     var searchController = UISearchController(searchResultsController: nil)

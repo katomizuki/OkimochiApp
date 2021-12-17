@@ -1,6 +1,6 @@
 import UIKit
 
-class LetterDetailController: UIViewController {
+class LetterDetailController: UIViewController,LetterDetailViewable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,8 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let valid = GMSServices.provideAPIKey("AIzaSyAhr4lPJs46kNIM_UeaLuXfYnYZWmORkAo")
         let placeValide = GMSPlacesClient.provideAPIKey("AIzaSyAhr4lPJs46kNIM_UeaLuXfYnYZWmORkAo")
-        print(valid,"✋")
-        print(placeValide,"✊")
+       
         return true
     }
 

@@ -1,6 +1,6 @@
 import UIKit
 
-class UpdateProfileController: UIViewController {
+class UpdateProfileController: UIViewController,UpdateProfileViewable {
     @IBOutlet weak var tableView: UITableView!
     var user: User?
     var presentar:UpdateProfilePresentar?
@@ -54,7 +54,4 @@ extension UpdateProfileController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return UpdateProfileSection.allCases.count
     }
-}
-extension UpdateProfileController:UpdateProfileViewable {
-    
 }

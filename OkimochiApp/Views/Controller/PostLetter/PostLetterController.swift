@@ -1,6 +1,6 @@
 import UIKit
 
-class PostLetterController: UIViewController {
+class PostLetterController: UIViewController,PostLetterViewable {
     // MARK: Properties
     @IBOutlet private weak var whoTypeTableView: UITableView!
     @IBOutlet private weak var nextButton: UIButton! {
@@ -9,6 +9,8 @@ class PostLetterController: UIViewController {
             nextButton.layer.masksToBounds = true
         }
     }
+    var presentar:PostLetterPresentar?
+    static let id = String(describing: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()

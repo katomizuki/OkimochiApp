@@ -26,6 +26,7 @@ class LoginController: UIViewController {
         }
     }
     private var viewModel = LoginViewData()
+    static let id = String(describing: self)
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

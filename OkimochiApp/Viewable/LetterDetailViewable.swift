@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol LetterDetailViewable: AnyObject {
+protocol LetterDetailViewable: AnyObject,Transitioner {
     
 }

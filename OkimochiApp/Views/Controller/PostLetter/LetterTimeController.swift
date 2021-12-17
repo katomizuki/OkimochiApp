@@ -13,6 +13,7 @@ final class LetterTimeController: UIViewController {
             nextButton.layer.masksToBounds = true
         }
     }
+    static let id = String(describing: self)
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal

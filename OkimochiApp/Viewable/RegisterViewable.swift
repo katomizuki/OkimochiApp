@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol RegisterViewable:AnyObject {
+protocol RegisterViewable:AnyObject ,Transitioner{
     
 }

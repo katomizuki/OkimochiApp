@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol TimeLineViewable:AnyObject {
+protocol TimeLineViewable:AnyObject,Transitioner {
     
 }

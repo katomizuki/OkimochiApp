@@ -6,7 +6,6 @@
 //
 
 import Foundation
-protocol UserProfileViewable:AnyObject {
-  
+protocol UserProfileViewable:AnyObject, Transitioner {
     
 }

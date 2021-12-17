@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol SearchFriendsViewable:AnyObject {
+protocol SearchFriendsViewable:AnyObject,Transitioner {
     
 }

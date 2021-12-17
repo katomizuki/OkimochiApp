@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol UpdateProfileViewable:AnyObject {
+protocol UpdateProfileViewable:AnyObject,Transitioner {
     
 }

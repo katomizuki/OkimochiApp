@@ -1,7 +1,7 @@
 import UIKit
 
 final class LetterFriendController: UIViewController {
-
+    static let id = String(describing: self)
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var navigationBar: UINavigationBar!
     override func viewDidLoad() {
