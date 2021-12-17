@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = GooglePlaces;
+			productName = GooglePlaces;
 		};
 		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
 			isa = PBXAggregateTarget;
@@ -24,6 +25,7 @@
 			dependencies = (
 			);
 			name = GoogleMaps;
+			productName = GoogleMaps;
 		};
 /* End PBXAggregateTarget section */
 
@@ -330,7 +332,7 @@
 		5F651E4674D641A0DED858DB12E3EA2A /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/Core/UIImage+GIF.m"; sourceTree = "<group>"; };
 		5F7295B209CF39E4C3551ADF25845367 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		5FE8E81807C840481A3E12385BA213D5 /* PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PKHUD-Info.plist"; sourceTree = "<group>"; };
-		6291E570B1FD65460B019695AB28FEB9 /* Pods-OkimochiApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OkimochiApp"; path = Pods_OkimochiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6291E570B1FD65460B019695AB28FEB9 /* Pods_OkimochiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkimochiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E67D66CF6062D626838004A28FEBDB /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
 		694B3391F859895FC2F20668360AD649 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		6995B27A81574853380329B47BB7A411 /* SDDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDisplayLink.h; path = SDWebImage/Private/SDDisplayLink.h; sourceTree = "<group>"; };
@@ -376,7 +378,7 @@
 		9B943A756BFB589249865D8968A13DB0 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
 		9BA4EB07579E12449D94D75AB1AA7CC1 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PKHUD.modulemap; sourceTree = "<group>"; };
 		9CF5B7AF063181C21015BE55BBC1848C /* SDFileAttributeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDFileAttributeHelper.h; path = SDWebImage/Private/SDFileAttributeHelper.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF4FD6DB8F92F067BAE1F6630621BB7 /* NSBezierPath+SDRoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+SDRoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+SDRoundedCorners.h"; sourceTree = "<group>"; };
 		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F82E114A272174DE4D1103DBEE14222 /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
@@ -538,7 +540,6 @@
 				DAB6982FA9331C2DDA6D2C1855006E5D /* TegKeychainConstants.swift */,
 				B0E38E5647C7B9F7830FF9860E41EF0E /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -558,7 +559,6 @@
 				229A111FA26E31915BF63B2EB8DE02D9 /* Maps */,
 				09568F12BFB9D1B7C52442EAC9D62632 /* Support Files */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -587,7 +587,6 @@
 				D4959D652FAC187366EA4E5277BB1CF7 /* Resources */,
 				3FB1EFCE7C1AAA18F6DF4912205491CD /* Support Files */,
 			);
-			name = GooglePlaces;
 			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
@@ -613,7 +612,7 @@
 				9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */,
 				05A2656F46E8CA87E77A035911B33D10 /* PKHUD */,
 				BFCB2D5C605270A32522299AED3B5AE6 /* PKHUD-PKHUDResources */,
-				6291E570B1FD65460B019695AB28FEB9 /* Pods-OkimochiApp */,
+				6291E570B1FD65460B019695AB28FEB9 /* Pods_OkimochiApp.framework */,
 				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
 			);
 			name = Products;
@@ -649,7 +648,6 @@
 				ED082F3938F17B646E458F066602CEF1 /* Core */,
 				7EAFAC29AFA85CE90BFC4009B54D1F9E /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -684,7 +682,6 @@
 				EA8041F173F9D9032F6F3ACB10BA5877 /* Resources */,
 				5B0766FE18EAA501124F43F5F4513123 /* Support Files */,
 			);
-			name = PKHUD;
 			path = PKHUD;
 			sourceTree = "<group>";
 		};
@@ -1146,7 +1143,7 @@
 			);
 			name = "Pods-OkimochiApp";
 			productName = Pods_OkimochiApp;
-			productReference = 6291E570B1FD65460B019695AB28FEB9 /* Pods-OkimochiApp */;
+			productReference = 6291E570B1FD65460B019695AB28FEB9 /* Pods_OkimochiApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
