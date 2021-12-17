@@ -6,5 +6,9 @@
 //
 
 protocol UserProfilePresentable {
-    
+    func viewDidLoad()
+    func viewWillAppear()
+    func onTapUpdateButton()
+    func onTapPastButton()
+    func onTapFriendsButton()
 }

@@ -6,5 +6,7 @@
 //
 
 protocol TimeLinePresentable {
-    
+    func viewDidLoad()
+    func viewWillAppear()
+    func onTapLetter()
 }

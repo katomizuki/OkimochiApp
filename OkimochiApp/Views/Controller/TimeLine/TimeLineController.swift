@@ -38,16 +38,16 @@ class TimeLineController: UIViewController {
     // MARK: - checkMethod
     private func checkLogin() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        UserService.getUser(token: token) { result in
-            switch result {
-            case .success(let user):
-                self.user = user
-            case .failure:
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "LoginController", sender: nil)
-                }
-            }
-        }
+//        UserService.getUser(token: token) { result in
+//            switch result {
+//            case .success(let user):
+//                self.user = user
+//            case .failure:
+//                DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "LoginController", sender: nil)
+//                }
+//            }
+//        }
     }
     private func checkLocationAndAddPin() {
         locationManager.delegate = self

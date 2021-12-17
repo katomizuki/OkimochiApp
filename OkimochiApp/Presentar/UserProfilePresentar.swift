@@ -8,6 +8,8 @@
 import Foundation
 
 final class UserProfilePresentar: UserProfilePresentable {
+   
+    
     struct DI {
         var router:UserProfileWireframe
         var interactor:UserProfileUseCase
@@ -20,5 +22,24 @@ final class UserProfilePresentar: UserProfilePresentable {
         self.router = DI.router
         self.interactor = DI.interactor
         self.view = DI.view
+    }
+    func viewDidLoad() {
+        
+    }
+    
+    func viewWillAppear() {
+        
+    }
+    
+    func onTapUpdateButton() {
+        
+    }
+    
+    func onTapPastButton() {
+        
+    }
+    
+    func onTapFriendsButton() {
+        
     }
 }

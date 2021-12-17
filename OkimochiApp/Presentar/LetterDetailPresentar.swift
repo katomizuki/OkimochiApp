@@ -8,6 +8,8 @@
 import Foundation
 
 final class LetterDetailPresentar: LetterDetailPresentable{
+   
+    
     struct DI {
     var router:LetterDetailWireframe
     var interactor:LetterDetailUseCase
@@ -20,5 +22,16 @@ final class LetterDetailPresentar: LetterDetailPresentable{
         self.view = DI.view
         self.interactor = DI.interactor
         self.router = DI.router
+    }
+    func viewDidLoad() {
+        
+    }
+    
+    func viewWillAppear() {
+        
+    }
+    
+    func onTapAddFavoriteButton() {
+        
     }
 }

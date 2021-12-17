@@ -6,5 +6,5 @@
 //
 
 protocol RegisterPrentable {
-    
+    func onTapRegisterButton()
 }

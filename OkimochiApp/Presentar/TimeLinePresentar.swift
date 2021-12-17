@@ -7,7 +7,7 @@
 
 import Foundation
 final class TimeLinePresentar:TimeLinePresentable {
-    
+   
     struct DI {
         var view:TimeLineViewable
         var router:TimeLineWireframe
@@ -21,4 +21,17 @@ final class TimeLinePresentar:TimeLinePresentable {
         self.interactor = DI.interactor
         self.router = DI.router
     }
+    func viewDidLoad() {
+        
+    }
+    
+    func viewWillAppear() {
+        
+    }
+    
+    func onTapLetter() {
+        
+    }
+    
+    
 }

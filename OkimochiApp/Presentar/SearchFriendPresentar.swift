@@ -8,6 +8,8 @@
 import Foundation
 
 final class SearchFriendPresentar:SearchFriendPresentable {
+    
+    
     struct DI {
         var router:SearchFriendsWireframe
         var view: SearchFriendsViewable
@@ -20,5 +22,16 @@ final class SearchFriendPresentar:SearchFriendPresentable {
         self.view = DI.view
         self.interactor = DI.interactor
         self.router = DI.router
+    }
+    func viewDidLoad() {
+        
+    }
+    
+    func searchFriend(_ text: String) {
+        
+    }
+    
+    func onTapCell() {
+        
     }
 }

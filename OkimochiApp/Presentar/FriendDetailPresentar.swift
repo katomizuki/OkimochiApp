@@ -8,6 +8,8 @@
 import Foundation
 
 final class FriendDetailPresentar:FriendDetailPresentable {
+    
+    
     struct DI {
         var view:FriendsDetailViewable
         var interactor:FriendDetailUseCase
@@ -20,5 +22,8 @@ final class FriendDetailPresentar:FriendDetailPresentable {
         self.view = DI.view
         self.router = DI.router
         self.interactor = DI.interactor
+    }
+    func onApplyFriendButton() {
+        
     }
 }

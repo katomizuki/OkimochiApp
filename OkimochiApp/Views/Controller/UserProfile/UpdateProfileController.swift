@@ -3,6 +3,7 @@ import UIKit
 class UpdateProfileController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var user: User?
+    var presentar:UpdateProfilePresentar?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -19,10 +20,6 @@ class UpdateProfileController: UIViewController {
     @IBAction func didTapSaveButton(_ sender: Any) {
         print(#function)
     }
-    
-
-    
-
 }
 extension UpdateProfileController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -57,5 +54,7 @@ extension UpdateProfileController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return UpdateProfileSection.allCases.count
     }
+}
+extension UpdateProfileController:UpdateProfileViewable {
     
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 final class RegisterPresentar:RegisterPrentable {
+    
     struct DI {
         var view:RegisterViewable
         var router:RegisterWireframe
@@ -20,4 +21,8 @@ final class RegisterPresentar:RegisterPrentable {
         self.view = DI.view
         self.interactor = DI.interactor
     }
+    func onTapRegisterButton() {
+        
+    }
+    
 }

@@ -6,5 +6,7 @@
 //
 
 protocol SearchFriendPresentable {
-    
+    func viewDidLoad()
+    func searchFriend(_ text:String)
+    func onTapCell()
 }

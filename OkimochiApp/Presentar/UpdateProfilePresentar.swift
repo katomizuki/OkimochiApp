@@ -8,6 +8,7 @@
 import Foundation
 
 final class UpdateProfilePresentar:UpdateProfilePresentable {
+    
     struct DI {
         var router:UpdateProfileWireframe
         var view:UpdateProfileViewable
@@ -21,4 +22,16 @@ final class UpdateProfilePresentar:UpdateProfilePresentable {
         self.interactor = DI.interactor
         self.router = DI.router
     }
+    func viewDidLoad() {
+        
+    }
+    
+    func viewWillAppear() {
+        
+    }
+    
+    func onTapSaveButton() {
+        
+    }
+    
 }
