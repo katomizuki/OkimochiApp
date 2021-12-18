@@ -39,22 +39,11 @@ class LoginController: UIViewController {
         print(#function)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-//        AuthService.login(email: email, password: password) { result in
-//            switch result {
-//            case .success(let authResponse):
-//                UserDefaultsRepositry.shared.saveToken(token: authResponse.token)
-//                self.dismiss(animated: true, completion: nil)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        presentar?.onTapLoginButton()
     }
     @IBAction func gotoRegister(_ sender: Any) {
         print(#function)
-        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        print(storyboard)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
-        navigationController?.pushViewController(vc, animated: true)
+        presentar?.onTapGotoRegisterButton()
     }
 }
 // MARK: - TextFieldDelegate

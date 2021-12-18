@@ -8,7 +8,6 @@
 import Foundation
 final class LoginPresentar:LoginPresentable{
     
-    
     struct DI {
         var view:LoginViewable
         var router:LoginWireframe
@@ -23,7 +22,10 @@ final class LoginPresentar:LoginPresentable{
         self.router = DI.router
     }
     func onTapLoginButton() {
-        
+        router.dismiss()
+    }
+    func onTapGotoRegisterButton() {
+        router.transitionRegisterVC()
     }
     
 }

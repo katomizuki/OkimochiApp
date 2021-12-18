@@ -50,7 +50,7 @@ class RegisterController: UIViewController {
     }
     // MARK: - IBAction
     @IBAction private func gotoLogin(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        presentar?.onTapGotoLoginButton()
     }
     
     @IBAction func didTapImageButton(_ sender: Any) {
@@ -67,14 +67,7 @@ class RegisterController: UIViewController {
         guard let name = nameTextField.text else { return }
         guard let image = viewData.image else { return }
         let credential = Credential(name: name, email: email, password: password)
-//        AuthService.register(credential: credential) { result in
-//            switch result {
-//            case .success:
-//                self.dismiss(animated: true, completion: nil)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        presentar?.onTapRegisterButton()
     }
     
 }

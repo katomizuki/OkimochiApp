@@ -16,13 +16,19 @@ final class RegisterPresentar:RegisterPresentable {
     weak var view:RegisterViewable!
     var router:RegisterWireframe!
     var interactor:RegisterUseCase!
+    
     init(DI:DI) {
         self.router = DI.router
         self.view = DI.view
         self.interactor = DI.interactor
     }
-    func onTapRegisterButton() {
-        
+    
+    func onTapGotoLoginButton() {
+        router.transitionLoginVC()
     }
+    func onTapRegisterButton() {
+        router.dismiss()
+    }
+    
     
 }

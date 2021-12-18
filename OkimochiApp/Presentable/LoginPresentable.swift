@@ -7,4 +7,5 @@
 
 protocol LoginPresentable {
     func onTapLoginButton()
+    func onTapGotoRegisterButton()
 }

@@ -45,8 +45,8 @@ extension UpdateProfileController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UpdateProfileTableCell.id, for: indexPath) as? UpdateProfileTableCell else { fatalError()}
         guard let section = UpdateProfileSection(rawValue: indexPath.row) else { return cell }
         guard let user = user else { return cell }
-        let viewModel = UpdateProfileViewData(user: user, sectons: section)
-        cell.viewModel = viewModel
+        let viewData = UpdateProfileViewData(user: user, sectons: section)
+        cell.viewModel = viewData
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,4 +7,5 @@
 
 protocol LoginWireframe {
     func dismiss()
+    func transitionRegisterVC()
 }

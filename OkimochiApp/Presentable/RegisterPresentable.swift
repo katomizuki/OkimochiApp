@@ -6,5 +6,6 @@
 //
 
 protocol RegisterPresentable {
+    func onTapGotoLoginButton()
     func onTapRegisterButton()
 }

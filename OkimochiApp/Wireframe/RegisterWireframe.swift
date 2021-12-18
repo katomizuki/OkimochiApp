@@ -6,4 +6,5 @@
 //
 protocol RegisterWireframe {
     func dismiss()
+    func transitionLoginVC()
 }
