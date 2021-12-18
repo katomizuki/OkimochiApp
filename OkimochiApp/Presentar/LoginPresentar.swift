@@ -25,6 +25,7 @@ final class LoginPresentar:LoginPresentable{
         router.dismiss()
     }
     func onTapGotoRegisterButton() {
+        print(#function)
         router.transitionRegisterVC()
     }
     

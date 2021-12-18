@@ -42,7 +42,6 @@ class LoginController: UIViewController {
         presentar?.onTapLoginButton()
     }
     @IBAction func gotoRegister(_ sender: Any) {
-        print(#function)
         presentar?.onTapGotoRegisterButton()
     }
 }

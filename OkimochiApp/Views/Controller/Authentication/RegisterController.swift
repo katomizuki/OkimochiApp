@@ -50,6 +50,7 @@ class RegisterController: UIViewController {
     }
     // MARK: - IBAction
     @IBAction private func gotoLogin(_ sender: Any) {
+        print(#function)
         presentar?.onTapGotoLoginButton()
     }
     

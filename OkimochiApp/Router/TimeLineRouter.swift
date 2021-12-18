@@ -21,8 +21,11 @@ final class TimeLineRouter:TimeLineWireframe {
         let interactor = LoginInteractor()
         let presentar = LoginPresentar(DI: LoginPresentar.DI(view: controller, router: loginRouter, interactor: interactor))
         controller.presentar = presentar
-        view.present(controller, animated: true, completion: nil)
-        
+        let nav = UINavigationController(rootViewController: controller)
+        nav.modalPresentationStyle = .fullScreen
+        DispatchQueue.main.async {
+            self.view.present(nav, animated: true, completion: nil)
+        }
     }
     
     func transitionLetterDetail() {

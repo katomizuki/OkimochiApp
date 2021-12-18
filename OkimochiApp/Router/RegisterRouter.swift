@@ -16,6 +16,7 @@ final class RegisterRouter: RegisterWireframe {
         view.dismiss(animated: true)
     }
     func transitionLoginVC() {
+        print(#function)
         view.popViewController(animated: true)
     }
 }
