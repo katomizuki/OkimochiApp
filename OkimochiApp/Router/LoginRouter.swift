@@ -8,6 +8,10 @@
 import Foundation
 
 final class LoginRouter:LoginWireframe {
+    private (set) weak var view:LoginViewable!
+    init(view:LoginViewable) {
+        self.view = view
+    }
     func dismiss() {
         
     }

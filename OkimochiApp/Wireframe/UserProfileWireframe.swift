@@ -8,4 +8,5 @@
 protocol UserProfileWireframe: AnyObject {
     func transitionUpdateUserProfile()
     func transitionSearchUser()
+    func transitionLetterDetail()
 }

@@ -50,9 +50,7 @@ class UserProfileController: UIViewController {
 extension UserProfileController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterDetailController") as! LetterDetailController
-        self.navigationController?.pushViewController(controller, animated: true)
+        presentar?.onTapLetterDetail()
     }
     
 }

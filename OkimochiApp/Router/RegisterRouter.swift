@@ -8,6 +8,10 @@
 import Foundation
 
 final class RegisterRouter:RegisterWireframe {
+    private (set) weak var view:RegisterViewable!
+    init(view:RegisterViewable) {
+        self.view = view
+    }
     func dismiss() {
         
     }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-
- class UserProfileRouter: UserProfileWireframe {
+class UserProfileRouter: UserProfileWireframe {
+    
      private (set) weak var view:UserProfileViewable!
      init(view:UserProfileViewable) {
          self.view = view
@@ -32,5 +32,11 @@ import UIKit
          controller.presentar = presentar
          view.navigationController?.pushViewController(controller, animated: true)
      }
+    
+    func transitionLetterDetail() {
+        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LetterDetailController") as! LetterDetailController
+        view.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 

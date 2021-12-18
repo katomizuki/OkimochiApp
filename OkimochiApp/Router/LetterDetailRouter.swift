@@ -8,6 +8,10 @@
 import Foundation
 
 final class LetterDetailRouter: LetterDetailWireframe {
+    private (set) weak var view:LetterDetailViewable!
+    init(view:LetterDetailViewable) {
+        self.view = view
+    }
     func dismiss() {
         
     }

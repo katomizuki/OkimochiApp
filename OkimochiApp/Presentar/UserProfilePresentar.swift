@@ -8,8 +8,7 @@
 import Foundation
 
 final class UserProfilePresentar: UserProfilePresentable {
-   
-    
+
     struct DI {
         var router:UserProfileWireframe
         var interactor:UserProfileUseCase
@@ -46,5 +45,8 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     func onTapSearchButton() {
         router.transitionSearchUser()
+    }
+    func onTapLetterDetail() {
+        router.transitionLetterDetail()
     }
 }
