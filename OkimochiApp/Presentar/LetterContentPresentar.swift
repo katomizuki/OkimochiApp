@@ -7,7 +7,19 @@
 
 import Foundation
 
-final class LetterContentPresentar {
+final class LetterContentPresentar:LetterContentPresentable {
     
-    
+    struct DI {
+        var view:LetterContentViewable
+        var router:LetterContentRouter
+        var interactor:LetterContentUseCase
+    }
+    weak var view:LetterContentViewable!
+    var router:LetterContentRouter!
+    var interactor:LetterContentUseCase!
+    init(DI:DI) {
+        self.view = DI.view
+        self.router = DI.router
+        self.interactor = DI.interactor
+    }
 }

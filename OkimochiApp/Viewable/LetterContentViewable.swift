@@ -6,6 +6,6 @@
 //
 
 
-protocol LetterContentViewable: AnyObject, Transitioner {
+protocol LetterContentViewable: Transitioner {
     
 }

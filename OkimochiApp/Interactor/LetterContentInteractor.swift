@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class LetterContentInteractor {
+final class LetterContentInteractor:LetterContentUseCase {
     
 }

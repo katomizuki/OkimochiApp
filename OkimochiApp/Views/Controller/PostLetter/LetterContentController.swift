@@ -33,6 +33,8 @@ final class LetterContentController: UIViewController {
             titleTextFiled.layer.borderWidth = 2
         }
     }
+    var presentar:LetterContentPresentar?
+    static let id = String(describing: self)
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
@@ -52,4 +54,7 @@ final class LetterContentController: UIViewController {
     @objc private func didChangeTextView() {
         placeholderText.isHidden = contentTextView.text.count > 0
     }
+}
+extension LetterContentController:LetterContentViewable {
+    
 }

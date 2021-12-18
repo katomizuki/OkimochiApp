@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol LetterContentWireframe {
+protocol LetterContentWireframe: AnyObject {
     
 }
