@@ -88,7 +88,6 @@
 		D315165B276B77920061C488 /* FriendsDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165A276B77920061C488 /* FriendsDetailWireframe.swift */; };
 		D315165D276B792D0061C488 /* Transitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165C276B792D0061C488 /* Transitioner.swift */; };
 		D315165F276B793D0061C488 /* AnyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165E276B793D0061C488 /* AnyInteractor.swift */; };
-		D3151661276B79500061C488 /* AnyPresentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151660276B79500061C488 /* AnyPresentar.swift */; };
 		D3151668276CB91C0061C488 /* PostLetterViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151667276CB91C0061C488 /* PostLetterViewable.swift */; };
 		D315166A276CB92C0061C488 /* PostLetterPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151669276CB92C0061C488 /* PostLetterPresentable.swift */; };
 		D315166C276CB9990061C488 /* PostLetterPresentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315166B276CB9990061C488 /* PostLetterPresentar.swift */; };
@@ -256,7 +255,6 @@
 		D315165A276B77920061C488 /* FriendsDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDetailWireframe.swift; sourceTree = "<group>"; };
 		D315165C276B792D0061C488 /* Transitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitioner.swift; sourceTree = "<group>"; };
 		D315165E276B793D0061C488 /* AnyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInteractor.swift; sourceTree = "<group>"; };
-		D3151660276B79500061C488 /* AnyPresentar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPresentar.swift; sourceTree = "<group>"; };
 		D3151667276CB91C0061C488 /* PostLetterViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterViewable.swift; sourceTree = "<group>"; };
 		D3151669276CB92C0061C488 /* PostLetterPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterPresentable.swift; sourceTree = "<group>"; };
 		D315166B276CB9990061C488 /* PostLetterPresentar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterPresentar.swift; sourceTree = "<group>"; };
@@ -697,7 +695,6 @@
 				D3151613276B6C4E0061C488 /* LoginPresentable.swift */,
 				D3151615276B6C580061C488 /* RegisterPrentable.swift */,
 				D3151617276B6C680061C488 /* FriendDetailPresentable.swift */,
-				D3151660276B79500061C488 /* AnyPresentar.swift */,
 				D3151669276CB92C0061C488 /* PostLetterPresentable.swift */,
 				D3151683276D63580061C488 /* LetterContentPresentable.swift */,
 				D3151695276D6A440061C488 /* LetterMapPresentable.swift */,
@@ -979,7 +976,6 @@
 				D31516BE276D72140061C488 /* FinishLetterPresentable.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
 				D315160C276B6C0A0061C488 /* UpdateProfilePresentable.swift in Sources */,
-				D3151661276B79500061C488 /* AnyPresentar.swift in Sources */,
 				D315169A276D6AC30061C488 /* LetterTimePresentar.swift in Sources */,
 				D3151620276B6D8B0061C488 /* SearchFriendUseCase.swift in Sources */,
 				D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */,

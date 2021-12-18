@@ -1,6 +1,6 @@
 import UIKit
 class UserProfileController: UIViewController {
-    
+    static let id = String(describing: self)
     private var viewModel:ProfileViewData?
     var presentar:UserProfilePresentar?
     var user:User? {
@@ -88,9 +88,7 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
 extension UserProfileController: ProfileHeaderDelegate {
     func didTapUpdateButton() {
         print(#function)
-        print(presentar)
         presentar?.onTapUpdateButton()
-//        performSegue(withIdentifier: "gotoUpdateProfileController", sender: nil)
     }
     
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {

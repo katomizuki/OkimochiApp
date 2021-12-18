@@ -6,5 +6,6 @@
 //
 
 protocol FriendDetailPresentable {
+    func viewDidLoad()
     func onApplyFriendButton()
 }

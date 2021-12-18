@@ -6,5 +6,5 @@
 //
 
 protocol LetterDetailWireframe {
-    
+    func dismiss()
 }

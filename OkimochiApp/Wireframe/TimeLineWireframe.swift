@@ -6,5 +6,5 @@
 //
 
 protocol TimeLineWireframe {
-    
+    func transitionLetterDetail()
 }

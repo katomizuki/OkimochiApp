@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 class FriedDetailController: UIViewController {
-
+    static let id = String(describing: self)
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var friendImageView: UIImageView! {

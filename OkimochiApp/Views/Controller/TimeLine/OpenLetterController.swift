@@ -7,10 +7,4 @@ class OpenLetterController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
     }
-    
-    
-    
-    
-    
-
 }

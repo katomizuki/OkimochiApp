@@ -5,7 +5,6 @@ import CoreLocation
 class TimeLineController: UIViewController,TimeLineViewable{
     // MARK: - Properties
     var user:User?
-    var s:Int?
     private let collectionCell = "collectionCell"
     @IBOutlet weak var collectionView: UICollectionView!
     private let locationManager = CLLocationManager()
@@ -25,7 +24,6 @@ class TimeLineController: UIViewController,TimeLineViewable{
         setupCollectionView()
         checkLogin()
         checkLocationAndAddPin()
-        print(s,"ここだーー")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

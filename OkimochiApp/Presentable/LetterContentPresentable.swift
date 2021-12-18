@@ -6,5 +6,5 @@
 //
 
 protocol LetterContentPresentable {
-    
+    func viewDidLoad()
 }

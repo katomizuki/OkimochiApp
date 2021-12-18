@@ -6,5 +6,5 @@
 //
 
 protocol UpdateProfileWireframe {
-    
+    func dismiss()
 }

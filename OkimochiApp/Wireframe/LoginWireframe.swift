@@ -6,5 +6,5 @@
 //
 
 protocol LoginWireframe {
-    
+    func dismiss()
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class LetterDetailRouter:LetterDetailWireframe {
+final class LetterDetailRouter: LetterDetailWireframe {
     
 }

@@ -7,5 +7,5 @@
 
 
 protocol FinishLetterWireframe {
-    
+    func transitionRoot()
 }

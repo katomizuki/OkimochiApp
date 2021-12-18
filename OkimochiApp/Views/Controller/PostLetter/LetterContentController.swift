@@ -4,6 +4,7 @@ import UIKit
 final class LetterContentController: UIViewController {
 
     // MARK: - Properties
+    static let id = String(describing: self)
     @IBOutlet private weak var contentTextView: UITextView! {
         didSet {
             contentTextView.layer.cornerRadius = 15

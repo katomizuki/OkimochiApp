@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class SearchFriendsRouter:SearchFriendsWireframe {
+final class SearchFriendsRouter: SearchFriendsWireframe {
     
 }

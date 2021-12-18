@@ -10,6 +10,7 @@ class SearchFriendsController: UIViewController,SearchFriendsViewable {
     private var users = [User]()
     private var filterUsers = [User]()
     private var selectedIndex = Int()
+    static let id = String(describing: self)
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

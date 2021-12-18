@@ -6,5 +6,5 @@
 //
 
 protocol LetterFriendPresentable {
-    
+    func viewDidLoad()
 }
