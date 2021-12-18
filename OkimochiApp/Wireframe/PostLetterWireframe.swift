@@ -7,5 +7,5 @@
 
 import Foundation
 protocol PostLetterWireFrame {
-    
+    func transtionLetterContentVC()
 }

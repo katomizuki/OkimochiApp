@@ -98,6 +98,15 @@
 		D3151674276CBAF20061C488 /* PostLetterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151673276CBAF20061C488 /* PostLetterRouter.swift */; };
 		D3151676276CBE2B0061C488 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151675276CBE2B0061C488 /* AppRouter.swift */; };
 		D3151678276CC1360061C488 /* MaiinTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151677276CC1360061C488 /* MaiinTabBarController.swift */; };
+		D315167A276D5AE30061C488 /* PostLetterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151679276D5AE30061C488 /* PostLetterNavigationController.swift */; };
+		D315167C276D5B580061C488 /* UserNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315167B276D5B580061C488 /* UserNavigationController.swift */; };
+		D315167E276D62CF0061C488 /* LetterContentPresentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315167D276D62CE0061C488 /* LetterContentPresentar.swift */; };
+		D3151680276D62E90061C488 /* LetterContentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315167F276D62E90061C488 /* LetterContentInteractor.swift */; };
+		D3151682276D63220061C488 /* LetterContentViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151681276D63220061C488 /* LetterContentViewable.swift */; };
+		D3151684276D63580061C488 /* LetterContentPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151683276D63580061C488 /* LetterContentPresentable.swift */; };
+		D3151686276D64480061C488 /* LetterContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151685276D64480061C488 /* LetterContentUseCase.swift */; };
+		D3151688276D64700061C488 /* LetterContentWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151687276D64700061C488 /* LetterContentWireframe.swift */; };
+		D315168A276D648E0061C488 /* LetterContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151689276D648E0061C488 /* LetterContentRouter.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -229,6 +238,15 @@
 		D3151673276CBAF20061C488 /* PostLetterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterRouter.swift; sourceTree = "<group>"; };
 		D3151675276CBE2B0061C488 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		D3151677276CC1360061C488 /* MaiinTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaiinTabBarController.swift; sourceTree = "<group>"; };
+		D3151679276D5AE30061C488 /* PostLetterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterNavigationController.swift; sourceTree = "<group>"; };
+		D315167B276D5B580061C488 /* UserNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigationController.swift; sourceTree = "<group>"; };
+		D315167D276D62CE0061C488 /* LetterContentPresentar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentPresentar.swift; sourceTree = "<group>"; };
+		D315167F276D62E90061C488 /* LetterContentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentInteractor.swift; sourceTree = "<group>"; };
+		D3151681276D63220061C488 /* LetterContentViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentViewable.swift; sourceTree = "<group>"; };
+		D3151683276D63580061C488 /* LetterContentPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentPresentable.swift; sourceTree = "<group>"; };
+		D3151685276D64480061C488 /* LetterContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentUseCase.swift; sourceTree = "<group>"; };
+		D3151687276D64700061C488 /* LetterContentWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentWireframe.swift; sourceTree = "<group>"; };
+		D3151689276D648E0061C488 /* LetterContentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterContentRouter.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -327,6 +345,7 @@
 				D3151656276B71E90061C488 /* RegisterWireframe.swift */,
 				D315165A276B77920061C488 /* FriendsDetailWireframe.swift */,
 				D315166D276CB9C50061C488 /* PostLetterWireframe.swift */,
+				D3151687276D64700061C488 /* LetterContentWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -417,6 +436,8 @@
 				D3810231272D0FB1003C7850 /* Authentication */,
 				D3810230272D0F81003C7850 /* Storyboard */,
 				D3151677276CC1360061C488 /* MaiinTabBarController.swift */,
+				D3151679276D5AE30061C488 /* PostLetterNavigationController.swift */,
+				D315167B276D5B580061C488 /* UserNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -532,6 +553,7 @@
 				D3151647276B6FFF0061C488 /* RegisterRouter.swift */,
 				D3151673276CBAF20061C488 /* PostLetterRouter.swift */,
 				D3151675276CBE2B0061C488 /* AppRouter.swift */,
+				D3151689276D648E0061C488 /* LetterContentRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -548,6 +570,7 @@
 				D31515F5276B6A9D0061C488 /* LoginPresentar.swift */,
 				D31515F7276B6AAC0061C488 /* RegisterPresentar.swift */,
 				D315166B276CB9990061C488 /* PostLetterPresentar.swift */,
+				D315167D276D62CE0061C488 /* LetterContentPresentar.swift */,
 			);
 			path = Presentar;
 			sourceTree = "<group>";
@@ -563,6 +586,7 @@
 				D3151635276B6EED0061C488 /* LoginInteractor.swift */,
 				D3151637276B6EF60061C488 /* RegisterInteractor.swift */,
 				D315166F276CB9E80061C488 /* PostLetterInteractor.swift */,
+				D315167F276D62E90061C488 /* LetterContentInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -581,6 +605,7 @@
 				D3151607276B6B910061C488 /* RegisterViewable.swift */,
 				D3151658276B773D0061C488 /* FriendsDetailViewable.swift */,
 				D3151667276CB91C0061C488 /* PostLetterViewable.swift */,
+				D3151681276D63220061C488 /* LetterContentViewable.swift */,
 			);
 			path = Viewable;
 			sourceTree = "<group>";
@@ -598,6 +623,7 @@
 				D3151617276B6C680061C488 /* FriendDetailPresentable.swift */,
 				D3151660276B79500061C488 /* AnyPresentar.swift */,
 				D3151669276CB92C0061C488 /* PostLetterPresentable.swift */,
+				D3151683276D63580061C488 /* LetterContentPresentable.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -615,6 +641,7 @@
 				D3151629276B6E140061C488 /* FriendDetailUseCase.swift */,
 				D315165E276B793D0061C488 /* AnyInteractor.swift */,
 				D3151671276CBA200061C488 /* PostLetterUseCase.swift */,
+				D3151685276D64480061C488 /* LetterContentUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -804,6 +831,7 @@
 				D3151618276B6C680061C488 /* FriendDetailPresentable.swift in Sources */,
 				D381022B272D0359003C7850 /* Views+Extension.swift.swift in Sources */,
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
+				D3151680276D62E90061C488 /* LetterContentInteractor.swift in Sources */,
 				D3151606276B6B870061C488 /* LoginViewable.swift in Sources */,
 				D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */,
 				D312C2AA2744BFC300DF7E83 /* OpenLetterController.swift in Sources */,
@@ -840,6 +868,7 @@
 				D3151670276CB9E80061C488 /* PostLetterInteractor.swift in Sources */,
 				D31515EE276B69D30061C488 /* SearchFriendPresentar.swift in Sources */,
 				D3151612276B6C450061C488 /* TimeLinePresentable.swift in Sources */,
+				D3151688276D64700061C488 /* LetterContentWireframe.swift in Sources */,
 				D3B72D23274A75F900253933 /* AuthService.swift in Sources */,
 				D315160A276B6BFE0061C488 /* UserProfilePresentable.swift in Sources */,
 				D312C1E92741352200DF7E83 /* ResultsMapController.swift in Sources */,
@@ -848,6 +877,7 @@
 				D315160E276B6C1B0061C488 /* LetterDetailPresentable.swift in Sources */,
 				D315161C276B6D650061C488 /* UpdateProfileUserCase.swift in Sources */,
 				D315161A276B6D540061C488 /* UserProfileUseCase.swift in Sources */,
+				D3151682276D63220061C488 /* LetterContentViewable.swift in Sources */,
 				D3B91B32272E6D810048FC75 /* ProfileHeader.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
 				D315160C276B6C0A0061C488 /* UpdateProfilePresentable.swift in Sources */,
@@ -856,9 +886,11 @@
 				D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */,
 				D31515F6276B6A9D0061C488 /* LoginPresentar.swift in Sources */,
 				D3151672276CBA200061C488 /* PostLetterUseCase.swift in Sources */,
+				D315167A276D5AE30061C488 /* PostLetterNavigationController.swift in Sources */,
 				D315163C276B6FA50061C488 /* UpdateProfileRouter.swift in Sources */,
 				D315162A276B6E140061C488 /* FriendDetailUseCase.swift in Sources */,
 				D3151676276CBE2B0061C488 /* AppRouter.swift in Sources */,
+				D315168A276D648E0061C488 /* LetterContentRouter.swift in Sources */,
 				D31515F4276B6A6E0061C488 /* TimeLinePresentar.swift in Sources */,
 				D3151604276B6B7B0061C488 /* TimeLineViewable.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
@@ -870,6 +902,7 @@
 				D315163A276B6F970061C488 /* UserProfileRouter.swift in Sources */,
 				D315165F276B793D0061C488 /* AnyInteractor.swift in Sources */,
 				D3151642276B6FD80061C488 /* TimeLineRouter.swift in Sources */,
+				D315167E276D62CF0061C488 /* LetterContentPresentar.swift in Sources */,
 				D31515FE276B6B560061C488 /* LetterDetailViewable.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D31515EA276B69B40061C488 /* UpdateProfilePresentar.swift in Sources */,
@@ -877,6 +910,7 @@
 				D315161E276B6D710061C488 /* LetterDetailUseCase.swift in Sources */,
 				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
 				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
+				D3151684276D63580061C488 /* LetterContentPresentable.swift in Sources */,
 				D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D31515EC276B69C50061C488 /* LetterDetailPresentar.swift in Sources */,
@@ -905,7 +939,9 @@
 				D3151614276B6C4E0061C488 /* LoginPresentable.swift in Sources */,
 				D3151657276B71E90061C488 /* RegisterWireframe.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,
+				D3151686276D64480061C488 /* LetterContentUseCase.swift in Sources */,
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
+				D315167C276D5B580061C488 /* UserNavigationController.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
 				D3151640276B6FBA0061C488 /* SearchFriendsRouter.swift in Sources */,

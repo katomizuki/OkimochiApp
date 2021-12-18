@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let controller = UIStoryboard(name: "MainTab", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
-        AppRouter.start(controller: controller)
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }

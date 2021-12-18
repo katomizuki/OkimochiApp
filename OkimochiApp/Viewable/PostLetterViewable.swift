@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol PostLetterViewable: AnyObject,Transitioner{
+protocol PostLetterViewable:AnyObject,Transitioner{
     
 }

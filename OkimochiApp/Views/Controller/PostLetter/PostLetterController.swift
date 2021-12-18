@@ -15,7 +15,6 @@ class PostLetterController: UIViewController,PostLetterViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
-        
         setupTableView()
     }
     private func setupTableView() {
@@ -29,9 +28,7 @@ class PostLetterController: UIViewController,PostLetterViewable {
     }
 
     @IBAction private func didTapNextButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterContentController") as! LetterContentController
-        navigationController?.pushViewController(controller, animated: true)
+        presentar?.onTapNextButton()
     }
 }
 // MARK: - UITableViewDelegate

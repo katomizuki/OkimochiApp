@@ -7,7 +7,7 @@
 
 import Foundation
 final class PostLetterPresentar:PostLetterPresentable {
-    
+   
     struct DI {
         var view:PostLetterViewable
         var interactor:PostLetterUseCase
@@ -21,4 +21,12 @@ final class PostLetterPresentar:PostLetterPresentable {
         self.router = DI.router
         self.interactor = DI.interactor
     }
+    func viewDidLoad() {
+        
+    }
+    
+    func onTapNextButton() {
+        router.transtionLetterContentVC()
+    }
+    
 }

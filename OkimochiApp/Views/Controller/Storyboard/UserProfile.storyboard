@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="2660" y="904"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--User Navigation Controller-->
         <scene sceneID="i3C-Y7-boX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MtD-zF-2A8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MtD-zF-2A8" customClass="UserNavigationController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DaY-nm-XJ5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
