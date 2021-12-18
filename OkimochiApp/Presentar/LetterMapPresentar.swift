@@ -20,4 +20,7 @@ final class LetterMapPresentar: LetterMapPresentable {
         self.router = DI.router
         self.interactor = DI.interactor
     }
+    func viewDidLoad() {
+        
+    }
 }

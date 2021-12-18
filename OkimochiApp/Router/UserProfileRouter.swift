@@ -22,5 +22,15 @@ import UIKit
         controller.presentar = presentar
         view.performSegue(withIdentifier: "gotoUpdateProfileController", sender: nil)
     }
+     
+     func transitionSearchUser() {
+         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+         let controller = storyboard.instantiateViewController(withIdentifier: "SearchFriendsController") as! SearchFriendsController
+         let interactor = SearchFriendsInteractor()
+         let router = SearchFriendsRouter(view: controller)
+         let presentar = SearchFriendPresentar(DI: SearchFriendPresentar.DI(router: router, view: controller, interactor: interactor))
+         controller.presentar = presentar
+         view.navigationController?.pushViewController(controller, animated: true)
+     }
 }
 

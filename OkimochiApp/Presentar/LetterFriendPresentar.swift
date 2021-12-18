@@ -21,4 +21,7 @@ final class LetterFriendPresentar:LetterFriendPresentable {
         self.router = DI.router
         self.interactor = DI.interactor
     }
+    func viewDidLoad() {
+        
+    }
 }

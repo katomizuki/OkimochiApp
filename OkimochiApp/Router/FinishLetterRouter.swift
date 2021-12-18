@@ -7,5 +7,7 @@
 
 import Foundation
 final class FinishLetterRouter:FinishLetterWireframe {
-    
+    func transitionRoot() {
+        
+    }
 }

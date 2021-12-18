@@ -8,5 +8,7 @@
 import Foundation
 
 final class LetterDetailRouter: LetterDetailWireframe {
-    
+    func dismiss() {
+        
+    }
 }

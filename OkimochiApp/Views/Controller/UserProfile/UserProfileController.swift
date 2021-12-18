@@ -2,7 +2,7 @@ import UIKit
 class UserProfileController: UIViewController {
     static let id = String(describing: self)
     private var viewModel:ProfileViewData?
-    var presentar:UserProfilePresentar?
+    var presentar:UserProfilePresentable?
     var user:User? {
         didSet {
             profileCollectionView.reloadData()
@@ -32,9 +32,8 @@ class UserProfileController: UIViewController {
     }
     @objc private func didTapSearchButton() {
         print(#function)
-        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "SearchFriendsController") as! SearchFriendsController
-        self.navigationController?.pushViewController(controller, animated: true)
+        presentar?.onTapSearchButton()
+        
     }
     @objc private func didTapLogoutButton() {
 //        do {

@@ -44,4 +44,7 @@ final class UserProfilePresentar: UserProfilePresentable {
     func onTapFriendsButton() {
         
     }
+    func onTapSearchButton() {
+        router.transitionSearchUser()
+    }
 }

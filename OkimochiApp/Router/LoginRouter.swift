@@ -8,5 +8,7 @@
 import Foundation
 
 final class LoginRouter:LoginWireframe {
-    
+    func dismiss() {
+        
+    }
 }

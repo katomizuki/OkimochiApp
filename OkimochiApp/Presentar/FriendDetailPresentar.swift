@@ -26,4 +26,7 @@ final class FriendDetailPresentar:FriendDetailPresentable {
     func onApplyFriendButton() {
         
     }
+    func viewDidLoad() {
+        
+    }
 }

@@ -12,7 +12,6 @@ final class LetterMapController: UIViewController {
             postLetterButton.layer.masksToBounds = true
         }
     }
-    static let id = String(describing: self)
     var presentar:LetterMapPresentar?
     // MARK: - Lifecycle
     override func viewDidLoad() {

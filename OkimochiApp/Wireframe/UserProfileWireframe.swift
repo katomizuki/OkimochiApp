@@ -7,4 +7,5 @@
 
 protocol UserProfileWireframe: AnyObject {
     func transitionUpdateUserProfile()
+    func transitionSearchUser()
 }

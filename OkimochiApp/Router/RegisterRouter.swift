@@ -8,5 +8,7 @@
 import Foundation
 
 final class RegisterRouter:RegisterWireframe {
-    
+    func dismiss() {
+        
+    }
 }

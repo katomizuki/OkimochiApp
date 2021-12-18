@@ -21,4 +21,7 @@ final class LetterTimePresentar:LetterTimePresentable {
         self.interactor = DI.interactor
         self.router = DI.router
     }
+    func viewDidLoad() {
+        
+    }
 }

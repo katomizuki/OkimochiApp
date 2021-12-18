@@ -1,7 +1,6 @@
 import UIKit
 
 final class LetterTimeController: UIViewController {
-    static let id = String(describing: self)
     @IBOutlet private weak var postTimePicker: UIDatePicker! {
         didSet {
             postTimePicker.locale = Locale(identifier: "ja_JP")

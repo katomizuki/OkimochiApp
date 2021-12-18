@@ -22,4 +22,7 @@ final class LetterContentPresentar:LetterContentPresentable {
         self.router = DI.router
         self.interactor = DI.interactor
     }
+    func viewDidLoad() {
+        
+    }
 }
