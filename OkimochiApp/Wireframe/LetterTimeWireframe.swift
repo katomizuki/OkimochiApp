@@ -6,5 +6,5 @@
 //
 
 protocol LetterTimeWireframe {
-    
+    func transitionLetterMapVC()
 }

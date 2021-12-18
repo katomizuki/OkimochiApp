@@ -1,6 +1,6 @@
 import UIKit
 
-class PostLetterController: UIViewController,PostLetterViewable {
+final class PostLetterController: UIViewController,PostLetterViewable {
     // MARK: Properties
     @IBOutlet private weak var whoTypeTableView: UITableView!
     @IBOutlet private weak var nextButton: UIButton! {
@@ -9,7 +9,7 @@ class PostLetterController: UIViewController,PostLetterViewable {
             nextButton.layer.masksToBounds = true
         }
     }
-    var presentar:PostLetterPresentar?
+    var presentar:PostLetterPresentable?
     static let id = String(describing: self)
     
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class PostLetterController: UIViewController,PostLetterViewable {
     @IBAction private func didTapNextButton(_ sender: Any) {
         presentar?.onTapNextButton()
     }
+
 }
 // MARK: - UITableViewDelegate
 extension PostLetterController: UITableViewDelegate {
@@ -37,7 +38,7 @@ extension PostLetterController: UITableViewDelegate {
         print(#function)
         let cell = tableView.cellForRow(at: indexPath) as! LetterWhoTypeCell
         if indexPath.row == 1 {
-            performSegue(withIdentifier: "LetterFriendController", sender: nil)
+
         } else {
             cell.accessoryType =  .checkmark
     }

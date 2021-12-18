@@ -6,5 +6,5 @@
 //
 
 protocol LetterMapWireframe {
-    
+    func transitionLetterLastVC()
 }

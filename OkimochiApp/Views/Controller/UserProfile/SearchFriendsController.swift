@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchFriendsController: UIViewController,SearchFriendsViewable {
+final class SearchFriendsController: UIViewController,SearchFriendsViewable {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     var searchController = UISearchController(searchResultsController: nil)
@@ -43,7 +43,7 @@ class SearchFriendsController: UIViewController,SearchFriendsViewable {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriedDetailController" {
-            let controller = segue.destination as! FriedDetailController
+            let controller = segue.destination as! FriendDetailController
             let user = isSearched ? filterUsers[selectedIndex] : users[selectedIndex]
             controller.user = user
         }

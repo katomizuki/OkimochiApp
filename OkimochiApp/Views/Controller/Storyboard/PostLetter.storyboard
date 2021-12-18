@@ -78,7 +78,7 @@
                         <outlet property="titleTextFiled" destination="KOj-P4-5Yj" id="QHn-xb-3sq"/>
                         <outlet property="whoTypeTableView" destination="fea-UA-M6h" id="XVm-C9-XQx"/>
                         <segue destination="pCY-pY-8ub" kind="show" id="kmC-Tn-sNU"/>
-                        <segue destination="10X-yh-MlC" kind="presentation" identifier="LetterFriendController" modalPresentationStyle="fullScreen" id="5eS-ao-ujj"/>
+                        <segue destination="10X-yh-MlC" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="5eS-ao-ujj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

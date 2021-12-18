@@ -11,11 +11,11 @@ final class LetterContentPresentar:LetterContentPresentable {
     
     struct DI {
         var view:LetterContentViewable
-        var router:LetterContentRouter
+        var router:LetterContentWireframe
         var interactor:LetterContentUseCase
     }
     weak var view:LetterContentViewable!
-    var router:LetterContentRouter!
+    var router:LetterContentWireframe!
     var interactor:LetterContentUseCase!
     init(DI:DI) {
         self.view = DI.view
@@ -24,5 +24,8 @@ final class LetterContentPresentar:LetterContentPresentable {
     }
     func viewDidLoad() {
         
+    }
+    func onTapNextButton() {
+        router.transitionLetterTimeVC()
     }
 }

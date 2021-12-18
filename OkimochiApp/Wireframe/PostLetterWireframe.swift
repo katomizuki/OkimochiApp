@@ -7,4 +7,5 @@
 
 protocol PostLetterWireFrame {
     func transtionLetterContentVC()
+    func transtionLetterFriendVC()
 }

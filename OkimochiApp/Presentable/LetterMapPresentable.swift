@@ -8,4 +8,5 @@
 
 protocol LetterMapPresentable {
     func viewDidLoad()
+    func onTapNextButton()
 }

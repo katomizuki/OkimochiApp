@@ -26,7 +26,7 @@ class TimeLineController: UIViewController,TimeLineViewable{
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
         setupCollectionView()
-        checkLogin()
+//        checkLogin()
         checkLocationAndAddPin()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +59,7 @@ class TimeLineController: UIViewController,TimeLineViewable{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(#function)
-        if segue.identifier == "OpenLetterController" {
+        if segue.identifier == OpenLetterController.id {
             presentar?.segue(segue: segue)
         }
     }

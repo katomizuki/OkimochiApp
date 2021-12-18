@@ -1,6 +1,6 @@
 import UIKit
 import SDWebImage
-class FriedDetailController: UIViewController {
+final class FriendDetailController: UIViewController {
     static let id = String(describing: self)
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -29,4 +29,7 @@ class FriedDetailController: UIViewController {
     }
     
   
+}
+extension FriendDetailController:FriendsDetailViewable {
+    
 }

@@ -16,7 +16,7 @@ final class TimeLineRouter:TimeLineWireframe {
     func transitionLogin() {
         print(#function)
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        let controller = storyboard.instantiateViewController(withIdentifier: LoginController.id) as! LoginController
         let loginRouter = LoginRouter(view: controller)
         let interactor = LoginInteractor()
         let presentar = LoginPresentar(DI: LoginPresentar.DI(view: controller, router: loginRouter, interactor: interactor))
@@ -29,7 +29,7 @@ final class TimeLineRouter:TimeLineWireframe {
     }
     
     func transitionLetterDetail() {
-        view.performSegue(withIdentifier: "OpenLetterController", sender: nil)
+        view.performSegue(withIdentifier: OpenLetterController.id, sender: nil)
     }
     func setupDI(segue: UIStoryboardSegue) {
         let controller = segue.destination as! OpenLetterController

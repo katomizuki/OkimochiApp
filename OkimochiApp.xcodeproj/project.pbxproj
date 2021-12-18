@@ -146,7 +146,7 @@
 		D375CB8A272FF93A0030CA79 /* SearchFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB89272FF93A0030CA79 /* SearchFriendsController.swift */; };
 		D375CC172731627E0030CA79 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CC152731627E0030CA79 /* FriendCell.swift */; };
 		D375CC182731627E0030CA79 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CC162731627E0030CA79 /* FriendCell.xib */; };
-		D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CC1927316B7F0030CA79 /* FriedDetailController.swift */; };
+		D375CC1A27316B7F0030CA79 /* FriendDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CC1927316B7F0030CA79 /* FriendDetailController.swift */; };
 		D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */; };
 		D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */; };
 		D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */; };
@@ -319,7 +319,7 @@
 		D375CB89272FF93A0030CA79 /* SearchFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsController.swift; sourceTree = "<group>"; };
 		D375CC152731627E0030CA79 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		D375CC162731627E0030CA79 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
-		D375CC1927316B7F0030CA79 /* FriedDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriedDetailController.swift; sourceTree = "<group>"; };
+		D375CC1927316B7F0030CA79 /* FriendDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailController.swift; sourceTree = "<group>"; };
 		D37AAB52272ECE2F003A1308 /* UpdateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfile.storyboard; sourceTree = "<group>"; };
 		D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileController.swift; sourceTree = "<group>"; };
 		D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDetailController.swift; sourceTree = "<group>"; };
@@ -595,7 +595,7 @@
 				D37AAB54272ECE5F003A1308 /* UpdateProfileController.swift */,
 				D37AAB56272ECF6B003A1308 /* LetterDetailController.swift */,
 				D375CB89272FF93A0030CA79 /* SearchFriendsController.swift */,
-				D375CC1927316B7F0030CA79 /* FriedDetailController.swift */,
+				D375CC1927316B7F0030CA79 /* FriendDetailController.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -956,7 +956,7 @@
 				D315166E276CB9C50061C488 /* PostLetterWireframe.swift in Sources */,
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D315166C276CB9990061C488 /* PostLetterPresentar.swift in Sources */,
-				D375CC1A27316B7F0030CA79 /* FriedDetailController.swift in Sources */,
+				D375CC1A27316B7F0030CA79 /* FriendDetailController.swift in Sources */,
 				D31516C0276D72380061C488 /* FinishLetterUseCase.swift in Sources */,
 				D3151600276B6B640061C488 /* SearchFriendsViewable.swift in Sources */,
 				D315166A276CB92C0061C488 /* PostLetterPresentable.swift in Sources */,

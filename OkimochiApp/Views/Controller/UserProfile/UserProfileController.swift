@@ -1,5 +1,5 @@
 import UIKit
-class UserProfileController: UIViewController {
+final class UserProfileController: UIViewController {
     static let id = String(describing: self)
     private var viewModel:ProfileViewData?
     var presentar:UserProfilePresentable?

@@ -1,9 +1,9 @@
 import UIKit
 
-class UpdateProfileController: UIViewController,UpdateProfileViewable {
+final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     @IBOutlet weak var tableView: UITableView!
     var user: User?
-    var presentar:UpdateProfilePresentar?
+    var presentar:UpdateProfilePresentable?
     static let id = String(describing: self)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,11 @@ class UpdateProfileController: UIViewController,UpdateProfileViewable {
         tableView.register(nib, forCellReuseIdentifier: UpdateProfileTableCell.id)
     }
     @IBAction func didTapDismissButton(_ sender: Any) {
-        self.dismiss(animated: true)
+        presentar?.onTapDismissButton()
     }
     @IBAction func didTapSaveButton(_ sender: Any) {
         print(#function)
+        presentar?.onTapSaveButton()
     }
 }
 extension UpdateProfileController: UITableViewDelegate {

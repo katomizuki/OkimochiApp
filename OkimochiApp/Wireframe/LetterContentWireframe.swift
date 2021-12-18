@@ -6,5 +6,5 @@
 //
 
 protocol LetterContentWireframe: AnyObject {
-    
+    func transitionLetterTimeVC()
 }

@@ -6,5 +6,5 @@
 //
 
 protocol FinishLetterPresentable {
-    
+    func onTapFinishButton()
 }

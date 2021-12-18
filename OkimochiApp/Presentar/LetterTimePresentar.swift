@@ -24,4 +24,8 @@ final class LetterTimePresentar:LetterTimePresentable {
     func viewDidLoad() {
         
     }
+    func onTapNextButton() {
+        router.transitionLetterMapVC()
+        
+    }
 }

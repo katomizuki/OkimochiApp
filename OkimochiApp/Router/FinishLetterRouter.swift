@@ -12,6 +12,6 @@ final class FinishLetterRouter:FinishLetterWireframe {
         self.view = view
     }
     func transitionRoot() {
-        
+        view.navigationController?.popToRootViewController(animated: true)
     }
 }

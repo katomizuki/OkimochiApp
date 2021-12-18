@@ -7,6 +7,8 @@
 
 import Foundation
 final class LetterMapPresentar: LetterMapPresentable {
+    
+    
     struct DI {
         var view:LetterMapViewable
         var router:LetterMapWireframe
@@ -22,5 +24,8 @@ final class LetterMapPresentar: LetterMapPresentable {
     }
     func viewDidLoad() {
         
+    }
+    func onTapNextButton() {
+        router.transitionLetterLastVC()
     }
 }

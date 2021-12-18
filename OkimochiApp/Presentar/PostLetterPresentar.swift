@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 final class PostLetterPresentar:PostLetterPresentable {
    
     struct DI {
@@ -27,6 +29,9 @@ final class PostLetterPresentar:PostLetterPresentable {
     
     func onTapNextButton() {
         router.transtionLetterContentVC()
+    }
+    func onTapFriendButton() {
+        router.transtionLetterFriendVC()
     }
     
 }

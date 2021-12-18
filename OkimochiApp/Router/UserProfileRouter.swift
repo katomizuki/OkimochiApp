@@ -15,7 +15,7 @@ class UserProfileRouter: UserProfileWireframe {
      }
     func transitionUpdateUserProfile() {
         print(#function)
-        let controller = UIStoryboard(name: "UpdateProfile", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileController") as! UpdateProfileController
+        let controller = UIStoryboard(name: "UpdateProfile", bundle: nil).instantiateViewController(withIdentifier: UpdateProfileController.id) as! UpdateProfileController
         let interactor = UpdateProfileInteractor()
         let router = UpdateProfileRouter(view: controller)
         let presentar = UpdateProfilePresentar(DI: UpdateProfilePresentar.DI(router: router, view: controller, interactor: interactor))
@@ -26,7 +26,7 @@ class UserProfileRouter: UserProfileWireframe {
      
      func transitionSearchUser() {
          let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
-         let controller = storyboard.instantiateViewController(withIdentifier: "SearchFriendsController") as! SearchFriendsController
+         let controller = storyboard.instantiateViewController(withIdentifier: SearchFriendsController.id) as! SearchFriendsController
          let interactor = SearchFriendsInteractor()
          let router = SearchFriendsRouter(view: controller)
          let presentar = SearchFriendPresentar(DI: SearchFriendPresentar.DI(router: router, view: controller, interactor: interactor))
@@ -36,7 +36,7 @@ class UserProfileRouter: UserProfileWireframe {
     
     func transitionLetterDetail() {
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterDetailController") as! LetterDetailController
+        let controller = storyboard.instantiateViewController(withIdentifier: LetterDetailController.id) as! LetterDetailController
         view.navigationController?.pushViewController(controller, animated: true)
     }
 }

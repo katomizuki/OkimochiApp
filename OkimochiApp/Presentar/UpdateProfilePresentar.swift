@@ -33,5 +33,8 @@ final class UpdateProfilePresentar:UpdateProfilePresentable {
     func onTapSaveButton() {
         
     }
+    func onTapDismissButton() {
+        router.dismiss()
+    }
     
 }

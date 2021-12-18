@@ -13,6 +13,6 @@ final class LetterDetailRouter: LetterDetailWireframe {
         self.view = view
     }
     func dismiss() {
-        
+        view.dismiss(animated: true)
     }
 }

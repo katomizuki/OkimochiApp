@@ -13,6 +13,6 @@ final class UpdateProfileRouter: UpdateProfileWireframe {
         self.view = view
     }
     func dismiss() {
-        
+        view.dismiss(animated: true)
     }
 }

@@ -7,4 +7,5 @@
 
 protocol LetterTimePresentable {
     func viewDidLoad()
+    func onTapNextButton()
 }

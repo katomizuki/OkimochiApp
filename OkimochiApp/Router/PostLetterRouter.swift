@@ -9,16 +9,28 @@ import Foundation
 import UIKit
 
 final class PostLetterRouter:PostLetterWireFrame {
+    
     private (set) weak var view:PostLetterViewable!
     init(view:PostLetterViewable) {
         self.view = view
     }
     func transtionLetterContentVC() {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterContentController") as! LetterContentController
+        let controller = storyboard.instantiateViewController(withIdentifier: LetterContentController.id) as! LetterContentController
         let interactor = LetterContentInteractor()
         let router = LetterContentRouter(view: controller)
         controller.presentar = LetterContentPresentar(DI: LetterContentPresentar.DI(view: controller, router: router, interactor: interactor))
         view.pushViewController(controller, animated: true)
+    }
+    func transtionLetterFriendVC() {
+        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: LetterFriendController.id) as! LetterFriendController
+        let router = LetterFriendRouter(view: controller)
+        let interactor = LetterFriendInteractor()
+        let presentar = LetterFriendPresentar(DI: LetterFriendPresentar.DI(view: controller, router: router, interactor: interactor))
+        controller.presentar = presentar
+        controller.modalPresentationStyle = .fullScreen
+        view.present(controller, animated: true, completion: nil)
+        
     }
 }

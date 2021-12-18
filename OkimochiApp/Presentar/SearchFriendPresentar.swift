@@ -9,7 +9,6 @@ import Foundation
 
 final class SearchFriendPresentar:SearchFriendPresentable {
     
-    
     struct DI {
         var router:SearchFriendsWireframe
         var view: SearchFriendsViewable

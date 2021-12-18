@@ -4,6 +4,7 @@ final class FinishLetterController: UIViewController {
     // MARK: - Properties
     @IBOutlet private var letterImageView: UIImageView!
     static let id = String(describing: self)
+    var presentar:FinishLetterPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +12,7 @@ final class FinishLetterController: UIViewController {
     }
     // MARK: -  IBAction
     @IBAction private func didTapfinishButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        presentar?.onTapFinishButton()
     }
     func shakeLetter() {
         print(#function)

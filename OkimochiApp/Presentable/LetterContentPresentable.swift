@@ -7,4 +7,5 @@
 
 protocol LetterContentPresentable {
     func viewDidLoad()
+    func onTapNextButton()
 }

@@ -9,5 +9,5 @@ protocol UpdateProfilePresentable {
     func viewDidLoad()
     func viewWillAppear()
     func onTapSaveButton()
-    
+    func onTapDismissButton()
 }

@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="1745" y="889"/>
         </scene>
-        <!--Fried Detail Controller-->
+        <!--Friend Detail Controller-->
         <scene sceneID="SVJ-tS-nkK">
             <objects>
-                <viewController storyboardIdentifier="FriedDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQG-4u-zOT" customClass="FriedDetailController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriedDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rQG-4u-zOT" customClass="FriendDetailController" customModule="OkimochiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeO-Ci-SMM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

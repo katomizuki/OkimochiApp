@@ -22,4 +22,7 @@ final class FinishLetterPresentar:FinishLetterPresentable {
         self.interactor = DI.interactor
         self.router = DI.router
     }
+    func onTapFinishButton() {
+        router.transitionRoot()
+    }
 }

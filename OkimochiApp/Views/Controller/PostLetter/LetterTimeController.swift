@@ -13,15 +13,15 @@ final class LetterTimeController: UIViewController {
         }
     }
     static let id = String(describing: self)
+    var presentar:LetterTimePresentable?
     override func viewDidLoad() {
         super.viewDidLoad()
+        presentar?.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
     }
   
     @IBAction private func didTapNextButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterMapController") as! LetterMapController
-        navigationController?.pushViewController(controller, animated: true)
+        presentar?.onTapNextButton()
     }
     
 }

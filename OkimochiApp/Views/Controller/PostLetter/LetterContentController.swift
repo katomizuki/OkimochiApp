@@ -33,12 +33,13 @@ final class LetterContentController: UIViewController {
             titleTextFiled.layer.borderWidth = 2
         }
     }
-    var presentar:LetterContentPresentar?
+    var presentar:LetterContentPresentable?
     static let id = String(describing: self)
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
         setupPlaceholder()
+        presentar?.viewDidLoad()
     }
     private func setupPlaceholder() {
         contentTextView.addSubview(placeholderText)
@@ -47,9 +48,7 @@ final class LetterContentController: UIViewController {
     }
     
     @IBAction private func didTapNextButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LetterTimeController") as! LetterTimeController
-        navigationController?.pushViewController(controller, animated: true)
+        presentar?.onTapNextButton()
     }
     @objc private func didChangeTextView() {
         placeholderText.isHidden = contentTextView.text.count > 0
