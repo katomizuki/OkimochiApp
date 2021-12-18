@@ -26,3 +26,6 @@ final class LetterTimeController: UIViewController {
     }
     
 }
+extension LetterTimeController:LetterTimeViewable {
+    
+}

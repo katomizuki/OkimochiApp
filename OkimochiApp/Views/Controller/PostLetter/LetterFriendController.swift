@@ -45,3 +45,6 @@ extension LetterFriendController:UITableViewDataSource {
         return 20
     }
 }
+extension LetterFriendController:LetterFriendViewable {
+    
+}
