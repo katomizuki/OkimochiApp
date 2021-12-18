@@ -26,4 +26,6 @@ final class FinishLetterController: UIViewController {
 
     
 }
-
+extension FinishLetterController:FinishLetterViewable {
+    
+}
