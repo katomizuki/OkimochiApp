@@ -59,3 +59,6 @@ extension LoginController: UITextFieldDelegate {
         return true
     }
 }
+extension LoginController:LoginViewable {
+    
+}

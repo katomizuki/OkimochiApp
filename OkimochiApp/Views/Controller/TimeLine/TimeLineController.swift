@@ -16,9 +16,13 @@ class TimeLineController: UIViewController,TimeLineViewable{
     override func viewDidLoad() {
         super.viewDidLoad()
         let bounds = UIScreen.main.bounds.size
-        let frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+        let frame = CGRect(x: 0,
+                           y: 0,
+                           width: bounds.width,
+                           height: bounds.height)
         mapView = MKMapView(frame: frame)
-        mapView.center = CGPoint(x:self.view.frame.width/2,y:self.view.frame.height/2)
+        mapView.center = CGPoint(x: self.view.frame.width / 2,
+                                 y: self.view.frame.height / 2)
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
         setupCollectionView()
@@ -40,18 +44,6 @@ class TimeLineController: UIViewController,TimeLineViewable{
     // MARK: - checkMethod
     private func checkLogin() {
         presentar?.notToken()
-//        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-//        UserService.getUser(token: token) { result in
-//            switch result {
-//            case .success(let user):
-//                self.user = user
-//            case .failure:
-//                DispatchQueue.main.async {
-//        
-//                    self.performSegue(withIdentifier: "LoginController", sender: nil)
-//                }
-//            }
-//        }
     }
     private func checkLocationAndAddPin() {
         locationManager.delegate = self
@@ -59,11 +51,17 @@ class TimeLineController: UIViewController,TimeLineViewable{
     }
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         print(#function)
+        
 
     }
     @IBAction func prepareForUnwind(unwindSegue :UIStoryboardSegue) {
         print(#function)
-
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(#function)
+        if segue.identifier == "OpenLetterController" {
+            presentar?.segue(segue: segue)
+        }
     }
 }
 // MARK: - CollectionViewDelegate

@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-final class OpenLetterPresentar {
+final class OpenLetterPresentar:OpenLetterPresentable {
     struct DI {
         var view:OpenLetterViewable
         var router:OpenLetterWireframe

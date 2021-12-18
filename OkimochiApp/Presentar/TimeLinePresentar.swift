@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 final class TimeLinePresentar:TimeLinePresentable {
    
     struct DI {
@@ -35,6 +36,9 @@ final class TimeLinePresentar:TimeLinePresentable {
     func notToken() {
         print(#function)
         router.transitionLogin()
+    }
+    func segue(segue:UIStoryboardSegue) {
+        router.setupDI(segue: segue)
     }
     
     

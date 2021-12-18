@@ -93,3 +93,6 @@ extension RegisterController:UIImagePickerControllerDelegate,UINavigationControl
         dismiss(animated: true, completion: nil)
     }
 }
+extension RegisterController:RegisterViewable {
+    
+}

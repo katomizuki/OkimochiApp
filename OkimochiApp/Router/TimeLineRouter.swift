@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class TimeLineRouter:TimeLineWireframe {
     private (set) weak var view:TimeLineViewable!
@@ -14,15 +15,24 @@ final class TimeLineRouter:TimeLineWireframe {
     }
     func transitionLogin() {
         print(#function)
-        DispatchQueue.main.async {
-            self.view.performSegue(withIdentifier: "LoginController", sender: nil)
-        }
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        let loginRouter = LoginRouter(view: controller)
+        let interactor = LoginInteractor()
+        let presentar = LoginPresentar(DI: LoginPresentar.DI(view: controller, router: loginRouter, interactor: interactor))
+        controller.presentar = presentar
+        view.present(controller, animated: true, completion: nil)
         
     }
     
     func transitionLetterDetail() {
-        DispatchQueue.main.async {
-            self.view.performSegue(withIdentifier:"OpenLetterController", sender: nil)
-        }
+        view.performSegue(withIdentifier: "OpenLetterController", sender: nil)
+    }
+    func setupDI(segue: UIStoryboardSegue) {
+        let controller = segue.destination as! OpenLetterController
+        let router = OpenLetterRouter(view: controller)
+        let interactor = OpenLetterInteractor()
+        let presentar = OpenLetterPresentar(DI: OpenLetterPresentar.DI(view: controller, router: router, interactor: interactor))
+        controller.presentar = presentar
     }
 }

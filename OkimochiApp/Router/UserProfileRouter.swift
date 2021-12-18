@@ -20,7 +20,8 @@ class UserProfileRouter: UserProfileWireframe {
         let router = UpdateProfileRouter(view: controller)
         let presentar = UpdateProfilePresentar(DI: UpdateProfilePresentar.DI(router: router, view: controller, interactor: interactor))
         controller.presentar = presentar
-        view.performSegue(withIdentifier: "gotoUpdateProfileController", sender: nil)
+        controller.modalPresentationStyle = .fullScreen
+        view.present(controller, animated: true, completion: nil)
     }
      
      func transitionSearchUser() {

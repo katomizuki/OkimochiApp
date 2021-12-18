@@ -52,9 +52,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profileCollectionView" destination="08i-3w-kvD" id="KAl-pm-fbD"/>
-                        <segue destination="KRd-AC-nAf" kind="presentation" identifier="gotoUpdateProfileController" modalPresentationStyle="fullScreen" id="GqV-M4-iJM"/>
                         <segue destination="L9y-Yj-hmi" kind="show" id="SVL-HW-edC"/>
                         <segue destination="Dvb-C9-eAu" kind="show" id="9py-Lm-4fD"/>
+                        <segue destination="KRd-AC-nAf" kind="presentation" modalPresentationStyle="fullScreen" id="Hul-vF-zGe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
                 <viewControllerPlaceholder storyboardName="UpdateProfile" id="KRd-AC-nAf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uI0-t6-csl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="-392"/>
+            <point key="canvasLocation" x="1538" y="-421"/>
         </scene>
         <!--Letter Detail Controller-->
         <scene sceneID="fBw-Z4-Ka5">

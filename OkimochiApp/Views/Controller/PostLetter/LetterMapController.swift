@@ -74,3 +74,6 @@ extension LetterMapController: ResultMapControllerDelegate {
         mapView.setRegion(region, animated: true)
     }
 }
+extension LetterMapController:LetterMapViewable {
+    
+}
