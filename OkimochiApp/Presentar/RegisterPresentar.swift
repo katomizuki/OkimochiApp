@@ -6,7 +6,7 @@
 //
 
 import Foundation
-final class RegisterPresentar:RegisterPrentable {
+final class RegisterPresentar:RegisterPresentable {
     
     struct DI {
         var view:RegisterViewable

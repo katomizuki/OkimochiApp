@@ -7,4 +7,5 @@
 
 protocol TimeLineWireframe {
     func transitionLetterDetail()
+    func transitionLogin()
 }

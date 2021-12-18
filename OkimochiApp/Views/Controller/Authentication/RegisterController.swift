@@ -32,7 +32,8 @@ class RegisterController: UIViewController {
             registerButton.layer.masksToBounds = true
         }
     }
-    private var viewModel = RegisterViewData()
+    private var viewData = RegisterViewData()
+    var presentar:RegisterPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +65,7 @@ class RegisterController: UIViewController {
         guard let email = mailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
-        guard let image = viewModel.image else { return }
+        guard let image = viewData.image else { return }
         let credential = Credential(name: name, email: email, password: password)
 //        AuthService.register(credential: credential) { result in
 //            switch result {
@@ -81,13 +82,13 @@ class RegisterController: UIViewController {
 extension RegisterController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case mailTextField: viewModel.email = textField.text
-        case passwordTextField: viewModel.password = textField.text
-        case nameTextField: viewModel.name = textField.text
+        case mailTextField: viewData.email = textField.text
+        case passwordTextField: viewData.password = textField.text
+        case nameTextField: viewData.name = textField.text
         default:break
         }
-        registerButton.isEnabled = viewModel.isValid
-        registerButton.backgroundColor = viewModel.isValid ? .systemOrange : .systemGray
+        registerButton.isEnabled = viewData.isValid
+        registerButton.backgroundColor = viewData.isValid ? .systemOrange : .systemGray
         return true
     }
 }
@@ -95,7 +96,7 @@ extension RegisterController:UIImagePickerControllerDelegate,UINavigationControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         imageButton.setImage(image, for: .normal)
-        viewModel.image = image
+        viewData.image = image
         dismiss(animated: true, completion: nil)
     }
 }

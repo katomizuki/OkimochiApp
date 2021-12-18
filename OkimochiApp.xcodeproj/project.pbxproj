@@ -53,7 +53,7 @@
 		D3151610276B6C340061C488 /* SearchFriendPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315160F276B6C340061C488 /* SearchFriendPresentable.swift */; };
 		D3151612276B6C450061C488 /* TimeLinePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151611276B6C450061C488 /* TimeLinePresentable.swift */; };
 		D3151614276B6C4E0061C488 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151613276B6C4E0061C488 /* LoginPresentable.swift */; };
-		D3151616276B6C580061C488 /* RegisterPrentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151615276B6C580061C488 /* RegisterPrentable.swift */; };
+		D3151616276B6C580061C488 /* RegisterPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151615276B6C580061C488 /* RegisterPresentable.swift */; };
 		D3151618276B6C680061C488 /* FriendDetailPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151617276B6C680061C488 /* FriendDetailPresentable.swift */; };
 		D315161A276B6D540061C488 /* UserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151619276B6D540061C488 /* UserProfileUseCase.swift */; };
 		D315161C276B6D650061C488 /* UpdateProfileUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315161B276B6D650061C488 /* UpdateProfileUserCase.swift */; };
@@ -134,6 +134,12 @@
 		D31516BE276D72140061C488 /* FinishLetterPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516BD276D72130061C488 /* FinishLetterPresentable.swift */; };
 		D31516C0276D72380061C488 /* FinishLetterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516BF276D72380061C488 /* FinishLetterUseCase.swift */; };
 		D31516C2276D72700061C488 /* FinishLetterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516C1276D72700061C488 /* FinishLetterWireframe.swift */; };
+		D31516C4276D8D1D0061C488 /* OpenLetterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516C3276D8D1D0061C488 /* OpenLetterRouter.swift */; };
+		D31516C6276D8D790061C488 /* OpenLetterPresentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516C5276D8D790061C488 /* OpenLetterPresentar.swift */; };
+		D31516C8276D8E230061C488 /* OpenLetterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516C7276D8E230061C488 /* OpenLetterInteractor.swift */; };
+		D31516CA276D8E5C0061C488 /* OpenLetterPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516C9276D8E5C0061C488 /* OpenLetterPresentable.swift */; };
+		D31516CC276D8E750061C488 /* OpenLetterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */; };
+		D31516CE276D8E8C0061C488 /* OpenLetterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -220,7 +226,7 @@
 		D315160F276B6C340061C488 /* SearchFriendPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendPresentable.swift; sourceTree = "<group>"; };
 		D3151611276B6C450061C488 /* TimeLinePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLinePresentable.swift; sourceTree = "<group>"; };
 		D3151613276B6C4E0061C488 /* LoginPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentable.swift; sourceTree = "<group>"; };
-		D3151615276B6C580061C488 /* RegisterPrentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPrentable.swift; sourceTree = "<group>"; };
+		D3151615276B6C580061C488 /* RegisterPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresentable.swift; sourceTree = "<group>"; };
 		D3151617276B6C680061C488 /* FriendDetailPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailPresentable.swift; sourceTree = "<group>"; };
 		D3151619276B6D540061C488 /* UserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUseCase.swift; sourceTree = "<group>"; };
 		D315161B276B6D650061C488 /* UpdateProfileUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUserCase.swift; sourceTree = "<group>"; };
@@ -301,6 +307,12 @@
 		D31516BD276D72130061C488 /* FinishLetterPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishLetterPresentable.swift; sourceTree = "<group>"; };
 		D31516BF276D72380061C488 /* FinishLetterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishLetterUseCase.swift; sourceTree = "<group>"; };
 		D31516C1276D72700061C488 /* FinishLetterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishLetterWireframe.swift; sourceTree = "<group>"; };
+		D31516C3276D8D1D0061C488 /* OpenLetterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterRouter.swift; sourceTree = "<group>"; };
+		D31516C5276D8D790061C488 /* OpenLetterPresentar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterPresentar.swift; sourceTree = "<group>"; };
+		D31516C7276D8E230061C488 /* OpenLetterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterInteractor.swift; sourceTree = "<group>"; };
+		D31516C9276D8E5C0061C488 /* OpenLetterPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterPresentable.swift; sourceTree = "<group>"; };
+		D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterUseCase.swift; sourceTree = "<group>"; };
+		D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterWireframe.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -404,6 +416,7 @@
 				D31516A5276D6C4A0061C488 /* LetterTimeWireframe.swift */,
 				D31516B3276D6E200061C488 /* LetterFriendWireframe.swift */,
 				D31516C1276D72700061C488 /* FinishLetterWireframe.swift */,
+				D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -616,6 +629,7 @@
 				D315169B276D6B330061C488 /* LetterTimeRouter.swift */,
 				D31516A7276D6CB90061C488 /* LetterFriendRouter.swift */,
 				D31516B5276D712E0061C488 /* FinishLetterRouter.swift */,
+				D31516C3276D8D1D0061C488 /* OpenLetterRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -637,6 +651,7 @@
 				D3151699276D6AC30061C488 /* LetterTimePresentar.swift */,
 				D31516A9276D6CF10061C488 /* LetterFriendPresentar.swift */,
 				D31516B7276D714F0061C488 /* FinishLetterPresentar.swift */,
+				D31516C5276D8D790061C488 /* OpenLetterPresentar.swift */,
 			);
 			path = Presentar;
 			sourceTree = "<group>";
@@ -657,6 +672,7 @@
 				D315169D276D6B8D0061C488 /* LetterTimeInteractor.swift */,
 				D31516AB276D6D990061C488 /* LetterFriendInteractor.swift */,
 				D31516B9276D71D90061C488 /* FinishLetterInteractor.swift */,
+				D31516C7276D8E230061C488 /* OpenLetterInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -693,7 +709,7 @@
 				D315160F276B6C340061C488 /* SearchFriendPresentable.swift */,
 				D3151611276B6C450061C488 /* TimeLinePresentable.swift */,
 				D3151613276B6C4E0061C488 /* LoginPresentable.swift */,
-				D3151615276B6C580061C488 /* RegisterPrentable.swift */,
+				D3151615276B6C580061C488 /* RegisterPresentable.swift */,
 				D3151617276B6C680061C488 /* FriendDetailPresentable.swift */,
 				D3151669276CB92C0061C488 /* PostLetterPresentable.swift */,
 				D3151683276D63580061C488 /* LetterContentPresentable.swift */,
@@ -701,6 +717,7 @@
 				D31516A1276D6BC50061C488 /* LetterTimePresentable.swift */,
 				D31516AF276D6DE40061C488 /* LetterFriendPresentable.swift */,
 				D31516BD276D72130061C488 /* FinishLetterPresentable.swift */,
+				D31516C9276D8E5C0061C488 /* OpenLetterPresentable.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -723,6 +740,7 @@
 				D31516A3276D6BE00061C488 /* LetterTimeUseCase.swift */,
 				D31516B1276D6E010061C488 /* LetterFriendUseCase.swift */,
 				D31516BF276D72380061C488 /* FinishLetterUseCase.swift */,
+				D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -917,6 +935,7 @@
 				D31516B0276D6DE40061C488 /* LetterFriendPresentable.swift in Sources */,
 				D3151606276B6B870061C488 /* LoginViewable.swift in Sources */,
 				D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */,
+				D31516C6276D8D790061C488 /* OpenLetterPresentar.swift in Sources */,
 				D31516AC276D6D990061C488 /* LetterFriendInteractor.swift in Sources */,
 				D3151694276D6A300061C488 /* LetterMapViewable.swift in Sources */,
 				D312C2AA2744BFC300DF7E83 /* OpenLetterController.swift in Sources */,
@@ -997,15 +1016,17 @@
 				D31515E8276B69A10061C488 /* UserProfilePresentar.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D315164F276B71AB0061C488 /* LetterDetailWireframe.swift in Sources */,
+				D31516C4276D8D1D0061C488 /* OpenLetterRouter.swift in Sources */,
 				D3151659276B773D0061C488 /* FriendsDetailViewable.swift in Sources */,
 				D315163A276B6F970061C488 /* UserProfileRouter.swift in Sources */,
 				D315165F276B793D0061C488 /* AnyInteractor.swift in Sources */,
 				D3151642276B6FD80061C488 /* TimeLineRouter.swift in Sources */,
 				D315167E276D62CF0061C488 /* LetterContentPresentar.swift in Sources */,
+				D31516CC276D8E750061C488 /* OpenLetterUseCase.swift in Sources */,
 				D31515FE276B6B560061C488 /* LetterDetailViewable.swift in Sources */,
 				D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */,
 				D31515EA276B69B40061C488 /* UpdateProfilePresentar.swift in Sources */,
-				D3151616276B6C580061C488 /* RegisterPrentable.swift in Sources */,
+				D3151616276B6C580061C488 /* RegisterPresentable.swift in Sources */,
 				D315161E276B6D710061C488 /* LetterDetailUseCase.swift in Sources */,
 				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
 				D31516B8276D714F0061C488 /* FinishLetterPresentar.swift in Sources */,
@@ -1025,6 +1046,7 @@
 				D3151655276B71E00061C488 /* LoginWireframe.swift in Sources */,
 				D3151636276B6EED0061C488 /* LoginInteractor.swift in Sources */,
 				D381023E272D11BE003C7850 /* PostLetterController.swift in Sources */,
+				D31516C8276D8E230061C488 /* OpenLetterInteractor.swift in Sources */,
 				D31516A6276D6C4A0061C488 /* LetterTimeWireframe.swift in Sources */,
 				D315169E276D6B8D0061C488 /* LetterTimeInteractor.swift in Sources */,
 				D315162E276B6EA10061C488 /* UpdateProfileInteractor.swift in Sources */,
@@ -1037,6 +1059,7 @@
 				D3151653276B71D40061C488 /* TimeLineWireframe.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewData.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
+				D31516CA276D8E5C0061C488 /* OpenLetterPresentable.swift in Sources */,
 				D3151632276B6ECF0061C488 /* SearchFriendsInteractor.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,
 				D31516BA276D71D90061C488 /* FinishLetterInteractor.swift in Sources */,
@@ -1050,6 +1073,7 @@
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,
 				D315167C276D5B580061C488 /* UserNavigationController.swift in Sources */,
 				D37AAB55272ECE5F003A1308 /* UpdateProfileController.swift in Sources */,
+				D31516CE276D8E8C0061C488 /* OpenLetterWireframe.swift in Sources */,
 				D381022D272D06DC003C7850 /* LoginViewModel.swift.swift in Sources */,
 				D3151640276B6FBA0061C488 /* SearchFriendsRouter.swift in Sources */,
 				D31516A4276D6BE00061C488 /* LetterTimeUseCase.swift in Sources */,

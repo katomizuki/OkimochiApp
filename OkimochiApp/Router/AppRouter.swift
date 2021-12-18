@@ -11,7 +11,7 @@ class AppRouter {
     static func start(controller:MainTabBarController) {
         let timeLineVC = controller.viewControllers![0] as! TimeLineController
         let timeLineInteractor = TimeLineInteractor()
-        let timeLineRouter = TimeLineRouter()
+        let timeLineRouter = TimeLineRouter(view: timeLineVC)
         let timeLinePresentar = TimeLinePresentar(DI: TimeLinePresentar.DI(view: timeLineVC, router: timeLineRouter, interactor: timeLineInteractor))
         timeLineVC.presentar = timeLinePresentar
         

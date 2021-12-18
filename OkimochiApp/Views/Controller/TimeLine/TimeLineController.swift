@@ -9,7 +9,7 @@ class TimeLineController: UIViewController,TimeLineViewable{
     @IBOutlet weak var collectionView: UICollectionView!
     private let locationManager = CLLocationManager()
     var mapView:MKMapView!
-    var presentar:TimeLinePresentar?
+    var presentar:TimeLinePresentable?
     static let id = String(describing: self)
   
     // MARK: - Lifecycle
@@ -39,13 +39,15 @@ class TimeLineController: UIViewController,TimeLineViewable{
     }
     // MARK: - checkMethod
     private func checkLogin() {
-        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+        presentar?.notToken()
+//        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
 //        UserService.getUser(token: token) { result in
 //            switch result {
 //            case .success(let user):
 //                self.user = user
 //            case .failure:
 //                DispatchQueue.main.async {
+//        
 //                    self.performSegue(withIdentifier: "LoginController", sender: nil)
 //                }
 //            }
@@ -68,7 +70,7 @@ class TimeLineController: UIViewController,TimeLineViewable{
 extension TimeLineController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-        performSegue(withIdentifier: "OpenLetterController", sender: nil)
+        presentar?.onTapLetter()
     }
 }
 // MARK: - CollectionViewDataSource

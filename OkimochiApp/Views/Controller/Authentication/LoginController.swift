@@ -25,8 +25,9 @@ class LoginController: UIViewController {
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
-    private var viewModel = LoginViewData()
+    private var viewData = LoginViewData()
     static let id = String(describing: self)
+    var presentar:LoginPresentable?
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,12 +61,12 @@ class LoginController: UIViewController {
 extension LoginController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case emailTextField: viewModel.email = textField.text
-        case passwordTextField: viewModel.password = textField.text
+        case emailTextField: viewData.email = textField.text
+        case passwordTextField: viewData.password = textField.text
         default:break
         }
-        loginButton.isEnabled = viewModel.isValid
-        loginButton.backgroundColor = viewModel.isValid ? .systemOrange : .systemGray
+        loginButton.isEnabled = viewData.isValid
+        loginButton.backgroundColor = viewData.isValid ? .systemOrange : .systemGray
         return true
     }
 }

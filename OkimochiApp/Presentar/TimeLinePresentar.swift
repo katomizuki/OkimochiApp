@@ -30,7 +30,11 @@ final class TimeLinePresentar:TimeLinePresentable {
     }
     
     func onTapLetter() {
-        
+        router.transitionLetterDetail()
+    }
+    func notToken() {
+        print(#function)
+        router.transitionLogin()
     }
     
     
