@@ -1,16 +1,16 @@
 import UIKit
 
 class ProfileCell: UICollectionViewCell {
-    static let id = "ProfileCell"
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var friendImageView: UIImageView! {
+    static let id = String(describing: self)
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var friendImageView: UIImageView! {
         didSet {
             friendImageView.layer.cornerRadius = 60 / 2
             friendImageView.layer.masksToBounds = true
         }
     }
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var letterImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var letterImageView: UIImageView!
     var viewModel:ProfileViewData? {
         didSet {
             setupUI()
@@ -18,9 +18,10 @@ class ProfileCell: UICollectionViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+    
     }
     static func nib()->UINib {
-      return  UINib(nibName: "ProfileCell", bundle: nil)
+      return  UINib(nibName: String(describing: self), bundle: nil)
     }
     private func setupUI() {
         guard let viewModel = viewModel else {
@@ -40,4 +41,5 @@ class ProfileCell: UICollectionViewCell {
             friendImageView.isHidden = false
     }
   }
+    
 }

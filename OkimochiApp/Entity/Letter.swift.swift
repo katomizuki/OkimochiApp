@@ -17,4 +17,10 @@ struct Letter:Codable {
     var isOpen = true
     var sendType: SendWhoType?
     var placeName: String
+    var who:String
+    var imageUrl:String
+    var openTime:String
+    var openPlaceName:String
+    var latitude:String
+    var longitude:String
 }

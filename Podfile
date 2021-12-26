@@ -12,5 +12,7 @@ pod 'PKHUD', '~> 5.0'
 pod 'KeychainSwift', '~> 19.0'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
-
+pod 'RxSwift', '6.2.0'
+pod 'RxCocoa', '6.2.0'
+pod 'Alamofire', '~> 5.5'
 end
