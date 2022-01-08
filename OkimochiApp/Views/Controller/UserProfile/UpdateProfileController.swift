@@ -4,7 +4,7 @@ final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     @IBOutlet weak var tableView: UITableView!
     var user: User?
     var presentar:UpdateProfilePresentable?
-    static let id = String(describing: self)
+    static let id = String(describing: type(of: self))
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()

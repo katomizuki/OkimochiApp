@@ -9,8 +9,9 @@ final class PostLetterController: UIViewController,PostLetterViewable {
             nextButton.layer.masksToBounds = true
         }
     }
-    var presentar:PostLetterPresentable?
-    static let id = String(describing: self)
+    var presentar: PostLetterPresentable?
+    private let dataSource = PostDataSource()
+    static let id = String(describing: PostLetterController.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,8 @@ final class PostLetterController: UIViewController,PostLetterViewable {
     }
     private func setupTableView() {
         whoTypeTableView.delegate = self
-        whoTypeTableView.dataSource = self
-        let nib = LetterWhoTypeCell.nib()
-        whoTypeTableView.register(nib, forCellReuseIdentifier: LetterWhoTypeCell.id)
+        whoTypeTableView.dataSource = dataSource
+        whoTypeTableView.register(LetterWhoTypeCell.nib(), forCellReuseIdentifier: LetterWhoTypeCell.id)
         whoTypeTableView.rowHeight = 50
         whoTypeTableView.isScrollEnabled = false
         whoTypeTableView.allowsMultipleSelection = false
@@ -48,14 +48,4 @@ extension PostLetterController: UITableViewDelegate {
         cell?.accessoryType = .none
     }
 }
-// MARK: - UITableViewDataSource
-extension PostLetterController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SendWhoType.allCases.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LetterWhoTypeCell.id, for: indexPath) as? LetterWhoTypeCell else { fatalError() }
-        cell.whoType = SendWhoType(rawValue: indexPath.row)
-        return cell
-    }
-}
+

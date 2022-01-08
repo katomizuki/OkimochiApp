@@ -12,7 +12,7 @@ final class LetterTimeController: UIViewController {
             nextButton.layer.masksToBounds = true
         }
     }
-    static let id = String(describing: self)
+    static let id = String(describing: LetterTimeController.self)
     var presentar:LetterTimePresentable?
     override func viewDidLoad() {
         super.viewDidLoad()

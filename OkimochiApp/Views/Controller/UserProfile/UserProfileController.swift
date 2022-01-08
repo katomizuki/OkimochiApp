@@ -1,14 +1,17 @@
 import UIKit
 final class UserProfileController: UIViewController {
-    static let id = String(describing: self)
+    static let id = String(describing: UserProfileController.self)
     private var viewModel:ProfileViewData?
     var presentar:UserProfilePresentable?
     var user:User? {
         didSet {
+            guard let user = user else { return }
+            dataSource.initViewData(ProfileHeaderViewData(user: user))
             profileCollectionView.reloadData()
         }
     }
     @IBOutlet weak var profileCollectionView: UICollectionView!
+    private let dataSource = UserProfileDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -23,7 +26,8 @@ final class UserProfileController: UIViewController {
         let cellNib = ProfileCell.nib()
         profileCollectionView.register(cellNib, forCellWithReuseIdentifier: ProfileCell.id)
         profileCollectionView.delegate = self
-        profileCollectionView.dataSource = self
+        profileCollectionView.dataSource = dataSource
+        dataSource.delegate = self
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
     }
@@ -36,13 +40,7 @@ final class UserProfileController: UIViewController {
         
     }
     @objc private func didTapLogoutButton() {
-//        do {
-//            try Auth.auth().signOut()
-//            let vc = tabBarController?.viewControllers?[0]
-//            tabBarController?.selectedViewController = vc
-//        } catch {
-//            print(error)
-//        }
+        presentar?.onTapLogoutButton()
     }
 }
 
@@ -54,24 +52,7 @@ extension UserProfileController: UICollectionViewDelegate {
     }
     
 }
-// MARK: - colledtionViewDataSource
-extension UserProfileController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCell.id, for: indexPath) as? ProfileCell else { fatalError() }
-        return cell
-    }
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id, for: indexPath) as? ProfileHeader else { fatalError() }
-        header.delegate = self
-        if let user = user {
-            header.viewModel = ProfileHeaderViewData(user: user)
-        }
-        return header
-    }
-}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension UserProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,24 +63,16 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
     }
 }
 // MARK: - ProfileHeaderDelegate
-extension UserProfileController: ProfileHeaderDelegate {
-    func didTapUpdateButton() {
-        print(#function)
+extension UserProfileController: UserProfileDataSourceDelegate {
+    func onTapUpdateButton() {
         presentar?.onTapUpdateButton()
     }
     
-    func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
-        print(#function)
-        switch selectOptions {
-        case .fav:
-            print("fav")
-        case .past:
-            print("past")
-        case .info:
-            print("info")
-            
-        }
+    func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
+//        presentar?.on
     }
+    
+    
 }
 extension UserProfileController:UserProfileViewable {
    

@@ -15,4 +15,5 @@ pod 'GooglePlaces'
 pod 'RxSwift', '6.2.0'
 pod 'RxCocoa', '6.2.0'
 pod 'Alamofire', '~> 5.5'
+pod 'Moya', '~> 15.0'
 end

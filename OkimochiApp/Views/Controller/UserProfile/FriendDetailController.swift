@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 final class FriendDetailController: UIViewController {
-    static let id = String(describing: self)
+    static let id = String(describing: FriendDetailController.self)
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var friendImageView: UIImageView! {

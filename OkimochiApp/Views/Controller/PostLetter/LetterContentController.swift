@@ -34,7 +34,7 @@ final class LetterContentController: UIViewController {
         }
     }
     var presentar:LetterContentPresentable?
-    static let id = String(describing: self)
+    static let id = String(describing: LetterContentController.self)
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal

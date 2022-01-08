@@ -10,7 +10,7 @@ class TimeLineController: UIViewController,TimeLineViewable{
     private let locationManager = CLLocationManager()
     var mapView:MKMapView!
     var presentar:TimeLinePresentable?
-    static let id = String(describing: self)
+    static let id = String(describing: TimeLineController.self)
   
     // MARK: - Lifecycle
     override func viewDidLoad() {

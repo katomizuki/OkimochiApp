@@ -26,7 +26,7 @@ class LoginController: UIViewController {
         }
     }
     private var viewData = LoginViewData()
-    static let id = String(describing: self)
+    static let id = String(describing: LoginController.self)
     var presentar:LoginPresentable?
     // MARK: - LifeCycle
     override func viewDidLoad() {

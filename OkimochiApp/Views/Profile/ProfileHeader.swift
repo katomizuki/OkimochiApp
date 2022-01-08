@@ -7,9 +7,9 @@ protocol ProfileHeaderDelegate: AnyObject {
 }
 class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
-    static let id = "ProfileHeader"
+    static let id = String(describing: self)
     weak var delegate:ProfileHeaderDelegate?
-    var viewModel:ProfileHeaderViewData? {
+    var viewData:ProfileHeaderViewData? {
         didSet {
             setupUI()
         }
@@ -40,7 +40,7 @@ class ProfileHeader: UICollectionReusableView {
         super.init(coder: coder)
     }
     static func nib()->UINib {
-        return UINib(nibName: "ProfileHeader", bundle: nil)
+        return UINib(nibName: String(describing: self), bundle: nil)
     }
     @IBAction func didTapUpdateButton(_ sender: Any) {
         print(#function)
@@ -78,7 +78,7 @@ class ProfileHeader: UICollectionReusableView {
         }
     }
     private func setupUI() {
-        nameLabel.text = viewModel?.user.name
-        profileImageView.sd_setImage(with: viewModel?.user.profileUrl, completed: nil)
+        nameLabel.text = viewData?.user.name
+        profileImageView.sd_setImage(with: viewData?.user.profileUrl, completed: nil)
     }
 }

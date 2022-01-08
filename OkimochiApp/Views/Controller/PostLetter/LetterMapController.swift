@@ -3,7 +3,7 @@ import CoreLocation
 import MapKit
 final class LetterMapController: UIViewController {
     // MARK: - Properties
-    static let id = String(describing: self)
+    static let id = String(describing: LetterMapController.self)
     @IBOutlet private weak var mapView: MKMapView!
     var searchController = UISearchController(searchResultsController: ResultMapController())
     @IBOutlet private weak var postLetterButton: UIButton! {

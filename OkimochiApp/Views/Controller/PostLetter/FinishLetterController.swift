@@ -3,7 +3,7 @@ import UIKit
 final class FinishLetterController: UIViewController {
     // MARK: - Properties
     @IBOutlet private var letterImageView: UIImageView!
-    static let id = String(describing: self)
+    static let id = String(describing: FinishLetterController.self)
     var presentar:FinishLetterPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {

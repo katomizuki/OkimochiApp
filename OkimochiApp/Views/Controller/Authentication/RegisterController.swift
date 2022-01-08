@@ -2,7 +2,7 @@ import UIKit
 
 class RegisterController: UIViewController {
     @IBOutlet weak var imageButton: UIButton!
-    static let id = String(describing: self)
+    static let id = String(describing: RegisterController.self)
     // MARK: - Properties
     @IBOutlet private weak var mailTextField: UITextField! {
         didSet {

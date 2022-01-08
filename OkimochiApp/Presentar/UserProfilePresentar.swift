@@ -5,10 +5,9 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import Foundation
 
 final class UserProfilePresentar: UserProfilePresentable {
-
+    
     struct DI {
         var router:UserProfileWireframe
         var interactor:UserProfileUseCase
@@ -21,7 +20,6 @@ final class UserProfilePresentar: UserProfilePresentable {
         self.router = DI.router
         self.interactor = DI.interactor
         self.view = DI.view
-        print("通った")
     }
     func viewDidLoad() {
         
@@ -48,5 +46,8 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     func onTapLetterDetail() {
         router.transitionLetterDetail()
+    }
+    func onTapLogoutButton() {
+        
     }
 }
