@@ -6,12 +6,12 @@ final class UserProfileController: UIViewController {
     var user:User? {
         didSet {
             guard let user = user else { return }
-            dataSource.initViewData(ProfileHeaderViewData(user: user))
+            collectionViewManager.initViewData(ProfileHeaderViewData(user: user))
             profileCollectionView.reloadData()
         }
     }
     @IBOutlet weak var profileCollectionView: UICollectionView!
-    private let dataSource = UserProfileDataSource()
+    private let collectionViewManager = UserProfileDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -25,9 +25,9 @@ final class UserProfileController: UIViewController {
     private func setupCollectionView() {
         let cellNib = ProfileCell.nib()
         profileCollectionView.register(cellNib, forCellWithReuseIdentifier: ProfileCell.id)
-        profileCollectionView.delegate = self
-        profileCollectionView.dataSource = dataSource
-        dataSource.delegate = self
+        profileCollectionView.delegate = collectionViewManager
+        profileCollectionView.dataSource = collectionViewManager
+        collectionViewManager.delegate = self
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
     }
@@ -35,7 +35,6 @@ final class UserProfileController: UIViewController {
    
     }
     @objc private func didTapSearchButton() {
-        print(#function)
         presentar?.onTapSearchButton()
         
     }
@@ -44,36 +43,18 @@ final class UserProfileController: UIViewController {
     }
 }
 
-// MARK: - collectionViewDelegate
-extension UserProfileController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(#function)
-        presentar?.onTapLetterDetail()
-    }
-    
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension UserProfileController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
-    }
-}
 // MARK: - ProfileHeaderDelegate
 extension UserProfileController: UserProfileDataSourceDelegate {
+    func onTapLetterDetail() {
+        presentar?.onTapLetterDetail()
+    }
     func onTapUpdateButton() {
         presentar?.onTapUpdateButton()
     }
     
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
-//        presentar?.on
     }
-    
-    
 }
-extension UserProfileController:UserProfileViewable {
+extension UserProfileController: UserProfileViewable {
    
 }

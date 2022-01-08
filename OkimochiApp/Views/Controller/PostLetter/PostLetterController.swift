@@ -10,7 +10,7 @@ final class PostLetterController: UIViewController,PostLetterViewable {
         }
     }
     var presentar: PostLetterPresentable?
-    private let dataSource = PostDataSource()
+    private let tableViewManager = PostDataTableViewManager()
     static let id = String(describing: PostLetterController.self)
     
     override func viewDidLoad() {
@@ -19,8 +19,8 @@ final class PostLetterController: UIViewController,PostLetterViewable {
         setupTableView()
     }
     private func setupTableView() {
-        whoTypeTableView.delegate = self
-        whoTypeTableView.dataSource = dataSource
+        whoTypeTableView.delegate = tableViewManager
+        whoTypeTableView.dataSource = tableViewManager
         whoTypeTableView.register(LetterWhoTypeCell.nib(), forCellReuseIdentifier: LetterWhoTypeCell.id)
         whoTypeTableView.rowHeight = 50
         whoTypeTableView.isScrollEnabled = false
@@ -30,22 +30,6 @@ final class PostLetterController: UIViewController,PostLetterViewable {
     @IBAction private func didTapNextButton(_ sender: Any) {
         presentar?.onTapNextButton()
     }
+}
 
-}
-// MARK: - UITableViewDelegate
-extension PostLetterController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(#function)
-        let cell = tableView.cellForRow(at: indexPath) as! LetterWhoTypeCell
-        if indexPath.row == 1 {
-
-        } else {
-            cell.accessoryType =  .checkmark
-    }
-}
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.accessoryType = .none
-    }
-}
 

@@ -175,7 +175,7 @@
 		D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B33272E703A0048FC75 /* ProfileCell.swift */; };
 		D3B91B36272E703A0048FC75 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B34272E703A0048FC75 /* ProfileCell.xib */; };
 		D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9742764BD26008EFB53 /* Keychain.swift */; };
-		D3D62E912789B17700DCA027 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E902789B17700DCA027 /* PostDataSource.swift */; };
+		D3D62E912789B17700DCA027 /* PostDataTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */; };
 		D3D62E932789B48600DCA027 /* UserProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */; };
 		D3D62E952789BD1700DCA027 /* UpdateProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */; };
 		D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */; };
@@ -354,7 +354,7 @@
 		D3B91B33272E703A0048FC75 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		D3B91B34272E703A0048FC75 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		D3C8A9742764BD26008EFB53 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OkimochiApp/Model/realmData/Keychain.swift; sourceTree = SOURCE_ROOT; };
-		D3D62E902789B17700DCA027 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
+		D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataTableViewManager.swift; sourceTree = "<group>"; };
 		D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataSource.swift; sourceTree = "<group>"; };
 		D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileDataSource.swift; sourceTree = "<group>"; };
 		D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsDataSource.swift; sourceTree = "<group>"; };
@@ -788,7 +788,7 @@
 		D3D62E8F2789B06200DCA027 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				D3D62E902789B17700DCA027 /* PostDataSource.swift */,
+				D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */,
 				D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */,
 				D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */,
 				D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */,
@@ -966,7 +966,7 @@
 				D3151624276B6DB30061C488 /* TimeLineUseCase.swift in Sources */,
 				D31516B6276D712E0061C488 /* FinishLetterRouter.swift in Sources */,
 				D31516AE276D6DBD0061C488 /* LetterFriendViewable.swift in Sources */,
-				D3D62E912789B17700DCA027 /* PostDataSource.swift in Sources */,
+				D3D62E912789B17700DCA027 /* PostDataTableViewManager.swift in Sources */,
 				D315168E276D69550061C488 /* LetterMapPresentar.swift in Sources */,
 				D3074C8D2753A3F800A84358 /* APIError.swift in Sources */,
 				D312C2AE2744C90200DF7E83 /* CustomSegue.swift in Sources */,

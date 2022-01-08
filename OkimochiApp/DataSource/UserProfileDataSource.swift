@@ -9,8 +9,9 @@ import UIKit
 protocol UserProfileDataSourceDelegate: AnyObject {
     func onTapUpdateButton()
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
+    func onTapLetterDetail()
 }
-class UserProfileDataSource: NSObject, UICollectionViewDataSource  {
+class UserProfileDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     weak var delegate:UserProfileDataSourceDelegate?
     var viewData:ProfileHeaderViewData?
     func initViewData(_ viewData:ProfileHeaderViewData) {
@@ -30,6 +31,17 @@ class UserProfileDataSource: NSObject, UICollectionViewDataSource  {
             header.viewData = viewData
         }
         return header
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onTapLetterDetail()
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.width
+        return CGSize(width: width, height: 100)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width = UIScreen.main.bounds.width
+        return CGSize(width: width, height: 150)
     }
 }
 extension UserProfileDataSource:ProfileHeaderDelegate {
