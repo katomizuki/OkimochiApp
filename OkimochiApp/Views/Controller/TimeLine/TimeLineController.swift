@@ -11,10 +11,17 @@ class TimeLineController: UIViewController,TimeLineViewable{
     var mapView:MKMapView!
     var presentar:TimeLinePresentable?
     static let id = String(describing: TimeLineController.self)
-  
+    private let collectionViewController = TimeLineCollectionViewController()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupMapView()
+        setupCollectionView()
+        checkLogin()
+        checkLocationAndAddPin()
+    }
+    private func setupMapView() {
         let bounds = UIScreen.main.bounds.size
         let frame = CGRect(x: 0,
                            y: 0,
@@ -25,19 +32,19 @@ class TimeLineController: UIViewController,TimeLineViewable{
                                  y: self.view.frame.height / 2)
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
-        setupCollectionView()
-//        checkLogin()
-        checkLocationAndAddPin()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        presentar?.viewWillAppear()
     }
+    
     // MARK: - SetupMethod
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView.delegate = collectionViewController
+        collectionView.dataSource = collectionViewController
+        collectionViewController.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionCell)
         collectionView.collectionViewLayout = layout
     }
@@ -51,8 +58,6 @@ class TimeLineController: UIViewController,TimeLineViewable{
     }
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         print(#function)
-        
-
     }
     @IBAction func prepareForUnwind(unwindSegue :UIStoryboardSegue) {
         print(#function)
@@ -65,27 +70,9 @@ class TimeLineController: UIViewController,TimeLineViewable{
     }
 }
 // MARK: - CollectionViewDelegate
-extension TimeLineController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(#function)
+extension TimeLineController: TimeLineDataSourceDelegate {
+    func tapCell() {
         presentar?.onTapLetter()
-    }
-}
-// MARK: - CollectionViewDataSource
-extension TimeLineController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCell, for: indexPath)
-        cell.backgroundColor = .systemOrange
-        return cell
-    }
-}
-// MARK: - CollectionViewDelegateFlowlayout
-extension TimeLineController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 60)
     }
 }
 // MARK: - CLLocationManagerDelegate
@@ -105,17 +92,16 @@ extension TimeLineController: CLLocationManagerDelegate {
         }
     }
     func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
-             switch status {
-             case .notDetermined:
-                 manager.requestWhenInUseAuthorization()
-             case .restricted, .denied:
-                 break
-             case .authorizedAlways, .authorizedWhenInUse:
-                 manager.startUpdatingLocation()
-                 break
-             default:
-                 break
-             }
-         }
+        switch status {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            break
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+            break
+        default:
+            break
+        }
+    }
 }
-// MARK: - MKMapViewDelegate

@@ -179,6 +179,7 @@
 		D3D62E932789B48600DCA027 /* UserProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */; };
 		D3D62E952789BD1700DCA027 /* UpdateProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */; };
 		D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */; };
+		D3D62E992789C83000DCA027 /* TimeLineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,6 +358,7 @@
 		D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataSource.swift; sourceTree = "<group>"; };
 		D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileDataSource.swift; sourceTree = "<group>"; };
 		D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsDataSource.swift; sourceTree = "<group>"; };
+		D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionViewController.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -790,6 +792,7 @@
 				D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */,
 				D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */,
 				D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */,
+				D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				D30E6F4B273409D200FBE5AF /* ProfileHeaderViewData.swift in Sources */,
 				D3074C8F2753A61F00A84358 /* AuthResponse.swift in Sources */,
 				D315164B276B718F0061C488 /* UserProfileWireframe.swift in Sources */,
+				D3D62E992789C83000DCA027 /* TimeLineCollectionViewController.swift in Sources */,
 				D31516B4276D6E200061C488 /* LetterFriendWireframe.swift in Sources */,
 				D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */,
 				D381020A272CF2CA003C7850 /* AppDelegate.swift in Sources */,
