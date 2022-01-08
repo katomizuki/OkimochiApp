@@ -7,5 +7,9 @@
 
 
 final class PostLetterInteractor:PostLetterUseCase {
+    func postLetter(letter: Letter, completion: @escaping (Error?) -> Void) {
+        
+    }
+    
     
 }

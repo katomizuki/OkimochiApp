@@ -7,5 +7,9 @@
 
 
 final class UpdateProfileInteractor:UpdateProfileUserCase{
+    func updateUserProfile(user: User, completion: @escaping (Error?) -> Void) {
+        
+    }
+    
     
 }

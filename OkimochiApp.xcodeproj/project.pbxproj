@@ -87,7 +87,6 @@
 		D3151659276B773D0061C488 /* FriendsDetailViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151658276B773D0061C488 /* FriendsDetailViewable.swift */; };
 		D315165B276B77920061C488 /* FriendsDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165A276B77920061C488 /* FriendsDetailWireframe.swift */; };
 		D315165D276B792D0061C488 /* Transitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165C276B792D0061C488 /* Transitioner.swift */; };
-		D315165F276B793D0061C488 /* AnyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315165E276B793D0061C488 /* AnyInteractor.swift */; };
 		D3151668276CB91C0061C488 /* PostLetterViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151667276CB91C0061C488 /* PostLetterViewable.swift */; };
 		D315166A276CB92C0061C488 /* PostLetterPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3151669276CB92C0061C488 /* PostLetterPresentable.swift */; };
 		D315166C276CB9990061C488 /* PostLetterPresentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315166B276CB9990061C488 /* PostLetterPresentar.swift */; };
@@ -178,6 +177,8 @@
 		D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9742764BD26008EFB53 /* Keychain.swift */; };
 		D3D62E912789B17700DCA027 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E902789B17700DCA027 /* PostDataSource.swift */; };
 		D3D62E932789B48600DCA027 /* UserProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */; };
+		D3D62E952789BD1700DCA027 /* UpdateProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */; };
+		D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,7 +263,6 @@
 		D3151658276B773D0061C488 /* FriendsDetailViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewable.swift; sourceTree = "<group>"; };
 		D315165A276B77920061C488 /* FriendsDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDetailWireframe.swift; sourceTree = "<group>"; };
 		D315165C276B792D0061C488 /* Transitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitioner.swift; sourceTree = "<group>"; };
-		D315165E276B793D0061C488 /* AnyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInteractor.swift; sourceTree = "<group>"; };
 		D3151667276CB91C0061C488 /* PostLetterViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterViewable.swift; sourceTree = "<group>"; };
 		D3151669276CB92C0061C488 /* PostLetterPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterPresentable.swift; sourceTree = "<group>"; };
 		D315166B276CB9990061C488 /* PostLetterPresentar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLetterPresentar.swift; sourceTree = "<group>"; };
@@ -355,6 +355,8 @@
 		D3C8A9742764BD26008EFB53 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OkimochiApp/Model/realmData/Keychain.swift; sourceTree = SOURCE_ROOT; };
 		D3D62E902789B17700DCA027 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataSource.swift; sourceTree = "<group>"; };
+		D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileDataSource.swift; sourceTree = "<group>"; };
+		D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsDataSource.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -738,7 +740,6 @@
 				D3151625276B6E000061C488 /* LoginUseCase.swift */,
 				D3151627276B6E0B0061C488 /* RegisterUseCase.swift */,
 				D3151629276B6E140061C488 /* FriendDetailUseCase.swift */,
-				D315165E276B793D0061C488 /* AnyInteractor.swift */,
 				D3151671276CBA200061C488 /* PostLetterUseCase.swift */,
 				D3151685276D64480061C488 /* LetterContentUseCase.swift */,
 				D3151691276D69FC0061C488 /* LetterMapUseCase.swift */,
@@ -787,6 +788,8 @@
 			children = (
 				D3D62E902789B17700DCA027 /* PostDataSource.swift */,
 				D3D62E922789B48600DCA027 /* UserProfileDataSource.swift */,
+				D3D62E942789BD1700DCA027 /* UpdateProfileDataSource.swift */,
+				D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				D31516BE276D72140061C488 /* FinishLetterPresentable.swift in Sources */,
 				D375CC172731627E0030CA79 /* FriendCell.swift in Sources */,
 				D315160C276B6C0A0061C488 /* UpdateProfilePresentable.swift in Sources */,
+				D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */,
 				D315169A276D6AC30061C488 /* LetterTimePresentar.swift in Sources */,
 				D3151620276B6D8B0061C488 /* SearchFriendUseCase.swift in Sources */,
 				D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */,
@@ -1027,13 +1031,13 @@
 				D3151604276B6B7B0061C488 /* TimeLineViewable.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 				D3151674276CBAF20061C488 /* PostLetterRouter.swift in Sources */,
+				D3D62E952789BD1700DCA027 /* UpdateProfileDataSource.swift in Sources */,
 				D31515E8276B69A10061C488 /* UserProfilePresentar.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D315164F276B71AB0061C488 /* LetterDetailWireframe.swift in Sources */,
 				D31516C4276D8D1D0061C488 /* OpenLetterRouter.swift in Sources */,
 				D3151659276B773D0061C488 /* FriendsDetailViewable.swift in Sources */,
 				D315163A276B6F970061C488 /* UserProfileRouter.swift in Sources */,
-				D315165F276B793D0061C488 /* AnyInteractor.swift in Sources */,
 				D3151642276B6FD80061C488 /* TimeLineRouter.swift in Sources */,
 				D315167E276D62CF0061C488 /* LetterContentPresentar.swift in Sources */,
 				D31516CC276D8E750061C488 /* OpenLetterUseCase.swift in Sources */,

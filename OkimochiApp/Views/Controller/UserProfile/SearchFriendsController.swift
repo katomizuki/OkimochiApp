@@ -2,9 +2,9 @@ import UIKit
 
 final class SearchFriendsController: UIViewController,SearchFriendsViewable {
     // MARK: - Properties
-    @IBOutlet weak var tableView: UITableView!
-    var searchController = UISearchController(searchResultsController: nil)
-    var isSearched: Bool {
+    @IBOutlet private weak var tableView: UITableView!
+    private var searchController = UISearchController(searchResultsController: nil)
+    private var isSearched: Bool {
         return searchController.searchBar.text?.isEmpty == false
     }
     private var users = [User]()
@@ -31,8 +31,7 @@ final class SearchFriendsController: UIViewController,SearchFriendsViewable {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        let nib = FriendCell.nib()
-        tableView.register(nib, forCellReuseIdentifier: FriendCell.id)
+        tableView.register(FriendCell.nib(), forCellReuseIdentifier: FriendCell.id)
         tableView.rowHeight = 80
     }
     private func setupUserData() {
@@ -72,7 +71,7 @@ extension SearchFriendsController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.id, for: indexPath) as? FriendCell else { fatalError() }
         let user = isSearched ? filterUsers[indexPath.row] : users[indexPath.row]
         let viewModel = FrinedCellViewData(user: user)
-        cell.viewModel = viewModel
+        cell.viewData = viewModel
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

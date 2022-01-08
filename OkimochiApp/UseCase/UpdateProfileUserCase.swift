@@ -6,5 +6,5 @@
 //
 
 protocol UpdateProfileUserCase {
-    
+    func updateUserProfile(user:User,completion:@escaping(Error?)->Void)
 }

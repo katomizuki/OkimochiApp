@@ -7,5 +7,5 @@
 
 
 final class FinishLetterInteractor:FinishLetterUseCase {
-    
+
 }

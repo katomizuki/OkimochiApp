@@ -2,8 +2,8 @@
 import UIKit
 
 class UpdateProfileTableCell: UITableViewCell {
-    static let id = "UpdateProfileTableCell"
-    var viewModel:UpdateProfileViewData? {
+    static let id = String(describing: self)
+    var viewData:UpdateProfileViewData? {
         didSet {
             setupUI()
         }
@@ -12,7 +12,7 @@ class UpdateProfileTableCell: UITableViewCell {
         super.awakeFromNib()
     }
     static func nib()->UINib {
-        return UINib(nibName: "UpdateProfileTableCell", bundle: nil)
+        return UINib(nibName: String(describing: self), bundle: nil)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

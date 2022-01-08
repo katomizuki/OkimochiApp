@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import Foundation
+
 import UIKit
 protocol Transitioner where Self: UIViewController {
     func pushViewController(_ viewController: UIViewController, animated: Bool)

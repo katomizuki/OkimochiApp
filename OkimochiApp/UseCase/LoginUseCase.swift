@@ -6,5 +6,6 @@
 //
 
 protocol LoginUseCase {
-    
+    func saveUserId(uid:String,completion:@escaping(Error?)->Void)
+    func saveToken(token:String,completion:@escaping(Error?)->Void)
 }

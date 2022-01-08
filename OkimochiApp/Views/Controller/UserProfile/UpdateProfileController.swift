@@ -2,18 +2,23 @@ import UIKit
 
 final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     @IBOutlet weak var tableView: UITableView!
-    var user: User?
+    var user: User? {
+        didSet {
+            guard let user = user else { return }
+            dataSource.initUserData(user)
+        }
+    }
     var presentar:UpdateProfilePresentable?
-    static let id = String(describing: type(of: self))
+    static let id = String(describing: UpdateProfileController.self)
+    private let dataSource = UpdateProfileDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         }
     private func setupTableView() {
         tableView.delegate = self
-        tableView.dataSource = self
-        let nib = UpdateProfileTableCell.nib()
-        tableView.register(nib, forCellReuseIdentifier: UpdateProfileTableCell.id)
+        tableView.dataSource = dataSource
+        tableView.register(UpdateProfileTableCell.nib(), forCellReuseIdentifier: UpdateProfileTableCell.id)
     }
     @IBAction func didTapDismissButton(_ sender: Any) {
         presentar?.onTapDismissButton()
@@ -41,19 +46,4 @@ extension UpdateProfileController: UITableViewDelegate {
         view.tintColor = .systemOrange
     }
 }
-extension UpdateProfileController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: UpdateProfileTableCell.id, for: indexPath) as? UpdateProfileTableCell else { fatalError()}
-        guard let section = UpdateProfileSection(rawValue: indexPath.row) else { return cell }
-        guard let user = user else { return cell }
-        let viewData = UpdateProfileViewData(user: user, sectons: section)
-        cell.viewModel = viewData
-        return cell
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return UpdateProfileSection.allCases.count
-    }
-}
+

@@ -6,5 +6,5 @@
 //
 
 protocol RegisterUseCase {
-    
+    func sendUser(user:User,completion:@escaping(Error?)->Void)
 }

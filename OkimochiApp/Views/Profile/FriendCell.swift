@@ -10,7 +10,7 @@ class FriendCell: UITableViewCell {
             frinedImageView.contentMode = .scaleAspectFill
         }
     }
-    var viewModel:FrinedCellViewData? {
+    var viewData:FrinedCellViewData? {
         didSet {
             setupUI()
         }
@@ -27,8 +27,8 @@ class FriendCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     private func setupUI() {
-        friendNameLabel.attributedText = viewModel?.nameAttributedText
-        frinedImageView.sd_setImage(with: viewModel?.user.profileUrl, completed: nil)
+        friendNameLabel.attributedText = viewData?.nameAttributedText
+        frinedImageView.sd_setImage(with: viewData?.user.profileUrl, completed: nil)
     }
     
 }
