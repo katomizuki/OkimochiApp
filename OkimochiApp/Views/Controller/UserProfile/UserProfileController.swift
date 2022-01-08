@@ -11,7 +11,7 @@ final class UserProfileController: UIViewController {
         }
     }
     @IBOutlet weak var profileCollectionView: UICollectionView!
-    private let collectionViewManager = UserProfileDataSource()
+    private let collectionViewManager = UserProfileCollectionViewManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -44,7 +44,7 @@ final class UserProfileController: UIViewController {
 }
 
 // MARK: - ProfileHeaderDelegate
-extension UserProfileController: UserProfileDataSourceDelegate {
+extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     func onTapLetterDetail() {
         presentar?.onTapLetterDetail()
     }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class UpdateProfileDataSource:NSObject,UITableViewDataSource {
+class UpdateProfileTableViewManager:NSObject,UITableViewDataSource {
     var user:User?
     func initUserData(_ user:User) {
         self.user = user

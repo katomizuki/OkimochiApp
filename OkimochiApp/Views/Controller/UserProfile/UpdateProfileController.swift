@@ -10,7 +10,7 @@ final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     }
     var presentar:UpdateProfilePresentable?
     static let id = String(describing: UpdateProfileController.self)
-    private let dataSource = UpdateProfileDataSource()
+    private let dataSource = UpdateProfileTableViewManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()

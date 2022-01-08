@@ -6,13 +6,13 @@
 //
 
 import UIKit
-protocol UserProfileDataSourceDelegate: AnyObject {
+protocol UserProfileCollectionViewManagerDelegate: AnyObject {
     func onTapUpdateButton()
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
     func onTapLetterDetail()
 }
-class UserProfileDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
-    weak var delegate:UserProfileDataSourceDelegate?
+class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
+    weak var delegate:UserProfileCollectionViewManagerDelegate?
     var viewData:ProfileHeaderViewData?
     func initViewData(_ viewData:ProfileHeaderViewData) {
         self.viewData = viewData
@@ -44,7 +44,7 @@ class UserProfileDataSource: NSObject, UICollectionViewDataSource, UICollectionV
         return CGSize(width: width, height: 150)
     }
 }
-extension UserProfileDataSource:ProfileHeaderDelegate {
+extension UserProfileCollectionViewManager:ProfileHeaderDelegate {
     func didTapUpdateButton() {
         self.delegate?.onTapUpdateButton()
     }
