@@ -6,7 +6,14 @@
 //
 
 final class RegisterInteractor: RegisterUseCase {
-    func sendUser(user: User, completion: @escaping (Error?) -> Void) {
+    
+    
+    let service:AuthServiceProtocol
+    init(service:AuthServiceProtocol) {
+        self.service = service
+    }
+
+    func sendUser(user: User) async throws {
         
     }
     

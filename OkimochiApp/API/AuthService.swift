@@ -1,7 +1,9 @@
 import Foundation
 import Alamofire
-
-struct AuthService {
+protocol AuthServiceProtocol {
+    
+}
+struct AuthService: AuthServiceProtocol {
     
     static func register(credential:Credential,completion:@escaping (Result<Void,Error>)->Void) {
         let baseURL = "https://kobajun029.sakura.ne.jp/okimochi/api/register"

@@ -6,10 +6,17 @@
 //
 
 final class LoginInteractor: LoginUseCase {
-    func saveToken(token: String, completion: @escaping (Error?) -> Void) {
+   
+    
+    let service:AuthServiceProtocol
+    init(service:AuthServiceProtocol) {
+        self.service = service
+    }
+    func saveUserId(uid: String) async throws {
         
     }
-    func saveUserId(uid: String, completion: @escaping (Error?) -> Void) {
+    
+    func saveToken(token: String) async throws {
         
     }
 }

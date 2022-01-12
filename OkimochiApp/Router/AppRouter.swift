@@ -17,14 +17,14 @@ class AppRouter {
         
         let postLetterNav = controller.viewControllers![1] as! PostLetterNavigationController
         let postLetterVC = postLetterNav.viewControllers[0] as! PostLetterController
-        let postInteractor = PostLetterInteractor()
+        let postInteractor = PostLetterInteractor(service: PostService())
         let postRouter = PostLetterRouter(view: postLetterVC)
         let postPresentar = PostLetterPresentar(DI: PostLetterPresentar.DI(view: postLetterVC, interactor: postInteractor, router: postRouter))
         postLetterVC.presentar = postPresentar
         
         let userNav = controller.viewControllers![2] as! UserNavigationController
         let userVC = userNav.viewControllers[0] as! UserProfileController
-        let userInteractor = UserProfileInteractor()
+        let userInteractor = UserProfileInteractor(service: UserService())
         let userRouter = UserProfileRouter(view: userVC)
         let userPresentar = UserProfilePresentar(DI: UserProfilePresentar.DI(router: userRouter, interactor: userInteractor, view: userVC))
         userVC.presentar = userPresentar

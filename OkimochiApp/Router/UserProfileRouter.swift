@@ -16,7 +16,7 @@ class UserProfileRouter: UserProfileWireframe {
     func transitionUpdateUserProfile() {
         print(#function)
         let controller = UIStoryboard(name: "UpdateProfile", bundle: nil).instantiateViewController(withIdentifier: UpdateProfileController.id) as! UpdateProfileController
-        let interactor = UpdateProfileInteractor()
+        let interactor = UpdateProfileInteractor(service: UserService())
         let router = UpdateProfileRouter(view: controller)
         let presentar = UpdateProfilePresentar(DI: UpdateProfilePresentar.DI(router: router, view: controller, interactor: interactor))
         controller.presentar = presentar

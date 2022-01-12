@@ -7,7 +7,13 @@
 
 
 final class PostLetterInteractor:PostLetterUseCase {
-    func postLetter(letter: Letter, completion: @escaping (Error?) -> Void) {
+    
+    
+    let service:PostServiceProtocol
+    init(service:PostServiceProtocol) {
+        self.service = service
+    }
+    func postLetter(letter: Letter) async throws {
         
     }
     

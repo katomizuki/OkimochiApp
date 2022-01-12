@@ -22,7 +22,7 @@ final class LoginRouter:LoginWireframe {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: RegisterController.id) as! RegisterController
         let router = RegisterRouter(view: vc)
-        let interactor = RegisterInteractor()
+        let interactor = RegisterInteractor(service: AuthService())
         let presentar = RegisterPresentar(DI: RegisterPresentar.DI(view: vc, router: router, interactor: interactor))
         vc.presentar = presentar
         view.navigationController?.pushViewController(vc, animated: true)

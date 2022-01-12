@@ -16,7 +16,7 @@ final class LetterMapRouter:LetterMapWireframe {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
         guard let controller = storyboard.instantiateViewController(withIdentifier: FinishLetterController.id) as? FinishLetterController else { return }
         let router = FinishLetterRouter(view: controller)
-        let interactor = FinishLetterInteractor()
+        let interactor = FinishLetterInteractor(service: PostService())
         let presentar = FinishLetterPresentar(DI: FinishLetterPresentar.DI(view: controller, router: router, interactor: interactor))
         controller.presentar = presentar
         view.navigationController?.pushViewController(controller, animated: true)
