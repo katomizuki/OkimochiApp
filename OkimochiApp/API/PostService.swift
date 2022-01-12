@@ -1,6 +1,8 @@
 import Alamofire
-
-struct PostService {
+protocol PostServiceProtocol {
+    
+}
+struct PostService:PostServiceProtocol {
     static func fetchMyPost(completion:@escaping (Result<[Letter],Error>)->Void) {
         let baseUrl = "https://kobajun029.sakura.ne.jp/okimochi/api/mypage"
         guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))

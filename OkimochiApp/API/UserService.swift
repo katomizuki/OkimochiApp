@@ -1,9 +1,11 @@
-//import Foundation
+
 import Alamofire
-//
-struct UserService {
-//    //    Authorization
-    static func getUser(token:String,completion:@escaping(Result<User,Error>)->Void) {
+protocol UserServiceProtocol {
+    
+}
+struct UserService: UserServiceProtocol {
+
+     func getUser(token:String,completion:@escaping(Result<User,Error>)->Void) {
             let baseURL = "https://kobajun029.sakura.ne.jp/laravel1/api/get_user"
             let parameter:[String:Any] =
             ["token": "\(token)"]

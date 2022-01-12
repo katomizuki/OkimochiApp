@@ -27,7 +27,7 @@ class UserProfileRouter: UserProfileWireframe {
      func transitionSearchUser() {
          let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
          let controller = storyboard.instantiateViewController(withIdentifier: SearchFriendsController.id) as! SearchFriendsController
-         let interactor = SearchFriendsInteractor()
+         let interactor = SearchFriendsInteractor(service: UserService())
          let router = SearchFriendsRouter(view: controller)
          let presentar = SearchFriendPresentar(DI: SearchFriendPresentar.DI(router: router, view: controller, interactor: interactor))
          controller.presentar = presentar
