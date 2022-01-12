@@ -29,8 +29,12 @@ final class UpdateProfilePresentar:UpdateProfilePresentable {
         
     }
     
-    func onTapSaveButton() {
-        
+    func onTapSaveButton(user: User) async {
+        do {
+        try await interactor.updateUserProfile(user: user)
+    } catch {
+            print(error)
+        }
     }
     func onTapDismissButton() {
         router.dismiss()

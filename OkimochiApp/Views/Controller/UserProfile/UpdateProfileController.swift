@@ -23,9 +23,11 @@ final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     @IBAction func didTapDismissButton(_ sender: Any) {
         presentar?.onTapDismissButton()
     }
-    @IBAction func didTapSaveButton(_ sender: Any) {
+    @IBAction func didTapSaveButton(_ sender: Any)  {
         print(#function)
-        presentar?.onTapSaveButton()
+        Task {
+            await presentar?.onTapSaveButton(user: User(dic: [:]))
+        }
     }
 }
 extension UpdateProfileController: UITableViewDelegate {
@@ -35,7 +37,7 @@ extension UpdateProfileController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionTitle = UpdateProfileSection(rawValue: section)?.description
         return sectionTitle
     }

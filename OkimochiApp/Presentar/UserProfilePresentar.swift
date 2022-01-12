@@ -5,6 +5,8 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
+import RxSwift
+
 
 final class UserProfilePresentar: UserProfilePresentable {
     
@@ -14,8 +16,9 @@ final class UserProfilePresentar: UserProfilePresentable {
         var view:UserProfileViewable
     }
     weak var view:UserProfileViewable!
-    var interactor:UserProfileUseCase!
-    var router:UserProfileWireframe!
+    var interactor:UserProfileUseCase
+    var router:UserProfileWireframe
+    private let disposeBag = DisposeBag()
     init(DI:DI) {
         self.router = DI.router
         self.interactor = DI.interactor
@@ -26,7 +29,22 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     
     func viewWillAppear() {
-        
+        interactor.fetchUser()
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] user in
+            self?.view.setUser(user)
+        } onFailure: { [weak self] _ in
+            self?.view.showError()
+        }.disposed(by: disposeBag)
+
+        interactor.fetchMyLetter()
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] letters in
+                self?.view.setLetters(letters)
+            } onFailure: { [weak self] _ in
+                self?.view.showError()
+            }.disposed(by: disposeBag)
+
     }
     
     func onTapUpdateButton() {

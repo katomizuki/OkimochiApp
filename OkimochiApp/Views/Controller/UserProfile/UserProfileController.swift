@@ -19,7 +19,6 @@ final class UserProfileController: UIViewController {
         setupCollectionView()
         navigationItem.rightBarButtonItem?.tintColor = .systemOrange
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(didTapLogoutButton))
-        setupUserData()
     }
     // MARK: - SetupMethod
     private func setupCollectionView() {
@@ -30,9 +29,6 @@ final class UserProfileController: UIViewController {
         collectionViewManager.delegate = self
         let headerNib = ProfileHeader.nib()
         profileCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
-    }
-    private func setupUserData() {
-   
     }
     @objc private func didTapSearchButton() {
         presentar?.onTapSearchButton()
@@ -53,8 +49,21 @@ extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     }
     
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
+        
     }
 }
 extension UserProfileController: UserProfileViewable {
+    func setUser(_ user: User) {
+        
+    }
+    
+    func setLetters(_ letters: [Letter]) {
+        
+    }
+    
+    func showError() {
+        
+    }
+    
    
 }
