@@ -8,10 +8,8 @@ final class LetterFriendController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        let navItem = UINavigationItem(title: "")
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "もどる", style: .done, target: self, action: #selector(didTapDismissButton))
-        navigationBar.pushItem(navItem, animated: true)
-        navigationBar.barTintColor = .white
+        setupNavigationBar()
+        presentar?.viewDidLoad()
     }
     private func setupTableView() {
         print(#function)
@@ -19,6 +17,12 @@ final class LetterFriendController: UIViewController {
         tableView.dataSource = self
         let nib = FriendCell.nib()
         tableView.register(nib, forCellReuseIdentifier: FriendCell.id)
+    }
+    private func setupNavigationBar() {
+        let navItem = UINavigationItem(title: "")
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "もどる", style: .done, target: self, action: #selector(didTapDismissButton))
+        navigationBar.pushItem(navItem, animated: true)
+        navigationBar.barTintColor = .white
     }
     @objc private func didTapDismissButton() {
         print(#function)
@@ -47,5 +51,13 @@ extension LetterFriendController:UITableViewDataSource {
     }
 }
 extension LetterFriendController:LetterFriendViewable {
+    func showError() {
+        
+    }
+    
+    func setFriends(_ friends: [User]) {
+        
+    }
+    
     
 }
