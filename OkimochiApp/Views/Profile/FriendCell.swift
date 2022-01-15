@@ -23,9 +23,6 @@ class FriendCell: UITableViewCell {
         return UINib(nibName: "FriendCell", bundle: nil)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     private func setupUI() {
         friendNameLabel.attributedText = viewData?.nameAttributedText
         frinedImageView.sd_setImage(with: viewData?.user.profileUrl, completed: nil)

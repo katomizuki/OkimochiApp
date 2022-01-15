@@ -26,7 +26,7 @@ final class PostLetterRouter:PostLetterWireFrame {
         let storyboard = UIStoryboard(name: "PostLetter", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: LetterFriendController.id) as! LetterFriendController
         let router = LetterFriendRouter(view: controller)
-        let interactor = LetterFriendInteractor()
+        let interactor = LetterFriendInteractor(service: UserService())
         let presentar = LetterFriendPresentar(DI: LetterFriendPresentar.DI(view: controller, router: router, interactor: interactor))
         controller.presentar = presentar
         controller.modalPresentationStyle = .fullScreen
