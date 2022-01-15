@@ -168,6 +168,9 @@
 		D3810240272D11D4003C7850 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381023F272D11D4003C7850 /* UserProfileController.swift */; };
 		D3810242272D1991003C7850 /* User.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810241272D1991003C7850 /* User.swift.swift */; };
 		D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810243272D1BE4003C7850 /* Letter.swift.swift */; };
+		D3A779112792F90100EA888C /* UserAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A779102792F90100EA888C /* UserAPIClient.swift */; };
+		D3A779132792FD1800EA888C /* PostAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A779122792FD1800EA888C /* PostAPIClient.swift */; };
+		D3A779152793020500EA888C /* AuthAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A779142793020500EA888C /* AuthAPIClient.swift */; };
 		D3B5F069272E876A006F6881 /* ProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5F068272E876A006F6881 /* ProfileViewData.swift */; };
 		D3B72D23274A75F900253933 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B72D22274A75F800253933 /* AuthService.swift */; };
 		D3B91B30272E6D5D0048FC75 /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */; };
@@ -347,6 +350,9 @@
 		D381023F272D11D4003C7850 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D3810241272D1991003C7850 /* User.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift.swift; sourceTree = "<group>"; };
 		D3810243272D1BE4003C7850 /* Letter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift.swift; sourceTree = "<group>"; };
+		D3A779102792F90100EA888C /* UserAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIClient.swift; sourceTree = "<group>"; };
+		D3A779122792FD1800EA888C /* PostAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIClient.swift; sourceTree = "<group>"; };
+		D3A779142793020500EA888C /* AuthAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIClient.swift; sourceTree = "<group>"; };
 		D3B5F068272E876A006F6881 /* ProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewData.swift; sourceTree = "<group>"; };
 		D3B72D22274A75F800253933 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D3B91B2F272E6D5D0048FC75 /* ProfileHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
@@ -525,6 +531,7 @@
 		D3810221272CF2FC003C7850 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D3A7790F2792F8F100EA888C /* APIClient */,
 				D30E6F482734031B00FBE5AF /* UserService.swift */,
 				D3B72D22274A75F800253933 /* AuthService.swift */,
 				D3074C932753ACB400A84358 /* PostService.swift */,
@@ -753,6 +760,16 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		D3A7790F2792F8F100EA888C /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				D3A779102792F90100EA888C /* UserAPIClient.swift */,
+				D3A779122792FD1800EA888C /* PostAPIClient.swift */,
+				D3A779142793020500EA888C /* AuthAPIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		D3B5F063272E8072006F6881 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +962,7 @@
 				D3151628276B6E0B0061C488 /* RegisterUseCase.swift in Sources */,
 				D315163E276B6FAF0061C488 /* LetterDetailRouter.swift in Sources */,
 				D31516A2276D6BC50061C488 /* LetterTimePresentable.swift in Sources */,
+				D3A779112792F90100EA888C /* UserAPIClient.swift in Sources */,
 				D312C1E727412A9000DF7E83 /* PlaceError.swift in Sources */,
 				D3810225272CF4E0003C7850 /* RegisterController.swift in Sources */,
 				D3151618276B6C680061C488 /* FriendDetailPresentable.swift in Sources */,
@@ -1024,6 +1042,7 @@
 				D31515F6276B6A9D0061C488 /* LoginPresentar.swift in Sources */,
 				D3151672276CBA200061C488 /* PostLetterUseCase.swift in Sources */,
 				D31516AA276D6CF10061C488 /* LetterFriendPresentar.swift in Sources */,
+				D3A779152793020500EA888C /* AuthAPIClient.swift in Sources */,
 				D315167A276D5AE30061C488 /* PostLetterNavigationController.swift in Sources */,
 				D315163C276B6FA50061C488 /* UpdateProfileRouter.swift in Sources */,
 				D3151692276D69FC0061C488 /* LetterMapUseCase.swift in Sources */,
@@ -1039,6 +1058,7 @@
 				D31515E8276B69A10061C488 /* UserProfilePresentar.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D315164F276B71AB0061C488 /* LetterDetailWireframe.swift in Sources */,
+				D3A779132792FD1800EA888C /* PostAPIClient.swift in Sources */,
 				D31516C4276D8D1D0061C488 /* OpenLetterRouter.swift in Sources */,
 				D3151659276B773D0061C488 /* FriendsDetailViewable.swift in Sources */,
 				D315163A276B6F970061C488 /* UserProfileRouter.swift in Sources */,
