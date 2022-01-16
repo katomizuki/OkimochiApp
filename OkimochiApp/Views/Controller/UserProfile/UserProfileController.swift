@@ -49,7 +49,7 @@ extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     }
     
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
-        
+        presentar?.onTapOptionsButton(selectOptions)
     }
 }
 extension UserProfileController: UserProfileViewable {

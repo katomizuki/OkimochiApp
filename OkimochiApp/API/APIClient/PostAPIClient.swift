@@ -14,6 +14,7 @@ enum PostAPI {
     case delete(id:String,token:String)
     case update(id:String,token:String,dic:[String:Any])
     case deleteSaved(id:String,token:String)
+    case post(dic:[String:Any],token:String)
 }
 extension PostAPI:TargetType {
     var baseURL: URL {
@@ -34,6 +35,8 @@ extension PostAPI:TargetType {
             return "/okimochi/api/update/\(id)"
         case .deleteSaved(let id,_):
             return "/okimochi/api/save/delete/\(id)"
+        case .post:
+            return "https://kobajun029.sakura.ne.jp/okimochi/api/post"
         }
         
     }
@@ -60,6 +63,8 @@ extension PostAPI:TargetType {
             return .requestParameters(parameters: ["token":token], encoding: URLEncoding.queryString)
         case .deleteSaved(_, let token):
             return .requestParameters(parameters: ["token":token], encoding: URLEncoding.queryString)
+        case .post(let dic,_):
+            return .requestParameters(parameters: dic, encoding: URLEncoding.queryString)
         }
     }
     

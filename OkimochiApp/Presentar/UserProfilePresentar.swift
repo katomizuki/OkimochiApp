@@ -69,4 +69,14 @@ final class UserProfilePresentar: UserProfilePresentable {
     func onTapLogoutButton() {
         
     }
+    func onTapOptionsButton(_ selectOptions: ProfileFilterOptions) {
+        switch selectOptions {
+        case .fav:
+            print("fav")
+        case .past:
+            print("past")
+        case .info:
+            print("info")
+        }
+    }
 }

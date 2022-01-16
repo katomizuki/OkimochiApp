@@ -15,6 +15,7 @@ final class SearchFriendsInteractor: SearchFriendUseCase {
     }
     func searchUser(text: String) -> Single<[User]> {
         return Single.create { SingleEvent->Disposable in
+//            service.sea
             return Disposables.create()
         }
     }

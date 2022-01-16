@@ -7,8 +7,6 @@
 
 
 final class PostLetterInteractor:PostLetterUseCase {
-    
-    
     let service:PostServiceProtocol
     init(service:PostServiceProtocol) {
         self.service = service

@@ -14,4 +14,5 @@ protocol UserProfilePresentable {
     func onTapSearchButton()
     func onTapLetterDetail()
     func onTapLogoutButton()
+    func onTapOptionsButton(_ selectOptions: ProfileFilterOptions)
 }

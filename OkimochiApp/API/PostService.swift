@@ -3,6 +3,7 @@ import Moya
 protocol PostServiceProtocol {
     func getLetters(completion:@escaping (Result<[Letter], Error>)->Void)
     func fetchMyPost(completion: @escaping (Result<[Letter],Error>)->Void)
+    func postLetter(dic:[String:Any],completion:@escaping(Result<Void,Error>)->Void)
 }
 struct PostService:PostServiceProtocol {
     
@@ -46,7 +47,8 @@ struct PostService:PostServiceProtocol {
             }
         }
     }
-    static func saveLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
+//    func postLetter(
+    func saveLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
             return
         }
@@ -61,7 +63,7 @@ struct PostService:PostServiceProtocol {
         }
     }
     
-    static func deleteLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
+    func deleteLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else {
             completion(.failure(APIError.notToken))
             return
@@ -77,7 +79,7 @@ struct PostService:PostServiceProtocol {
         }
     }
     
-    static func deleteSavedLetter(id: String,
+    func deleteSavedLetter(id: String,
                                   completion: @escaping (Result<Void,Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else {
             completion(.failure(APIError.notToken))
@@ -93,8 +95,23 @@ struct PostService:PostServiceProtocol {
             }
         }
     }
+    func postLetter(dic:[String:Any],completion:@escaping(Result<Void,Error>)->Void) {
+        guard let token = UserDefaultsRepositry.shared.getToken() else {
+            completion(.failure(APIError.notToken))
+            return
+        }
+        let provider = MoyaProvider<PostAPI>()
+        provider.request(.post(dic: dic, token: token)) { result in
+            switch result {
+            case .success:
+                completion(.success(()))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
     
-    static func updateLetter(id:String,letter:Letter,completion:@escaping(Result<Void,Error>)->Void) {
+    func updateLetter(id:String,letter:Letter,completion:@escaping(Result<Void,Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else {
             completion(.failure(APIError.notToken))
             return
@@ -119,7 +136,5 @@ struct PostService:PostServiceProtocol {
             }
         }
     }
-    func letterAction(_ action:PostAPI) {
-        
-    }
+
 }

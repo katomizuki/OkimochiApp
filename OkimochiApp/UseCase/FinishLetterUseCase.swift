@@ -6,5 +6,5 @@
 //
 
 protocol FinishLetterUseCase {
-    func sendLetter(_ letter:Letter) async throws -> Void
+    func sendLetter(_ letter:Letter,completion:@escaping(Result<Void,Error>)->Void)
 }
