@@ -24,7 +24,7 @@ class AppRouter {
         
         let userNav = controller.viewControllers![2] as! UserNavigationController
         let userVC = userNav.viewControllers[0] as! UserProfileController
-        let userInteractor = UserProfileInteractor(service: UserService())
+        let userInteractor = UserProfileInteractor(service: UserService(), postService: PostService())
         let userRouter = UserProfileRouter(view: userVC)
         let userPresentar = UserProfilePresentar(DI: UserProfilePresentar.DI(router: userRouter, interactor: userInteractor, view: userVC))
         userVC.presentar = userPresentar

@@ -29,10 +29,11 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     
     func viewWillAppear() {
+        
         interactor.fetchUser()
             .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] user in
-            self?.view.setUser(user)
+            .subscribe { [weak self] viewData in
+            self?.view.setViewData(viewData)
         } onFailure: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)

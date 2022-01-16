@@ -7,12 +7,12 @@
 
 
 final class UpdateProfileInteractor:UpdateProfileUserCase {
-    func updateUserProfile(user: User) async throws {
-        
-    }
     
     let service: UserServiceProtocol
     init(service:UserServiceProtocol) {
         self.service = service
+    }
+    func updateUserProfile(user: User) async throws {
+        
     }
 }

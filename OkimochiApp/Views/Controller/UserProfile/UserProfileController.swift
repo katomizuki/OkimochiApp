@@ -1,7 +1,7 @@
 import UIKit
 final class UserProfileController: UIViewController {
     static let id = String(describing: UserProfileController.self)
-    private var viewModel:ProfileViewData?
+    private var viewData:ProfileViewData?
     var presentar:UserProfilePresentable?
     var user:User? {
         didSet {
@@ -53,16 +53,19 @@ extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     }
 }
 extension UserProfileController: UserProfileViewable {
-    func setUser(_ user: User) {
-        
+    func setViewData(_ viewData: ProfileHeaderViewData) {
+        collectionViewManager.initViewData(viewData)
     }
-    
+
     func setLetters(_ letters: [Letter]) {
-        
+//        collectionViewManager.set
     }
     
     func showError() {
         
+    }
+    func reload() {
+        profileCollectionView.reloadData()
     }
     
    

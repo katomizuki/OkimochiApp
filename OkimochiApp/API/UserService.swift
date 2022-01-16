@@ -2,7 +2,8 @@ import Alamofire
 import Moya
 
 protocol UserServiceProtocol {
-    
+    func getUser(token: String,
+                 completion: @escaping (Result<User, Error>) -> Void) 
 }
 struct UserService: UserServiceProtocol {
 
