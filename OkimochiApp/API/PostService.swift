@@ -1,7 +1,7 @@
 import Alamofire
 import Moya
 protocol PostServiceProtocol {
-    
+    func getLetters(completion:@escaping (Result<[Letter], Error>)->Void)
 }
 struct PostService:PostServiceProtocol {
     
@@ -25,7 +25,7 @@ struct PostService:PostServiceProtocol {
         }
     }
     
-    static func getLetters(completion:@escaping (Result<[Letter], Error>)->Void) {
+    func getLetters(completion:@escaping (Result<[Letter], Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else {
             completion(.failure(APIError.notToken))
             return

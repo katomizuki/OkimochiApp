@@ -55,5 +55,9 @@ final class LetterContentController: UIViewController {
     }
 }
 extension LetterContentController:LetterContentViewable {
+    func showError() {
+        
+    }
+    
     
 }

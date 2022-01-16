@@ -1,6 +1,6 @@
 import UIKit
 
-final class PostLetterController: UIViewController,PostLetterViewable {
+final class PostLetterController: UIViewController {
     // MARK: Properties
     @IBOutlet private weak var whoTypeTableView: UITableView!
     @IBOutlet private weak var nextButton: UIButton! {
@@ -29,6 +29,11 @@ final class PostLetterController: UIViewController,PostLetterViewable {
 
     @IBAction private func didTapNextButton(_ sender: Any) {
         presentar?.onTapNextButton()
+    }
+}
+extension PostLetterController:PostLetterViewable {
+    func showError() {
+        
     }
 }
 

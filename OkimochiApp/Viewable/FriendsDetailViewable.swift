@@ -6,5 +6,5 @@
 //
 
 protocol FriendsDetailViewable: Transitioner {
-    
+    func showError()
 }

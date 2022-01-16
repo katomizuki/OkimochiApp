@@ -12,8 +12,12 @@ protocol TimeLineDataSourceDelegate:AnyObject {
 class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     private let id = "collectionCell"
     weak var delegate:TimeLineDataSourceDelegate?
+    private var letters:[Letter] = []
+    func initViewData(_ letters:[Letter]) {
+        self.letters = letters
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return letters.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath)

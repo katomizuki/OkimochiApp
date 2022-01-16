@@ -7,5 +7,5 @@
 
 
 protocol LetterContentViewable: Transitioner {
-    
+    func showError()
 }

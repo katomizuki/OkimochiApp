@@ -31,5 +31,9 @@ final class FriendDetailController: UIViewController {
   
 }
 extension FriendDetailController:FriendsDetailViewable {
+    func showError() {
+        
+    }
+    
     
 }

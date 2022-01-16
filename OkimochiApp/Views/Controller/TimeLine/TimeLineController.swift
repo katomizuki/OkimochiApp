@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 //import GoogleMaps
 import CoreLocation
-class TimeLineController: UIViewController,TimeLineViewable{
+class TimeLineController: UIViewController {
     // MARK: - Properties
     var user:User?
     private let collectionCell = "collectionCell"
@@ -103,5 +103,17 @@ extension TimeLineController: CLLocationManagerDelegate {
         default:
             break
         }
+    }
+}
+extension TimeLineController: TimeLineViewable {
+    func reload() {
+        collectionView.reloadData()
+    }
+    
+    func showError() {
+        
+    }
+    func setLetters(_ letters: [Letter]) {
+        collectionViewController.initViewData(letters)
     }
 }

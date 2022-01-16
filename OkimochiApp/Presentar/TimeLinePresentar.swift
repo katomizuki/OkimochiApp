@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 final class TimeLinePresentar:TimeLinePresentable {
    
     struct DI {
@@ -16,6 +17,7 @@ final class TimeLinePresentar:TimeLinePresentable {
     weak var view:TimeLineViewable!
     var router:TimeLineWireframe!
     var interactor:TimeLineUseCase!
+    private let disposeBag = DisposeBag()
     init(DI:DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -26,7 +28,13 @@ final class TimeLinePresentar:TimeLinePresentable {
     }
     
     func viewWillAppear() {
-        
+        interactor.fetchTimeLines().observe(on: MainScheduler.instance)
+            .subscribe { [weak self] letters in
+                self?.view.setLetters(letters)
+            } onFailure: { [weak self] _ in
+                self?.view.showError()
+            }.disposed(by: disposeBag)
+
     }
     
     func onTapLetter() {
