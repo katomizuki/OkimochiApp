@@ -5,6 +5,8 @@ protocol AuthServiceProtocol {
     func login(email: String,
                password: String,
                completion: @escaping(Result<AuthResponse, Error>) -> Void)
+    func register(credential: Credential,
+                  completion: @escaping (Result<Void,Error>)->Void)
 }
 struct AuthService: AuthServiceProtocol {
     

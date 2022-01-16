@@ -1,6 +1,6 @@
 import UIKit
 
-class RegisterController: UIViewController {
+final class RegisterController: UIViewController {
     @IBOutlet weak var imageButton: UIButton!
     static let id = String(describing: RegisterController.self)
     // MARK: - Properties
@@ -66,9 +66,9 @@ class RegisterController: UIViewController {
         guard let email = mailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
-        guard let image = viewData.image else { return }
+//        guard let image = viewData.image else { return }
         let credential = Credential(name: name, email: email, password: password)
-        presentar?.onTapRegisterButton()
+        presentar?.onTapRegisterButton(credential:credential)
     }
     
 }
@@ -95,5 +95,7 @@ extension RegisterController:UIImagePickerControllerDelegate,UINavigationControl
     }
 }
 extension RegisterController:RegisterViewable {
-    
+    func showError() {
+        // エラー処理
+    }
 }

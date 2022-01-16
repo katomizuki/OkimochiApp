@@ -6,5 +6,5 @@
 //
 
 protocol RegisterViewable: Transitioner{
-    
+    func showError()
 }
