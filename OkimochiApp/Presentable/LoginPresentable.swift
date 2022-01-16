@@ -6,6 +6,6 @@
 //
 
 protocol LoginPresentable {
-    func onTapLoginButton()
+    func onTapLoginButton(email: String, password: String)
     func onTapGotoRegisterButton()
 }

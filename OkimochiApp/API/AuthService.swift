@@ -2,11 +2,13 @@ import Foundation
 import Alamofire
 import Moya
 protocol AuthServiceProtocol {
-    
+    func login(email: String,
+               password: String,
+               completion: @escaping(Result<AuthResponse, Error>) -> Void)
 }
 struct AuthService: AuthServiceProtocol {
     
-    static func register(credential:Credential,completion:@escaping (Result<Void,Error>)->Void) {
+    func register(credential:Credential,completion:@escaping (Result<Void,Error>)->Void) {
         let parameters:[String:Any] = ["name" : credential.name,
                                        "email" : credential.email,
                                        "password" : credential.password]
@@ -21,9 +23,9 @@ struct AuthService: AuthServiceProtocol {
         }
     }
     
-    static func login(email: String,
+    func login(email: String,
                       password: String,
-                      completion: @escaping(Result<AuthResponse, Error>)->Void) {
+                      completion: @escaping(Result<AuthResponse, Error>) -> Void) {
         let parameters:[String:Any] = [
             "email" : "\(email)",
             "password" : "\(password)"]

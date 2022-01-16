@@ -6,12 +6,12 @@
 //
 
 import Foundation
-final class LoginPresentar:LoginPresentable{
-    
+final class LoginPresentar: LoginPresentable{
+   
     struct DI {
-        var view:LoginViewable
-        var router:LoginWireframe
-        var interactor:LoginUseCase
+        var view: LoginViewable
+        var router: LoginWireframe
+        var interactor: LoginUseCase
     }
     weak var view:LoginViewable!
     var router:LoginWireframe!
@@ -21,11 +21,20 @@ final class LoginPresentar:LoginPresentable{
         self.interactor = DI.interactor
         self.router = DI.router
     }
-    func onTapLoginButton() {
-        router.dismiss()
+
+    func onTapLoginButton(email: String, password: String) {
+        interactor.login(email: email, password: password) { result in
+            switch result {
+            case .success(let authResponse):
+                self.interactor.saveToken(token: authResponse.token)
+                self.router.dismiss()
+            case .failure:
+                self.view.showError()
+            }
+        }
+        
     }
     func onTapGotoRegisterButton() {
-        print(#function)
         router.transitionRegisterVC()
     }
     

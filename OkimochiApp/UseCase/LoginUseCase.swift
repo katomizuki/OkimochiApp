@@ -6,6 +6,8 @@
 //
 
 protocol LoginUseCase {
-    func saveUserId(uid:String) async throws -> Void
-    func saveToken(token:String) async throws -> Void
+    func saveToken(token:String)
+    func login(email:String,
+               password:String,
+               completion: @escaping(Result<AuthResponse, Error>) -> Void)
 }

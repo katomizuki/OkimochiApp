@@ -39,7 +39,7 @@ class LoginController: UIViewController {
         print(#function)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        presentar?.onTapLoginButton()
+        presentar?.onTapLoginButton(email: email, password: password)
     }
     @IBAction func gotoRegister(_ sender: Any) {
         presentar?.onTapGotoRegisterButton()
@@ -58,6 +58,8 @@ extension LoginController: UITextFieldDelegate {
         return true
     }
 }
-extension LoginController:LoginViewable {
-    
+extension LoginController: LoginViewable {
+    func showError() {
+        // エラーをここで出す。
+    }
 }

@@ -6,5 +6,5 @@
 //
 
 protocol LoginViewable: Transitioner {
-    
+    func showError()
 }
