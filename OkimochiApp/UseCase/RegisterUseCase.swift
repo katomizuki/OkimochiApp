@@ -6,6 +6,6 @@
 //
 
 protocol RegisterUseCase {
-    func sendUser(_ credential:Credential,completion: @escaping (Result<Void,Error>)->Void)
+    func sendUser(_ credential:Credential,completion: @escaping (Error?) -> Void)
     func saveToken(token: String)
 }

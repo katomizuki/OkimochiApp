@@ -20,6 +20,10 @@ final class UserProfileController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .systemOrange
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(didTapLogoutButton))
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presentar?.viewWillAppear()
+    }
     // MARK: - SetupMethod
     private func setupCollectionView() {
         let cellNib = ProfileCell.nib()

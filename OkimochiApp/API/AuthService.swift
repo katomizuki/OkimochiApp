@@ -6,11 +6,11 @@ protocol AuthServiceProtocol {
                password: String,
                completion: @escaping(Result<AuthResponse, Error>) -> Void)
     func register(credential: Credential,
-                  completion: @escaping (Result<Void,Error>)->Void)
+                  completion: @escaping (Result<AuthResponse, Error>) -> Void)
 }
 struct AuthService: AuthServiceProtocol {
     
-    func register(credential:Credential,completion:@escaping (Result<Void,Error>)->Void) {
+    func register(credential:Credential,completion:@escaping (Result<AuthResponse, Error>) -> Void) {
         let parameters:[String:Any] = ["name" : credential.name,
                                        "email" : credential.email,
                                        "password" : credential.password]
@@ -18,7 +18,8 @@ struct AuthService: AuthServiceProtocol {
         provider.request(.register(parameter: parameters)) { result in
             switch result {
             case .success:
-                completion(.success(()))
+                print("成功！")
+                self.login(email: credential.email, password: credential.password, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -28,6 +29,7 @@ struct AuthService: AuthServiceProtocol {
     func login(email: String,
                       password: String,
                       completion: @escaping(Result<AuthResponse, Error>) -> Void) {
+        print(#function)
         let parameters:[String:Any] = [
             "email" : "\(email)",
             "password" : "\(password)"]
@@ -37,6 +39,7 @@ struct AuthService: AuthServiceProtocol {
             case .success(let response):
                 do {
                     let authResponse = try JSONDecoder().decode(AuthResponse.self, from: response.data)
+                    print(authResponse)
                     completion(.success(authResponse))
                 } catch {
                     completion(.failure(APIError.decodeError))

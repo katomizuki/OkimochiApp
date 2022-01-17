@@ -26,14 +26,12 @@ final class RegisterPresentar:RegisterPresentable {
         router.transitionLoginVC()
     }
     func onTapRegisterButton(credential: Credential) {
-        interactor.sendUser(credential) { result in
-            switch result {
-            case .success:
-//                self.interactor.sa
-                self.router.dismiss()
-            case .failure(let error):
+        self.interactor.sendUser(credential) { error in
+            if error != nil {
                 self.view.showError()
+                return
             }
+            self.router.dismiss()
         }
         
     }

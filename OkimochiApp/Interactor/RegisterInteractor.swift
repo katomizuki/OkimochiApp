@@ -11,8 +11,16 @@ final class RegisterInteractor: RegisterUseCase {
     init(service:AuthServiceProtocol) {
         self.service = service
     }
-    func sendUser(_ credential: Credential, completion: @escaping (Result<Void, Error>) -> Void) {
-        service.register(credential: credential, completion: completion)
+    func sendUser(_ credential: Credential, completion: @escaping (Error?) -> Void) {
+        service.register(credential: credential) { result in
+            switch result {
+            case .success(let authReponse):
+                print(authReponse)
+                self.saveToken(token: authReponse.token)
+            case .failure(let error):
+                completion(error)
+            }
+        }
     }
     func saveToken(token: String) {
         UserDefaultsRepositry.shared.saveToken(token: token)

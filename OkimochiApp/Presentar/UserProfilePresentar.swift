@@ -34,6 +34,7 @@ final class UserProfilePresentar: UserProfilePresentable {
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] viewData in
             self?.view.setViewData(viewData)
+            self?.view.reload()
         } onFailure: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)

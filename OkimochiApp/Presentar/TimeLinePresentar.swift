@@ -42,7 +42,9 @@ final class TimeLinePresentar:TimeLinePresentable {
     }
     func notToken() {
         print(#function)
-        router.transitionLogin()
+//        if UserDefaultsRepositry.shared.getToken() == nil {
+//            router.transitionLogin()
+//        }
     }
     func segue(segue:UIStoryboardSegue) {
         router.setupDI(segue: segue)
