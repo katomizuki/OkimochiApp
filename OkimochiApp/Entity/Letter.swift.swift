@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 enum SendWhoType: Int,CaseIterable,Codable {
     case me
     case you
@@ -23,4 +24,6 @@ struct Letter:Codable {
     var openPlaceName:String
     var latitude:String
     var longitude:String
+//    var letterImage:UIImage?
+    var imageData:Data?
 }
