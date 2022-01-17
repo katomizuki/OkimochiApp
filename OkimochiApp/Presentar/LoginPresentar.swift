@@ -26,6 +26,7 @@ final class LoginPresentar: LoginPresentable{
         interactor.login(email: email, password: password) { result in
             switch result {
             case .success(let authResponse):
+                print(authResponse)
                 self.interactor.saveToken(token: authResponse.token)
                 self.router.dismiss()
             case .failure:

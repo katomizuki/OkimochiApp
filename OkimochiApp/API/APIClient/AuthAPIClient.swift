@@ -18,7 +18,7 @@ extension AuthAPI: TargetType {
     var path: String {
         switch self {
         case .register:return "/okimochi/api/register"
-        case .login:return "/okimochi/api/register"
+        case .login:return "/okimochi/api/login"
         }
     }
     

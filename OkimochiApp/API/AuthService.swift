@@ -37,14 +37,17 @@ struct AuthService: AuthServiceProtocol {
         provider.request(.login(parameter: parameters)) { result in
             switch result {
             case .success(let response):
+                print(response)
                 do {
                     let authResponse = try JSONDecoder().decode(AuthResponse.self, from: response.data)
                     print(authResponse)
                     completion(.success(authResponse))
                 } catch {
+                    print(APIError.decodeError)
                     completion(.failure(APIError.decodeError))
                 }
             case .failure:
+                print(APIError.apiError)
                 completion(.failure(APIError.apiError))
             }
         }
