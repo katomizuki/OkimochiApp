@@ -6,9 +6,25 @@
 //
 
 import Moya
+protocol APIResponse {
+    associatedtype Response:Decodable
+    var para:[String: Any] { get }
+}
 
-enum UserAPI {
+enum UserAPI:APIResponse {
+    var para: [String : Any] {
+        var para:[String:Any] = [:]
+        switch self {
+        case .getUser(let token):
+            para["token"] = token
+        }
+        return para
+    }
+    
+    typealias Response = User
+    
     case getUser(token:String)
+    
 }
 extension UserAPI:TargetType {
     var baseURL: URL {

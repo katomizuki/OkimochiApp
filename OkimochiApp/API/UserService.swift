@@ -1,27 +1,12 @@
 import Alamofire
 import Moya
+import RxSwift
 
 protocol UserServiceProtocol {
-    func getUser(token: String,
-                 completion: @escaping (Result<User, Error>) -> Void) 
+    func getUser(token: String)->Single<User>
 }
 struct UserService: UserServiceProtocol {
-
-     func getUser(token: String,
-                  completion: @escaping (Result<User, Error>) -> Void) {
-        let provider = MoyaProvider<UserAPI>()
-         provider.request(.getUser(token: token)) { result in
-             switch result {
-             case .success(let response):
-                 do {
-                     let user = try JSONDecoder().decode(User.self, from: response.data)
-                     completion(.success(user))
-                 } catch {
-                     completion(.failure(error))
-                 }
-             case .failure(let error):
-                 completion(.failure(error))
-             }
-         }
-     }
+    func getUser(token: String)->Single<User> {
+        APIClient.shared.request(UserAPI.getUser(token: token))
+    }
 }

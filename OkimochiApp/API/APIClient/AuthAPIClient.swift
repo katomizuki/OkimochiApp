@@ -34,6 +34,7 @@ extension AuthAPI: TargetType {
             return .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
         }
     }
+   
     
     var headers: [String : String]? {
         return ["Contenttype": "application/json"]

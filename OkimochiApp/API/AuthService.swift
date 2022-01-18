@@ -37,7 +37,6 @@ struct AuthService: AuthServiceProtocol {
         provider.request(.login(parameter: parameters)) { result in
             switch result {
             case .success(let response):
-                print(response)
                 do {
                     let authResponse = try JSONDecoder().decode(AuthResponse.self, from: response.data)
                     print(authResponse)

@@ -16,7 +16,31 @@ enum PostAPI {
     case deleteSaved(id:String,token:String)
     case post(dic:[String:Any],token:String)
 }
-extension PostAPI:TargetType {
+extension PostAPI:TargetType, APIResponse {
+    
+    var para: [String : Any] {
+        var para:[String:Any] = [:]
+        switch self {
+        case .getMyLetter(let token):
+            para["token"] = token
+        case .save(_,let token):
+            para["token"] = token
+        case .get(let token):
+            para["token"] = token
+        case .delete(_, let token):
+            para["token"] = token
+        case .update(_,_, let dic):
+            para = dic
+        case .post(let dic,_):
+            para = dic
+        case .deleteSaved(_,let token):
+            para["token"] = token
+        }
+        return para
+    }
+    
+    typealias Response = [Letter]
+    
     var baseURL: URL {
         return URL(string: "https://kobajun029.sakura.ne.jp")!
     }

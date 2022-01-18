@@ -1,11 +1,15 @@
 import Alamofire
 import Moya
+import RxSwift
 protocol PostServiceProtocol {
     func getLetters(completion:@escaping (Result<[Letter], Error>)->Void)
     func fetchMyPost(completion: @escaping (Result<[Letter],Error>)->Void)
     func postLetter(dic:[String:Any],completion:@escaping(Result<Void,Error>)->Void)
 }
 struct PostService:PostServiceProtocol {
+    func fetchMyPost(token:String)->Single<[Letter]> {
+        APIClient.shared.request(PostAPI.getMyLetter(token: token))
+    }
     
     func fetchMyPost(completion: @escaping (Result<[Letter],Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))

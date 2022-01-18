@@ -10,6 +10,7 @@ import RxSwift
 final class UserProfileInteractor:UserProfileUseCase {
     let service:UserServiceProtocol
     let postService:PostServiceProtocol
+    private let disposeBag = DisposeBag()
     init(service:UserServiceProtocol,postService:PostServiceProtocol) {
         self.service = service
         self.postService = postService
@@ -18,14 +19,11 @@ final class UserProfileInteractor:UserProfileUseCase {
     func fetchUser() -> Single<ProfileHeaderViewData> {
         return Single.create { singleEvent->Disposable in
             guard let token = UserDefaultsRepositry.shared.getToken() else { return Disposables.create() }
-            self.service.getUser(token: token) { result in
-                switch result {
-                case .success(let user):
-                    singleEvent(.success(ProfileHeaderViewData(user: user)))
-                case .failure(let error):
-                    singleEvent(.failure(error))
-                }
-            }
+            self.service.getUser(token: token).subscribe { user in
+                singleEvent(.success(ProfileHeaderViewData(user: user)))
+            } onFailure: {  error in
+                singleEvent(.failure(error))
+            }.disposed(by: self.disposeBag)
             return Disposables.create()
         }
     }
