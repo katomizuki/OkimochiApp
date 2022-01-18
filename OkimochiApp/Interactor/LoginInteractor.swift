@@ -5,8 +5,10 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
+import RxSwift
+
 final class LoginInteractor: LoginUseCase {
-    
+
     let service: AuthServiceProtocol
     init(service: AuthServiceProtocol) {
         self.service = service
@@ -18,7 +20,7 @@ final class LoginInteractor: LoginUseCase {
     func saveToken(token: String) {
         UserDefaultsRepositry.shared.saveToken(token: token)
     }
-    func login(email: String, password: String, completion: @escaping (Result<AuthResponse, Error>) -> Void) {
-        service.login(email: email, password: password, completion: completion)
+    func login(email: String, password: String) -> Single<AuthResponse> {
+        service.login(email: email, password: password)
     }
 }

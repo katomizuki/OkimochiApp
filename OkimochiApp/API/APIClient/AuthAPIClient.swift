@@ -6,13 +6,22 @@
 //
 
 import Moya
-enum AuthAPI {
+enum AuthAPI: APIResponse {
+    typealias Response = AuthResponse
     case register(parameter:[String:Any])
     case login(parameter:[String:Any])
 }
 extension AuthAPI: TargetType {
     var baseURL: URL {
         return URL(string:"https://kobajun029.sakura.ne.jp")!
+    }
+    var para: [String : Any] {
+        switch self {
+        case .register(let parameter):
+            return parameter
+        case .login(let parameter):
+            return parameter
+        }
     }
     
     var path: String {

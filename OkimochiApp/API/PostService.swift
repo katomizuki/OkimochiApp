@@ -31,6 +31,10 @@ struct PostService:PostServiceProtocol {
         }
     }
     
+    func getLetters(token:String)->Single<[Letter]> {
+        APIClient.shared.request(PostAPI.get(token: token))
+    }
+    
     func getLetters(completion:@escaping (Result<[Letter], Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else {
             completion(.failure(APIError.notToken))
@@ -52,6 +56,7 @@ struct PostService:PostServiceProtocol {
         }
     }
 //    func postLetter(
+//    func saveLetter(id: String)
     func saveLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
             return

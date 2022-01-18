@@ -1,14 +1,24 @@
 import Foundation
 import Alamofire
 import Moya
+import RxSwift
 protocol AuthServiceProtocol {
-    func login(email: String,
-               password: String,
-               completion: @escaping(Result<AuthResponse, Error>) -> Void)
-    func register(credential: Credential,
-                  completion: @escaping (Result<AuthResponse, Error>) -> Void)
+//    func login(email: String,
+//               password: String,
+//               completion: @escaping(Result<AuthResponse, Error>) -> Void)
+    func login(email: String,password: String) -> Single<AuthResponse>
+    func register(credential: Credential) -> Single<AuthResponse>
+//    func register(credential: Credential,
+//                  completion: @escaping (Result<AuthResponse, Error>) -> Void)
 }
 struct AuthService: AuthServiceProtocol {
+    
+    func login(email: String, password: String) -> Single<AuthResponse> {
+        let parameters:[String:Any] = [
+            "email" : "\(email)",
+            "password" : "\(password)"]
+        return APIClient.shared.request(AuthAPI.login(parameter: parameters))
+    }
     
     func register(credential:Credential,completion:@escaping (Result<AuthResponse, Error>) -> Void) {
         let parameters:[String:Any] = ["name" : credential.name,
@@ -24,6 +34,12 @@ struct AuthService: AuthServiceProtocol {
                 completion(.failure(error))
             }
         }
+    }
+    func register(credential:Credential)->Single<AuthResponse> {
+        let parameters:[String:Any] = ["name" : credential.name,
+                                       "email" : credential.email,
+                                       "password" : credential.password]
+        return APIClient.shared.request(AuthAPI.register(parameter: parameters))
     }
     
     func login(email: String,
