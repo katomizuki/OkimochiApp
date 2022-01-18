@@ -32,6 +32,19 @@ class APIClient {
             }
             return Disposables.create()
         }
-        
+    }
+    func request<T:APITargetType>(_ request:T) -> Completable {
+        Completable.create { subscriber -> Disposable in
+            let url = request.path
+            AF.request(url, method: request.method, parameters: request.para, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in
+                switch response.result {
+                case .success:
+                    subscriber(.completed)
+                case .failure(let error):
+                    subscriber(.error(error))
+                }
+            }
+            return Disposables.create()
+        }
     }
 }

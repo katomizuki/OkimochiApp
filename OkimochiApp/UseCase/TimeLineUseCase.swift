@@ -6,5 +6,5 @@
 //
 import RxSwift
 protocol TimeLineUseCase {
-    func fetchTimeLines()->Single<[Letter]>
+    func fetchTimeLines(token:String)->Single<[Letter]>
 }

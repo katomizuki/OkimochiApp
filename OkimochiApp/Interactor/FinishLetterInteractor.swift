@@ -10,9 +10,6 @@ import UIKit
 
 final class FinishLetterInteractor:FinishLetterUseCase {
 
-    
-    
-    
     let service:PostServiceProtocol
     init(service:PostServiceProtocol) {
         self.service = service
@@ -26,7 +23,8 @@ final class FinishLetterInteractor:FinishLetterUseCase {
                     "open_place_latitude":letter.latitude,
                     "open_place_longitude":letter.longitude,
                    "public":0]
-        service.postLetter(dic: dic, completion: completion)
+        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+        service.postLetter(dic: dic, token: token)
     }
 
     

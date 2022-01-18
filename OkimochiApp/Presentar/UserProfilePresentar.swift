@@ -29,8 +29,8 @@ final class UserProfilePresentar: UserProfilePresentable {
     }
     
     func viewWillAppear() {
-        
-        interactor.fetchUser()
+        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+        interactor.fetchUser(token: token)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] viewData in
             self?.view.setViewData(viewData)
@@ -39,7 +39,7 @@ final class UserProfilePresentar: UserProfilePresentable {
             self?.view.showError()
         }.disposed(by: disposeBag)
 
-        interactor.fetchMyLetter()
+        interactor.fetchMyLetter(token: token)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] letters in
                 self?.view.setLetters(letters)

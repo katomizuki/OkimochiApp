@@ -28,13 +28,14 @@ final class TimeLinePresentar:TimeLinePresentable {
     }
     
     func viewWillAppear() {
-        interactor.fetchTimeLines().observe(on: MainScheduler.instance)
+        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+        interactor.fetchTimeLines(token: token)
+            .observe(on: MainScheduler.instance)
             .subscribe { [weak self] letters in
                 self?.view.setLetters(letters)
             } onFailure: { [weak self] _ in
                 self?.view.showError()
             }.disposed(by: disposeBag)
-
     }
     
     func onTapLetter() {
@@ -43,7 +44,6 @@ final class TimeLinePresentar:TimeLinePresentable {
     func notToken() {
         print(#function)
         if UserDefaultsRepositry.shared.getToken() == nil {
-            print("⚡️")
             router.transitionLogin()
         }
     }

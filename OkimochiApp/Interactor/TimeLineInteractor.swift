@@ -12,17 +12,7 @@ final class TimeLineInteractor:TimeLineUseCase {
     init(service:PostServiceProtocol) {
         self.service = service
     }
-    func fetchTimeLines() -> Single<[Letter]> {
-        return Single.create { singleEvent->Disposable in
-            self.service.getLetters { result in
-                switch result {
-                case .success(let letters):
-                    singleEvent(.success(letters))
-                case .failure(let error):
-                    singleEvent(.failure(error))
-                }
-            }
-            return Disposables.create()
-        }
+    func fetchTimeLines(token:String) -> Single<[Letter]> {
+        self.service.getLetters(token: token)
     }
 }

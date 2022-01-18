@@ -2,129 +2,40 @@ import Alamofire
 import Moya
 import RxSwift
 protocol PostServiceProtocol {
-    func getLetters(completion:@escaping (Result<[Letter], Error>)->Void)
-    func fetchMyPost(completion: @escaping (Result<[Letter],Error>)->Void)
-    func postLetter(dic:[String:Any],completion:@escaping(Result<Void,Error>)->Void)
+    func fetchMyPost(token:String)->Single<[Letter]>
+    func getLetters(token:String)->Single<[Letter]>
+    func saveLetter(id: String,token:String) -> Completable
+    func deleteLetter(id:String, token:String) -> Completable
+    func deleteSavedLetter(id:String ,token: String) -> Completable
+    func postLetter(dic:[String:Any],token: String) -> Completable
+    func updateLetter(id:String,letter:Letter,token:String) -> Completable
 }
 struct PostService:PostServiceProtocol {
     func fetchMyPost(token:String)->Single<[Letter]> {
         APIClient.shared.request(PostAPI.getMyLetter(token: token))
     }
     
-    func fetchMyPost(completion: @escaping (Result<[Letter],Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.getMyLetter(token: token)) { result in
-            switch result {
-            case .success(let response):
-                do {
-                    let letters = try JSONDecoder().decode([Letter].self, from: response.data)
-                    completion(.success(letters))
-                } catch {
-                    completion(.failure(APIError.decodeError))
-                }
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
-    }
-    
     func getLetters(token:String)->Single<[Letter]> {
         APIClient.shared.request(PostAPI.get(token: token))
     }
-    
-    func getLetters(completion:@escaping (Result<[Letter], Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else {
-            completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.get(token: token)) { result in
-            switch result {
-            case .success(let response):
-                do {
-                    let decodedData = try JSONDecoder().decode([Letter].self, from: response.data)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(APIError.decodeError))
-                }
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
-    }
-//    func postLetter(
-//    func saveLetter(id: String)
-    func saveLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else { completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.save(id: id, token: token)) { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
+ 
+    func saveLetter(id: String,token:String) -> Completable {
+        APIClient.shared.request(PostAPI.save(id: id, token: token))
     }
     
-    func deleteLetter(id:String, completion:@escaping (Result<Void, Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else {
-            completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.delete(id: id, token: token)) { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
+    func deleteLetter(id:String, token:String) -> Completable {
+        APIClient.shared.request(PostAPI.delete(id: id, token: token))
     }
     
-    func deleteSavedLetter(id: String,
-                                  completion: @escaping (Result<Void,Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else {
-            completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.deleteSaved(id: id, token: token)) { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
+
+    func deleteSavedLetter(id:String ,token: String) -> Completable {
+        APIClient.shared.request(PostAPI.delete(id: id, token: token))
     }
-    func postLetter(dic:[String:Any],completion:@escaping(Result<Void,Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else {
-            completion(.failure(APIError.notToken))
-            return
-        }
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.post(dic: dic, token: token)) { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+
+    func postLetter(dic:[String:Any],token: String) -> Completable {
+        APIClient.shared.request(PostAPI.post(dic: dic, token: token))
     }
-    
-    func updateLetter(id:String,letter:Letter,completion:@escaping(Result<Void,Error>)->Void) {
-        guard let token = UserDefaultsRepositry.shared.getToken() else {
-            completion(.failure(APIError.notToken))
-            return
-        }
+    func updateLetter(id:String,letter:Letter,token:String) -> Completable {
         let parameter:[String:Any] = ["who":letter.who,
                                       "title":letter.title,
                                       "message":letter.text,
@@ -135,15 +46,17 @@ struct PostService:PostServiceProtocol {
                                       "open_place_longitude":letter.longitude,
                                       "public":"0",
                                       "token":token]
-        let provider = MoyaProvider<PostAPI>()
-        provider.request(.update(id: id, token: token, dic: parameter)) { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure:
-                completion(.failure(APIError.apiError))
-            }
-        }
+        return APIClient.shared.request(PostAPI.update(id: id, token: token, dic: parameter))
     }
+    
+
 
 }
+//
+//protocol Completable {
+//    
+//}
+//enum Complete {
+//    case complete
+//    case failed
+//}

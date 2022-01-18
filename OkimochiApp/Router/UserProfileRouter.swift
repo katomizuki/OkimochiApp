@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserProfileRouter: UserProfileWireframe {
+final class UserProfileRouter: UserProfileWireframe {
     
      private (set) weak var view:UserProfileViewable!
      init(view:UserProfileViewable) {

@@ -6,6 +6,6 @@
 //
 import RxSwift
 protocol UserProfileUseCase {
-    func fetchUser()->Single<ProfileHeaderViewData>
-    func fetchMyLetter()->Single<[Letter]>
+    func fetchUser(token: String)->Single<ProfileHeaderViewData>
+    func fetchMyLetter(token: String)->Single<[Letter]>
 }
