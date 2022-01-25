@@ -7,5 +7,6 @@
 
 
 protocol FinishLetterViewable:Transitioner {
-    
+    func showError()
+    func showSuccess()
 }

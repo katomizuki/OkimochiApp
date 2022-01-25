@@ -185,6 +185,7 @@
 		D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */; };
 		D3D62E992789C83000DCA027 /* TimeLineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */; };
 		D3F2153B27A00FAE009897CE /* TimeLineViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */; };
+		D3F2153D27A011FC009897CE /* AlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153C27A011FC009897CE /* AlertProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -369,6 +370,7 @@
 		D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsDataSource.swift; sourceTree = "<group>"; };
 		D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionViewController.swift; sourceTree = "<group>"; };
 		D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewData.swift; sourceTree = "<group>"; };
+		D3F2153C27A011FC009897CE /* AlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProvider.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -561,6 +563,7 @@
 				D381022A272D0359003C7850 /* Views+Extension.swift.swift */,
 				D312C2AD2744C90200DF7E83 /* CustomSegue.swift */,
 				D312C2AF2744D29F00DF7E83 /* UnwindSegue.swift */,
+				D3F2153C27A011FC009897CE /* AlertProvider.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				D3151640276B6FBA0061C488 /* SearchFriendsRouter.swift in Sources */,
 				D31516A4276D6BE00061C488 /* LetterTimeUseCase.swift in Sources */,
 				D3810244272D1BE4003C7850 /* Letter.swift.swift in Sources */,
+				D3F2153D27A011FC009897CE /* AlertProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

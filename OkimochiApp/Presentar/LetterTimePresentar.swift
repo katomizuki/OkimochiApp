@@ -25,6 +25,5 @@ final class LetterTimePresentar:LetterTimePresentable {
     }
     func onTapNextButton() {
         router.transitionLetterMapVC()
-        
     }
 }

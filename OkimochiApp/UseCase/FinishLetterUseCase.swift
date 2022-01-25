@@ -4,7 +4,7 @@
 //
 //  Created by ミズキ on 2021/12/18.
 //
-
+import RxSwift
 protocol FinishLetterUseCase {
-    func sendLetter(_ letter:Letter,completion:@escaping(Result<Void,Error>)->Void)
+    func postLetter(dic: [String: Any], token: String) -> Completable
 }

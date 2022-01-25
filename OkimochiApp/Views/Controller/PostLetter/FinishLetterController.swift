@@ -28,5 +28,13 @@ final class FinishLetterController: UIViewController {
     
 }
 extension FinishLetterController:FinishLetterViewable {
+    func showError() {
+        present(AlertProvider.makeCommonAlert(), animated: true)
+    }
+    
+    func showSuccess() {
+        // 成功アニメーション
+    }
+    
     
 }

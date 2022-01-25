@@ -18,7 +18,7 @@ class TimeLineController: UIViewController {
         super.viewDidLoad()
         setupMapView()
         setupCollectionView()
-        checkLogin()
+//        checkLogin()
         checkLocationAndAddPin()
     }
     private func setupMapView() {
@@ -111,7 +111,7 @@ extension TimeLineController: TimeLineViewable {
     }
     
     func showError() {
-        
+        present(AlertProvider.makeCommonAlert(), animated: true)
     }
     func setLetters(_ viewData: TimeLineViewData) {
         collectionViewController.initViewData(viewData)
