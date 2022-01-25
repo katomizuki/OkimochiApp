@@ -17,6 +17,8 @@ enum UserAPI:APIResponse {
         switch self {
         case .getUser(let token):
             para["token"] = token
+        case .updateUser(let token):
+            para["token"] = token
         }
         return para
     }
@@ -24,6 +26,7 @@ enum UserAPI:APIResponse {
     typealias Response = User
     
     case getUser(token:String)
+    case updateUser(token: String)
     
 }
 extension UserAPI:TargetType {
@@ -42,6 +45,8 @@ extension UserAPI:TargetType {
     var task: Task {
         switch self {
         case .getUser(let token):
+            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
+        case .updateUser(let token):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         }
     }

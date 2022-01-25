@@ -15,15 +15,14 @@ enum SendWhoType: Int,CaseIterable,Codable {
 struct Letter:Codable {
     var title: String
     var text: String
-    var isOpen = true
+    var isOpen: Int
     var sendType: SendWhoType?
-    var placeName: String
     var who:String
     var imageUrl:String
     var openTime:String
     var openPlaceName:String
-    var latitude:String
-    var longitude:String
+    var latitude:Double
+    var longitude:Double
 //    var letterImage:UIImage?
     var imageData:Data?
 }

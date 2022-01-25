@@ -4,7 +4,7 @@
 //
 //  Created by ミズキ on 2021/12/16.
 //
-
+import RxSwift
 protocol UpdateProfileUserCase {
-    func updateUserProfile(user:User) async throws -> Void
+    func updateUserProfile(user:User, token: String) -> Completable
 }

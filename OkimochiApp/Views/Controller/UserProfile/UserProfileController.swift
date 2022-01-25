@@ -1,4 +1,5 @@
 import UIKit
+
 final class UserProfileController: UIViewController {
     static let id = String(describing: UserProfileController.self)
     private var viewData:ProfileViewData?
@@ -61,12 +62,12 @@ extension UserProfileController: UserProfileViewable {
         collectionViewManager.initViewData(viewData)
     }
 
-    func setLetters(_ letters: [Letter]) {
-//        collectionViewManager.set
+    func setLetterViewData(_ viewData: UserLetterViewData) {
+        collectionViewManager.initUserLetterViewData(viewData)
     }
     
     func showError() {
-        
+        present(AlertProvider.makeCommonAlert(), animated: true)
     }
     func reload() {
         profileCollectionView.reloadData()

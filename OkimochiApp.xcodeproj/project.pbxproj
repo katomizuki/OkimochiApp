@@ -186,6 +186,10 @@
 		D3D62E992789C83000DCA027 /* TimeLineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */; };
 		D3F2153B27A00FAE009897CE /* TimeLineViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */; };
 		D3F2153D27A011FC009897CE /* AlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153C27A011FC009897CE /* AlertProvider.swift */; };
+		D3F2153F27A019F2009897CE /* MyLetterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153E27A019F2009897CE /* MyLetterClient.swift */; };
+		D3F2154127A01B3B009897CE /* MyLetterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2154027A01B3B009897CE /* MyLetterResult.swift */; };
+		D3F2154327A01EBC009897CE /* MyLetterResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2154227A01EBC009897CE /* MyLetterResult+Extension.swift */; };
+		D3F2154527A01EF4009897CE /* UserLetterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2154427A01EF4009897CE /* UserLetterViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -371,6 +375,10 @@
 		D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionViewController.swift; sourceTree = "<group>"; };
 		D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewData.swift; sourceTree = "<group>"; };
 		D3F2153C27A011FC009897CE /* AlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProvider.swift; sourceTree = "<group>"; };
+		D3F2153E27A019F2009897CE /* MyLetterClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLetterClient.swift; sourceTree = "<group>"; };
+		D3F2154027A01B3B009897CE /* MyLetterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLetterResult.swift; sourceTree = "<group>"; };
+		D3F2154227A01EBC009897CE /* MyLetterResult+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyLetterResult+Extension.swift"; sourceTree = "<group>"; };
+		D3F2154427A01EF4009897CE /* UserLetterViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLetterViewData.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -444,6 +452,7 @@
 		D3151662276B79EA0061C488 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				D3F2154227A01EBC009897CE /* MyLetterResult+Extension.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -516,6 +525,7 @@
 				D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */,
 				D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */,
 				D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */,
+				D3F2154427A01EF4009897CE /* UserLetterViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -544,6 +554,7 @@
 				D3074C932753ACB400A84358 /* PostService.swift */,
 				D3074C8C2753A3F800A84358 /* APIError.swift */,
 				D3074C8E2753A61F00A84358 /* AuthResponse.swift */,
+				D3F2154027A01B3B009897CE /* MyLetterResult.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -775,6 +786,7 @@
 				D3A779122792FD1800EA888C /* PostAPIClient.swift */,
 				D3A779142793020500EA888C /* AuthAPIClient.swift */,
 				D35C88C22796E1350020CF8D /* APIClient.swift */,
+				D3F2153E27A019F2009897CE /* MyLetterClient.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -982,6 +994,7 @@
 				D3151606276B6B870061C488 /* LoginViewable.swift in Sources */,
 				D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */,
 				D31516C6276D8D790061C488 /* OpenLetterPresentar.swift in Sources */,
+				D3F2154327A01EBC009897CE /* MyLetterResult+Extension.swift in Sources */,
 				D31516AC276D6D990061C488 /* LetterFriendInteractor.swift in Sources */,
 				D3151694276D6A300061C488 /* LetterMapViewable.swift in Sources */,
 				D312C2AA2744BFC300DF7E83 /* OpenLetterController.swift in Sources */,
@@ -1056,14 +1069,17 @@
 				D315163C276B6FA50061C488 /* UpdateProfileRouter.swift in Sources */,
 				D3151692276D69FC0061C488 /* LetterMapUseCase.swift in Sources */,
 				D315162A276B6E140061C488 /* FriendDetailUseCase.swift in Sources */,
+				D3F2153F27A019F2009897CE /* MyLetterClient.swift in Sources */,
 				D3151698276D6A5A0061C488 /* LetterMapWireframe.swift in Sources */,
 				D3151676276CBE2B0061C488 /* AppRouter.swift in Sources */,
 				D315168A276D648E0061C488 /* LetterContentRouter.swift in Sources */,
 				D31515F4276B6A6E0061C488 /* TimeLinePresentar.swift in Sources */,
 				D3151604276B6B7B0061C488 /* TimeLineViewable.swift in Sources */,
+				D3F2154527A01EF4009897CE /* UserLetterViewData.swift in Sources */,
 				D381020C272CF2CA003C7850 /* SceneDelegate.swift in Sources */,
 				D3151674276CBAF20061C488 /* PostLetterRouter.swift in Sources */,
 				D3D62E952789BD1700DCA027 /* UpdateProfileTableViewManager.swift in Sources */,
+				D3F2154127A01B3B009897CE /* MyLetterResult.swift in Sources */,
 				D31515E8276B69A10061C488 /* UserProfilePresentar.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
 				D315164F276B71AB0061C488 /* LetterDetailWireframe.swift in Sources */,

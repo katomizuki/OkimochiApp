@@ -5,8 +5,8 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-
-final class UpdateProfilePresentar:UpdateProfilePresentable {
+import RxSwift
+final class UpdateProfilePresentar: UpdateProfilePresentable {
     
     struct DI {
         var router:UpdateProfileWireframe
@@ -29,12 +29,9 @@ final class UpdateProfilePresentar:UpdateProfilePresentable {
         
     }
     
-    func onTapSaveButton(user: User) async {
-        do {
-        try await interactor.updateUserProfile(user: user)
-    } catch {
-            print(error)
-        }
+    func onTapSaveButton(user: User) {
+        guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+         interactor.updateUserProfile(user: user,token: token)
     }
     func onTapDismissButton() {
         router.dismiss()

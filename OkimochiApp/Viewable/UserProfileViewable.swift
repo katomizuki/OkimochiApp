@@ -7,7 +7,7 @@
 
 protocol UserProfileViewable: Transitioner {
     func setViewData(_ viewData:ProfileHeaderViewData)
-    func setLetters(_ letters:[Letter])
+    func setLetterViewData(_ viewData: UserLetterViewData)
     func showError()
     func reload()
 }

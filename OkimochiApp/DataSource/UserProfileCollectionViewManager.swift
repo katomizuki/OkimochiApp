@@ -14,8 +14,12 @@ protocol UserProfileCollectionViewManagerDelegate: AnyObject {
 class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     weak var delegate:UserProfileCollectionViewManagerDelegate?
     var viewData:ProfileHeaderViewData?
+    var userLetterViewData:UserLetterViewData?
     func initViewData(_ viewData:ProfileHeaderViewData) {
         self.viewData = viewData
+    }
+    func initUserLetterViewData(_ viewData: UserLetterViewData) {
+        self.userLetterViewData = viewData
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10

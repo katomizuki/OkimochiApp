@@ -25,9 +25,7 @@ final class UpdateProfileController: UIViewController,UpdateProfileViewable {
     }
     @IBAction func didTapSaveButton(_ sender: Any)  {
         print(#function)
-        Task {
-            await presentar?.onTapSaveButton(user: User(dic: [:]))
-        }
+        presentar?.onTapSaveButton(user: User(dic: [:]))
     }
 }
 extension UpdateProfileController: UITableViewDelegate {

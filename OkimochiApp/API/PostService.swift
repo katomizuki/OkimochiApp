@@ -2,7 +2,7 @@ import Alamofire
 import Moya
 import RxSwift
 protocol PostServiceProtocol {
-    func fetchMyPost(token:String)->Single<[Letter]>
+    func fetchMyPost(token:String)->Single<MyLetterResult>
     func getLetters(token:String)->Single<[Letter]>
     func saveLetter(id: String,token:String) -> Completable
     func deleteLetter(id:String, token:String) -> Completable
@@ -11,8 +11,8 @@ protocol PostServiceProtocol {
     func updateLetter(id:String,letter:Letter,token:String) -> Completable
 }
 struct PostService:PostServiceProtocol {
-    func fetchMyPost(token:String)->Single<[Letter]> {
-        APIClient.shared.request(PostAPI.getMyLetter(token: token))
+    func fetchMyPost(token:String)->Single<MyLetterResult> {
+        APIClient.shared.request(MyLetterAPI.fetchMyLetters(token: token))
     }
     
     func getLetters(token:String)->Single<[Letter]> {

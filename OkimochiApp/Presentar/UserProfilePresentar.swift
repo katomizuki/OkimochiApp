@@ -41,8 +41,8 @@ final class UserProfilePresentar: UserProfilePresentable {
 
         interactor.fetchMyLetter(token: token)
             .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] letters in
-                self?.view.setLetters(letters)
+            .subscribe { [weak self] viewData in
+                self?.view.setLetterViewData(viewData)
             } onFailure: { [weak self] _ in
                 self?.view.showError()
             }.disposed(by: disposeBag)
