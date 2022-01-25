@@ -113,7 +113,7 @@ extension TimeLineController: TimeLineViewable {
     func showError() {
         
     }
-    func setLetters(_ letters: [Letter]) {
-        collectionViewController.initViewData(letters)
+    func setLetters(_ viewData: TimeLineViewData) {
+        collectionViewController.initViewData(viewData)
     }
 }

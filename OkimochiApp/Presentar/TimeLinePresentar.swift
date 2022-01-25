@@ -31,8 +31,8 @@ final class TimeLinePresentar:TimeLinePresentable {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         interactor.fetchTimeLines(token: token)
             .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] letters in
-                self?.view.setLetters(letters)
+            .subscribe { [weak self] viewData in
+                self?.view.setLetters(viewData)
             } onFailure: { [weak self] _ in
                 self?.view.showError()
             }.disposed(by: disposeBag)

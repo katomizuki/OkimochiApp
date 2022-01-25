@@ -63,7 +63,6 @@ extension LetterMapController: ResultMapControllerDelegate {
         searchController.searchBar.resignFirstResponder()
         let annotions = mapView.annotations
         mapView.removeAnnotations(annotions)
-        print(#function)
         let pin = MKPointAnnotation()
         pin.coordinate = coordinator
         mapView.addAnnotation(pin)

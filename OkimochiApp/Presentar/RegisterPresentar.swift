@@ -30,7 +30,8 @@ final class RegisterPresentar:RegisterPresentable {
     func onTapRegisterButton(credential: Credential) {
         self.interactor.sendUser(credential: credential)
             .subscribe { response in
-//                self.view.dis
+                print(response,"⚡️")
+//            self.view.dismiss(animated: true)
         } onFailure: { error in
             self.view.showError()
         }.disposed(by: disposeBag)

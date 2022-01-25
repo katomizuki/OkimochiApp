@@ -58,6 +58,4 @@ extension LetterFriendController:LetterFriendViewable {
     func setFriends(_ friends: [User]) {
         
     }
-    
-    
 }

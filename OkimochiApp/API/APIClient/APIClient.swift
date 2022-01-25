@@ -12,6 +12,7 @@ import RxSwift
 class APIClient {
     static let shared = APIClient()
     typealias APITargetType = TargetType & APIResponse
+    
     func request<T:APITargetType>(_ request:T) ->Single<T.Response> {
         return Single.create { observer->Disposable in
             let url = request.path
@@ -33,6 +34,7 @@ class APIClient {
             return Disposables.create()
         }
     }
+    
     func request<T:APITargetType>(_ request:T) -> Completable {
         Completable.create { subscriber -> Disposable in
             let url = request.path

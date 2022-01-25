@@ -52,11 +52,4 @@ struct PostService:PostServiceProtocol {
 
 
 }
-//
-//protocol Completable {
-//    
-//}
-//enum Complete {
-//    case complete
-//    case failed
-//}
+

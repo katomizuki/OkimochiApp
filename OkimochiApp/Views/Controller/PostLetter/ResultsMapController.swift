@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+
 protocol ResultMapControllerDelegate:AnyObject {
     func didTapPlace(coordinator: CLLocationCoordinate2D)
 }

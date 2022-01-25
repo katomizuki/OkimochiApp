@@ -140,7 +140,6 @@
 		D31516CC276D8E750061C488 /* OpenLetterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */; };
 		D31516CE276D8E8C0061C488 /* OpenLetterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */; };
 		D35C88C32796E1350020CF8D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C88C22796E1350020CF8D /* APIClient.swift */; };
-		D35C88C52796ECD10020CF8D /* CompletableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C88C42796ECD10020CF8D /* CompletableEntity.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -185,6 +184,7 @@
 		D3D62E952789BD1700DCA027 /* UpdateProfileTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileTableViewManager.swift */; };
 		D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */; };
 		D3D62E992789C83000DCA027 /* TimeLineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */; };
+		D3F2153B27A00FAE009897CE /* TimeLineViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -322,7 +322,6 @@
 		D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterUseCase.swift; sourceTree = "<group>"; };
 		D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterWireframe.swift; sourceTree = "<group>"; };
 		D35C88C22796E1350020CF8D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		D35C88C42796ECD10020CF8D /* CompletableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletableEntity.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -369,6 +368,7 @@
 		D3D62E942789BD1700DCA027 /* UpdateProfileTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableViewManager.swift; sourceTree = "<group>"; };
 		D3D62E962789BF9C00DCA027 /* SearchFriendsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendsDataSource.swift; sourceTree = "<group>"; };
 		D3D62E982789C83000DCA027 /* TimeLineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionViewController.swift; sourceTree = "<group>"; };
+		D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewData.swift; sourceTree = "<group>"; };
 		EFD23BB78D9D2D590B4BE05C /* Pods-OkimochiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.debug.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -513,6 +513,7 @@
 				D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */,
 				D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */,
 				D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */,
+				D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -628,7 +629,6 @@
 				D312C1E4274129FF00DF7E83 /* Place.swift */,
 				D312C1E627412A9000DF7E83 /* PlaceError.swift */,
 				D3074C8A2753A1D300A84358 /* Credential.swift */,
-				D35C88C42796ECD10020CF8D /* CompletableEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1024,7 +1024,6 @@
 				D31515EE276B69D30061C488 /* SearchFriendPresentar.swift in Sources */,
 				D3151612276B6C450061C488 /* TimeLinePresentable.swift in Sources */,
 				D3151688276D64700061C488 /* LetterContentWireframe.swift in Sources */,
-				D35C88C52796ECD10020CF8D /* CompletableEntity.swift in Sources */,
 				D3B72D23274A75F900253933 /* AuthService.swift in Sources */,
 				D315160A276B6BFE0061C488 /* UserProfilePresentable.swift in Sources */,
 				D3151690276D69E00061C488 /* LetterMapInteractor.swift in Sources */,
@@ -1119,6 +1118,7 @@
 				D3151657276B71E90061C488 /* RegisterWireframe.swift in Sources */,
 				D31516B2276D6E010061C488 /* LetterFriendUseCase.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,
+				D3F2153B27A00FAE009897CE /* TimeLineViewData.swift in Sources */,
 				D3151696276D6A440061C488 /* LetterMapPresentable.swift in Sources */,
 				D3151686276D64480061C488 /* LetterContentUseCase.swift in Sources */,
 				D30E6F492734031B00FBE5AF /* UserService.swift in Sources */,

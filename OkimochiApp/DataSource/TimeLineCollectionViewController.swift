@@ -12,12 +12,12 @@ protocol TimeLineDataSourceDelegate:AnyObject {
 class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     private let id = "collectionCell"
     weak var delegate:TimeLineDataSourceDelegate?
-    private var letters:[Letter] = []
-    func initViewData(_ letters:[Letter]) {
-        self.letters = letters
+    private var viewData:TimeLineViewData?
+    func initViewData(_ viewData: TimeLineViewData) {
+        self.viewData = viewData
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return letters.count
+        return viewData?.numberOfCell ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath)

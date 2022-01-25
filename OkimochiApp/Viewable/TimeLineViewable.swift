@@ -6,7 +6,7 @@
 //
 
 protocol TimeLineViewable: Transitioner {
-    func setLetters(_ letters:[Letter])
+    func setLetters(_ viewData: TimeLineViewData)
     func showError()
     func reload()
 }
