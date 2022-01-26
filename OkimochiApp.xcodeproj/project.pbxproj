@@ -144,6 +144,8 @@
 		D35D5B0827A174590041D2E1 /* FriendsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0727A174590041D2E1 /* FriendsResult.swift */; };
 		D35D5B0A27A1786A0041D2E1 /* UserFriends+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0927A1786A0041D2E1 /* UserFriends+Extension.swift */; };
 		D35D5B0C27A178AE0041D2E1 /* UserFriendsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */; };
+		D35D5B0E27A17BDF0041D2E1 /* RequestFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0D27A17BDF0041D2E1 /* RequestFriends.swift */; };
+		D35D5B1027A17E9F0041D2E1 /* RequestFriendTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0F27A17E9F0041D2E1 /* RequestFriendTargetType.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -335,6 +337,8 @@
 		D35D5B0727A174590041D2E1 /* FriendsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResult.swift; sourceTree = "<group>"; };
 		D35D5B0927A1786A0041D2E1 /* UserFriends+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFriends+Extension.swift"; sourceTree = "<group>"; };
 		D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendsViewData.swift; sourceTree = "<group>"; };
+		D35D5B0D27A17BDF0041D2E1 /* RequestFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFriends.swift; sourceTree = "<group>"; };
+		D35D5B0F27A17E9F0041D2E1 /* RequestFriendTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFriendTargetType.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 				D3074C8E2753A61F00A84358 /* AuthResponse.swift */,
 				D3F2154027A01B3B009897CE /* MyLetterResult.swift */,
 				D35D5B0727A174590041D2E1 /* FriendsResult.swift */,
+				D35D5B0D27A17BDF0041D2E1 /* RequestFriends.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 				D35C88C22796E1350020CF8D /* APIClient.swift */,
 				D3F2153E27A019F2009897CE /* MyLetterClient.swift */,
 				D35D5B0527A174130041D2E1 /* FriendsTargetType.swift */,
+				D35D5B0F27A17E9F0041D2E1 /* RequestFriendTargetType.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -992,6 +998,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35D5B0E27A17BDF0041D2E1 /* RequestFriends.swift in Sources */,
 				D3151628276B6E0B0061C488 /* RegisterUseCase.swift in Sources */,
 				D315163E276B6FAF0061C488 /* LetterDetailRouter.swift in Sources */,
 				D31516A2276D6BC50061C488 /* LetterTimePresentable.swift in Sources */,
@@ -1114,6 +1121,7 @@
 				D31516B8276D714F0061C488 /* FinishLetterPresentar.swift in Sources */,
 				D35C88C32796E1350020CF8D /* APIClient.swift in Sources */,
 				D315168C276D69200061C488 /* LetterMapRouter.swift in Sources */,
+				D35D5B1027A17E9F0041D2E1 /* RequestFriendTargetType.swift in Sources */,
 				D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */,
 				D3151684276D63580061C488 /* LetterContentPresentable.swift in Sources */,
 				D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */,

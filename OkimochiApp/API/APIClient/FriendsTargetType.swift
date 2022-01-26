@@ -12,11 +12,14 @@ enum FriendsTargetType: APIResponse {
         switch self {
         case .getFriends(let token):
             return ["token": token]
+        case .requestFriend(let token,_):
+            return ["token": token]
         }
     }
     
     typealias Response = FriendsResult
     case getFriends(token: String)
+    case requestFriend(token: String,id: String)
 }
 extension FriendsTargetType: TargetType {
     var baseURL: URL {
@@ -24,7 +27,13 @@ extension FriendsTargetType: TargetType {
     }
     
     var path: String {
-        return "okimochi/api/friends_list"
+        switch self {
+        case .getFriends:
+            return "okimochi/api/friends_list"
+        case .requestFriend(_, let id):
+            return "okimochi/api/request/\(id)"
+        }
+        
     }
     
     var method: Method {
@@ -34,6 +43,8 @@ extension FriendsTargetType: TargetType {
     var task: Task {
         switch self {
         case .getFriends(let token):
+            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
+        case .requestFriend(token: let token):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         }
     }

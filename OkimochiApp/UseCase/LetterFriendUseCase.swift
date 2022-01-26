@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol LetterFriendUseCase {
-    func fetchFriends(uid:String)->Single<[User]>
+    func fetchFriends(uid:String,token: String)->Single<UserFriendsViewData>
 }

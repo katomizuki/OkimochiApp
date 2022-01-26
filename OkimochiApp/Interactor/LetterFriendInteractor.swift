@@ -13,9 +13,13 @@ final class LetterFriendInteractor:LetterFriendUseCase {
     init(service:UserServiceProtocol) {
         self.service = service
     }
-    func fetchFriends(uid: String) -> Single<[User]> {
+    func fetchFriends(uid: String, token: String) -> Single<UserFriendsViewData> {
         return Single.create { singleEvent->Disposable in
-            return Disposables.create()
+            self.service.getFriends(token: token).subscribe { result in
+                singleEvent(.success(result.convertToViewData()))
+            } onFailure: { error in
+                singleEvent(.failure(error))
+            }
         }
     }
 

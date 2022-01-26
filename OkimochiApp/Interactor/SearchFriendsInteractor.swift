@@ -9,6 +9,8 @@ import RxSwift
 
 
 final class SearchFriendsInteractor: SearchFriendUseCase {
+    
+    
     let service:UserServiceProtocol
     init(service:UserServiceProtocol) {
         self.service = service
@@ -18,6 +20,9 @@ final class SearchFriendsInteractor: SearchFriendUseCase {
 //            service.sea
             return Disposables.create()
         }
+    }
+    func requestFriend(token: String,id: String) -> Completable {
+        self.service.requestFriend(token: token, id: id)
     }
     
     

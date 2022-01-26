@@ -51,11 +51,13 @@ extension LetterFriendController:UITableViewDataSource {
     }
 }
 extension LetterFriendController:LetterFriendViewable {
+    func setFriends(_ viewData: UserFriendsViewData) {
+        
+    }
+    
     func showError() {
         
     }
     
-    func setFriends(_ friends: [User]) {
-        
-    }
+ 
 }

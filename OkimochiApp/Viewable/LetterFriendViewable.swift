@@ -7,5 +7,5 @@
 
 protocol LetterFriendViewable:Transitioner {
     func showError()
-    func setFriends(_ friends:[User])
+    func setFriends(_ viewData: UserFriendsViewData)
 }
