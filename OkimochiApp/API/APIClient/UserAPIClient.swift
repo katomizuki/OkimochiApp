@@ -35,7 +35,13 @@ extension UserAPI:TargetType {
     }
     
     var path: String {
-        return "/okimochi/api/get_user"
+        switch self {
+        case .getUser:
+            return "/okimochi/api/get_user"
+        case .updateUser:
+            return "/okimochi/api/update_user"
+        }
+        
     }
     
     var method: Method {

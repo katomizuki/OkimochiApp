@@ -140,6 +140,10 @@
 		D31516CC276D8E750061C488 /* OpenLetterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */; };
 		D31516CE276D8E8C0061C488 /* OpenLetterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */; };
 		D35C88C32796E1350020CF8D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C88C22796E1350020CF8D /* APIClient.swift */; };
+		D35D5B0627A174130041D2E1 /* FriendsTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0527A174130041D2E1 /* FriendsTargetType.swift */; };
+		D35D5B0827A174590041D2E1 /* FriendsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0727A174590041D2E1 /* FriendsResult.swift */; };
+		D35D5B0A27A1786A0041D2E1 /* UserFriends+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0927A1786A0041D2E1 /* UserFriends+Extension.swift */; };
+		D35D5B0C27A178AE0041D2E1 /* UserFriendsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -327,6 +331,10 @@
 		D31516CB276D8E750061C488 /* OpenLetterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterUseCase.swift; sourceTree = "<group>"; };
 		D31516CD276D8E8C0061C488 /* OpenLetterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterWireframe.swift; sourceTree = "<group>"; };
 		D35C88C22796E1350020CF8D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		D35D5B0527A174130041D2E1 /* FriendsTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTargetType.swift; sourceTree = "<group>"; };
+		D35D5B0727A174590041D2E1 /* FriendsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResult.swift; sourceTree = "<group>"; };
+		D35D5B0927A1786A0041D2E1 /* UserFriends+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFriends+Extension.swift"; sourceTree = "<group>"; };
+		D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendsViewData.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -453,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F2154227A01EBC009897CE /* MyLetterResult+Extension.swift */,
+				D35D5B0927A1786A0041D2E1 /* UserFriends+Extension.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -526,6 +535,7 @@
 				D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */,
 				D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */,
 				D3F2154427A01EF4009897CE /* UserLetterViewData.swift */,
+				D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -555,6 +565,7 @@
 				D3074C8C2753A3F800A84358 /* APIError.swift */,
 				D3074C8E2753A61F00A84358 /* AuthResponse.swift */,
 				D3F2154027A01B3B009897CE /* MyLetterResult.swift */,
+				D35D5B0727A174590041D2E1 /* FriendsResult.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -787,6 +798,7 @@
 				D3A779142793020500EA888C /* AuthAPIClient.swift */,
 				D35C88C22796E1350020CF8D /* APIClient.swift */,
 				D3F2153E27A019F2009897CE /* MyLetterClient.swift */,
+				D35D5B0527A174130041D2E1 /* FriendsTargetType.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -991,6 +1003,7 @@
 				D37AAB57272ECF6B003A1308 /* LetterDetailController.swift in Sources */,
 				D3151680276D62E90061C488 /* LetterContentInteractor.swift in Sources */,
 				D31516B0276D6DE40061C488 /* LetterFriendPresentable.swift in Sources */,
+				D35D5B0C27A178AE0041D2E1 /* UserFriendsViewData.swift in Sources */,
 				D3151606276B6B870061C488 /* LoginViewable.swift in Sources */,
 				D3074C922753A92E00A84358 /* UserRepositry.swift in Sources */,
 				D31516C6276D8D790061C488 /* OpenLetterPresentar.swift in Sources */,
@@ -1008,6 +1021,7 @@
 				D31516AE276D6DBD0061C488 /* LetterFriendViewable.swift in Sources */,
 				D3D62E912789B17700DCA027 /* PostDataTableViewManager.swift in Sources */,
 				D315168E276D69550061C488 /* LetterMapPresentar.swift in Sources */,
+				D35D5B0A27A1786A0041D2E1 /* UserFriends+Extension.swift in Sources */,
 				D3074C8D2753A3F800A84358 /* APIError.swift in Sources */,
 				D312C2AE2744C90200DF7E83 /* CustomSegue.swift in Sources */,
 				D3151602276B6B730061C488 /* OpenLetterViewable.swift in Sources */,
@@ -1058,6 +1072,7 @@
 				D315160C276B6C0A0061C488 /* UpdateProfilePresentable.swift in Sources */,
 				D3D62E972789BF9C00DCA027 /* SearchFriendsDataSource.swift in Sources */,
 				D315169A276D6AC30061C488 /* LetterTimePresentar.swift in Sources */,
+				D35D5B0827A174590041D2E1 /* FriendsResult.swift in Sources */,
 				D3151620276B6D8B0061C488 /* SearchFriendUseCase.swift in Sources */,
 				D30E6EC1273228B000FBE5AF /* LetterContentController.swift in Sources */,
 				D31516A0276D6BA90061C488 /* LetterTimeViewable.swift in Sources */,
@@ -1134,6 +1149,7 @@
 				D31516BA276D71D90061C488 /* FinishLetterInteractor.swift in Sources */,
 				D3074C8B2753A1D300A84358 /* Credential.swift in Sources */,
 				D3151614276B6C4E0061C488 /* LoginPresentable.swift in Sources */,
+				D35D5B0627A174130041D2E1 /* FriendsTargetType.swift in Sources */,
 				D3151657276B71E90061C488 /* RegisterWireframe.swift in Sources */,
 				D31516B2276D6E010061C488 /* LetterFriendUseCase.swift in Sources */,
 				D3810227272CFDD9003C7850 /* Anchor+Extension.swift.swift in Sources */,

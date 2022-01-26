@@ -37,4 +37,14 @@ final class UserProfileInteractor:UserProfileUseCase {
             }
         }
     }
+    
+    func fetchMyFriends(token: String) -> Single<UserFriendsViewData> {
+        return Single.create { observer -> Disposable in
+            self.service.getFriends(token: token).subscribe { result in
+                observer(.success(UserFriendsViewData(result: result)))
+            } onFailure: { error in
+                observer(.failure(error))
+            }
+        }
+    }
 }
