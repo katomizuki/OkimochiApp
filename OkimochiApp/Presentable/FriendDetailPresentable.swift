@@ -8,4 +8,6 @@
 protocol FriendDetailPresentable {
     func viewDidLoad()
     func onApplyFriendButton()
+    func onTapBlockButton()
+    func rejectFriendButton()
 }

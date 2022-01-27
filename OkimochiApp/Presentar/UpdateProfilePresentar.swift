@@ -16,6 +16,7 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
     var router:UpdateProfileWireframe!
     var interactor:UpdateProfileUserCase!
     weak var view:UpdateProfileViewable!
+    private let disposeBag = DisposeBag()
     init(DI:DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -31,7 +32,11 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
     
     func onTapSaveButton(user: User) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-         interactor.updateUserProfile(user: user,token: token)
+        interactor.updateUserProfile(user: user,token: token).subscribe {
+            self.view.updateUserInfo()
+        } onError: { [weak self] _ in
+            self?.view.showError()
+        }.disposed(by: disposeBag)
     }
     func onTapDismissButton() {
         router.dismiss()

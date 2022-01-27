@@ -14,12 +14,15 @@ enum FriendsTargetType: APIResponse {
             return ["token": token]
         case .requestFriend(let token,_):
             return ["token": token]
+        case .rejectFriend(let token,_):
+            return ["token": token]
         }
     }
     
     typealias Response = FriendsResult
     case getFriends(token: String)
     case requestFriend(token: String,id: String)
+    case rejectFriend(token: String, id: String)
 }
 extension FriendsTargetType: TargetType {
     var baseURL: URL {
@@ -32,6 +35,8 @@ extension FriendsTargetType: TargetType {
             return "okimochi/api/friends_list"
         case .requestFriend(_, let id):
             return "okimochi/api/request/\(id)"
+        case .rejectFriend(_,let id):
+            return "okimochi/api/reject/\(id)"
         }
         
     }
@@ -44,7 +49,9 @@ extension FriendsTargetType: TargetType {
         switch self {
         case .getFriends(let token):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
-        case .requestFriend(token: let token):
+        case .requestFriend(let token,_):
+            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
+        case .rejectFriend(let token,_):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         }
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-final class UpdateProfileController: UIViewController,UpdateProfileViewable {
+final class UpdateProfileController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var user: User? {
         didSet {
@@ -44,6 +44,14 @@ extension UpdateProfileController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .systemOrange
+    }
+}
+extension UpdateProfileController:UpdateProfileViewable {
+    func showError() {
+        
+    }
+    func updateUserInfo() {
+        
     }
 }
 

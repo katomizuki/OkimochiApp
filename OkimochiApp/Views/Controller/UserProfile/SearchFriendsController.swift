@@ -1,6 +1,6 @@
 import UIKit
 
-final class SearchFriendsController: UIViewController,SearchFriendsViewable {
+final class SearchFriendsController: UIViewController {
     // MARK: - Properties
     @IBOutlet private weak var tableView: UITableView!
     private var searchController = UISearchController(searchResultsController: nil)
@@ -76,5 +76,13 @@ extension SearchFriendsController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return isSearched ? filterUsers.count : users.count
+    }
+}
+extension SearchFriendsController:SearchFriendsViewable {
+    func showError() {
+        
+    }
+    func showResult(_ user: [User]) {
+        
     }
 }

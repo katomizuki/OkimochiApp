@@ -7,7 +7,9 @@ protocol UserServiceProtocol {
     func updateUser(token :String) -> Completable
     func getFriends(token: String) -> Single<FriendsResult>
     func requestFriend(token: String,id: String) -> Completable
+    func rejectFriend(token: String,id: String) -> Completable
     func getRequestFriends(token: String) -> Single<RequestFriends>
+    func getUsers(token: String) -> Single<[User]>
 }
 struct UserService: UserServiceProtocol {
     
@@ -25,5 +27,11 @@ struct UserService: UserServiceProtocol {
     }
     func getRequestFriends(token: String) -> Single<RequestFriends> {
         APIClient.shared.request(RequestFriendTargetType.getRequstList(token: token))
+    }
+    func rejectFriend(token: String, id: String) -> Completable {
+        APIClient.shared.requestCompletable(FriendsTargetType.rejectFriend(token: token, id: id))
+    }
+    func getUsers(token: String) -> Single<[User]> {
+        APIClient.shared.request(AllUserTargetType.getAllUser(token: token))
     }
 }

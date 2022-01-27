@@ -6,5 +6,6 @@
 //
 
 protocol UpdateProfileViewable: Transitioner {
-    
+    func showError()
+    func updateUserInfo()
 }
