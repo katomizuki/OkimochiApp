@@ -6,11 +6,11 @@
 //
 
 import Moya
-enum MyLetterAPI: APIResponse {
+enum MyLetterTargetType: APIResponse {
     typealias Response = MyLetterResult
     case fetchMyLetters(token :String)
 }
-extension MyLetterAPI: TargetType {
+extension MyLetterTargetType: TargetType {
     var baseURL: URL {
         return URL(string:"https://kobajun029.sakura.ne.jp")!
     }

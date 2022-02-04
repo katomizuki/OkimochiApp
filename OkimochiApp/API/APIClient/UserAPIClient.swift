@@ -6,12 +6,9 @@
 //
 
 import Moya
-protocol APIResponse {
-    associatedtype Response:Decodable
-    var para:[String: Any] { get }
-}
 
-enum UserAPI:APIResponse {
+
+enum UserTargetType:APIResponse {
     var para: [String : Any] {
         var para:[String:Any] = [:]
         switch self {
@@ -29,7 +26,7 @@ enum UserAPI:APIResponse {
     case updateUser(token: String)
     
 }
-extension UserAPI:TargetType {
+extension UserTargetType:TargetType {
     var baseURL: URL {
         return URL(string:"https://kobajun029.sakura.ne.jp")!
     }

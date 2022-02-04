@@ -13,28 +13,28 @@ protocol PostServiceProtocol {
 struct PostService:PostServiceProtocol {
     
     func fetchMyPost(token:String)->Single<MyLetterResult> {
-        APIClient.shared.request(MyLetterAPI.fetchMyLetters(token: token))
+        APIClient.shared.request(MyLetterTargetType.fetchMyLetters(token: token))
     }
     
     func getLetters(token:String)->Single<[Letter]> {
-        APIClient.shared.request(PostAPI.get(token: token))
+        APIClient.shared.request(LetterTargetType.get(token: token))
     }
  
     func saveLetter(id: String,token:String) -> Completable {
-        APIClient.shared.requestCompletable(PostAPI.save(id: id, token: token))
+        APIClient.shared.requestCompletable(LetterTargetType.save(id: id, token: token))
     }
     
     func deleteLetter(id:String, token:String) -> Completable {
-        APIClient.shared.requestCompletable(PostAPI.delete(id: id, token: token))
+        APIClient.shared.requestCompletable(LetterTargetType.delete(id: id, token: token))
     }
     
 
     func deleteSavedLetter(id:String ,token: String) -> Completable {
-        APIClient.shared.requestCompletable(PostAPI.delete(id: id, token: token))
+        APIClient.shared.requestCompletable(LetterTargetType.delete(id: id, token: token))
     }
 
     func postLetter(dic:[String:Any],token: String) -> Completable {
-        APIClient.shared.requestCompletable(PostAPI.post(dic: dic, token: token))
+        APIClient.shared.requestCompletable(LetterTargetType.post(dic: dic, token: token))
     }
     func updateLetter(id:String,letter:Letter,token:String) -> Completable {
         let parameter:[String:Any] = ["who":letter.who,
@@ -47,7 +47,7 @@ struct PostService:PostServiceProtocol {
                                       "open_place_longitude":letter.longitude,
                                       "public":"0",
                                       "token":token]
-        return APIClient.shared.requestCompletable(PostAPI.update(id: id, token: token, dic: parameter))
+        return APIClient.shared.requestCompletable(LetterTargetType.update(id: id, token: token, dic: parameter))
     }
     
 

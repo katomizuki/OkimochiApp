@@ -13,14 +13,14 @@ struct AuthService: AuthServiceProtocol {
         let parameters:[String:Any] = [
             "email" : "\(email)",
             "password" : "\(password)"]
-        return APIClient.shared.request(AuthAPI.login(parameter: parameters))
+        return APIClient.shared.request(LoginTargetType.login(parameter: parameters))
     }
 
     func register(credential:Credential)->Single<RegisterResponse> {
         let parameters:[String:Any] = ["name" : credential.name,
                                        "email" : credential.email,
                                        "password" : credential.password]
-        return APIClient.shared.request(AuthAPI.register(parameter: parameters))
+        return APIClient.shared.request(RegisterTargetType.register(paramas: parameters))
     }
     
 }

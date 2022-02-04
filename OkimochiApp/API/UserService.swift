@@ -14,11 +14,11 @@ protocol UserServiceProtocol {
 struct UserService: UserServiceProtocol {
     
     func getUser(token: String) -> Single<User> {
-        APIClient.shared.request(UserAPI.getUser(token: token))
+        APIClient.shared.request(UserTargetType.getUser(token: token))
     }
     
     func updateUser(token: String) -> Completable {
-        APIClient.shared.requestCompletable(UserAPI.updateUser(token: token))
+        APIClient.shared.requestCompletable(UserTargetType.updateUser(token: token))
     }
     
     func getFriends(token: String) -> Single<FriendsResult> {

@@ -6,19 +6,16 @@
 //
 
 import Moya
-enum AuthAPI: APIResponse {
+enum LoginTargetType: APIResponse {
     typealias Response = LoginResponse
-    case register(parameter:[String:Any])
     case login(parameter:[String:Any])
 }
-extension AuthAPI: TargetType {
+extension LoginTargetType: TargetType {
     var baseURL: URL {
         return URL(string:"https://kobajun029.sakura.ne.jp")!
     }
     var para: [String : Any] {
         switch self {
-        case .register(let parameter):
-            return parameter
         case .login(let parameter):
             return parameter
         }
@@ -26,7 +23,6 @@ extension AuthAPI: TargetType {
     
     var path: String {
         switch self {
-        case .register:return "/okimochi/api/register"
         case .login:return "/okimochi/api/login"
         }
     }
@@ -37,8 +33,6 @@ extension AuthAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .register(let parameter):
-            return .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
         case .login(let parameter):
             return .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
         }

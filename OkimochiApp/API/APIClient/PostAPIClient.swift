@@ -7,7 +7,7 @@
 
 import Moya
 import Alamofire
-enum PostAPI {
+enum LetterTargetType {
     case getMyLetter(token:String)
     case save(id:String,token:String)
     case get(token:String)
@@ -16,7 +16,7 @@ enum PostAPI {
     case deleteSaved(id:String,token:String)
     case post(dic:[String:Any],token:String)
 }
-extension PostAPI:TargetType, APIResponse {
+extension LetterTargetType:TargetType, APIResponse {
     
     var para: [String : Any] {
         var para:[String:Any] = [:]
