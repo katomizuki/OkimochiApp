@@ -13,7 +13,7 @@ final class RegisterInteractor: RegisterUseCase {
     init(service: AuthServiceProtocol) {
         self.service = service
     }
-    func sendUser(credential:Credential) -> Single<AuthResponse> {
+    func sendUser(credential:Credential) -> Single<RegisterResponse> {
         service.register(credential: credential)
     }
     func saveToken(token: String) {

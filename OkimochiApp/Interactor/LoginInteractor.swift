@@ -20,7 +20,7 @@ final class LoginInteractor: LoginUseCase {
     func saveToken(token: String) {
         UserDefaultsRepositry.shared.saveToken(token: token)
     }
-    func login(email: String, password: String) -> Single<AuthResponse> {
+    func login(email: String, password: String) -> Single<LoginResponse> {
         service.login(email: email, password: password)
     }
 }

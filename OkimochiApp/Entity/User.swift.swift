@@ -7,9 +7,6 @@ struct User:Codable {
     var profileUrl:URL?
     var uid: String
     var haveLetters = [Letter]()
-//    var isCurrentUser:Bool {
-//        return Auth.auth().currentUser?.uid == uid
-//    }
     var isReadyMatch = false
     var isFriend = false
     init(dic: [String:Any]) {

@@ -17,7 +17,7 @@ final class SearchFriendsInteractor: SearchFriendUseCase {
         self.service = service
     }
     
-    func searchUser(text: String,token: String) -> Single<[User]> {
+    func searchUser(text: String,token: String) -> Single<[User]>{
         return Single.create { observer -> Disposable in
             self.service.getUsers(token: token).subscribe(onSuccess: { users in
                 observer(.success(users.filter({ $0.name.contains(text)} )))

@@ -11,6 +11,7 @@ protocol PostServiceProtocol {
     func updateLetter(id:String,letter:Letter,token:String) -> Completable
 }
 struct PostService:PostServiceProtocol {
+    
     func fetchMyPost(token:String)->Single<MyLetterResult> {
         APIClient.shared.request(MyLetterAPI.fetchMyLetters(token: token))
     }

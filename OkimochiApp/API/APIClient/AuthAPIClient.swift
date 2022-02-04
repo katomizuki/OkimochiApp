@@ -7,7 +7,7 @@
 
 import Moya
 enum AuthAPI: APIResponse {
-    typealias Response = AuthResponse
+    typealias Response = LoginResponse
     case register(parameter:[String:Any])
     case login(parameter:[String:Any])
 }

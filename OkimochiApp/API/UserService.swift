@@ -16,12 +16,15 @@ struct UserService: UserServiceProtocol {
     func getUser(token: String) -> Single<User> {
         APIClient.shared.request(UserAPI.getUser(token: token))
     }
+    
     func updateUser(token: String) -> Completable {
         APIClient.shared.requestCompletable(UserAPI.updateUser(token: token))
     }
+    
     func getFriends(token: String) -> Single<FriendsResult> {
         APIClient.shared.request(FriendsTargetType.getFriends(token: token))
     }
+    
     func requestFriend(token: String, id: String) -> Completable {
         APIClient.shared.requestCompletable(FriendsTargetType.requestFriend(token: token, id: id))
     }
