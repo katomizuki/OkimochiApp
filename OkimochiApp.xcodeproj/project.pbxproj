@@ -149,6 +149,10 @@
 		D370503627AD44CD00373225 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503527AD44CD00373225 /* LoginResponse.swift */; };
 		D370503827AD45DF00373225 /* RegisterTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503727AD45DF00373225 /* RegisterTargetType.swift */; };
 		D370503A27AD464500373225 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503927AD464500373225 /* APIResponse.swift */; };
+		D370503C27AD4CD500373225 /* UserViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503B27AD4CD500373225 /* UserViewData.swift */; };
+		D370503E27AD4D5D00373225 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503D27AD4D5D00373225 /* AuthProtocol.swift */; };
+		D370504027AD4DA100373225 /* ProfileFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370503F27AD4DA100373225 /* ProfileFilterOptions.swift */; };
+		D370504227AD4DD200373225 /* UpdateProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370504127AD4DD200373225 /* UpdateProfileSection.swift */; };
 		D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */; };
 		D375CB84272FD91A0030CA79 /* UpdateProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */; };
 		D375CB86272FDC250030CA79 /* UpdateProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */; };
@@ -347,6 +351,10 @@
 		D370503527AD44CD00373225 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		D370503727AD45DF00373225 /* RegisterTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTargetType.swift; sourceTree = "<group>"; };
 		D370503927AD464500373225 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D370503B27AD4CD500373225 /* UserViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewData.swift; sourceTree = "<group>"; };
+		D370503D27AD4D5D00373225 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
+		D370503F27AD4DA100373225 /* ProfileFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterOptions.swift; sourceTree = "<group>"; };
+		D370504127AD4DD200373225 /* UpdateProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileSection.swift; sourceTree = "<group>"; };
 		D375CB81272FD91A0030CA79 /* UpdateProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableCell.swift; sourceTree = "<group>"; };
 		D375CB82272FD91A0030CA79 /* UpdateProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileTableCell.xib; sourceTree = "<group>"; };
 		D375CB85272FDC250030CA79 /* UpdateProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewData.swift; sourceTree = "<group>"; };
@@ -480,6 +488,23 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
+		D370504327AD4E0300373225 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				D370504127AD4DD200373225 /* UpdateProfileSection.swift */,
+				D370503F27AD4DA100373225 /* ProfileFilterOptions.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		D370504427AD4E0700373225 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D370503D27AD4D5D00373225 /* AuthProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		D38101FD272CF2CA003C7850 = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +575,7 @@
 				D3F2153A27A00FAE009897CE /* TimeLineViewData.swift */,
 				D3F2154427A01EF4009897CE /* UserLetterViewData.swift */,
 				D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */,
+				D370503B27AD4CD500373225 /* UserViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -589,6 +615,8 @@
 		D3810222272CF300003C7850 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D370504427AD4E0700373225 /* Protocol */,
+				D370504327AD4E0300373225 /* Enum */,
 				D3810228272CFE03003C7850 /* Extension */,
 			);
 			path = Utility;
@@ -1055,6 +1083,7 @@
 				D381020E272CF2CA003C7850 /* LoginController.swift in Sources */,
 				D315166C276CB9990061C488 /* PostLetterPresentar.swift in Sources */,
 				D375CC1A27316B7F0030CA79 /* FriendDetailController.swift in Sources */,
+				D370503C27AD4CD500373225 /* UserViewData.swift in Sources */,
 				D31516C0276D72380061C488 /* FinishLetterUseCase.swift in Sources */,
 				D3151600276B6B640061C488 /* SearchFriendsViewable.swift in Sources */,
 				D315166A276CB92C0061C488 /* PostLetterPresentable.swift in Sources */,
@@ -1122,7 +1151,9 @@
 				D3D62E952789BD1700DCA027 /* UpdateProfileTableViewManager.swift in Sources */,
 				D3F2154127A01B3B009897CE /* MyLetterResult.swift in Sources */,
 				D31515E8276B69A10061C488 /* UserProfilePresentar.swift in Sources */,
+				D370504227AD4DD200373225 /* UpdateProfileSection.swift in Sources */,
 				D30E6EC5273228D000FBE5AF /* LetterTimeController.swift in Sources */,
+				D370503E27AD4D5D00373225 /* AuthProtocol.swift in Sources */,
 				D315164F276B71AB0061C488 /* LetterDetailWireframe.swift in Sources */,
 				D3A779132792FD1800EA888C /* PostAPIClient.swift in Sources */,
 				D31516C4276D8D1D0061C488 /* OpenLetterRouter.swift in Sources */,
@@ -1138,6 +1169,7 @@
 				D3151616276B6C580061C488 /* RegisterPresentable.swift in Sources */,
 				D315161E276B6D710061C488 /* LetterDetailUseCase.swift in Sources */,
 				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
+				D370504027AD4DA100373225 /* ProfileFilterOptions.swift in Sources */,
 				D31516B8276D714F0061C488 /* FinishLetterPresentar.swift in Sources */,
 				D35C88C32796E1350020CF8D /* APIClient.swift in Sources */,
 				D315168C276D69200061C488 /* LetterMapRouter.swift in Sources */,

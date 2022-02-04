@@ -15,6 +15,7 @@ final class LetterContentPresentar:LetterContentPresentable {
     weak var view:LetterContentViewable!
     var router:LetterContentWireframe!
     var interactor:LetterContentUseCase!
+    
     init(DI:DI) {
         self.view = DI.view
         self.router = DI.router

@@ -8,4 +8,5 @@
 protocol UpdateProfileViewable: Transitioner {
     func showError()
     func updateUserInfo()
+    func setViewData(_ viewData: UserViewData)
 }

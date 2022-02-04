@@ -7,4 +7,5 @@
 import RxSwift
 protocol UpdateProfileUserCase {
     func updateUserProfile(user:User, token: String) -> Completable
+    func getUser(token: String) -> Single<UserViewData>
 }

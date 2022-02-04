@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2022/01/25.
 //
 
-import UIKit
 
 struct TimeLineViewData {
     private var letters = [Letter]()

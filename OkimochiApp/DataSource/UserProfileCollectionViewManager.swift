@@ -15,8 +15,12 @@ class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UI
     weak var delegate:UserProfileCollectionViewManagerDelegate?
     var viewData:ProfileHeaderViewData?
     var userLetterViewData:UserLetterViewData?
+    var friendsViewData: UserFriendsViewData?
     func initViewData(_ viewData:ProfileHeaderViewData) {
         self.viewData = viewData
+    }
+    func initFriendsViewData(_ viewData: UserFriendsViewData) {
+        self.friendsViewData = viewData
     }
     func initUserLetterViewData(_ viewData: UserLetterViewData) {
         self.userLetterViewData = viewData

@@ -30,6 +30,7 @@ final class UserProfilePresentar: UserProfilePresentable {
     
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
+        
         interactor.fetchUser(token: token)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] viewData in
@@ -46,7 +47,14 @@ final class UserProfilePresentar: UserProfilePresentable {
             } onFailure: { [weak self] _ in
                 self?.view.showError()
             }.disposed(by: disposeBag)
-
+        
+        interactor.fetchMyFriends(token: token)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] viewData in
+                self?.view.setFriendViewData(viewData)
+            } onFailure: { [weak self] _ in
+                self?.view.showError()
+            }.disposed(by: disposeBag)
     }
     
     func onTapUpdateButton() {

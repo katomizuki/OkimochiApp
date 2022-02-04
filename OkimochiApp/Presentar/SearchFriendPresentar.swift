@@ -19,6 +19,7 @@ final class SearchFriendPresentar:SearchFriendPresentable {
     var interactor:SearchFriendUseCase!
     var router:SearchFriendsWireframe!
     private let disposeBag = DisposeBag()
+    
     init(DI:DI) {
         self.view = DI.view
         self.interactor = DI.interactor

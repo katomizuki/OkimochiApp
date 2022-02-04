@@ -5,8 +5,6 @@
 //  Created by ミズキ on 2021/11/04.
 //
 
-import Foundation
-
 struct ProfileHeaderViewData {
     
     var user:User

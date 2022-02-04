@@ -1,8 +1,6 @@
-import Foundation
+
 import UIKit
-protocol AuthProtocol {
-    var isValid:Bool { get }
-}
+
 struct RegisterViewData: AuthProtocol {
     var email: String?
     var name: String?

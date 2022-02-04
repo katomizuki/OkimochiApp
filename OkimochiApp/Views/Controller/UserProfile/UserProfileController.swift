@@ -72,6 +72,9 @@ extension UserProfileController: UserProfileViewable {
     func reload() {
         profileCollectionView.reloadData()
     }
+    func setFriendViewData(_ viewData: UserFriendsViewData) {
+        collectionViewManager.initFriendsViewData(viewData)
+    }
     
    
 }

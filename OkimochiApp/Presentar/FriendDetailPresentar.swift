@@ -16,6 +16,7 @@ final class FriendDetailPresentar:FriendDetailPresentable {
         var interactor:FriendDetailUseCase
         var router:FriendsDetailWireframe
     }
+    
     weak var view:FriendsDetailViewable!
     var interactor:FriendDetailUseCase!
     var router:FriendsDetailWireframe!

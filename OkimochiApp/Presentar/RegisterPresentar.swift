@@ -18,6 +18,7 @@ final class RegisterPresentar:RegisterPresentable {
     var router:RegisterWireframe!
     var interactor:RegisterUseCase!
     private let disposeBag = DisposeBag()
+    
     init(DI:DI) {
         self.router = DI.router
         self.view = DI.view
@@ -29,11 +30,11 @@ final class RegisterPresentar:RegisterPresentable {
     }
     func onTapRegisterButton(credential: Credential) {
         self.interactor.sendUser(credential: credential)
-            .subscribe { response in
-                print(response,"⚡️")
-//            self.view.dismiss(animated: true)
-        } onFailure: { error in
-            self.view.showError()
+            .subscribe { [weak self] response in
+                self?.interactor.saveToken(token: response.token)
+                self?.view.dismiss(animated: true)
+        } onFailure: { [weak self] error in
+                self?.view.showError()
         }.disposed(by: disposeBag)
 
         
