@@ -54,7 +54,6 @@ extension UpdateProfileController:UpdateProfileViewable {
         
     }
     func setViewData(_ viewData: UserViewData) {
-        
     }
 }
 
