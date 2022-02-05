@@ -16,7 +16,7 @@ final class LoginInteractor: LoginUseCase {
     func saveUserId(uid: String) {
         UserDefaultsRepositry.shared.saveUserDefaults(element: uid, key: "uid")
     }
-    
+
     func saveToken(token: String) {
         UserDefaultsRepositry.shared.saveToken(token: token)
     }

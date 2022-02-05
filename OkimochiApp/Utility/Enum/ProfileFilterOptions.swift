@@ -5,8 +5,8 @@
 //  Created by ミズキ on 2022/02/04.
 //
 
-//列挙型,CaseIterable プロトコル
-enum ProfileFilterOptions :Int,CaseIterable {
+// 列挙型,CaseIterable プロトコル
+enum ProfileFilterOptions: Int, CaseIterable {
     case fav
     case past
     case info

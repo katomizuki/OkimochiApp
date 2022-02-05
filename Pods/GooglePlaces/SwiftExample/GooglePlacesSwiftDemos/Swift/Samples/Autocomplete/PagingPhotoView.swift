@@ -48,7 +48,7 @@ private class ImageAndAttributionView: UIView {
     NSLayoutConstraint.activate([
       imageView.topAnchor.constraint(equalTo: topAnchor, constant: margin),
       imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margin),
-      imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margin),
+      imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margin)
     ])
     addSubview(attributionView)
     NSLayoutConstraint.activate([
@@ -56,7 +56,7 @@ private class ImageAndAttributionView: UIView {
       attributionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin),
       attributionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margin),
       attributionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margin),
-      attributionView.heightAnchor.constraint(equalToConstant: textViewHeight),
+      attributionView.heightAnchor.constraint(equalToConstant: textViewHeight)
     ])
     imageView.image = attributedPhoto.image
     attributionView.attributedText = attributedPhoto.attributions
@@ -70,8 +70,7 @@ private class ImageAndAttributionView: UIView {
 extension ImageAndAttributionView: UITextViewDelegate {
   // Make links clickable.
   func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange)
-    -> Bool
-  {
+    -> Bool {
     return true
   }
 }
@@ -112,7 +111,7 @@ class PagingPhotoView: UIScrollView {
       contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
       contentView.widthAnchor.constraint(
         equalToConstant: bounds.width * CGFloat(pageViews.count)),
-      contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
+      contentView.centerYAnchor.constraint(equalTo: centerYAnchor)
     ])
   }
 

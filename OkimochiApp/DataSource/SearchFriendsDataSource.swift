@@ -6,12 +6,12 @@
 //
 
 import UIKit
-class SearchFriendsDataSource:NSObject, UITableViewDataSource {
+class SearchFriendsDataSource: NSObject, UITableViewDataSource {
     var users = [User]()
     var filterUsers = [User]()
     var isSearched = false
     func initUsersData(_ users: [User]) {
-        
+
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.id, for: indexPath) as? FriendCell else { fatalError() }

@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol OpenLetterUseCase {
-    func fetchLetterDetail(letterId:String)->Single<Letter>
+    func fetchLetterDetail(letterId: String)->Single<Letter>
 }

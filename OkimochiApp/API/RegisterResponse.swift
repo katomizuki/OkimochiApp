@@ -1,4 +1,3 @@
-
 import Foundation
 
 struct RegisterResponse: Codable {
@@ -12,7 +11,7 @@ struct RegisterResponse: Codable {
         let updatedAt: String
         let createdAt: String
         let id: Int
-        
+
         private enum CodingKeys: String, CodingKey {
             case name
             case email

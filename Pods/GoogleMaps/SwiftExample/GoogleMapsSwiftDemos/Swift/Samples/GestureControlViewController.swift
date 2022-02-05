@@ -58,7 +58,7 @@ class GestureControlViewController: UIViewController {
       zoomLabel.centerYAnchor.constraint(equalTo: holder.centerYAnchor),
       zoomSwitch.rightAnchor.constraint(equalTo: holder.rightAnchor, constant: -zoomLabelInset),
       zoomSwitch.centerYAnchor.constraint(
-        equalTo: holder.centerYAnchor),
+        equalTo: holder.centerYAnchor)
     ])
     NSLayoutConstraint.activate([
       holder.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)

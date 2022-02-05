@@ -20,14 +20,14 @@ class LoginController: UIViewController {
     }
     @IBOutlet weak var gotoRegisterButton: UIButton! {
         didSet {
-            let attibutedString = updateAuthAttibutedString(explain:"まだアカウントを持ってない方はこちらへ" ,
-                                          pageName: "新規登録ページへ")
+            let attibutedString = updateAuthAttibutedString(explain: "まだアカウントを持ってない方はこちらへ" ,
+                                                            pageName: "新規登録ページへ")
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
     private var viewData = LoginViewData()
     static let id = String(describing: LoginController.self)
-    var presentar:LoginPresentable?
+    var presentar: LoginPresentable?
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

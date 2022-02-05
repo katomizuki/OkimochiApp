@@ -17,7 +17,7 @@ final class LetterContentController: UIViewController {
             nextButton.layer.masksToBounds = true
         }
     }
-    private let placeholderText:UILabel = {
+    private let placeholderText: UILabel = {
         let label = UILabel()
         label.text = "ここに内容を入力してください"
         label.textColor = .lightGray
@@ -32,7 +32,7 @@ final class LetterContentController: UIViewController {
             titleTextFiled.layer.borderWidth = 2
         }
     }
-    var presentar:LetterContentPresentable?
+    var presentar: LetterContentPresentable?
     static let id = String(describing: LetterContentController.self)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +42,10 @@ final class LetterContentController: UIViewController {
     }
     private func setupPlaceholder() {
         contentTextView.addSubview(placeholderText)
-        placeholderText.anchor(top:contentTextView.topAnchor,left: contentTextView.leftAnchor,paddingTop: 5,paddingLeft: 10)
+        placeholderText.anchor(top: contentTextView.topAnchor, left: contentTextView.leftAnchor, paddingTop: 5, paddingLeft: 10)
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeTextView), name: UITextView.textDidChangeNotification, object: nil)
     }
-    
+
     @IBAction private func didTapNextButton(_ sender: Any) {
         presentar?.onTapNextButton()
     }
@@ -53,10 +53,9 @@ final class LetterContentController: UIViewController {
         placeholderText.isHidden = contentTextView.text.count > 0
     }
 }
-extension LetterContentController:LetterContentViewable {
+extension LetterContentController: LetterContentViewable {
     func showError() {
-        
+
     }
-    
-    
+
 }

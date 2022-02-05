@@ -6,9 +6,9 @@
 //
 
 import UIKit
-class UpdateProfileTableViewManager:NSObject,UITableViewDataSource {
-    var user:User?
-    func initUserData(_ user:User) {
+class UpdateProfileTableViewManager: NSObject, UITableViewDataSource {
+    var user: User?
+    func initUserData(_ user: User) {
         self.user = user
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

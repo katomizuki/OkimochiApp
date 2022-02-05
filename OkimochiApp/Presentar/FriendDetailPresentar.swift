@@ -7,21 +7,19 @@
 
 import RxSwift
 
+final class FriendDetailPresentar: FriendDetailPresentable {
 
-final class FriendDetailPresentar:FriendDetailPresentable {
-   
-    
     struct DI {
-        var view:FriendsDetailViewable
-        var interactor:FriendDetailUseCase
-        var router:FriendsDetailWireframe
+        var view: FriendsDetailViewable
+        var interactor: FriendDetailUseCase
+        var router: FriendsDetailWireframe
     }
-    
-    weak var view:FriendsDetailViewable!
-    var interactor:FriendDetailUseCase!
-    var router:FriendsDetailWireframe!
+
+    weak var view: FriendsDetailViewable!
+    var interactor: FriendDetailUseCase!
+    var router: FriendsDetailWireframe!
     private let disposeBag = DisposeBag()
-    init(DI:DI) {
+    init(DI: DI) {
         self.view = DI.view
         self.router = DI.router
         self.interactor = DI.interactor
@@ -29,15 +27,15 @@ final class FriendDetailPresentar:FriendDetailPresentable {
     func onApplyFriendButton() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         self.interactor.applyFriend(token: token, id: "").subscribe {
-            
+
         } onError: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
 
     }
     func viewDidLoad() {
-        self.interactor.getUserDetail(userId: "").subscribe { user in
-            
+        self.interactor.getUserDetail(userId: "").subscribe { _ in
+
         } onFailure: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
@@ -46,22 +44,21 @@ final class FriendDetailPresentar:FriendDetailPresentable {
     func onTapBlockButton() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         self.interactor.blockFriend(token: token, id: "").subscribe {
-            
+
         } onError: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
 
     }
-    
+
     func rejectFriendButton() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         self.interactor.rejectFriend(token: token, id: "").subscribe {
-            
+
         } onError: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
 
     }
-    
-    
+
 }

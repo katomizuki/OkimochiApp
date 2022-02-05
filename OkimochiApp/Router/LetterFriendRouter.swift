@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class LetterFriendRouter:LetterFriendWireframe {
-    private (set) weak var view:LetterFriendViewable?
-    init(view:LetterFriendViewable) {
+final class LetterFriendRouter: LetterFriendWireframe {
+    private (set) weak var view: LetterFriendViewable?
+    init(view: LetterFriendViewable) {
         self.view = view
     }
 }

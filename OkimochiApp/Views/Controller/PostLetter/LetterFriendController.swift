@@ -4,7 +4,7 @@ final class LetterFriendController: UIViewController {
     static let id = String(describing: LetterFriendController.self)
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var navigationBar: UINavigationBar!
-    var presentar:LetterFriendPresentable?
+    var presentar: LetterFriendPresentable?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -41,7 +41,7 @@ extension LetterFriendController: UITableViewDelegate {
     }
 }
 // MARK: - UITableViewDataSource
-extension LetterFriendController:UITableViewDataSource {
+extension LetterFriendController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.id, for: indexPath) as? FriendCell else { fatalError() }
         return cell
@@ -50,14 +50,13 @@ extension LetterFriendController:UITableViewDataSource {
         return 20
     }
 }
-extension LetterFriendController:LetterFriendViewable {
+extension LetterFriendController: LetterFriendViewable {
     func setFriends(_ viewData: UserFriendsViewData) {
-        
+
     }
-    
+
     func showError() {
-        
+
     }
-    
- 
+
 }

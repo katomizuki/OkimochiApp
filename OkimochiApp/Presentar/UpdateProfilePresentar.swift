@@ -7,25 +7,25 @@
 
 import RxSwift
 final class UpdateProfilePresentar: UpdateProfilePresentable {
-    
+
     struct DI {
-        var router:UpdateProfileWireframe
-        var view:UpdateProfileViewable
-        var interactor:UpdateProfileUserCase
+        var router: UpdateProfileWireframe
+        var view: UpdateProfileViewable
+        var interactor: UpdateProfileUserCase
     }
-    var router:UpdateProfileWireframe!
-    var interactor:UpdateProfileUserCase!
-    weak var view:UpdateProfileViewable!
+    var router: UpdateProfileWireframe!
+    var interactor: UpdateProfileUserCase!
+    weak var view: UpdateProfileViewable!
     private let disposeBag = DisposeBag()
-    init(DI:DI) {
+    init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
         self.router = DI.router
     }
     func viewDidLoad() {
-        
+
     }
-    
+
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         interactor.getUser(token: token)
@@ -37,10 +37,10 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
             }.disposed(by: disposeBag)
 
     }
-    
+
     func onTapSaveButton(user: User) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.updateUserProfile(user: user,token: token).subscribe {
+        interactor.updateUserProfile(user: user, token: token).subscribe {
             self.view.updateUserInfo()
         } onError: { [weak self] _ in
             self?.view.showError()
@@ -49,5 +49,5 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
     func onTapDismissButton() {
         router.dismiss()
     }
-    
+
 }

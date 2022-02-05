@@ -65,7 +65,7 @@ class IndoorMuseumNavigationViewController: UIViewController {
 
     NSLayoutConstraint.activate([
       segmentedControl.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-      segmentedControl.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+      segmentedControl.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
     ])
 
     // Load the exhibits configuration from JSON

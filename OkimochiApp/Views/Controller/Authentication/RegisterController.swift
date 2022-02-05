@@ -21,8 +21,8 @@ final class RegisterController: UIViewController {
     }
     @IBOutlet private weak var gotoRegisterButton: UIButton! {
         didSet {
-            let attibutedString = updateAuthAttibutedString(explain:"既にアカウントを持っている方はこちらへ" ,
-                                          pageName: "ログイン画面へ")
+            let attibutedString = updateAuthAttibutedString(explain: "既にアカウントを持っている方はこちらへ" ,
+                                                            pageName: "ログイン画面へ")
             gotoRegisterButton.setAttributedTitle(attibutedString, for: .normal)
         }
     }
@@ -33,7 +33,7 @@ final class RegisterController: UIViewController {
         }
     }
     private var viewData = RegisterViewData()
-    var presentar:RegisterPresentable?
+    var presentar: RegisterPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ final class RegisterController: UIViewController {
         print(#function)
         presentar?.onTapGotoLoginButton()
     }
-    
+
     @IBAction func didTapImageButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -66,11 +66,11 @@ final class RegisterController: UIViewController {
         guard let email = mailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
-//        guard let image = viewData.image else { return }
+        //        guard let image = viewData.image else { return }
         let credential = Credential(name: name, email: email, password: password)
-        presentar?.onTapRegisterButton(credential:credential)
+        presentar?.onTapRegisterButton(credential: credential)
     }
-    
+
 }
 // MARK: - TextFieldDelegate
 extension RegisterController: UITextFieldDelegate {
@@ -86,15 +86,15 @@ extension RegisterController: UITextFieldDelegate {
         return true
     }
 }
-extension RegisterController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+extension RegisterController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         imageButton.setImage(image, for: .normal)
         viewData.image = image
         dismiss(animated: true, completion: nil)
     }
 }
-extension RegisterController:RegisterViewable {
+extension RegisterController: RegisterViewable {
     func showError() {
         // エラー処理
     }

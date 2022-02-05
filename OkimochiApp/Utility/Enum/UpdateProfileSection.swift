@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2022/02/04.
 //
 
-enum UpdateProfileSection:Int,CaseIterable {
+enum UpdateProfileSection: Int, CaseIterable {
     case name
     case gender
     case age

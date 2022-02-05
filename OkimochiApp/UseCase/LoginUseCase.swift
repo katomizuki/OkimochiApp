@@ -6,6 +6,6 @@
 //
 import RxSwift
 protocol LoginUseCase {
-    func saveToken(token:String)
+    func saveToken(token: String)
     func login(email: String, password: String) -> Single<LoginResponse>
 }

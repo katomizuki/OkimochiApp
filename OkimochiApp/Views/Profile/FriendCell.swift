@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 class FriendCell: UITableViewCell {
- 
+
     @IBOutlet weak var friendNameLabel: UILabel!
     @IBOutlet weak var frinedImageView: UIImageView! {
         didSet {
@@ -10,7 +10,7 @@ class FriendCell: UITableViewCell {
             frinedImageView.contentMode = .scaleAspectFill
         }
     }
-    var viewData:FrinedCellViewData? {
+    var viewData: FrinedCellViewData? {
         didSet {
             setupUI()
         }
@@ -19,7 +19,7 @@ class FriendCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    static func nib()->UINib{
+    static func nib() -> UINib {
         return UINib(nibName: "FriendCell", bundle: nil)
     }
 
@@ -27,5 +27,5 @@ class FriendCell: UITableViewCell {
         friendNameLabel.attributedText = viewData?.nameAttributedText
         frinedImageView.sd_setImage(with: viewData?.user.profileUrl, completed: nil)
     }
-    
+
 }

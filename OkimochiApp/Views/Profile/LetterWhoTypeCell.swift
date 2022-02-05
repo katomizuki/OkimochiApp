@@ -9,9 +9,9 @@ class LetterWhoTypeCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+
     }
-    static func nib()->UINib {
+    static func nib() -> UINib {
         return UINib(nibName: "LetterWhoTypeCell", bundle: nil)
     }
 
@@ -21,5 +21,5 @@ class LetterWhoTypeCell: UITableViewCell {
     private func setupUI() {
         self.textLabel?.text = whoType.description
     }
-    
+
 }

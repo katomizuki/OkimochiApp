@@ -9,8 +9,7 @@ struct MyLetterResult: Codable {
     let success: Bool
     let myPost: [LetterEntity]
     let saves: [LetterEntity]
-    
-    
+
     struct LetterEntity: Codable {
         let id: Int
         let okimochiId: Int
@@ -57,5 +56,5 @@ struct MyLetterResult: Codable {
             }
         }
     }
-    
+
 }

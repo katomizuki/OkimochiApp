@@ -7,10 +7,9 @@
 
 import Moya
 
-
-enum UserTargetType:APIResponse {
-    var para: [String : Any] {
-        var para:[String:Any] = [:]
+enum UserTargetType: APIResponse {
+    var para: [String: Any] {
+        var para: [String: Any] = [:]
         switch self {
         case .getUser(let token):
             para["token"] = token
@@ -19,18 +18,18 @@ enum UserTargetType:APIResponse {
         }
         return para
     }
-    
+
     typealias Response = User
-    
-    case getUser(token:String)
+
+    case getUser(token: String)
     case updateUser(token: String)
-    
+
 }
-extension UserTargetType:TargetType {
+extension UserTargetType: TargetType {
     var baseURL: URL {
-        return URL(string:"https://kobajun029.sakura.ne.jp")!
+        return URL(string: "https://kobajun029.sakura.ne.jp")!
     }
-    
+
     var path: String {
         switch self {
         case .getUser:
@@ -38,13 +37,13 @@ extension UserTargetType:TargetType {
         case .updateUser:
             return "/okimochi/api/update_user"
         }
-        
+
     }
-    
+
     var method: Method {
         return .get
     }
-    
+
     var task: Task {
         switch self {
         case .getUser(let token):
@@ -53,9 +52,8 @@ extension UserTargetType:TargetType {
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         }
     }
-    
-    var headers: [String : String]? {
+
+    var headers: [String: String]? {
         return nil
     }
 }
-

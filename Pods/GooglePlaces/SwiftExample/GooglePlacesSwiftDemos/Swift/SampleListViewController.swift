@@ -72,8 +72,7 @@ class SampleListViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
-    -> UITableViewCell
-  {
+    -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: SampleListViewController.sampleCellIdentifier, for: indexPath)
     if let sample = sample(at: indexPath) {
@@ -86,8 +85,7 @@ class SampleListViewController: UITableViewController {
     return sampleSections.count
   }
 
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-  {
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     guard section <= sampleSections.count else {
       return nil
     }

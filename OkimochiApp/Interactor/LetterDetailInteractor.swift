@@ -7,14 +7,13 @@
 
 import RxSwift
 
-
-final class LetterDetailInteractor:LetterDetailUseCase {
-    let service:PostServiceProtocol
-    init(service:PostServiceProtocol) {
+final class LetterDetailInteractor: LetterDetailUseCase {
+    let service: PostServiceProtocol
+    init(service: PostServiceProtocol) {
         self.service = service
     }
     func fetchLetterDetail() -> Single<User> {
-        return Single.create { singleEvent->Disposable in
+        return Single.create { _->Disposable in
             return Disposables.create()
         }
     }

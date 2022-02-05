@@ -177,7 +177,7 @@ extension GMSPath {
       [41.9993, -79.7250],
       [42.0003, -79.7621],
       [42.1827, -79.7621],
-      [42.5146, -79.7621],
+      [42.5146, -79.7621]
     ]
     let path = GMSMutablePath()
     for degrees in data {
@@ -256,7 +256,7 @@ extension GMSPath {
       [34.3910, -77.4481],
       [34.0481, -77.7983],
       [33.7666, -77.9260],
-      [33.7963, -78.4863],
+      [33.7963, -78.4863]
     ]
     for degrees in data {
       path.addLatitude(degrees[0], longitude: degrees[1])

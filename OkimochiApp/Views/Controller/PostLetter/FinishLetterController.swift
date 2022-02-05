@@ -4,19 +4,19 @@ final class FinishLetterController: UIViewController {
     // MARK: - Properties
     @IBOutlet private var letterImageView: UIImageView!
     static let id = String(describing: FinishLetterController.self)
-    var presentar:FinishLetterPresentable?
+    var presentar: FinishLetterPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         shakeLetter()
     }
-    // MARK: -  IBAction
+    // MARK: - IBAction
     @IBAction private func didTapfinishButton(_ sender: Any) {
         presentar?.onTapFinishButton()
     }
     func shakeLetter() {
         print(#function)
-       let animation = CAKeyframeAnimation()
+        let animation = CAKeyframeAnimation()
         animation.keyPath = "position.x"
         animation.values = [0, 20, -20, 20, 0]
         animation.keyTimes = [0, 0.16, 0.5, 0.83, 1]
@@ -25,16 +25,14 @@ final class FinishLetterController: UIViewController {
         letterImageView.layer.add(animation, forKey: "shake")
     }
 
-    
 }
-extension FinishLetterController:FinishLetterViewable {
+extension FinishLetterController: FinishLetterViewable {
     func showError() {
         present(AlertProvider.makeCommonAlert(), animated: true)
     }
-    
+
     func showSuccess() {
         // 成功アニメーション
     }
-    
-    
+
 }

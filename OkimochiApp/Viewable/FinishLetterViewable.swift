@@ -5,8 +5,7 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-
-protocol FinishLetterViewable:Transitioner {
+protocol FinishLetterViewable: Transitioner {
     func showError()
     func showSuccess()
 }

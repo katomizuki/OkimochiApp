@@ -6,6 +6,6 @@
 //
 import RxSwift
 protocol RegisterUseCase {
-    func sendUser(credential:Credential) -> Single<RegisterResponse>
+    func sendUser(credential: Credential) -> Single<RegisterResponse>
     func saveToken(token: String)
 }

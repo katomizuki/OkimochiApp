@@ -6,9 +6,9 @@
 //
 
 import Foundation
-final class FinishLetterRouter:FinishLetterWireframe {
-    private (set) weak var view:FinishLetterViewable!
-    init(view:FinishLetterViewable) {
+final class FinishLetterRouter: FinishLetterWireframe {
+    private (set) weak var view: FinishLetterViewable!
+    init(view: FinishLetterViewable) {
         self.view = view
     }
     func transitionRoot() {

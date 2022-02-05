@@ -49,7 +49,7 @@ class SnapshotReadyViewController: UIViewController {
     NSLayoutConstraint.activate([
       statusLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
       statusLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
-      statusLabel.heightAnchor.constraint(equalToConstant: 30),
+      statusLabel.heightAnchor.constraint(equalToConstant: 30)
     ])
     NSLayoutConstraint.activate([
       statusLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)

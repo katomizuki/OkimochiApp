@@ -8,6 +8,6 @@
 import Foundation
 
 protocol APIResponse {
-    associatedtype Response:Decodable
-    var para:[String: Any] { get }
+    associatedtype Response: Decodable
+    var para: [String: Any] { get }
 }

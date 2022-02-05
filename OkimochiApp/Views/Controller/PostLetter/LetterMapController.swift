@@ -12,7 +12,7 @@ final class LetterMapController: UIViewController {
             postLetterButton.layer.masksToBounds = true
         }
     }
-    var presentar:LetterMapPresentable?
+    var presentar: LetterMapPresentable?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ extension LetterMapController: UISearchResultsUpdating {
         print(#function)
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
-        let resultVC = searchController.searchResultsController as? ResultMapController else {
+              let resultVC = searchController.searchResultsController as? ResultMapController else {
             return }
         if query.count <= 3 { return }
         resultVC.delegate = self
@@ -71,6 +71,6 @@ extension LetterMapController: ResultMapControllerDelegate {
         mapView.setRegion(region, animated: true)
     }
 }
-extension LetterMapController:LetterMapViewable {
-    
+extension LetterMapController: LetterMapViewable {
+
 }

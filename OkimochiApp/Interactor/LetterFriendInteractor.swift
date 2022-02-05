@@ -7,10 +7,9 @@
 
 import RxSwift
 
-
-final class LetterFriendInteractor:LetterFriendUseCase {
-    let service:UserServiceProtocol
-    init(service:UserServiceProtocol) {
+final class LetterFriendInteractor: LetterFriendUseCase {
+    let service: UserServiceProtocol
+    init(service: UserServiceProtocol) {
         self.service = service
     }
     func fetchFriends(uid: String, token: String) -> Single<UserFriendsViewData> {

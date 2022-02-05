@@ -8,8 +8,8 @@ protocol ProfileHeaderDelegate: AnyObject {
 class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     static let id = String(describing: self)
-    weak var delegate:ProfileHeaderDelegate?
-    var viewData:ProfileHeaderViewData? {
+    weak var delegate: ProfileHeaderDelegate?
+    var viewData: ProfileHeaderViewData? {
         didSet {
             setupUI()
         }
@@ -22,7 +22,7 @@ class ProfileHeader: UICollectionReusableView {
         }
     }
     @IBOutlet weak var orangeUnderLineConstaraint: NSLayoutConstraint!
-    private let underLine:UIView = {
+    private let underLine: UIView = {
         let view = UIView()
         view.backgroundColor = .systemOrange
         return view
@@ -39,7 +39,7 @@ class ProfileHeader: UICollectionReusableView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    static func nib()->UINib {
+    static func nib() -> UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     @IBAction func didTapUpdateButton(_ sender: Any) {
@@ -49,32 +49,32 @@ class ProfileHeader: UICollectionReusableView {
     @IBAction func didTapOptionsButton(_ sender: UIButton) {
         let width = UIScreen.main.bounds.width
         print(#function)
-            switch sender {
-            case myInfoButton:
-                UIView.animate(withDuration: 0.5) {
-                    self.orangeUnderLineConstaraint.constant = width * 2 / 3
-                }
-                myInfoButton.tintColor = .systemOrange
-                pastSeenButton.tintColor = .systemGray
-                favButton.tintColor = .systemGray
-                self.delegate?.didTapProfileOptionsButton(.info)
-            case pastSeenButton:
-                UIView.animate(withDuration: 0.5) {
-                    self.orangeUnderLineConstaraint.constant = width * 1 / 3
-                }
-                pastSeenButton.tintColor = .systemOrange
-                myInfoButton.tintColor = .systemGray
-                favButton.tintColor = .systemGray
-                self.delegate?.didTapProfileOptionsButton(.past)
-            case favButton:
-                UIView.animate(withDuration: 0.5) {
+        switch sender {
+        case myInfoButton:
+            UIView.animate(withDuration: 0.5) {
+                self.orangeUnderLineConstaraint.constant = width * 2 / 3
+            }
+            myInfoButton.tintColor = .systemOrange
+            pastSeenButton.tintColor = .systemGray
+            favButton.tintColor = .systemGray
+            self.delegate?.didTapProfileOptionsButton(.info)
+        case pastSeenButton:
+            UIView.animate(withDuration: 0.5) {
+                self.orangeUnderLineConstaraint.constant = width * 1 / 3
+            }
+            pastSeenButton.tintColor = .systemOrange
+            myInfoButton.tintColor = .systemGray
+            favButton.tintColor = .systemGray
+            self.delegate?.didTapProfileOptionsButton(.past)
+        case favButton:
+            UIView.animate(withDuration: 0.5) {
                 self.orangeUnderLineConstaraint.constant = 0
             }
-                favButton.tintColor = .systemOrange
-                myInfoButton.tintColor = .systemGray
-                pastSeenButton.tintColor = .systemGray
-                self.delegate?.didTapProfileOptionsButton(.fav)
-            default: break
+            favButton.tintColor = .systemOrange
+            myInfoButton.tintColor = .systemGray
+            pastSeenButton.tintColor = .systemGray
+            self.delegate?.didTapProfileOptionsButton(.fav)
+        default: break
         }
     }
     private func setupUI() {

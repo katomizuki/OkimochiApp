@@ -2,9 +2,9 @@ import UIKit
 
 final class UserProfileController: UIViewController {
     static let id = String(describing: UserProfileController.self)
-    private var viewData:ProfileViewData?
-    var presentar:UserProfilePresentable?
-    var user:User? {
+    private var viewData: ProfileViewData?
+    var presentar: UserProfilePresentable?
+    var user: User? {
         didSet {
             guard let user = user else { return }
             collectionViewManager.initViewData(ProfileHeaderViewData(user: user))
@@ -37,7 +37,7 @@ final class UserProfileController: UIViewController {
     }
     @objc private func didTapSearchButton() {
         presentar?.onTapSearchButton()
-        
+
     }
     @objc private func didTapLogoutButton() {
         presentar?.onTapLogoutButton()
@@ -52,7 +52,7 @@ extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     func onTapUpdateButton() {
         presentar?.onTapUpdateButton()
     }
-    
+
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
         presentar?.onTapOptionsButton(selectOptions)
     }
@@ -65,7 +65,7 @@ extension UserProfileController: UserProfileViewable {
     func setLetterViewData(_ viewData: UserLetterViewData) {
         collectionViewManager.initUserLetterViewData(viewData)
     }
-    
+
     func showError() {
         present(AlertProvider.makeCommonAlert(), animated: true)
     }
@@ -75,6 +75,5 @@ extension UserProfileController: UserProfileViewable {
     func setFriendViewData(_ viewData: UserFriendsViewData) {
         collectionViewManager.initFriendsViewData(viewData)
     }
-    
-   
+
 }

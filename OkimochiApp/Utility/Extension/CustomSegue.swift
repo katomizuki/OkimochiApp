@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-class CustomSegue:UIStoryboardSegue {
-    
+class CustomSegue: UIStoryboardSegue {
+
     override func perform() {
         scale()
     }
@@ -16,12 +16,10 @@ class CustomSegue:UIStoryboardSegue {
         containerView?.addSubview(toVC.view)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
             toVC.view.transform = CGAffineTransform.identity
-        } completion: { result in
+        } completion: { _ in
             toVC.modalPresentationStyle = .fullScreen
             fromVC.present(toVC, animated: false, completion: nil)
             print(#function)
         }
     }
 }
-
-

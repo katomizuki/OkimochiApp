@@ -10,7 +10,7 @@ final class FriendDetailController: UIViewController {
             friendImageView.layer.masksToBounds = true
         }
     }
-    var user:User?
+    var user: User?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -19,7 +19,7 @@ final class FriendDetailController: UIViewController {
         print(#function)
         dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func didTapPlusFrinedButton(_ sender: Any) {
         print(#function)
     }
@@ -27,13 +27,11 @@ final class FriendDetailController: UIViewController {
         nameLabel.text = user?.name
         friendImageView.sd_setImage(with: user?.profileUrl, completed: nil)
     }
-    
-  
+
 }
-extension FriendDetailController:FriendsDetailViewable {
+extension FriendDetailController: FriendsDetailViewable {
     func showError() {
-        
+
     }
-    
-    
+
 }

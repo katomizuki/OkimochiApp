@@ -54,13 +54,13 @@ class AutocompleteBaseViewController: UIViewController {
       textView.topAnchor.constraint(equalTo: guide.topAnchor),
       textView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
       textView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      textView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+      textView.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
     ])
     NSLayoutConstraint.activate([
       pagingPhotoView.topAnchor.constraint(equalTo: guide.topAnchor),
       pagingPhotoView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
       pagingPhotoView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      pagingPhotoView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+      pagingPhotoView.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
     ])
   }
 
@@ -80,7 +80,7 @@ class AutocompleteBaseViewController: UIViewController {
     }
 
     if #available(iOS 13.0, *) {
-      text.addAttribute(.foregroundColor, value: UIColor.label, range: NSMakeRange(0, text.length))
+      text.addAttribute(.foregroundColor, value: UIColor.label, range: NSRange(location: 0, length: text.length))
     }
     textView.attributedText = text
     textView.isHidden = false
@@ -120,7 +120,7 @@ extension AutocompleteBaseViewController {
       let downloadGroup = DispatchGroup()
       photos.forEach { photo in
         downloadGroup.enter()
-        placeClient.loadPlacePhoto(photo) { imageData, error in
+        placeClient.loadPlacePhoto(photo) { imageData, _ in
           if let image = imageData, let attributions = photo.attributions {
             attributedPhotos.append(AttributedPhoto(image: image, attributions: attributions))
           }

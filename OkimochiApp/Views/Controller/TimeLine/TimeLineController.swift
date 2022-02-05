@@ -1,24 +1,24 @@
 import UIKit
 import MapKit
-//import GoogleMaps
+// import GoogleMaps
 import CoreLocation
 class TimeLineController: UIViewController {
     // MARK: - Properties
-    var user:User?
+    var user: User?
     private let collectionCell = "collectionCell"
     @IBOutlet weak var collectionView: UICollectionView!
     private let locationManager = CLLocationManager()
-    var mapView:MKMapView!
-    var presentar:TimeLinePresentable?
+    var mapView: MKMapView!
+    var presentar: TimeLinePresentable?
     static let id = String(describing: TimeLineController.self)
     private let collectionViewController = TimeLineCollectionViewController()
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMapView()
         setupCollectionView()
-//        checkLogin()
+        //        checkLogin()
         checkLocationAndAddPin()
     }
     private func setupMapView() {
@@ -37,7 +37,7 @@ class TimeLineController: UIViewController {
         super.viewWillAppear(true)
         presentar?.viewWillAppear()
     }
-    
+
     // MARK: - SetupMethod
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
@@ -59,7 +59,7 @@ class TimeLineController: UIViewController {
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         print(#function)
     }
-    @IBAction func prepareForUnwind(unwindSegue :UIStoryboardSegue) {
+    @IBAction func prepareForUnwind(unwindSegue: UIStoryboardSegue) {
         print(#function)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,10 +88,10 @@ extension TimeLineController: CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: center, span: span)
             mapView.setRegion(region, animated: true)
             mapView.setCenter(mapView.userLocation.coordinate, animated: true)
-            
+
         }
     }
-    func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
@@ -99,7 +99,6 @@ extension TimeLineController: CLLocationManagerDelegate {
             break
         case .authorizedAlways, .authorizedWhenInUse:
             manager.startUpdatingLocation()
-            break
         default:
             break
         }
@@ -109,7 +108,7 @@ extension TimeLineController: TimeLineViewable {
     func reload() {
         collectionView.reloadData()
     }
-    
+
     func showError() {
         present(AlertProvider.makeCommonAlert(), animated: true)
     }

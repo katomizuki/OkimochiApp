@@ -6,10 +6,10 @@
 //
 
 import Foundation
- 
+
 final class UpdateProfileRouter: UpdateProfileWireframe {
-    private (set) weak var view:UpdateProfileViewable!
-    init(view:UpdateProfileViewable) {
+    private (set) weak var view: UpdateProfileViewable!
+    init(view: UpdateProfileViewable) {
         self.view = view
     }
     func dismiss() {

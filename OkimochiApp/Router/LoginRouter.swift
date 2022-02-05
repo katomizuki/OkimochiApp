@@ -7,16 +7,16 @@
 
 import Foundation
 import UIKit
-final class LoginRouter:LoginWireframe {
-   
-    private (set) weak var view:LoginViewable!
-    init(view:LoginViewable) {
+final class LoginRouter: LoginWireframe {
+
+    private (set) weak var view: LoginViewable!
+    init(view: LoginViewable) {
         self.view = view
     }
     func dismiss() {
         view.dismiss(animated: true)
     }
-    
+
     func transitionRegisterVC() {
         print(#function)
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)

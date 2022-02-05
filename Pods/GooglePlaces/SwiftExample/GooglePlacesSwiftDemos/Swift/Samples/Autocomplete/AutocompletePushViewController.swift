@@ -43,7 +43,7 @@ class AutocompletePushViewController: AutocompleteBaseViewController {
       showWidgetButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       showWidgetButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       showWidgetButton.topAnchor.constraint(equalTo: view.topAnchor, constant: margin),
-      showWidgetButton.heightAnchor.constraint(equalToConstant: buttonHeight),
+      showWidgetButton.heightAnchor.constraint(equalToConstant: buttonHeight)
     ])
   }
 

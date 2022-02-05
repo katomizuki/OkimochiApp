@@ -7,6 +7,6 @@
 
 import RxSwift
 protocol SearchFriendUseCase {
-    func searchUser(text:String, token: String) -> Single<[User]>
-    func requestFriend(token: String,id: String) -> Completable
+    func searchUser(text: String, token: String) -> Single<[User]>
+    func requestFriend(token: String, id: String) -> Completable
 }

@@ -6,13 +6,13 @@
 //
 
 import UIKit
-protocol TimeLineDataSourceDelegate:AnyObject {
+protocol TimeLineDataSourceDelegate: AnyObject {
     func tapCell()
 }
-class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private let id = "collectionCell"
-    weak var delegate:TimeLineDataSourceDelegate?
-    private var viewData:TimeLineViewData?
+    weak var delegate: TimeLineDataSourceDelegate?
+    private var viewData: TimeLineViewData?
     func initViewData(_ viewData: TimeLineViewData) {
         self.viewData = viewData
     }

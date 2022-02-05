@@ -89,7 +89,7 @@ class MapZoomViewController: UIViewController {
       zoomRangeView.topAnchor.constraint(equalTo: view.topAnchor),
       zoomRangeView.heightAnchor.constraint(equalToConstant: zoomRangeViewHeight),
       zoomRangeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      zoomRangeView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      zoomRangeView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])
     didTapNext()
 

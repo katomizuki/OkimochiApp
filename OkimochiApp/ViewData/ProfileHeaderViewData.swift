@@ -6,9 +6,9 @@
 //
 
 struct ProfileHeaderViewData {
-    
-    var user:User
-    init(user:User) {
+
+    var user: User
+    init(user: User) {
         self.user = user
     }
 }

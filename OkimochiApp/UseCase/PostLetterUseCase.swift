@@ -6,5 +6,5 @@
 //
 import RxSwift
 protocol PostLetterUseCase {
-    
+
 }

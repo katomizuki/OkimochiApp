@@ -6,7 +6,7 @@
 //
 
 struct FriendsResult: Codable {
-    let friendList:[FriendResponse]
+    let friendList: [FriendResponse]
     private enum CodingKeys: String, CodingKey {
         case friendList = "friends_list"
     }
@@ -18,7 +18,7 @@ struct FriendsResult: Codable {
         let createdAt: String
         let updatedAt: String
         let receiveUser: Friend
-        
+
         private enum CodingKeys: String, CodingKey {
             case id
             case requestId = "request_id"
@@ -28,7 +28,7 @@ struct FriendsResult: Codable {
             case updatedAt = "updated_at"
             case receiveUser = "receive_user"
         }
-        
+
         struct Friend: Codable {
             let id: Int
             let name: String

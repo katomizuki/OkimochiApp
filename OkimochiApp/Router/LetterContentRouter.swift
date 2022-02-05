@@ -5,10 +5,10 @@
 //  Created by ミズキ on 2021/12/18.
 //
 import UIKit
-final class LetterContentRouter:LetterContentWireframe {
-    
-    private (set) weak var view:LetterContentViewable!
-    init(view:LetterContentViewable) {
+final class LetterContentRouter: LetterContentWireframe {
+
+    private (set) weak var view: LetterContentViewable!
+    init(view: LetterContentViewable) {
         self.view = view
     }
     func transitionLetterTimeVC() {
@@ -20,5 +20,5 @@ final class LetterContentRouter:LetterContentWireframe {
         controller.presentar = presentar
         view.navigationController?.pushViewController(controller, animated: true)
     }
-    
+
 }

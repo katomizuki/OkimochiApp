@@ -7,9 +7,9 @@
 
 import Foundation
 import UIKit
-final class LetterMapRouter:LetterMapWireframe {
+final class LetterMapRouter: LetterMapWireframe {
     private (set) weak var view: LetterMapViewable!
-    init(view:LetterMapViewable) {
+    init(view: LetterMapViewable) {
         self.view = view
     }
     func transitionLetterLastVC() {

@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-
 import UIKit
 protocol Transitioner where Self: UIViewController {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
@@ -13,7 +12,7 @@ protocol Transitioner where Self: UIViewController {
     func popToRootViewController(animated: Bool)
     func present(viewController: UIViewController,
                  animated: Bool,
-                 completion: (() -> ())?)
+                 completion: (() -> Void)?)
     func dismiss(animated: Bool)
 }
 
@@ -34,8 +33,7 @@ extension Transitioner {
         nc.popToRootViewController(animated: true)
     }
 
-
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> ())? = nil) {
+    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
         present(viewController, animated: animated, completion: completion)
     }
 

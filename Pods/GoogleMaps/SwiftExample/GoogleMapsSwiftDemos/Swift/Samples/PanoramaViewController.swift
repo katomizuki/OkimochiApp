@@ -38,7 +38,7 @@ class PanoramaViewController: UIViewController {
       statusLabel.topAnchor.constraint(equalTo: view.topAnchor),
       statusLabel.heightAnchor.constraint(equalToConstant: 30),
       statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])
   }
 }

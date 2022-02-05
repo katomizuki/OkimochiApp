@@ -6,23 +6,22 @@
 //
 
 final class LetterMapPresentar: LetterMapPresentable {
-    
-    
+
     struct DI {
-        var view:LetterMapViewable
-        var router:LetterMapWireframe
-        var interactor:LetterMapUseCase
+        var view: LetterMapViewable
+        var router: LetterMapWireframe
+        var interactor: LetterMapUseCase
     }
-    weak var view:LetterMapViewable!
-    var router:LetterMapWireframe
-    var interactor:LetterMapUseCase
-    init(DI:DI) {
+    weak var view: LetterMapViewable!
+    var router: LetterMapWireframe
+    var interactor: LetterMapUseCase
+    init(DI: DI) {
         self.view = DI.view
         self.router = DI.router
         self.interactor = DI.interactor
     }
     func viewDidLoad() {
-        
+
     }
     func onTapNextButton() {
         router.transitionLetterLastVC()

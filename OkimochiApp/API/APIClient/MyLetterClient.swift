@@ -8,35 +8,34 @@
 import Moya
 enum MyLetterTargetType: APIResponse {
     typealias Response = MyLetterResult
-    case fetchMyLetters(token :String)
+    case fetchMyLetters(token: String)
 }
 extension MyLetterTargetType: TargetType {
     var baseURL: URL {
-        return URL(string:"https://kobajun029.sakura.ne.jp")!
+        return URL(string: "https://kobajun029.sakura.ne.jp")!
     }
-    var para: [String : Any] {
+    var para: [String: Any] {
         switch self {
         case .fetchMyLetters(let token):
             return ["token": token]
         }
     }
-    
+
     var path: String {
         return "/okimochi/api/mypage"
     }
-    
+
     var method: Method { .get }
-    
+
     var task: Task {
         switch self {
         case .fetchMyLetters(let token):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         }
     }
-    
-    var headers: [String : String]? {
+
+    var headers: [String: String]? {
         return nil
     }
-    
-    
+
 }

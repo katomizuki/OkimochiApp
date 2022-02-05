@@ -7,18 +7,18 @@
 
 import Foundation
 import RxSwift
-final class LoginPresentar: LoginPresentable{
-   
+final class LoginPresentar: LoginPresentable {
+
     struct DI {
         var view: LoginViewable
         var router: LoginWireframe
         var interactor: LoginUseCase
     }
-    weak var view:LoginViewable!
-    var router:LoginWireframe!
-    var interactor:LoginUseCase!
+    weak var view: LoginViewable!
+    var router: LoginWireframe!
+    var interactor: LoginUseCase!
     private let disposeBag = DisposeBag()
-    init(DI:DI) {
+    init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
         self.router = DI.router
@@ -28,7 +28,7 @@ final class LoginPresentar: LoginPresentable{
         interactor.login(email: email, password: password).subscribe { response in
             self.interactor.saveToken(token: response.token)
             self.view.showError()
-        } onFailure: { error in
+        } onFailure: { _ in
             self.view.showError()
         }.disposed(by: disposeBag)
 
@@ -36,5 +36,5 @@ final class LoginPresentar: LoginPresentable{
     func onTapGotoRegisterButton() {
         router.transitionRegisterVC()
     }
-    
+
 }

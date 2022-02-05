@@ -194,6 +194,11 @@
 		D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B33272E703A0048FC75 /* ProfileCell.swift */; };
 		D3B91B36272E703A0048FC75 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B34272E703A0048FC75 /* ProfileCell.xib */; };
 		D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9742764BD26008EFB53 /* Keychain.swift */; };
+		D3CF09AF27AE9B3E0095AAE3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */; };
+		D3CF09B127AE9B3E0095AAE3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B027AE9B3E0095AAE3 /* RxSwift */; };
+		D3CF09B427AE9B5B0095AAE3 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B327AE9B5B0095AAE3 /* PKHUD */; };
+		D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B627AE9B7A0095AAE3 /* SDWebImage */; };
+		D3CF09BA27AE9C590095AAE3 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B927AE9C590095AAE3 /* KeychainAccess */; };
 		D3D62E912789B17700DCA027 /* PostDataTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */; };
 		D3D62E932789B48600DCA027 /* UserProfileCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E922789B48600DCA027 /* UserProfileCollectionViewManager.swift */; };
 		D3D62E952789BD1700DCA027 /* UpdateProfileTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileTableViewManager.swift */; };
@@ -417,7 +422,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CF09B127AE9B3E0095AAE3 /* RxSwift in Frameworks */,
+				D3CF09B427AE9B5B0095AAE3 /* PKHUD in Frameworks */,
+				D3CF09BA27AE9C590095AAE3 /* KeychainAccess in Frameworks */,
+				D3CF09AF27AE9B3E0095AAE3 /* RxCocoa in Frameworks */,
 				12D4F447AA5A0458B69EC3E3 /* Pods_OkimochiApp.framework in Frameworks */,
+				D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,12 +919,21 @@
 				D3810204272CF2CA003C7850 /* Resources */,
 				30DCE58221792E02829EB2B7 /* [CP] Embed Pods Frameworks */,
 				96CF4495AF51C3E5DC916977 /* [CP] Copy Pods Resources */,
+				D3CF09AC27AE9A910095AAE3 /* ShellScript */,
+				D3CF09BD27AE9F690095AAE3 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = OkimochiApp;
+			packageProductDependencies = (
+				D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */,
+				D3CF09B027AE9B3E0095AAE3 /* RxSwift */,
+				D3CF09B327AE9B5B0095AAE3 /* PKHUD */,
+				D3CF09B627AE9B7A0095AAE3 /* SDWebImage */,
+				D3CF09B927AE9C590095AAE3 /* KeychainAccess */,
+			);
 			productName = OkimochiApp;
 			productReference = D3810206272CF2CA003C7850 /* OkimochiApp.app */;
 			productType = "com.apple.product-type.application";
@@ -944,6 +963,10 @@
 			);
 			mainGroup = D38101FD272CF2CA003C7850;
 			packageReferences = (
+				D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				D3CF09B527AE9B7A0095AAE3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				D3CF09B827AE9C590095AAE3 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = D3810207272CF2CA003C7850 /* Products */;
 			projectDirPath = "";
@@ -1011,6 +1034,40 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D3CF09AC27AE9A910095AAE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run swiftlint autocorrect\nmint run swiftlint lint\n";
+		};
+		D3CF09BD27AE9F690095AAE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n  mint run swiftlint swiftlint autocorrect --format\n  mint run swiftlint swiftlint\nelse\n  echo 'warning: Mint not installed. Please install mint from https://github.com/yonaskolb/Mint'\nfi\n";
 		};
 		F8A63623915E5C39CD7D739D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1446,6 +1503,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D3CF09B527AE9B7A0095AAE3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D3CF09B827AE9C590095AAE3 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D3CF09B027AE9B3E0095AAE3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D3CF09B327AE9B5B0095AAE3 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+		D3CF09B627AE9B7A0095AAE3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3CF09B527AE9B7A0095AAE3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		D3CF09B927AE9C590095AAE3 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3CF09B827AE9C590095AAE3 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D38101FE272CF2CA003C7850 /* Project object */;
 }

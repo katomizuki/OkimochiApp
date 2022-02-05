@@ -7,17 +7,17 @@
 
 import RxSwift
 
-final class UserProfileInteractor:UserProfileUseCase {
-    
-    let service:UserServiceProtocol
-    let postService:PostServiceProtocol
+final class UserProfileInteractor: UserProfileUseCase {
+
+    let service: UserServiceProtocol
+    let postService: PostServiceProtocol
     private let disposeBag = DisposeBag()
-    init(service:UserServiceProtocol,postService:PostServiceProtocol) {
+    init(service: UserServiceProtocol, postService: PostServiceProtocol) {
         self.service = service
         self.postService = postService
     }
-    
-    func fetchUser(token:String) -> Single<ProfileHeaderViewData> {
+
+    func fetchUser(token: String) -> Single<ProfileHeaderViewData> {
         return Single.create { singleEvent->Disposable in
             self.service.getUser(token: token).subscribe { user in
                 singleEvent(.success(ProfileHeaderViewData(user: user)))
@@ -27,7 +27,7 @@ final class UserProfileInteractor:UserProfileUseCase {
             return Disposables.create()
         }
     }
-    
+
     func fetchMyLetter(token: String) -> Single<UserLetterViewData> {
         return Single.create { observer -> Disposable in
             self.postService.fetchMyPost(token: token).subscribe { result in
@@ -37,7 +37,7 @@ final class UserProfileInteractor:UserProfileUseCase {
             }
         }
     }
-    
+
     func fetchMyFriends(token: String) -> Single<UserFriendsViewData> {
         return Single.create { observer -> Disposable in
             self.service.getFriends(token: token).subscribe { result in

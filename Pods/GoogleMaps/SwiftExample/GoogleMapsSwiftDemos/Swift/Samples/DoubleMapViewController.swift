@@ -46,7 +46,7 @@ class DoubleMapViewController: UIViewController {
       mapView.topAnchor.constraint(equalTo: view.topAnchor),
       boundMapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
       mapView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
-      boundMapView.topAnchor.constraint(equalTo: mapView.bottomAnchor),
+      boundMapView.topAnchor.constraint(equalTo: mapView.bottomAnchor)
     ])
   }
 

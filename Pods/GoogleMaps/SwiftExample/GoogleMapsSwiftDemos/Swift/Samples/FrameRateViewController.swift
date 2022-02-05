@@ -42,7 +42,7 @@ class FrameRateViewController: UIViewController {
     NSLayoutConstraint.activate([
       statusTextView.leftAnchor.constraint(equalTo: view.leftAnchor),
       statusTextView.rightAnchor.constraint(equalTo: view.rightAnchor),
-      statusTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 24),
+      statusTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 24)
     ])
     NSLayoutConstraint.activate([
       statusTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)

@@ -8,13 +8,13 @@ final class UpdateProfileController: UIViewController {
             dataSource.initUserData(user)
         }
     }
-    var presentar:UpdateProfilePresentable?
+    var presentar: UpdateProfilePresentable?
     static let id = String(describing: UpdateProfileController.self)
     private let dataSource = UpdateProfileTableViewManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        }
+    }
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = dataSource
@@ -23,7 +23,7 @@ final class UpdateProfileController: UIViewController {
     @IBAction func didTapDismissButton(_ sender: Any) {
         presentar?.onTapDismissButton()
     }
-    @IBAction func didTapSaveButton(_ sender: Any)  {
+    @IBAction func didTapSaveButton(_ sender: Any) {
         print(#function)
         presentar?.onTapSaveButton(user: User(dic: [:]))
     }
@@ -46,14 +46,13 @@ extension UpdateProfileController: UITableViewDelegate {
         view.tintColor = .systemOrange
     }
 }
-extension UpdateProfileController:UpdateProfileViewable {
+extension UpdateProfileController: UpdateProfileViewable {
     func showError() {
-        
+
     }
     func updateUserInfo() {
-        
+
     }
     func setViewData(_ viewData: UserViewData) {
     }
 }
-

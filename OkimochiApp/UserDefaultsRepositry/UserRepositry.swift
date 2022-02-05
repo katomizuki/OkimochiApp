@@ -1,10 +1,9 @@
-
 import Foundation
 
 struct UserDefaultsRepositry {
     static let shared = UserDefaultsRepositry()
-    
-    func saveUserDefaults<T:Codable>(element:T,key:String) {
+
+    func saveUserDefaults<T: Codable>(element: T, key: String) {
         do {
             let data = try JSONEncoder().encode(element)
             UserDefaults.standard.set(data, forKey: key)
@@ -12,15 +11,15 @@ struct UserDefaultsRepositry {
             print(error)
         }
     }
-    
-    func saveToken(token:String) {
+
+    func saveToken(token: String) {
         UserDefaults.standard.set(token, forKey: "token")
     }
-    func getToken()->String? {
-      return UserDefaults.standard.string(forKey: "token")
+    func getToken() -> String? {
+        return UserDefaults.standard.string(forKey: "token")
     }
-    
-    func loadUserDefaults<T:Codable>(key:String) ->T {
+
+    func loadUserDefaults<T: Codable>(key: String) -> T {
         do {
             guard let data = UserDefaults.standard.data(forKey: key) else { fatalError() }
             let decodeData = try JSONDecoder().decode(T.self, from: data)
@@ -30,8 +29,8 @@ struct UserDefaultsRepositry {
             fatalError()
         }
     }
-    
-    func deleteUserDefaults(key:String) {
+
+    func deleteUserDefaults(key: String) {
         UserDefaults.standard.removeObject(forKey: key)
     }
 }

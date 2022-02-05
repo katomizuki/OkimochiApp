@@ -7,38 +7,37 @@
 
 import RxSwift
 
-
 final class UserProfilePresentar: UserProfilePresentable {
-    
+
     struct DI {
-        var router:UserProfileWireframe
-        var interactor:UserProfileUseCase
-        var view:UserProfileViewable
+        var router: UserProfileWireframe
+        var interactor: UserProfileUseCase
+        var view: UserProfileViewable
     }
-    weak var view:UserProfileViewable!
-    var interactor:UserProfileUseCase
-    var router:UserProfileWireframe
+    weak var view: UserProfileViewable!
+    var interactor: UserProfileUseCase
+    var router: UserProfileWireframe
     private let disposeBag = DisposeBag()
-    init(DI:DI) {
+    init(DI: DI) {
         self.router = DI.router
         self.interactor = DI.interactor
         self.view = DI.view
     }
     func viewDidLoad() {
-        
+
     }
-    
+
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        
+
         interactor.fetchUser(token: token)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] viewData in
-            self?.view.setViewData(viewData)
-            self?.view.reload()
-        } onFailure: { [weak self] _ in
-            self?.view.showError()
-        }.disposed(by: disposeBag)
+                self?.view.setViewData(viewData)
+                self?.view.reload()
+            } onFailure: { [weak self] _ in
+                self?.view.showError()
+            }.disposed(by: disposeBag)
 
         interactor.fetchMyLetter(token: token)
             .observe(on: MainScheduler.instance)
@@ -47,7 +46,7 @@ final class UserProfilePresentar: UserProfilePresentable {
             } onFailure: { [weak self] _ in
                 self?.view.showError()
             }.disposed(by: disposeBag)
-        
+
         interactor.fetchMyFriends(token: token)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] viewData in
@@ -56,18 +55,18 @@ final class UserProfilePresentar: UserProfilePresentable {
                 self?.view.showError()
             }.disposed(by: disposeBag)
     }
-    
+
     func onTapUpdateButton() {
         print(#function)
         router.transitionUpdateUserProfile()
     }
-    
+
     func onTapPastButton() {
-        
+
     }
-    
+
     func onTapFriendsButton() {
-        
+
     }
     func onTapSearchButton() {
         router.transitionSearchUser()
@@ -76,7 +75,7 @@ final class UserProfilePresentar: UserProfilePresentable {
         router.transitionLetterDetail()
     }
     func onTapLogoutButton() {
-        
+
     }
     func onTapOptionsButton(_ selectOptions: ProfileFilterOptions) {
         switch selectOptions {

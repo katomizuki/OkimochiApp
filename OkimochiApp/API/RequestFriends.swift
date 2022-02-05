@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2022/01/26.
 //
 
-struct RequestFriends:Codable {
+struct RequestFriends: Codable {
     let success: Bool
     let message: String
     let data: RequestData
@@ -16,7 +16,7 @@ struct RequestFriends:Codable {
         let updatedAt: String
         let createdAt: String
         let id: Int
-        
+
         private enum CodingKeys: String, CodingKey {
             case id
             case requestId = "request_id"
@@ -27,4 +27,3 @@ struct RequestFriends:Codable {
         }
     }
 }
-

@@ -7,13 +7,11 @@ target 'OkimochiApp' do
 
   # Pods for OkimochiApp
 
-pod 'SDWebImage', '~> 5.0'
-pod 'PKHUD', '~> 5.0'
-pod 'KeychainSwift', '~> 19.0'
+
+
 pod 'GoogleMaps'
 pod 'GooglePlaces'
-pod 'RxSwift', '6.2.0'
-pod 'RxCocoa', '6.2.0'
+
 pod 'Alamofire', '~> 5.5'
 pod 'Moya', '~> 15.0'
 end

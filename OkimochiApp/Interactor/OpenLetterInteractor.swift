@@ -6,12 +6,11 @@
 //
 
 import RxSwift
-final class OpenLetterInteractor:OpenLetterUseCase {
+final class OpenLetterInteractor: OpenLetterUseCase {
     func fetchLetterDetail(letterId: String) -> Single<Letter> {
-        return Single.create { singleEvent->Disposable in
+        return Single.create { _->Disposable in
             return Disposables.create()
         }
     }
-    
-    
+
 }

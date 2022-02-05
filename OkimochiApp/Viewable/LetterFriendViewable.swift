@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-protocol LetterFriendViewable:Transitioner {
+protocol LetterFriendViewable: Transitioner {
     func showError()
     func setFriends(_ viewData: UserFriendsViewData)
 }

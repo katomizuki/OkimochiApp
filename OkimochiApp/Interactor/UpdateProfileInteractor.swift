@@ -6,14 +6,14 @@
 //
 
 import RxSwift
-final class UpdateProfileInteractor:UpdateProfileUserCase {
-    
+final class UpdateProfileInteractor: UpdateProfileUserCase {
+
     let service: UserServiceProtocol
     private let disposeBag = DisposeBag()
-    init(service:UserServiceProtocol) {
+    init(service: UserServiceProtocol) {
         self.service = service
     }
-    func updateUserProfile(user: User, token: String) -> Completable  {
+    func updateUserProfile(user: User, token: String) -> Completable {
         self.service.updateUser(token: token)
     }
     func getUser(token: String) -> Single<UserViewData> {

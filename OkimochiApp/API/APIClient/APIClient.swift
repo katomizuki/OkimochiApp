@@ -8,12 +8,12 @@
 import Moya
 import Alamofire
 import RxSwift
-//protocol APICli
+// protocol APICli
 class APIClient {
     static let shared = APIClient()
     typealias APITargetType = TargetType & APIResponse
-    
-    func request<T:APITargetType>(_ request:T) ->Single<T.Response> {
+
+    func request<T: APITargetType>(_ request: T) ->Single<T.Response> {
         return Single.create { observer->Disposable in
             let url = request.path
             AF.request(url, method: request.method, parameters: request.para, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in
@@ -34,8 +34,8 @@ class APIClient {
             return Disposables.create()
         }
     }
-    
-    func requestCompletable<T:APITargetType>(_ request:T) -> Completable {
+
+    func requestCompletable<T: APITargetType>(_ request: T) -> Completable {
         Completable.create { subscriber -> Disposable in
             let url = request.path
             AF.request(url, method: request.method, parameters: request.para, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in

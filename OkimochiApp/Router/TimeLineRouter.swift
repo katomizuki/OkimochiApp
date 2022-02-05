@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-final class TimeLineRouter:TimeLineWireframe {
-    private (set) weak var view:TimeLineViewable!
-    init(view:TimeLineViewable) {
+final class TimeLineRouter: TimeLineWireframe {
+    private (set) weak var view: TimeLineViewable!
+    init(view: TimeLineViewable) {
         self.view = view
     }
     func transitionLogin() {
@@ -27,7 +27,7 @@ final class TimeLineRouter:TimeLineWireframe {
             self.view.present(nav, animated: true, completion: nil)
         }
     }
-    
+
     func transitionLetterDetail() {
         view.performSegue(withIdentifier: OpenLetterController.id, sender: nil)
     }

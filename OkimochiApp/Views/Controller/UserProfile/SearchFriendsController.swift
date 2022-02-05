@@ -11,7 +11,7 @@ final class SearchFriendsController: UIViewController {
     private var filterUsers = [User]()
     private var selectedIndex = Int()
     static let id = String(describing: SearchFriendsController.self)
-    var presentar:SearchFriendPresentable?
+    var presentar: SearchFriendPresentable?
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,10 @@ final class SearchFriendsController: UIViewController {
         tableView.rowHeight = 80
     }
     private func setupUserData() {
-//        UserService.fetchUsers { users in
-//            self.users = users
-//            self.tableView.reloadData()
-//        }
+        //        UserService.fetchUsers { users in
+        //            self.users = users
+        //            self.tableView.reloadData()
+        //        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriedDetailController" {
@@ -49,7 +49,7 @@ final class SearchFriendsController: UIViewController {
     }
 }
 // MARK: - UISearchResultsUpdating
-extension SearchFriendsController : UISearchResultsUpdating {
+extension SearchFriendsController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(#function)
         guard let text = searchController.searchBar.text else { return }
@@ -78,11 +78,11 @@ extension SearchFriendsController: UITableViewDataSource {
         return isSearched ? filterUsers.count : users.count
     }
 }
-extension SearchFriendsController:SearchFriendsViewable {
+extension SearchFriendsController: SearchFriendsViewable {
     func showError() {
-        
+
     }
     func showResult(_ user: [User]) {
-        
+
     }
 }

@@ -6,5 +6,5 @@
 //
 
 protocol LetterDetailViewable: Transitioner {
-    
+
 }

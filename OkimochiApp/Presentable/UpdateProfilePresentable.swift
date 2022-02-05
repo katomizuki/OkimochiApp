@@ -8,6 +8,6 @@
 protocol UpdateProfilePresentable {
     func viewDidLoad()
     func viewWillAppear()
-    func onTapSaveButton(user:User)
+    func onTapSaveButton(user: User)
     func onTapDismissButton()
 }

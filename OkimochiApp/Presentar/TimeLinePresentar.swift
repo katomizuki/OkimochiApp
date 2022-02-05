@@ -7,26 +7,26 @@
 
 import UIKit
 import RxSwift
-final class TimeLinePresentar:TimeLinePresentable {
-   
+final class TimeLinePresentar: TimeLinePresentable {
+
     struct DI {
-        var view:TimeLineViewable
-        var router:TimeLineWireframe
-        var interactor:TimeLineUseCase
+        var view: TimeLineViewable
+        var router: TimeLineWireframe
+        var interactor: TimeLineUseCase
     }
-    weak var view:TimeLineViewable!
-    var router:TimeLineWireframe!
-    var interactor:TimeLineUseCase!
+    weak var view: TimeLineViewable!
+    var router: TimeLineWireframe!
+    var interactor: TimeLineUseCase!
     private let disposeBag = DisposeBag()
-    init(DI:DI) {
+    init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
         self.router = DI.router
     }
     func viewDidLoad() {
-        
+
     }
-    
+
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         interactor.fetchTimeLines(token: token)
@@ -37,7 +37,7 @@ final class TimeLinePresentar:TimeLinePresentable {
                 self?.view.showError()
             }.disposed(by: disposeBag)
     }
-    
+
     func onTapLetter() {
         router.transitionLetterDetail()
     }
@@ -47,9 +47,8 @@ final class TimeLinePresentar:TimeLinePresentable {
             router.transitionLogin()
         }
     }
-    func segue(segue:UIStoryboardSegue) {
+    func segue(segue: UIStoryboardSegue) {
         router.setupDI(segue: segue)
     }
-    
-    
+
 }

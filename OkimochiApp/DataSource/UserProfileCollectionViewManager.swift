@@ -11,12 +11,12 @@ protocol UserProfileCollectionViewManagerDelegate: AnyObject {
     func onTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
     func onTapLetterDetail()
 }
-class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
-    weak var delegate:UserProfileCollectionViewManagerDelegate?
-    var viewData:ProfileHeaderViewData?
-    var userLetterViewData:UserLetterViewData?
+class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    weak var delegate: UserProfileCollectionViewManagerDelegate?
+    var viewData: ProfileHeaderViewData?
+    var userLetterViewData: UserLetterViewData?
     var friendsViewData: UserFriendsViewData?
-    func initViewData(_ viewData:ProfileHeaderViewData) {
+    func initViewData(_ viewData: ProfileHeaderViewData) {
         self.viewData = viewData
     }
     func initFriendsViewData(_ viewData: UserFriendsViewData) {
@@ -52,11 +52,11 @@ class UserProfileCollectionViewManager: NSObject, UICollectionViewDataSource, UI
         return CGSize(width: width, height: 150)
     }
 }
-extension UserProfileCollectionViewManager:ProfileHeaderDelegate {
+extension UserProfileCollectionViewManager: ProfileHeaderDelegate {
     func didTapUpdateButton() {
         self.delegate?.onTapUpdateButton()
     }
-    
+
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions) {
         self.delegate?.onTapProfileOptionsButton(selectOptions)
     }

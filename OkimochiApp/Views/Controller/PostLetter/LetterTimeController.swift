@@ -13,19 +13,19 @@ final class LetterTimeController: UIViewController {
         }
     }
     static let id = String(describing: LetterTimeController.self)
-    var presentar:LetterTimePresentable?
-    
+    var presentar: LetterTimePresentable?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presentar?.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
     }
-  
+
     @IBAction private func didTapNextButton(_ sender: Any) {
         presentar?.onTapNextButton()
     }
-    
+
 }
-extension LetterTimeController:LetterTimeViewable {
-    
+extension LetterTimeController: LetterTimeViewable {
+
 }

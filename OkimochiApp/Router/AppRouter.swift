@@ -8,20 +8,20 @@
 import Foundation
 import UIKit
 class AppRouter {
-    static func start(controller:MainTabBarController) {
+    static func start(controller: MainTabBarController) {
         let timeLineVC = controller.viewControllers![0] as! TimeLineController
         let timeLineInteractor = TimeLineInteractor(service: PostService())
         let timeLineRouter = TimeLineRouter(view: timeLineVC)
         let timeLinePresentar = TimeLinePresentar(DI: TimeLinePresentar.DI(view: timeLineVC, router: timeLineRouter, interactor: timeLineInteractor))
         timeLineVC.presentar = timeLinePresentar
-        
+
         let postLetterNav = controller.viewControllers![1] as! PostLetterNavigationController
         let postLetterVC = postLetterNav.viewControllers[0] as! PostLetterController
         let postInteractor = PostLetterInteractor(service: PostService())
         let postRouter = PostLetterRouter(view: postLetterVC)
         let postPresentar = PostLetterPresentar(DI: PostLetterPresentar.DI(view: postLetterVC, interactor: postInteractor, router: postRouter))
         postLetterVC.presentar = postPresentar
-        
+
         let userNav = controller.viewControllers![2] as! UserNavigationController
         let userVC = userNav.viewControllers[0] as! UserProfileController
         let userInteractor = UserProfileInteractor(service: UserService(), postService: PostService())

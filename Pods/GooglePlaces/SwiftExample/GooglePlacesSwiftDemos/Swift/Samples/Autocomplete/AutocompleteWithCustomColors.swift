@@ -179,7 +179,7 @@ class AutocompleteWithCustomColors: AutocompleteBaseViewController {
         button.topAnchor.constraint(equalTo: view.topAnchor, constant: topPadding),
         button.heightAnchor.constraint(equalToConstant: buttonHeight),
         button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
       ])
     }
   }
@@ -201,7 +201,7 @@ class AutocompleteWithCustomColors: AutocompleteBaseViewController {
     )
     textFieldAppearance.defaultTextAttributes = [
       .foregroundColor: colorTheme.searchBarTintColor,
-      .font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+      .font: UIFont.systemFont(ofSize: UIFont.systemFontSize)
     ]
 
     // Color of the "Search" placeholder text in search bar. For this example, we'll make it the
@@ -211,7 +211,7 @@ class AutocompleteWithCustomColors: AutocompleteBaseViewController {
       attributes: [
         .foregroundColor: colorTheme.searchBarTintColor.withAlphaComponent(
           colorTheme.searchBarTintColor.cgColor.alpha * 0.75),
-        .font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+        .font: UIFont.systemFont(ofSize: UIFont.systemFontSize)
       ])
 
     // Change the background color of selected table cells.

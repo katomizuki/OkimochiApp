@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
-protocol UnwindSegueDelegate:AnyObject {
+protocol UnwindSegueDelegate: AnyObject {
     func finishUnwind()
 }
-class UnwindSegue:UIStoryboardSegue {
-    weak var segueDelegate:UnwindSegueDelegate?
+class UnwindSegue: UIStoryboardSegue {
+    weak var segueDelegate: UnwindSegueDelegate?
     override func perform() {
         scale()
     }
@@ -15,7 +15,7 @@ class UnwindSegue:UIStoryboardSegue {
         fromVC.view.superview?.insertSubview(tabController.view, at: 0)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
             fromVC.view.transform = CGAffineTransform(scaleX: 0.05, y: 0.05)
-        } completion: { result in
+        } completion: { _ in
             fromVC.dismiss(animated: false, completion: nil)
         }
     }

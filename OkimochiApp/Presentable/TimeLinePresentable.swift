@@ -12,5 +12,5 @@ protocol TimeLinePresentable {
     func viewWillAppear()
     func onTapLetter()
     func notToken()
-    func segue(segue:UIStoryboardSegue)
+    func segue(segue: UIStoryboardSegue)
 }

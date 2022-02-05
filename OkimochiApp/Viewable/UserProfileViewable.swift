@@ -6,7 +6,7 @@
 //
 
 protocol UserProfileViewable: Transitioner {
-    func setViewData(_ viewData:ProfileHeaderViewData)
+    func setViewData(_ viewData: ProfileHeaderViewData)
     func setLetterViewData(_ viewData: UserLetterViewData)
     func setFriendViewData(_ viewData: UserFriendsViewData)
     func showError()

@@ -149,7 +149,7 @@ class ConfigurationViewController: UIViewController {
         samples: [
           name, placeId, plusCode, coordinate, openingHours, phoneNumber, formattedAddress, rating,
           ratingsTotal, priceLevel, types, website, viewPort, addressComponents, photos, minutes,
-          status,
+          status
         ]))
     return sections
   }()
@@ -193,12 +193,12 @@ class ConfigurationViewController: UIViewController {
       tableView.topAnchor.constraint(equalTo: guide.topAnchor),
       tableView.bottomAnchor.constraint(equalTo: closeButton.topAnchor),
       tableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+      tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
     ])
     NSLayoutConstraint.activate([
       closeButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
       closeButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-      closeButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+      closeButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
     ])
   }
 
@@ -287,8 +287,7 @@ extension ConfigurationViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
-    -> UITableViewCell
-  {
+    -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: cellIdentifier, for: indexPath)
     guard

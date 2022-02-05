@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-final class PostLetterRouter:PostLetterWireFrame {
-    
-    private (set) weak var view:PostLetterViewable!
-    init(view:PostLetterViewable) {
+final class PostLetterRouter: PostLetterWireFrame {
+
+    private (set) weak var view: PostLetterViewable!
+    init(view: PostLetterViewable) {
         self.view = view
     }
     func transtionLetterContentVC() {
@@ -31,6 +31,6 @@ final class PostLetterRouter:PostLetterWireFrame {
         controller.presentar = presentar
         controller.modalPresentationStyle = .fullScreen
         view.present(controller, animated: true, completion: nil)
-        
+
     }
 }

@@ -7,5 +7,3 @@ struct LoginViewData: AuthProtocol {
         return email?.count ?? 0 >= 6 && password?.count ?? 0 >= 6
     }
 }
-
-

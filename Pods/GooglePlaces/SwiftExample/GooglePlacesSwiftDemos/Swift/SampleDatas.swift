@@ -54,7 +54,7 @@ enum Samples {
         title: NSLocalizedString(
           "Demo.Title.Autocomplete.UITextField",
           comment: "Title of the UITextField autocomplete demo for display in a list or nav header")
-      ),
+      )
     ]
     let likelihoodsSample: [Sample] = [
       Sample(
@@ -63,7 +63,7 @@ enum Samples {
     ]
     return [
       Section(name: "Autocomplete", samples: autoCompleteSample),
-      Section(name: "Likelihoods", samples: likelihoodsSample),
+      Section(name: "Likelihoods", samples: likelihoodsSample)
     ]
   }
 }

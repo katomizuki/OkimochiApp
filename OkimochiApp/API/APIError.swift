@@ -1,6 +1,6 @@
 import Foundation
 
-enum APIError:Error {
+enum APIError: Error {
     case apiError
     case decodeError
     case notToken

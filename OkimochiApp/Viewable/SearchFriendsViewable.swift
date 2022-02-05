@@ -7,5 +7,5 @@
 
 protocol SearchFriendsViewable: Transitioner {
     func showError()
-    func showResult(_ user:[User])
+    func showResult(_ user: [User])
 }

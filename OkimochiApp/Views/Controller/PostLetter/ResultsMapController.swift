@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import CoreLocation
 
-protocol ResultMapControllerDelegate:AnyObject {
+protocol ResultMapControllerDelegate: AnyObject {
     func didTapPlace(coordinator: CLLocationCoordinate2D)
 }
 final class ResultMapController: UITableViewController {
@@ -17,12 +17,12 @@ final class ResultMapController: UITableViewController {
     }
     // MARK: - Helper
     public func update(with places: [Place]) {
-        print(#function,places)
+        print(#function, places)
         self.places = places
         self.tableView.isHidden = false
         tableView.reloadData()
     }
-    
+
 }
 // MARK: - Delegate
 extension ResultMapController {
@@ -42,7 +42,7 @@ extension ResultMapController {
 extension ResultMapController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    
+
         cell.textLabel?.text = places[indexPath.row].name
         return cell
     }

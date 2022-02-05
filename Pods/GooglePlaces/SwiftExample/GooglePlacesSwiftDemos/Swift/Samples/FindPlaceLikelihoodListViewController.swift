@@ -59,7 +59,7 @@ class FindPlaceLikelihoodListViewController: UIViewController {
       button.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
       button.heightAnchor.constraint(equalToConstant: 40),
       button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-      button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+      button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
     ])
 
     errorLabel.isHidden = true
@@ -69,7 +69,7 @@ class FindPlaceLikelihoodListViewController: UIViewController {
       errorLabel.topAnchor.constraint(equalTo: button.bottomAnchor, constant: padding),
       errorLabel.heightAnchor.constraint(equalToConstant: 40),
       errorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-      errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+      errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
     ])
 
     tableView.isHidden = true
@@ -79,7 +79,7 @@ class FindPlaceLikelihoodListViewController: UIViewController {
       tableView.topAnchor.constraint(equalTo: button.bottomAnchor, constant: padding),
       tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
       tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
     ])
 
     loadLikelihoodFromCurrentLocation()

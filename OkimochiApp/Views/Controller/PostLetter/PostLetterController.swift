@@ -12,7 +12,7 @@ final class PostLetterController: UIViewController {
     var presentar: PostLetterPresentable?
     private let tableViewManager = PostDataTableViewManager()
     static let id = String(describing: PostLetterController.self)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonDisplayMode = .minimal
@@ -31,10 +31,8 @@ final class PostLetterController: UIViewController {
         presentar?.onTapNextButton()
     }
 }
-extension PostLetterController:PostLetterViewable {
+extension PostLetterController: PostLetterViewable {
     func showError() {
-        
+
     }
 }
-
-
