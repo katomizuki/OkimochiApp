@@ -199,6 +199,10 @@
 		D3CF09B427AE9B5B0095AAE3 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B327AE9B5B0095AAE3 /* PKHUD */; };
 		D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B627AE9B7A0095AAE3 /* SDWebImage */; };
 		D3CF09BA27AE9C590095AAE3 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B927AE9C590095AAE3 /* KeychainAccess */; };
+		D3CF0A6B27AFC5010095AAE3 /* OkimochiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF0A6A27AFC5010095AAE3 /* OkimochiAppTests.swift */; };
+		D3CF0A7127AFC5EC0095AAE3 /* TimeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3810235272D106A003C7850 /* TimeLineController.swift */; };
+		D3CF0A7927AFC75E0095AAE3 /* OkimochiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF0A7827AFC75E0095AAE3 /* OkimochiAppUITests.swift */; };
+		D3CF0A7B27AFC75E0095AAE3 /* OkimochiAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF0A7A27AFC75E0095AAE3 /* OkimochiAppUITestsLaunchTests.swift */; };
 		D3D62E912789B17700DCA027 /* PostDataTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */; };
 		D3D62E932789B48600DCA027 /* UserProfileCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E922789B48600DCA027 /* UserProfileCollectionViewManager.swift */; };
 		D3D62E952789BD1700DCA027 /* UpdateProfileTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62E942789BD1700DCA027 /* UpdateProfileTableViewManager.swift */; };
@@ -211,6 +215,23 @@
 		D3F2154327A01EBC009897CE /* MyLetterResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2154227A01EBC009897CE /* MyLetterResult+Extension.swift */; };
 		D3F2154527A01EF4009897CE /* UserLetterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2154427A01EF4009897CE /* UserLetterViewData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3CF0A6C27AFC5010095AAE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38101FE272CF2CA003C7850 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3810205272CF2CA003C7850;
+			remoteInfo = OkimochiApp;
+		};
+		D3CF0A7C27AFC75E0095AAE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38101FE272CF2CA003C7850 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3810205272CF2CA003C7850;
+			remoteInfo = OkimochiApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C37A3416DA78F6B43EA59F64 /* Pods-OkimochiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkimochiApp.release.xcconfig"; path = "Target Support Files/Pods-OkimochiApp/Pods-OkimochiApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +424,11 @@
 		D3B91B33272E703A0048FC75 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		D3B91B34272E703A0048FC75 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		D3C8A9742764BD26008EFB53 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OkimochiApp/Model/realmData/Keychain.swift; sourceTree = SOURCE_ROOT; };
+		D3CF0A6827AFC5010095AAE3 /* OkimochiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkimochiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CF0A6A27AFC5010095AAE3 /* OkimochiAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkimochiAppTests.swift; sourceTree = "<group>"; };
+		D3CF0A7627AFC75E0095AAE3 /* OkimochiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkimochiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CF0A7827AFC75E0095AAE3 /* OkimochiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkimochiAppUITests.swift; sourceTree = "<group>"; };
+		D3CF0A7A27AFC75E0095AAE3 /* OkimochiAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkimochiAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3D62E902789B17700DCA027 /* PostDataTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataTableViewManager.swift; sourceTree = "<group>"; };
 		D3D62E922789B48600DCA027 /* UserProfileCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewManager.swift; sourceTree = "<group>"; };
 		D3D62E942789BD1700DCA027 /* UpdateProfileTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableViewManager.swift; sourceTree = "<group>"; };
@@ -428,6 +454,20 @@
 				D3CF09AF27AE9B3E0095AAE3 /* RxCocoa in Frameworks */,
 				12D4F447AA5A0458B69EC3E3 /* Pods_OkimochiApp.framework in Frameworks */,
 				D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CF0A6527AFC5010095AAE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CF0A7327AFC75E0095AAE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +559,8 @@
 			isa = PBXGroup;
 			children = (
 				D3810208272CF2CA003C7850 /* OkimochiApp */,
+				D3CF0A6927AFC5010095AAE3 /* OkimochiAppTests */,
+				D3CF0A7727AFC75E0095AAE3 /* OkimochiAppUITests */,
 				D3810207272CF2CA003C7850 /* Products */,
 				BA54CBA7C0FB471F020DC8D5 /* Pods */,
 				A79C92035B0B309CD072B67E /* Frameworks */,
@@ -529,6 +571,8 @@
 			isa = PBXGroup;
 			children = (
 				D3810206272CF2CA003C7850 /* OkimochiApp.app */,
+				D3CF0A6827AFC5010095AAE3 /* OkimochiAppTests.xctest */,
+				D3CF0A7627AFC75E0095AAE3 /* OkimochiAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -894,6 +938,23 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
+		D3CF0A6927AFC5010095AAE3 /* OkimochiAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3CF0A6A27AFC5010095AAE3 /* OkimochiAppTests.swift */,
+			);
+			path = OkimochiAppTests;
+			sourceTree = "<group>";
+		};
+		D3CF0A7727AFC75E0095AAE3 /* OkimochiAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3CF0A7827AFC75E0095AAE3 /* OkimochiAppUITests.swift */,
+				D3CF0A7A27AFC75E0095AAE3 /* OkimochiAppUITestsLaunchTests.swift */,
+			);
+			path = OkimochiAppUITests;
+			sourceTree = "<group>";
+		};
 		D3D62E8F2789B06200DCA027 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -938,6 +999,42 @@
 			productReference = D3810206272CF2CA003C7850 /* OkimochiApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D3CF0A6727AFC5010095AAE3 /* OkimochiAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3CF0A7027AFC5010095AAE3 /* Build configuration list for PBXNativeTarget "OkimochiAppTests" */;
+			buildPhases = (
+				D3CF0A6427AFC5010095AAE3 /* Sources */,
+				D3CF0A6527AFC5010095AAE3 /* Frameworks */,
+				D3CF0A6627AFC5010095AAE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3CF0A6D27AFC5010095AAE3 /* PBXTargetDependency */,
+			);
+			name = OkimochiAppTests;
+			productName = OkimochiAppTests;
+			productReference = D3CF0A6827AFC5010095AAE3 /* OkimochiAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3CF0A7527AFC75E0095AAE3 /* OkimochiAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3CF0A7E27AFC75E0095AAE3 /* Build configuration list for PBXNativeTarget "OkimochiAppUITests" */;
+			buildPhases = (
+				D3CF0A7227AFC75E0095AAE3 /* Sources */,
+				D3CF0A7327AFC75E0095AAE3 /* Frameworks */,
+				D3CF0A7427AFC75E0095AAE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3CF0A7D27AFC75E0095AAE3 /* PBXTargetDependency */,
+			);
+			name = OkimochiAppUITests;
+			productName = OkimochiAppUITests;
+			productReference = D3CF0A7627AFC75E0095AAE3 /* OkimochiAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -945,11 +1042,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					D3810205272CF2CA003C7850 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					D3CF0A6727AFC5010095AAE3 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D3810205272CF2CA003C7850;
+					};
+					D3CF0A7527AFC75E0095AAE3 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D3810205272CF2CA003C7850;
 					};
 				};
 			};
@@ -973,6 +1078,8 @@
 			projectRoot = "";
 			targets = (
 				D3810205272CF2CA003C7850 /* OkimochiApp */,
+				D3CF0A6727AFC5010095AAE3 /* OkimochiAppTests */,
+				D3CF0A7527AFC75E0095AAE3 /* OkimochiAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -995,6 +1102,20 @@
 				D30E6EBF2732245D00FBE5AF /* LetterWhoTypeCell.xib in Resources */,
 				D37AAB53272ECE2F003A1308 /* UpdateProfile.storyboard in Resources */,
 				D30E6F412733ECE900FBE5AF /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CF0A6627AFC5010095AAE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CF0A7427AFC75E0095AAE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,7 +1406,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3CF0A6427AFC5010095AAE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3CF0A7127AFC5EC0095AAE3 /* TimeLineController.swift in Sources */,
+				D3CF0A6B27AFC5010095AAE3 /* OkimochiAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CF0A7227AFC75E0095AAE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3CF0A7927AFC75E0095AAE3 /* OkimochiAppUITests.swift in Sources */,
+				D3CF0A7B27AFC75E0095AAE3 /* OkimochiAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3CF0A6D27AFC5010095AAE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3810205272CF2CA003C7850 /* OkimochiApp */;
+			targetProxy = D3CF0A6C27AFC5010095AAE3 /* PBXContainerItemProxy */;
+		};
+		D3CF0A7D27AFC75E0095AAE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3810205272CF2CA003C7850 /* OkimochiApp */;
+			targetProxy = D3CF0A7C27AFC75E0095AAE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D381020F272CF2CA003C7850 /* Auth.storyboard */ = {
@@ -1481,6 +1633,80 @@
 			};
 			name = Release;
 		};
+		D3CF0A6E27AFC5010095AAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSUSGUW6L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.OkimochiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OkimochiApp.app/OkimochiApp";
+			};
+			name = Debug;
+		};
+		D3CF0A6F27AFC5010095AAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSUSGUW6L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.OkimochiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OkimochiApp.app/OkimochiApp";
+			};
+			name = Release;
+		};
+		D3CF0A7F27AFC75E0095AAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSUSGUW6L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.OkimochiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OkimochiApp;
+			};
+			name = Debug;
+		};
+		D3CF0A8027AFC75E0095AAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSUSGUW6L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.OkimochiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OkimochiApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1498,6 +1724,24 @@
 			buildConfigurations = (
 				D381021B272CF2CB003C7850 /* Debug */,
 				D381021C272CF2CB003C7850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3CF0A7027AFC5010095AAE3 /* Build configuration list for PBXNativeTarget "OkimochiAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CF0A6E27AFC5010095AAE3 /* Debug */,
+				D3CF0A6F27AFC5010095AAE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3CF0A7E27AFC75E0095AAE3 /* Build configuration list for PBXNativeTarget "OkimochiAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3CF0A7F27AFC75E0095AAE3 /* Debug */,
+				D3CF0A8027AFC75E0095AAE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

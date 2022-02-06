@@ -15,9 +15,9 @@ final class SearchFriendsController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        presentar?.viewDidLoad()
         setupSearchController()
         setupTableView()
-        setupUserData()
     }
     // MARK: - SetupMethod
     private func setupSearchController() {
@@ -34,12 +34,7 @@ final class SearchFriendsController: UIViewController {
         tableView.register(FriendCell.nib(), forCellReuseIdentifier: FriendCell.id)
         tableView.rowHeight = 80
     }
-    private func setupUserData() {
-        //        UserService.fetchUsers { users in
-        //            self.users = users
-        //            self.tableView.reloadData()
-        //        }
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriedDetailController" {
             let controller = segue.destination as! FriendDetailController
@@ -50,6 +45,7 @@ final class SearchFriendsController: UIViewController {
 }
 // MARK: - UISearchResultsUpdating
 extension SearchFriendsController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         print(#function)
         guard let text = searchController.searchBar.text else { return }
