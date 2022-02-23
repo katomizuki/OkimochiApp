@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import UIKit
 import RxSwift
 final class TimeLinePresentar: TimeLinePresentable {
 
@@ -47,8 +46,8 @@ final class TimeLinePresentar: TimeLinePresentable {
             router.transitionLogin()
         }
     }
-    func segue(segue: UIStoryboardSegue) {
-        router.setupDI(segue: segue)
+    func segue() {
+        router.transitionOpenLetter()
     }
 
 }

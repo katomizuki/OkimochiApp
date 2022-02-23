@@ -10,5 +10,5 @@ import UIKit
 protocol TimeLineWireframe {
     func transitionLetterDetail()
     func transitionLogin()
-    func setupDI(segue: UIStoryboardSegue)
+    func transitionOpenLetter()
 }

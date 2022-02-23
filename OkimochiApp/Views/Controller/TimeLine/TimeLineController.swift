@@ -65,7 +65,7 @@ class TimeLineController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(#function)
         if segue.identifier == OpenLetterController.id {
-            presentar?.segue(segue: segue)
+            presentar?.segue()
         }
     }
 }

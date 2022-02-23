@@ -24,8 +24,8 @@ struct User: Codable {
 struct UserEntity: Codable {
     let success: Bool
     let saves: Letter
-    
-    struct Letter:Codable {
+
+    struct Letter: Codable {
         let id: Int
         let okimochiId: Int
         let userId: Int
@@ -41,7 +41,7 @@ struct UserEntity: Codable {
             case updatedAt = "updated_at"
             case okimochi
         }
-        
+
         struct Okimochi: Codable {
             let id: Int
             let who: String
@@ -55,8 +55,8 @@ struct UserEntity: Codable {
             let openPlaceLatitude: Double
             let openPlaceLongitude: Double
             let isPublic: Bool
-            
-            private enum CodingKeys: String ,CodingKey {
+
+            private enum CodingKeys: String, CodingKey {
                 case id
                 case who
                 case title

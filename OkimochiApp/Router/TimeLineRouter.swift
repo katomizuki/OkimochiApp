@@ -31,8 +31,9 @@ final class TimeLineRouter: TimeLineWireframe {
     func transitionLetterDetail() {
         view.performSegue(withIdentifier: OpenLetterController.id, sender: nil)
     }
-    func setupDI(segue: UIStoryboardSegue) {
-        let controller = segue.destination as! OpenLetterController
+    func transitionOpenLetter() {
+        let storyboard = UIStoryboard(name: "MainTab", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: OpenLetterController.id) as! OpenLetterController
         let router = OpenLetterRouter(view: controller)
         let interactor = OpenLetterInteractor()
         let presentar = OpenLetterPresentar(DI: OpenLetterPresentar.DI(view: controller, router: router, interactor: interactor))

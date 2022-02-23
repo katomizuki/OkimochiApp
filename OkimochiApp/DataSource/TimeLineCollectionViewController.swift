@@ -17,7 +17,7 @@ class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource, UI
         self.viewData = viewData
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewData?.numberOfCell ?? 0
+        return viewData?.numberOfCell ?? 4
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath)
