@@ -15,7 +15,8 @@ class APIClient {
 
     func request<T: APITargetType>(_ request: T) ->Single<T.Response> {
         return Single.create { observer->Disposable in
-            let url = request.path
+            let url = request.baseURL.absoluteString + request.path
+            print(request.baseURL, request.path)
             AF.request(url, method: request.method, parameters: request.para, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in
                 switch response.result {
                 case .success:

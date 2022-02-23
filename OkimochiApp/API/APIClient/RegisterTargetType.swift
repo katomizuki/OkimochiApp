@@ -27,7 +27,7 @@ extension RegisterTargetType: TargetType {
     var path: String {
         switch self {
         case .register:
-            return "okimochi/api/register"
+            return "/okimochi/api/register"
         }
     }
 
