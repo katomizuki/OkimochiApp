@@ -28,15 +28,15 @@ final class UserProfileInteractor: UserProfileUseCase {
         }
     }
 
-    func fetchMyLetter(token: String) -> Single<UserLetterViewData> {
-        return Single.create { observer -> Disposable in
-            self.postService.fetchMyPost(token: token).subscribe { result in
-                observer(.success(result.convertToViewData()))
-            } onFailure: { error in
-                observer(.failure(error))
-            }
-        }
-    }
+    //    func fetchMyLetter(token: String) -> Single<UserLetterViewData> {
+    //        return Single.create { observer -> Disposable in
+    //            self.postService.fetchMyPost(token: token).subscribe { result in
+    //                observer(.success(result.convertToViewData()))
+    //            } onFailure: { error in
+    //                observer(.failure(error))
+    //            }
+    //        }
+    //    }
 
     func fetchMyFriends(token: String) -> Single<UserFriendsViewData> {
         return Single.create { observer -> Disposable in

@@ -33,7 +33,7 @@ extension UserTargetType: TargetType {
     var path: String {
         switch self {
         case .getUser:
-            return "/okimochi/api/get_user"
+            return "/okimochi/api/mypage"
         case .updateUser:
             return "/okimochi/api/update_user"
         }
@@ -41,7 +41,7 @@ extension UserTargetType: TargetType {
     }
 
     var method: Method {
-        return .get
+        return .post
     }
 
     var task: Task {

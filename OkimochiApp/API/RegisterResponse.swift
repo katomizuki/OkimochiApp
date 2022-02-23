@@ -1,7 +1,6 @@
 import Foundation
 
 struct RegisterResponse: Codable {
-    let success: Bool
     let message: String
     let data: UserInfo
     let token: String

@@ -42,7 +42,7 @@ extension FriendsTargetType: TargetType {
     }
 
     var method: Method {
-        .get
+        .post
     }
 
     var task: Task {

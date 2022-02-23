@@ -39,13 +39,13 @@ final class UserProfilePresentar: UserProfilePresentable {
                 self?.view.showError()
             }.disposed(by: disposeBag)
 
-        interactor.fetchMyLetter(token: token)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] viewData in
-                self?.view.setLetterViewData(viewData)
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
+        //        interactor.fetchMyLetter(token: token)
+        //            .observe(on: MainScheduler.instance)
+        //            .subscribe { [weak self] viewData in
+        //                self?.view.setLetterViewData(viewData)
+        //            } onFailure: { [weak self] _ in
+        //                self?.view.showError()
+        //            }.disposed(by: disposeBag)
 
         interactor.fetchMyFriends(token: token)
             .observe(on: MainScheduler.instance)

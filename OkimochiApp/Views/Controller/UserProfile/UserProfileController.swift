@@ -11,7 +11,7 @@ final class UserProfileController: UIViewController {
             profileCollectionView.reloadData()
         }
     }
-    @IBOutlet weak var profileCollectionView: UICollectionView!
+    @IBOutlet private weak var profileCollectionView: UICollectionView!
     private let collectionViewManager = UserProfileCollectionViewManager()
     override func viewDidLoad() {
         super.viewDidLoad()
