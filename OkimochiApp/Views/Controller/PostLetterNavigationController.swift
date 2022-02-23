@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class PostLetterNavigationController: UINavigationController {
+final class PostLetterNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

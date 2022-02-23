@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class UserNavigationController: UINavigationController {
+final class UserNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

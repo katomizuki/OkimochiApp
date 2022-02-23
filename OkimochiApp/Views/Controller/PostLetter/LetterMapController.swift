@@ -47,7 +47,6 @@ extension LetterMapController: UISearchResultsUpdating {
         GooglePlacesManager.shared.findPlaces(query: query) { results in
             switch results {
             case .success(let places):
-                print(places)
                 DispatchQueue.main.async {
                     resultVC.update(with: places)
                 }

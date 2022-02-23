@@ -1,6 +1,6 @@
 import UIKit
 
-class LetterWhoTypeCell: UITableViewCell {
+final class LetterWhoTypeCell: UITableViewCell {
     static let id = "LetterWhoTypeCell"
     var whoType: SendWhoType! {
         didSet {

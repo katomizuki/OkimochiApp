@@ -16,7 +16,7 @@ struct AuthService: AuthServiceProtocol {
         return APIClient.shared.request(LoginTargetType.login(parameter: parameters))
     }
 
-    func register(credential: Credential)->Single<RegisterResponse> {
+    func register(credential: Credential) -> Single<RegisterResponse> {
         let parameters: [String: Any] = ["name": credential.name,
                                          "email": credential.email,
                                          "password": credential.password]

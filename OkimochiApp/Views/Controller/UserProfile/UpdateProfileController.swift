@@ -1,7 +1,7 @@
 import UIKit
 
 final class UpdateProfileController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     var user: User? {
         didSet {
             guard let user = user else { return }
@@ -20,10 +20,10 @@ final class UpdateProfileController: UIViewController {
         tableView.dataSource = dataSource
         tableView.register(UpdateProfileTableCell.nib(), forCellReuseIdentifier: UpdateProfileTableCell.id)
     }
-    @IBAction func didTapDismissButton(_ sender: Any) {
+    @IBAction private func didTapDismissButton(_ sender: Any) {
         presentar?.onTapDismissButton()
     }
-    @IBAction func didTapSaveButton(_ sender: Any) {
+    @IBAction private func didTapSaveButton(_ sender: Any) {
         print(#function)
         presentar?.onTapSaveButton(user: User(dic: [:]))
     }

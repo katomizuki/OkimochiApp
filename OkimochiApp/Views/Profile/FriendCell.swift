@@ -1,6 +1,6 @@
 import UIKit
 import SDWebImage
-class FriendCell: UITableViewCell {
+final class FriendCell: UITableViewCell {
 
     @IBOutlet weak var friendNameLabel: UILabel!
     @IBOutlet weak var frinedImageView: UIImageView! {

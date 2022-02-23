@@ -2,9 +2,9 @@ import UIKit
 import SDWebImage
 final class FriendDetailController: UIViewController {
     static let id = String(describing: FriendDetailController.self)
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var friendImageView: UIImageView! {
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var commentLabel: UILabel!
+    @IBOutlet private weak var friendImageView: UIImageView! {
         didSet {
             friendImageView.layer.cornerRadius = 75
             friendImageView.layer.masksToBounds = true

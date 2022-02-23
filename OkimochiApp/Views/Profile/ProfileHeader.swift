@@ -5,7 +5,7 @@ protocol ProfileHeaderDelegate: AnyObject {
     func didTapUpdateButton()
     func didTapProfileOptionsButton(_ selectOptions: ProfileFilterOptions)
 }
-class ProfileHeader: UICollectionReusableView {
+final class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     static let id = String(describing: self)
     weak var delegate: ProfileHeaderDelegate?

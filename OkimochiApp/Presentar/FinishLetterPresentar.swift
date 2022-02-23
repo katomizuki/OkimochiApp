@@ -23,14 +23,20 @@ final class FinishLetterPresentar: FinishLetterPresentable {
         self.interactor = DI.interactor
         self.router = DI.router
     }
+
     func onTapFinishButton() {
+        router.transitionRoot()
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.postLetter(dic: ["": ""], token: token).subscribe {
-            self.view.showSuccess()
+        interactor.postLetter(dic: ["": ""], token: token).subscribe { [weak self] in
+            self?.view.showSuccess()
+            self?.toRoot()
         } onError: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
 
-        router.transitionRoot()
+    }
+
+    private func toRoot() {
+
     }
 }

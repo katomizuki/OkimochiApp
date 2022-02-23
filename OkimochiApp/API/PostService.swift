@@ -1,6 +1,7 @@
 import Alamofire
 import Moya
 import RxSwift
+
 protocol PostServiceProtocol {
     func fetchMyPost(token: String)->Single<MyLetterResult>
     func getLetters(token: String)->Single<[Letter]>

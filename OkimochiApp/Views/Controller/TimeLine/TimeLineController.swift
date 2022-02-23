@@ -18,7 +18,7 @@ class TimeLineController: UIViewController {
         super.viewDidLoad()
         setupMapView()
         setupCollectionView()
-        //        checkLogin()
+        checkLogin()
         checkLocationAndAddPin()
     }
     private func setupMapView() {

@@ -1,6 +1,6 @@
 import UIKit
 
-class ProfileCell: UICollectionViewCell {
+final class ProfileCell: UICollectionViewCell {
     static let id = String(describing: self)
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var friendImageView: UIImageView! {
@@ -32,7 +32,6 @@ class ProfileCell: UICollectionViewCell {
             print("fav")
         case .past:
             print("past")
-
         case .info:
             print("info")
             timeLabel.isHidden = true

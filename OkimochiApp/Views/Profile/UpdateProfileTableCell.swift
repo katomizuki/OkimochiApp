@@ -1,6 +1,6 @@
 import UIKit
 
-class UpdateProfileTableCell: UITableViewCell {
+final class UpdateProfileTableCell: UITableViewCell {
     static let id = String(describing: self)
     var viewData: UpdateProfileViewData? {
         didSet {
