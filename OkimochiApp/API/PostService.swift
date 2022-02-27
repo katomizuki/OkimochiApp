@@ -9,7 +9,7 @@ protocol PostServiceProtocol {
     func deleteLetter(id: String, token: String) -> Completable
     func deleteSavedLetter(id: String, token: String) -> Completable
     func postLetter(dic: [String: Any], token: String) -> Completable
-    func updateLetter(id: String, letter: Letter, token: String) -> Completable
+    func updateLetter(id: String, token: String, parameter: [String: Any]) -> Completable
 }
 struct PostService: PostServiceProtocol {
 
@@ -36,17 +36,7 @@ struct PostService: PostServiceProtocol {
     func postLetter(dic: [String: Any], token: String) -> Completable {
         APIClient.shared.requestCompletable(LetterTargetType.post(dic: dic, token: token))
     }
-    func updateLetter(id: String, letter: Letter, token: String) -> Completable {
-        let parameter: [String: Any] = ["who": letter.who,
-                                        "title": letter.title,
-                                        "message": letter.text,
-                                        "pic_name": letter.imageUrl,
-                                        "open_time": letter.openTime,
-                                        "open_place_name": letter.openPlaceName,
-                                        "open_place_latitude": letter.latitude,
-                                        "open_place_longitude": letter.longitude,
-                                        "public": "0",
-                                        "token": token]
+    func updateLetter(id: String, token: String, parameter: [String: Any]) -> Completable {
         return APIClient.shared.requestCompletable(LetterTargetType.update(id: id, token: token, dic: parameter))
     }
 

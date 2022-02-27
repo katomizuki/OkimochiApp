@@ -4,6 +4,7 @@ final class FriendDetailController: UIViewController {
     static let id = String(describing: FriendDetailController.self)
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var commentLabel: UILabel!
+    var presentar: FriendDetailPresentable?
     @IBOutlet private weak var friendImageView: UIImageView! {
         didSet {
             friendImageView.layer.cornerRadius = 75
@@ -11,6 +12,7 @@ final class FriendDetailController: UIViewController {
         }
     }
     var user: User?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -23,6 +25,7 @@ final class FriendDetailController: UIViewController {
     @IBAction func didTapPlusFrinedButton(_ sender: Any) {
         print(#function)
     }
+
     private func setupUI() {
         nameLabel.text = user?.name
         friendImageView.sd_setImage(with: user?.profileUrl, completed: nil)

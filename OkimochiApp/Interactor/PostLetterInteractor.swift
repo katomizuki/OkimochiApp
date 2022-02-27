@@ -14,4 +14,8 @@ final class PostLetterInteractor: PostLetterUseCase {
         self.service = service
     }
 
+    func postLetter(token: String, dic: [String: Any]) -> Completable {
+        self.service.postLetter(dic: dic, token: token)
+    }
+
 }

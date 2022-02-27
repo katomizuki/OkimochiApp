@@ -20,9 +20,11 @@ final class UpdateProfileController: UIViewController {
         tableView.dataSource = dataSource
         tableView.register(UpdateProfileTableCell.nib(), forCellReuseIdentifier: UpdateProfileTableCell.id)
     }
+
     @IBAction private func didTapDismissButton(_ sender: Any) {
         presentar?.onTapDismissButton()
     }
+
     @IBAction private func didTapSaveButton(_ sender: Any) {
         print(#function)
         presentar?.onTapSaveButton(user: User(dic: [:]))

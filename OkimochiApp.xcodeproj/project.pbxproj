@@ -23,6 +23,7 @@
 		D30E6F492734031B00FBE5AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F482734031B00FBE5AF /* UserService.swift */; };
 		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */; };
 		D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */; };
+		D3128F1927CB0EDF00F57996 /* FriendDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F1827CB0EDF00F57996 /* FriendDetailRouter.swift */; };
 		D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */; };
 		D312C1E5274129FF00DF7E83 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E4274129FF00DF7E83 /* Place.swift */; };
 		D312C1E727412A9000DF7E83 /* PlaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E627412A9000DF7E83 /* PlaceError.swift */; };
@@ -251,6 +252,7 @@
 		D30E6F482734031B00FBE5AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewData.swift; sourceTree = "<group>"; };
 		D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendCellViewModel.swift; sourceTree = "<group>"; };
+		D3128F1827CB0EDF00F57996 /* FriendDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailRouter.swift; sourceTree = "<group>"; };
 		D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceManager.swift; sourceTree = "<group>"; };
 		D312C1E4274129FF00DF7E83 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		D312C1E627412A9000DF7E83 /* PlaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceError.swift; sourceTree = "<group>"; };
@@ -774,6 +776,7 @@
 				D31516A7276D6CB90061C488 /* LetterFriendRouter.swift */,
 				D31516B5276D712E0061C488 /* FinishLetterRouter.swift */,
 				D31516C3276D8D1D0061C488 /* OpenLetterRouter.swift */,
+				D3128F1827CB0EDF00F57996 /* FriendDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1358,6 +1361,7 @@
 				D31516BC276D71FB0061C488 /* FinishLetterViewable.swift in Sources */,
 				D30E6EC727322A1F00FBE5AF /* LetterFriendController.swift in Sources */,
 				D31515EC276B69C50061C488 /* LetterDetailPresentar.swift in Sources */,
+				D3128F1927CB0EDF00F57996 /* FriendDetailRouter.swift in Sources */,
 				D312C1E5274129FF00DF7E83 /* Place.swift in Sources */,
 				D3151668276CB91C0061C488 /* PostLetterViewable.swift in Sources */,
 				D3151634276B6EE20061C488 /* TimeLineInteractor.swift in Sources */,

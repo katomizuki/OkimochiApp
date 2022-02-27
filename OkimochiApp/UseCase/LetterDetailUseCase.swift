@@ -8,5 +8,6 @@
 import RxSwift
 
 protocol LetterDetailUseCase {
-    func fetchLetterDetail()->Single<User>
+    func fetchLetterDetail() -> Single<User>
+    func updateLetterDetail(token: String, dic: [String: Any]) -> Completable
 }

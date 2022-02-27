@@ -17,4 +17,8 @@ final class LetterDetailInteractor: LetterDetailUseCase {
             return Disposables.create()
         }
     }
+
+    func updateLetterDetail(token: String, dic: [String: Any]) -> Completable {
+        self.service.updateLetter(id: "", token: token, parameter: dic)
+    }
 }

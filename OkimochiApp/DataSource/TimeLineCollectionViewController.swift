@@ -30,4 +30,19 @@ class TimeLineCollectionViewController: NSObject, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 80, height: 60)
     }
+
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
+            let open = UIAction(title: "Open", image: UIImage(systemName: "link"), identifier: nil, discoverabilityTitle: nil, attributes: .disabled, state: .off) { _ in
+                self.delegate?.tapCell()
+                print("sss")
+            }
+            return UIMenu(title: "アイウエオ",
+                          image: nil,
+                          identifier: nil,
+                          options: UIMenu.Options.displayInline,
+                          children: [open])
+        }
+        return config
+    }
 }

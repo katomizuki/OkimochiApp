@@ -27,7 +27,8 @@ final class FinishLetterPresentar: FinishLetterPresentable {
     func onTapFinishButton() {
         router.transitionRoot()
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.postLetter(dic: ["": ""], token: token).subscribe { [weak self] in
+        let dic = self.makeDic()
+        interactor.postLetter(dic: dic, token: token).subscribe { [weak self] in
             self?.view.showSuccess()
             self?.toRoot()
         } onError: { [weak self] _ in
@@ -38,5 +39,9 @@ final class FinishLetterPresentar: FinishLetterPresentable {
 
     private func toRoot() {
 
+    }
+
+    private func makeDic() -> [String: Any] {
+        return ["": ""]
     }
 }

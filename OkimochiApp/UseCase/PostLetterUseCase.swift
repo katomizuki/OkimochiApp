@@ -6,5 +6,5 @@
 //
 import RxSwift
 protocol PostLetterUseCase {
-
+    func postLetter(token: String, dic: [String: Any]) -> Completable
 }

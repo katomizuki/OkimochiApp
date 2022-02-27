@@ -58,6 +58,7 @@ extension UserProfileController: UserProfileCollectionViewManagerDelegate {
     }
 }
 extension UserProfileController: UserProfileViewable {
+
     func setViewData(_ viewData: ProfileHeaderViewData) {
         collectionViewManager.initViewData(viewData)
     }
@@ -72,6 +73,7 @@ extension UserProfileController: UserProfileViewable {
     func reload() {
         profileCollectionView.reloadData()
     }
+
     func setFriendViewData(_ viewData: UserFriendsViewData) {
         collectionViewManager.initFriendsViewData(viewData)
     }

@@ -37,6 +37,9 @@ final class UserProfileRouter: UserProfileWireframe {
     func transitionLetterDetail() {
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: LetterDetailController.id) as! LetterDetailController
+        let interactor = LetterDetailInteractor(service: PostService())
+        let router = LetterDetailRouter(view: controller)
+        controller.presentar = LetterDetailPresentar(DI: LetterDetailPresentar.DI(router: router, interactor: interactor, view: controller))
         view.navigationController?.pushViewController(controller, animated: true)
     }
 }
