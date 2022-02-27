@@ -24,8 +24,8 @@ final class LetterFriendPresentar: LetterFriendPresentable {
     }
     func viewDidLoad() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        self.interactor.fetchFriends(uid: "", token: token).subscribe { [weak self] viewData in
-            self?.view.setFriends(viewData)
+        self.interactor.fetchFriends(uid: "", token: token).subscribe { [weak self] _ in
+            //            self?.view.setFriends(viewData)
         } onFailure: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)

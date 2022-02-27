@@ -7,4 +7,5 @@
 
 protocol RegisterViewable: Transitioner {
     func showError()
+    func completedRegister()
 }

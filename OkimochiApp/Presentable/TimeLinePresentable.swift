@@ -13,4 +13,5 @@ protocol TimeLinePresentable {
     func onTapLetter()
     func notToken()
     func segue()
+    func onTapBlockButton()
 }

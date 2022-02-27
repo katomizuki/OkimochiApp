@@ -58,7 +58,8 @@ extension SearchFriendsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
         selectedIndex = indexPath.row
-        performSegue(withIdentifier: "FriedDetailController", sender: nil)
+        presentar?.onTapCell()
+
     }
 }
 // MARK: - UITableViewDataSource

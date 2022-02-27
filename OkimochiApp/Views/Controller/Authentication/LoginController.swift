@@ -59,6 +59,10 @@ extension LoginController: UITextFieldDelegate {
     }
 }
 extension LoginController: LoginViewable {
+    func completedLogin() {
+        // ログイン完了処理
+    }
+
     func showError() {
         // エラーをここで出す。
     }

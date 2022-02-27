@@ -17,13 +17,12 @@ final class FriendDetailController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    @IBAction func didTapDismissButton(_ sender: Any) {
-        print(#function)
-        dismiss(animated: true, completion: nil)
+    @IBAction private func didTapDismissButton(_ sender: Any) {
+        presentar?.onTapDismissButton()
     }
 
-    @IBAction func didTapPlusFrinedButton(_ sender: Any) {
-        print(#function)
+    @IBAction private func didTapPlusFrinedButton(_ sender: Any) {
+        presentar?.onApplyFriendButton()
     }
 
     private func setupUI() {
@@ -33,8 +32,12 @@ final class FriendDetailController: UIViewController {
 
 }
 extension FriendDetailController: FriendsDetailViewable {
-    func showError() {
+    func setFriendViewData(_ viewData: FreindDetailViewData) {
+        // ViewDataでUI更新処理
+    }
 
+    func showError() {
+        //　エラー処理
     }
 
 }

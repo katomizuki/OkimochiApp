@@ -98,4 +98,8 @@ extension RegisterController: RegisterViewable {
     func showError() {
         // エラー処理
     }
+
+    func completedRegister() {
+        // ログイン完了処理
+    }
 }

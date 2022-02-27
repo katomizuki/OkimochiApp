@@ -6,5 +6,5 @@
 //
 
 protocol FriendsDetailWireframe: AnyObject {
-
+    func transitionDismiss()
 }

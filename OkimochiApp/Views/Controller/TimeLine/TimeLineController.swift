@@ -72,7 +72,6 @@ class TimeLineController: UIViewController {
 // MARK: - CollectionViewDelegate
 extension TimeLineController: TimeLineDataSourceDelegate {
     func tapCell() {
-
         presentar?.onTapLetter()
     }
 }

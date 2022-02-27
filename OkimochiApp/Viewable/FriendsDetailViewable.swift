@@ -7,4 +7,5 @@
 
 protocol FriendsDetailViewable: Transitioner {
     func showError()
+    func setFriendViewData(_ viewData: FreindDetailViewData)
 }

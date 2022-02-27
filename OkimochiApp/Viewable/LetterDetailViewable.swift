@@ -6,5 +6,7 @@
 //
 
 protocol LetterDetailViewable: Transitioner {
-
+    func showError()
+    func completeUpdate()
+    func setLetterViewData(_ viewData: LetterDetailViewData)
 }

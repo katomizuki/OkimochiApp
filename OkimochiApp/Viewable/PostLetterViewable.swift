@@ -6,4 +6,5 @@
 //
 protocol PostLetterViewable: Transitioner {
     func showError()
+    func completedPostLetter()
 }

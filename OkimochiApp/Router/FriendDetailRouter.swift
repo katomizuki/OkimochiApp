@@ -12,4 +12,8 @@ final class FriendDetailRouter: FriendsDetailWireframe {
     init(view: FriendsDetailViewable) {
         self.view = view
     }
+
+    func transitionDismiss() {
+        view.dismiss(animated: true, completion: nil)
+    }
 }

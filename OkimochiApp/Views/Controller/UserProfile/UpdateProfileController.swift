@@ -26,7 +26,6 @@ final class UpdateProfileController: UIViewController {
     }
 
     @IBAction private func didTapSaveButton(_ sender: Any) {
-        print(#function)
         presentar?.onTapSaveButton(user: User(dic: [:]))
     }
 }
@@ -50,11 +49,12 @@ extension UpdateProfileController: UITableViewDelegate {
 }
 extension UpdateProfileController: UpdateProfileViewable {
     func showError() {
-
+        // エラー処理
     }
     func updateUserInfo() {
-
+        // 更新したユーザー情報が入る
     }
     func setViewData(_ viewData: UserViewData) {
+        // 最初取ってくる。
     }
 }

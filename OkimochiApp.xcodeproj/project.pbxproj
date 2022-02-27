@@ -24,6 +24,10 @@
 		D30E6F4B273409D200FBE5AF /* ProfileHeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */; };
 		D30E6F532734BA2D00FBE5AF /* SearchFriendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */; };
 		D3128F1927CB0EDF00F57996 /* FriendDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F1827CB0EDF00F57996 /* FriendDetailRouter.swift */; };
+		D3128F1B27CB1E2100F57996 /* LetterDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F1A27CB1E2100F57996 /* LetterDetailViewData.swift */; };
+		D3128F1D27CB1E7E00F57996 /* OpenLetterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F1C27CB1E7E00F57996 /* OpenLetterViewData.swift */; };
+		D3128F1F27CB1EB400F57996 /* FriendDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F1E27CB1EB400F57996 /* FriendDetailViewData.swift */; };
+		D3128F2127CB1F7B00F57996 /* LetterFriendsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3128F2027CB1F7B00F57996 /* LetterFriendsViewData.swift */; };
 		D312C1E32741282700DF7E83 /* GooglePlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */; };
 		D312C1E5274129FF00DF7E83 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E4274129FF00DF7E83 /* Place.swift */; };
 		D312C1E727412A9000DF7E83 /* PlaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312C1E627412A9000DF7E83 /* PlaceError.swift */; };
@@ -253,6 +257,10 @@
 		D30E6F4A273409D200FBE5AF /* ProfileHeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewData.swift; sourceTree = "<group>"; };
 		D30E6F522734BA2D00FBE5AF /* SearchFriendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendCellViewModel.swift; sourceTree = "<group>"; };
 		D3128F1827CB0EDF00F57996 /* FriendDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailRouter.swift; sourceTree = "<group>"; };
+		D3128F1A27CB1E2100F57996 /* LetterDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDetailViewData.swift; sourceTree = "<group>"; };
+		D3128F1C27CB1E7E00F57996 /* OpenLetterViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLetterViewData.swift; sourceTree = "<group>"; };
+		D3128F1E27CB1EB400F57996 /* FriendDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewData.swift; sourceTree = "<group>"; };
+		D3128F2027CB1F7B00F57996 /* LetterFriendsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterFriendsViewData.swift; sourceTree = "<group>"; };
 		D312C1E22741282700DF7E83 /* GooglePlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceManager.swift; sourceTree = "<group>"; };
 		D312C1E4274129FF00DF7E83 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		D312C1E627412A9000DF7E83 /* PlaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceError.swift; sourceTree = "<group>"; };
@@ -632,6 +640,10 @@
 				D3F2154427A01EF4009897CE /* UserLetterViewData.swift */,
 				D35D5B0B27A178AE0041D2E1 /* UserFriendsViewData.swift */,
 				D370503B27AD4CD500373225 /* UserViewData.swift */,
+				D3128F1A27CB1E2100F57996 /* LetterDetailViewData.swift */,
+				D3128F1C27CB1E7E00F57996 /* OpenLetterViewData.swift */,
+				D3128F1E27CB1EB400F57996 /* FriendDetailViewData.swift */,
+				D3128F2027CB1F7B00F57996 /* LetterFriendsViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -1266,6 +1278,7 @@
 				D375CC1A27316B7F0030CA79 /* FriendDetailController.swift in Sources */,
 				D370503C27AD4CD500373225 /* UserViewData.swift in Sources */,
 				D31516C0276D72380061C488 /* FinishLetterUseCase.swift in Sources */,
+				D3128F1D27CB1E7E00F57996 /* OpenLetterViewData.swift in Sources */,
 				D3151600276B6B640061C488 /* SearchFriendsViewable.swift in Sources */,
 				D315166A276CB92C0061C488 /* PostLetterPresentable.swift in Sources */,
 				D3151678276CC1360061C488 /* MaiinTabBarController.swift in Sources */,
@@ -1286,6 +1299,7 @@
 				D312C2B22744F2C500DF7E83 /* FinishLetterController.swift in Sources */,
 				D31515F0276B69DF0061C488 /* FriendDetailPresentar.swift in Sources */,
 				D3151670276CB9E80061C488 /* PostLetterInteractor.swift in Sources */,
+				D3128F1F27CB1EB400F57996 /* FriendDetailViewData.swift in Sources */,
 				D31515EE276B69D30061C488 /* SearchFriendPresentar.swift in Sources */,
 				D3151612276B6C450061C488 /* TimeLinePresentable.swift in Sources */,
 				D3151688276D64700061C488 /* LetterContentWireframe.swift in Sources */,
@@ -1352,6 +1366,7 @@
 				D3074C942753ACB400A84358 /* PostService.swift in Sources */,
 				D370504027AD4DA100373225 /* ProfileFilterOptions.swift in Sources */,
 				D31516B8276D714F0061C488 /* FinishLetterPresentar.swift in Sources */,
+				D3128F2127CB1F7B00F57996 /* LetterFriendsViewData.swift in Sources */,
 				D35C88C32796E1350020CF8D /* APIClient.swift in Sources */,
 				D315168C276D69200061C488 /* LetterMapRouter.swift in Sources */,
 				D35D5B1027A17E9F0041D2E1 /* RequestFriendTargetType.swift in Sources */,
@@ -1385,6 +1400,7 @@
 				D3151653276B71D40061C488 /* TimeLineWireframe.swift in Sources */,
 				D3B5F069272E876A006F6881 /* ProfileViewData.swift in Sources */,
 				D375CB83272FD91A0030CA79 /* UpdateProfileTableCell.swift in Sources */,
+				D3128F1B27CB1E2100F57996 /* LetterDetailViewData.swift in Sources */,
 				D31516CA276D8E5C0061C488 /* OpenLetterPresentable.swift in Sources */,
 				D3151632276B6ECF0061C488 /* SearchFriendsInteractor.swift in Sources */,
 				D3810242272D1991003C7850 /* User.swift.swift in Sources */,

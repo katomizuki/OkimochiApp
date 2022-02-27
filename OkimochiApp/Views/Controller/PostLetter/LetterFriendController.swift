@@ -51,8 +51,8 @@ extension LetterFriendController: UITableViewDataSource {
     }
 }
 extension LetterFriendController: LetterFriendViewable {
-    func setFriends(_ viewData: UserFriendsViewData) {
-
+    func setFriends(_ viewData: LetterFriendsViewData) {
+        // Viewdataによる更新。
     }
 
     func showError() {

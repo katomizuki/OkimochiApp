@@ -6,6 +6,7 @@
 //
 
 final class OpenLetterPresentar: OpenLetterPresentable {
+
     struct DI {
         var view: OpenLetterViewable
         var router: OpenLetterWireframe
@@ -18,5 +19,13 @@ final class OpenLetterPresentar: OpenLetterPresentable {
         self.view = DI.view
         self.router = DI.router
         self.interactor = DI.interactor
+    }
+
+    func onTapBlockButton() {
+
+    }
+
+    func viewDidLoad() {
+
     }
 }

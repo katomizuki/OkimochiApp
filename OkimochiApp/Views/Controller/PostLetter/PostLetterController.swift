@@ -32,7 +32,11 @@ final class PostLetterController: UIViewController {
     }
 }
 extension PostLetterController: PostLetterViewable {
-    func showError() {
+    func completedPostLetter() {
+        // 手紙投稿の完了
+    }
 
+    func showError() {
+        // エラー処理
     }
 }

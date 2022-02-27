@@ -10,4 +10,5 @@ protocol FriendDetailPresentable {
     func onApplyFriendButton()
     func onTapBlockButton()
     func rejectFriendButton()
+    func onTapDismissButton()
 }

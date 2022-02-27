@@ -30,14 +30,9 @@ final class FinishLetterPresentar: FinishLetterPresentable {
         let dic = self.makeDic()
         interactor.postLetter(dic: dic, token: token).subscribe { [weak self] in
             self?.view.showSuccess()
-            self?.toRoot()
         } onError: { [weak self] _ in
             self?.view.showError()
         }.disposed(by: disposeBag)
-
-    }
-
-    private func toRoot() {
 
     }
 

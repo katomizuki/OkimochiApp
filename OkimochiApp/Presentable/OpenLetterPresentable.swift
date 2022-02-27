@@ -6,5 +6,6 @@
 //
 
 protocol OpenLetterPresentable {
-
+    func onTapBlockButton()
+    func viewDidLoad()
 }

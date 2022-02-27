@@ -9,4 +9,5 @@ protocol LetterDetailPresentable {
     func viewDidLoad()
     func viewWillAppear()
     func onTapAddFavoriteButton()
+    func onTapBlockButton()
 }

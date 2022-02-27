@@ -31,4 +31,8 @@ final class LetterDetailPresentar: LetterDetailPresentable {
     func onTapAddFavoriteButton() {
 
     }
+
+    func onTapBlockButton() {
+
+    }
 }

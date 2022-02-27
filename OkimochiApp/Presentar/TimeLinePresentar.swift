@@ -50,4 +50,8 @@ final class TimeLinePresentar: TimeLinePresentable {
         router.transitionOpenLetter()
     }
 
+    func onTapBlockButton() {
+
+    }
+
 }
