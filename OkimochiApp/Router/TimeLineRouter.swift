@@ -14,7 +14,6 @@ final class TimeLineRouter: TimeLineWireframe {
         self.view = view
     }
     func transitionLogin() {
-        print(#function)
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: LoginController.id) as! LoginController
         let loginRouter = LoginRouter(view: controller)
