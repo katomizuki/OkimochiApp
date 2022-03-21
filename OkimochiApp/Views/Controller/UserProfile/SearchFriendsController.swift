@@ -59,7 +59,6 @@ extension SearchFriendsController: UITableViewDelegate {
         print(#function)
         selectedIndex = indexPath.row
         presentar?.onTapCell()
-
     }
 }
 // MARK: - UITableViewDataSource

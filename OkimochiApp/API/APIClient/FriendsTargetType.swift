@@ -50,9 +50,9 @@ extension FriendsTargetType: TargetType {
         case .getFriends(let token):
             return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
         case .requestFriend(let token, _):
-            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["token": token], encoding: JSONEncoding.default)
         case .rejectFriend(let token, _):
-            return .requestParameters(parameters: ["token": token], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["token": token], encoding: JSONEncoding.default)
         }
     }
 

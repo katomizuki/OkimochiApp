@@ -31,7 +31,7 @@ final class UpdateProfileController: UIViewController {
 }
 extension UpdateProfileController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(#function)
+        // セルをタップした時
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

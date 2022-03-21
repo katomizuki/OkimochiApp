@@ -12,6 +12,8 @@ import RxSwift
 class APIClient {
     static let shared = APIClient()
     typealias APITargetType = TargetType & APIResponse
+    
+    private init() { }
 
     func request<T: APITargetType>(_ request: T) ->Single<T.Response> {
         return Single.create { observer->Disposable in
