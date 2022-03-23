@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Foundation
 
 final class UserProfilePresentar: UserProfilePresentable {
 
@@ -30,22 +31,18 @@ final class UserProfilePresentar: UserProfilePresentable {
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
 
-        interactor.fetchUser(token: token)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] viewData in
+        _ = interactor.fetchUser(token: token)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { [weak self] completion in
+                switch completion {
+                case .finished:
+                    self?.view.reload()
+                case .failure:
+                    self?.view.showError()
+                }
+            }, receiveValue: { [weak self] viewData in
                 self?.view.setViewData(viewData)
-                self?.view.reload()
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
-
-        //        interactor.fetchMyLetter(token: token)
-        //            .observe(on: MainScheduler.instance)
-        //            .subscribe { [weak self] viewData in
-        //                self?.view.setLetterViewData(viewData)
-        //            } onFailure: { [weak self] _ in
-        //                self?.view.showError()
-        //            }.disposed(by: disposeBag)
+            })
 
         interactor.fetchMyFriends(token: token)
             .observe(on: MainScheduler.instance)

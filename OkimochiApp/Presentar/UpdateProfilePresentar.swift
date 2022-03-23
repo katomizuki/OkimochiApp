@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Foundation
 final class UpdateProfilePresentar: UpdateProfilePresentable {
 
     struct DI {
@@ -28,14 +29,19 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
 
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.getUser(token: token)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] viewData in
-                self?.view.setViewData(viewData)
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
 
+        _ = interactor.getUser(token: token)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure:
+                    self?.view.showError()
+                case .finished:
+                    print("finish")
+                }
+            } receiveValue: { [weak self] viewData in
+                self?.view.setViewData(viewData)
+            }
     }
 
     func onTapSaveButton(user: User) {

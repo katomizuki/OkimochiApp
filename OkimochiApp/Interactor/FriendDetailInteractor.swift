@@ -6,14 +6,14 @@
 //
 
 import RxSwift
-
+import Combine
 final class FriendDetailInteractor: FriendDetailUseCase {
 
     let service: UserServiceProtocol
     init(service: UserServiceProtocol) {
         self.service = service
     }
-    func getUserDetail(userId: String) -> Single<User> {
+    func getUserDetail(userId: String) -> Future<User, Error> {
         self.service.getUser(token: "")
     }
 

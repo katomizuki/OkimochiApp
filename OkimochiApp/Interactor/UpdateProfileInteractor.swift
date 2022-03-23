@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Combine
 final class UpdateProfileInteractor: UpdateProfileUserCase {
 
     let service: UserServiceProtocol
@@ -16,13 +17,18 @@ final class UpdateProfileInteractor: UpdateProfileUserCase {
     func updateUserProfile(user: User, token: String) -> Completable {
         self.service.updateUser(token: token)
     }
-    func getUser(token: String) -> Single<UserViewData> {
-        return Single.create { observer -> Disposable in
-            self.service.getUser(token: token).subscribe { user in
-                observer(.success(UserViewData(user: user)))
-            } onFailure: { error in
-                observer(.failure(error))
-            }
+    func getUser(token: String) -> Future<UserViewData, Error> {
+        return Future<UserViewData, Error> { promise in
+            self.service.getUser(token: token).sink(receiveCompletion: { completed in
+                switch completed {
+                case .failure(let error):
+                    promise(.failure(error))
+                case .finished:
+                    print("finish")
+                }
+            }, receiveValue: { user in
+                promise(.success(UserViewData(user: user)))
+            })
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Combine
 
 final class UserProfileInteractor: UserProfileUseCase {
 
@@ -17,14 +18,18 @@ final class UserProfileInteractor: UserProfileUseCase {
         self.postService = postService
     }
 
-    func fetchUser(token: String) -> Single<ProfileHeaderViewData> {
-        return Single.create { singleEvent->Disposable in
-            self.service.getUser(token: token).subscribe { user in
-                singleEvent(.success(ProfileHeaderViewData(user: user)))
-            } onFailure: {  error in
-                singleEvent(.failure(error))
-            }.disposed(by: self.disposeBag)
-            return Disposables.create()
+    func fetchUser(token: String) -> Future<ProfileHeaderViewData, Error> {
+        return Future<ProfileHeaderViewData, Error> { promise in
+            self.service.getUser(token: token).sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("finish")
+                case .failure(let error):
+                    promise(.failure(error))
+                }
+            }, receiveValue: { user in
+                promise(.success(ProfileHeaderViewData(user: user)))
+            })
         }
     }
 

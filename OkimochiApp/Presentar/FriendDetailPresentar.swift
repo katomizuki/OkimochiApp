@@ -34,13 +34,14 @@ final class FriendDetailPresentar: FriendDetailPresentable {
 
     }
     func viewDidLoad() {
-        self.interactor.getUserDetail(userId: "").subscribe { _ in
+        _ = self.interactor.getUserDetail(userId: "")
+            .sink(receiveCompletion: { [weak self] _ in
+                self?.view.showError()
+            }) { _ in
 
-        } onFailure: { [weak self] _ in
-            self?.view.showError()
-        }.disposed(by: disposeBag)
-
+            }
     }
+
     func onTapBlockButton() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         self.interactor.blockFriend(token: token, id: "").subscribe {

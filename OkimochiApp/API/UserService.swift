@@ -1,9 +1,9 @@
 import Alamofire
 import Moya
 import RxSwift
-
+import Combine
 protocol UserServiceProtocol {
-    func getUser(token: String) -> Single<User>
+    func getUser(token: String) -> Future<User, Error>
     func updateUser(token: String) -> Completable
     func getFriends(token: String) -> Single<FriendsResult>
     func requestFriend(token: String, id: String) -> Completable
@@ -13,7 +13,7 @@ protocol UserServiceProtocol {
 }
 struct UserService: UserServiceProtocol {
 
-    func getUser(token: String) -> Single<User> {
+    func getUser(token: String) -> Future<User, Error> {
         APIClient.shared.request(UserTargetType.getUser(token: token))
     }
 
