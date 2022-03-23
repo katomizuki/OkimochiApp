@@ -24,11 +24,16 @@ final class LetterFriendPresentar: LetterFriendPresentable {
     }
     func viewDidLoad() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        self.interactor.fetchFriends(uid: "", token: token).subscribe { [weak self] _ in
-            //            self?.view.setFriends(viewData)
-        } onFailure: { [weak self] _ in
-            self?.view.showError()
-        }.disposed(by: disposeBag)
-
+        _ = interactor.fetchFriends(uid: "", token: token)
+            .sink(receiveCompletion: { [weak self] completion in
+                switch completion {
+                case .finished:
+                    print("finish")
+                case .failure:
+                    self?.view.showError()
+                }
+            }) { [weak self] _ in
+                //                self?.view.setFriends(viewData)
+            }
     }
 }

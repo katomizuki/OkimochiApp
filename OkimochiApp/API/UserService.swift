@@ -5,11 +5,11 @@ import Combine
 protocol UserServiceProtocol {
     func getUser(token: String) -> Future<User, Error>
     func updateUser(token: String) -> Completable
-    func getFriends(token: String) -> Single<FriendsResult>
+    func getFriends(token: String) -> Future<FriendsResult, Error>
     func requestFriend(token: String, id: String) -> Completable
     func rejectFriend(token: String, id: String) -> Completable
-    func getRequestFriends(token: String) -> Single<RequestFriends>
-    func getUsers(token: String) -> Single<[User]>
+    func getRequestFriends(token: String) -> Future<RequestFriends, Error>
+    func getUsers(token: String) -> Future<[User], Error>
 }
 struct UserService: UserServiceProtocol {
 
@@ -21,20 +21,20 @@ struct UserService: UserServiceProtocol {
         APIClient.shared.requestCompletable(UserTargetType.updateUser(token: token))
     }
 
-    func getFriends(token: String) -> Single<FriendsResult> {
+    func getFriends(token: String) -> Future<FriendsResult, Error> {
         APIClient.shared.request(FriendsTargetType.getFriends(token: token))
     }
 
     func requestFriend(token: String, id: String) -> Completable {
         APIClient.shared.requestCompletable(FriendsTargetType.requestFriend(token: token, id: id))
     }
-    func getRequestFriends(token: String) -> Single<RequestFriends> {
+    func getRequestFriends(token: String) -> Future<RequestFriends, Error> {
         APIClient.shared.request(RequestFriendTargetType.getRequstList(token: token))
     }
     func rejectFriend(token: String, id: String) -> Completable {
         APIClient.shared.requestCompletable(FriendsTargetType.rejectFriend(token: token, id: id))
     }
-    func getUsers(token: String) -> Single<[User]> {
+    func getUsers(token: String) -> Future<[User], Error> {
         APIClient.shared.request(AllUserTargetType.getAllUser(token: token))
     }
 }

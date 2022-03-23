@@ -4,7 +4,8 @@
 //
 //  Created by ミズキ on 2021/12/16.
 //
-import RxSwift
+import Combine
+
 protocol TimeLineUseCase {
-    func fetchTimeLines(token: String)->Single<TimeLineViewData>
+    func fetchTimeLines(token: String) -> Future<TimeLineViewData, Error>
 }

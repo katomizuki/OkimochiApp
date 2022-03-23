@@ -4,8 +4,9 @@
 //
 //  Created by ミズキ on 2021/12/16.
 //
-import RxSwift
+import Combine
+
 protocol RegisterUseCase {
-    func sendUser(credential: Credential) -> Single<RegisterResponse>
+    func sendUser(credential: Credential) -> Future<RegisterResponse, Error>
     func saveToken(token: String)
 }

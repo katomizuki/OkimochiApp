@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+import Combine
 
 final class RegisterPresentar: RegisterPresentable {
 
@@ -17,7 +17,6 @@ final class RegisterPresentar: RegisterPresentable {
     weak var view: RegisterViewable!
     var router: RegisterWireframe!
     var interactor: RegisterUseCase!
-    private let disposeBag = DisposeBag()
 
     init(DI: DI) {
         self.router = DI.router
@@ -29,14 +28,16 @@ final class RegisterPresentar: RegisterPresentable {
         router.transitionLoginVC()
     }
     func onTapRegisterButton(credential: Credential) {
-        self.interactor.sendUser(credential: credential)
-            .subscribe { [weak self] response in
+        _ = interactor.sendUser(credential: credential)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished: print("finish")
+                case .failure: self?.view.showError()
+                }
+            } receiveValue: { [weak self] response in
                 self?.interactor.saveToken(token: response.token)
                 self?.view.dismiss(animated: true)
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
-
+            }
     }
 
 }

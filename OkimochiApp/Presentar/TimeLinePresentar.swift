@@ -5,7 +5,8 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+import Combine
+import Foundation
 final class TimeLinePresentar: TimeLinePresentable {
 
     struct DI {
@@ -16,7 +17,7 @@ final class TimeLinePresentar: TimeLinePresentable {
     weak var view: TimeLineViewable!
     var router: TimeLineWireframe!
     var interactor: TimeLineUseCase!
-    private let disposeBag = DisposeBag()
+
     init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -28,13 +29,16 @@ final class TimeLinePresentar: TimeLinePresentable {
 
     func viewWillAppear() {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.fetchTimeLines(token: token)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] viewData in
+        _ = interactor.fetchTimeLines(token: token)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished: print("finish")
+                case .failure: self?.view.showError()
+                }
+            } receiveValue: { [weak self] viewData in
                 self?.view.setLetters(viewData)
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
+            }
     }
 
     func onTapLetter() {

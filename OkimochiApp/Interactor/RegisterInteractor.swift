@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+import Combine
 
 final class RegisterInteractor: RegisterUseCase {
 
@@ -13,7 +13,7 @@ final class RegisterInteractor: RegisterUseCase {
     init(service: AuthServiceProtocol) {
         self.service = service
     }
-    func sendUser(credential: Credential) -> Single<RegisterResponse> {
+    func sendUser(credential: Credential) -> Future<RegisterResponse, Error> {
         service.register(credential: credential)
     }
     func saveToken(token: String) {

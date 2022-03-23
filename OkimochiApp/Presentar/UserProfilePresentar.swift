@@ -44,13 +44,18 @@ final class UserProfilePresentar: UserProfilePresentable {
                 self?.view.setViewData(viewData)
             })
 
-        interactor.fetchMyFriends(token: token)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] viewData in
+        _ = interactor.fetchMyFriends(token: token)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    print("finish")
+                case .failure:
+                    self?.view.showError()
+                }
+            } receiveValue: { [weak self] viewData in
                 self?.view.setFriendViewData(viewData)
-            } onFailure: { [weak self] _ in
-                self?.view.showError()
-            }.disposed(by: disposeBag)
+            }
     }
 
     func onTapUpdateButton() {

@@ -10,5 +10,5 @@ import Combine
 protocol UserProfileUseCase {
     func fetchUser(token: String) -> Future<ProfileHeaderViewData, Error>
     //    func fetchMyLetter(token: String)->Single<UserLetterViewData>
-    func fetchMyFriends(token: String) -> Single<UserFriendsViewData>
+    func fetchMyFriends(token: String) -> Future<UserFriendsViewData, Error>
 }

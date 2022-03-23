@@ -33,12 +33,15 @@ final class UserProfileInteractor: UserProfileUseCase {
         }
     }
 
-    func fetchMyFriends(token: String) -> Single<UserFriendsViewData> {
-        return Single.create { observer -> Disposable in
-            self.service.getFriends(token: token).subscribe { result in
-                observer(.success(UserFriendsViewData(result: result)))
-            } onFailure: { error in
-                observer(.failure(error))
+    func fetchMyFriends(token: String) -> Future<UserFriendsViewData, Error> {
+        return Future<UserFriendsViewData, Error> { promise in
+            self.service.getFriends(token: token).sink { completion in
+                switch completion {
+                case .failure(let error): promise(.failure(error))
+                case .finished: print("finish")
+                }
+            } receiveValue: { result in
+                promise(.success(UserFriendsViewData(result: result)))
             }
         }
     }

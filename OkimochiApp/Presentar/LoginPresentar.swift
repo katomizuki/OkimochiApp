@@ -5,7 +5,8 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+import Combine
+
 final class LoginPresentar: LoginPresentable {
 
     struct DI {
@@ -16,7 +17,7 @@ final class LoginPresentar: LoginPresentable {
     weak var view: LoginViewable!
     var router: LoginWireframe!
     var interactor: LoginUseCase!
-    private let disposeBag = DisposeBag()
+
     init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -24,13 +25,15 @@ final class LoginPresentar: LoginPresentable {
     }
 
     func onTapLoginButton(email: String, password: String) {
-        interactor.login(email: email, password: password).subscribe { response in
-            self.interactor.saveToken(token: response.token)
-            self.view.showError()
-        } onFailure: { _ in
-            self.view.showError()
-        }.disposed(by: disposeBag)
-
+        _ = interactor.login(email: email, password: password)
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure: self?.view.showError()
+                case .finished: print("finish")
+                }
+            } receiveValue: { [weak self] response in
+                self?.interactor.saveToken(token: response.token)
+            }
     }
     func onTapGotoRegisterButton() {
         router.transitionRegisterVC()

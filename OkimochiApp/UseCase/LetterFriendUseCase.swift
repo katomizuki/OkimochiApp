@@ -6,7 +6,7 @@
 //
 
 import RxSwift
-
+import Combine
 protocol LetterFriendUseCase {
-    func fetchFriends(uid: String, token: String)->Single<UserFriendsViewData>
+    func fetchFriends(uid: String, token: String) -> Future<UserFriendsViewData, Error>
 }
