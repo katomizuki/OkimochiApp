@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
 import Foundation
 
 final class UserProfilePresentar: UserProfilePresentable {
@@ -18,7 +17,6 @@ final class UserProfilePresentar: UserProfilePresentable {
     weak var view: UserProfileViewable!
     var interactor: UserProfileUseCase
     var router: UserProfileWireframe
-    private let disposeBag = DisposeBag()
     init(DI: DI) {
         self.router = DI.router
         self.interactor = DI.interactor

@@ -4,7 +4,7 @@
 //
 //  Created by ミズキ on 2021/12/17.
 //
-import RxSwift
+import Combine
 protocol PostLetterUseCase {
-    func postLetter(token: String, dic: [String: Any]) -> Completable
+    func postLetter(token: String, dic: [String: Any]) -> Future<CompletableEntity, Error>
 }

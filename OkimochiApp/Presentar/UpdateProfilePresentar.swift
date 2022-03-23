@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
 import Foundation
 final class UpdateProfilePresentar: UpdateProfilePresentable {
 
@@ -17,7 +16,7 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
     var router: UpdateProfileWireframe!
     var interactor: UpdateProfileUserCase!
     weak var view: UpdateProfileViewable!
-    private let disposeBag = DisposeBag()
+
     init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -46,11 +45,13 @@ final class UpdateProfilePresentar: UpdateProfilePresentable {
 
     func onTapSaveButton(user: User) {
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
-        interactor.updateUserProfile(user: user, token: token).subscribe {
-            self.view.updateUserInfo()
-        } onError: { [weak self] _ in
-            self?.view.showError()
-        }.disposed(by: disposeBag)
+        _ = interactor.updateUserProfile(user: user, token: token)
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure: self?.view.showError()
+                case .finished: self?.view.updateUserInfo()
+                }
+            } receiveValue: { _ in }
     }
     func onTapDismissButton() {
         router.dismiss()

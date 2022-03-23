@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/17.
 //
 
-import RxSwift
+import Combine
 
 final class PostLetterInteractor: PostLetterUseCase {
     let service: PostServiceProtocol
@@ -14,7 +14,7 @@ final class PostLetterInteractor: PostLetterUseCase {
         self.service = service
     }
 
-    func postLetter(token: String, dic: [String: Any]) -> Completable {
+    func postLetter(token: String, dic: [String: Any]) -> Future<CompletableEntity, Error> {
         self.service.postLetter(dic: dic, token: token)
     }
 

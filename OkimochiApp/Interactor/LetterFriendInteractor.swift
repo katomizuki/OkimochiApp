@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-import RxSwift
 import Combine
 
 final class LetterFriendInteractor: LetterFriendUseCase {

@@ -5,12 +5,10 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
 import Combine
 final class SearchFriendsInteractor: SearchFriendUseCase {
 
     let service: UserServiceProtocol
-    private let disposeBag = DisposeBag()
     init(service: UserServiceProtocol) {
         self.service = service
     }
@@ -29,7 +27,7 @@ final class SearchFriendsInteractor: SearchFriendUseCase {
         }
     }
 
-    func requestFriend(token: String, id: String) -> Completable {
+    func requestFriend(token: String, id: String) -> Future<CompletableEntity, Error> {
         self.service.requestFriend(token: token, id: id)
     }
 

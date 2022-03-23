@@ -5,7 +5,6 @@
 //  Created by ミズキ on 2022/01/27.
 //
 
-import RxSwift
 import Combine
 final class FriendDetailInteractor: FriendDetailUseCase {
 
@@ -17,15 +16,15 @@ final class FriendDetailInteractor: FriendDetailUseCase {
         self.service.getUser(token: "")
     }
 
-    func applyFriend(token: String, id: String) -> Completable {
+    func applyFriend(token: String, id: String) -> Future<CompletableEntity, Error> {
         self.service.requestFriend(token: token, id: id)
     }
 
-    func rejectFriend(token: String, id: String) -> Completable {
+    func rejectFriend(token: String, id: String) -> Future<CompletableEntity, Error> {
         self.service.rejectFriend(token: token, id: id)
     }
 
-    func blockFriend(token: String, id: String) -> Completable {
+    func blockFriend(token: String, id: String) -> Future<CompletableEntity, Error> {
         self.service.rejectFriend(token: token, id: id)
     }
 }

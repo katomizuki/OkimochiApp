@@ -1,12 +1,13 @@
 import Foundation
 import Alamofire
 import Moya
-import RxSwift
 import Combine
+
 protocol AuthServiceProtocol {
     func login(email: String, password: String) -> Future<LoginResponse, Error>
     func register(credential: Credential) -> Future<RegisterResponse, Error>
 }
+
 struct AuthService: AuthServiceProtocol {
 
     func login(email: String, password: String) -> Future<LoginResponse, Error> {

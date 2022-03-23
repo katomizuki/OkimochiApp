@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-import RxSwift
+import Combine
 
 final class FinishLetterPresentar: FinishLetterPresentable {
 
@@ -17,7 +17,7 @@ final class FinishLetterPresentar: FinishLetterPresentable {
     weak var view: FinishLetterViewable!
     var router: FinishLetterWireframe
     var interactor: FinishLetterUseCase
-    private let disposeBag = DisposeBag()
+
     init(DI: DI) {
         self.view = DI.view
         self.interactor = DI.interactor
@@ -28,12 +28,13 @@ final class FinishLetterPresentar: FinishLetterPresentable {
         router.transitionRoot()
         guard let token = UserDefaultsRepositry.shared.getToken() else { return }
         let dic = self.makeDic()
-        interactor.postLetter(dic: dic, token: token).subscribe { [weak self] in
-            self?.view.showSuccess()
-        } onError: { [weak self] _ in
-            self?.view.showError()
-        }.disposed(by: disposeBag)
-
+        _ = interactor.postLetter(dic: dic, token: token)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished: self?.view.showSuccess()
+                case .failure: self?.view.showError()
+                }
+            } receiveValue: { _ in }
     }
 
     private func makeDic() -> [String: Any] {

@@ -5,7 +5,7 @@
 //  Created by ミズキ on 2021/12/18.
 //
 
-import RxSwift
+import Combine
 
 final class FinishLetterInteractor: FinishLetterUseCase {
 
@@ -13,7 +13,7 @@ final class FinishLetterInteractor: FinishLetterUseCase {
     init(service: PostServiceProtocol) {
         self.service = service
     }
-    func postLetter(dic: [String: Any], token: String) -> Completable {
+    func postLetter(dic: [String: Any], token: String) -> Future<CompletableEntity, Error> {
         return service.postLetter(dic: dic, token: token)
     }
 

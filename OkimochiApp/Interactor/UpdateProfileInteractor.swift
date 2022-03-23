@@ -5,8 +5,8 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
 import Combine
+
 final class UpdateProfileInteractor: UpdateProfileUserCase {
 
     let service: UserServiceProtocol
@@ -14,8 +14,8 @@ final class UpdateProfileInteractor: UpdateProfileUserCase {
     init(service: UserServiceProtocol) {
         self.service = service
     }
-    func updateUserProfile(user: User, token: String) -> Completable {
-        self.service.updateUser(token: token)
+    func updateUserProfile(user: User, token: String) -> Future<CompletableEntity, Error> {
+        service.updateUser(token: token)
     }
     func getUser(token: String) -> Future<UserViewData, Error> {
         return Future<UserViewData, Error> { promise in

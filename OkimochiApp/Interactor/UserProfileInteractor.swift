@@ -5,14 +5,14 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+
 import Combine
 
 final class UserProfileInteractor: UserProfileUseCase {
 
     let service: UserServiceProtocol
     let postService: PostServiceProtocol
-    private let disposeBag = DisposeBag()
+
     init(service: UserServiceProtocol, postService: PostServiceProtocol) {
         self.service = service
         self.postService = postService

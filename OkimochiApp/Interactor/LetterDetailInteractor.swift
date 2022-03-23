@@ -5,20 +5,15 @@
 //  Created by ミズキ on 2021/12/16.
 //
 
-import RxSwift
+import Combine
 
 final class LetterDetailInteractor: LetterDetailUseCase {
     let service: PostServiceProtocol
     init(service: PostServiceProtocol) {
         self.service = service
     }
-    func fetchLetterDetail() -> Single<User> {
-        return Single.create { _->Disposable in
-            return Disposables.create()
-        }
-    }
 
-    func updateLetterDetail(token: String, dic: [String: Any]) -> Completable {
+    func updateLetterDetail(token: String, dic: [String: Any]) -> Future<CompletableEntity, Error> {
         self.service.updateLetter(id: "", token: token, parameter: dic)
     }
 }
