@@ -10,7 +10,6 @@ import Combine
 final class UpdateProfileInteractor: UpdateProfileUserCase {
 
     let service: UserServiceProtocol
-    private let disposeBag = DisposeBag()
     init(service: UserServiceProtocol) {
         self.service = service
     }

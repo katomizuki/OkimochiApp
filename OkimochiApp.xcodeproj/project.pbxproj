@@ -199,8 +199,6 @@
 		D3B91B35272E703A0048FC75 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B91B33272E703A0048FC75 /* ProfileCell.swift */; };
 		D3B91B36272E703A0048FC75 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B91B34272E703A0048FC75 /* ProfileCell.xib */; };
 		D3C8A9752764BD26008EFB53 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8A9742764BD26008EFB53 /* Keychain.swift */; };
-		D3CF09AF27AE9B3E0095AAE3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */; };
-		D3CF09B127AE9B3E0095AAE3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B027AE9B3E0095AAE3 /* RxSwift */; };
 		D3CF09B427AE9B5B0095AAE3 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B327AE9B5B0095AAE3 /* PKHUD */; };
 		D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B627AE9B7A0095AAE3 /* SDWebImage */; };
 		D3CF09BA27AE9C590095AAE3 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D3CF09B927AE9C590095AAE3 /* KeychainAccess */; };
@@ -458,10 +456,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CF09B127AE9B3E0095AAE3 /* RxSwift in Frameworks */,
 				D3CF09B427AE9B5B0095AAE3 /* PKHUD in Frameworks */,
 				D3CF09BA27AE9C590095AAE3 /* KeychainAccess in Frameworks */,
-				D3CF09AF27AE9B3E0095AAE3 /* RxCocoa in Frameworks */,
 				12D4F447AA5A0458B69EC3E3 /* Pods_OkimochiApp.framework in Frameworks */,
 				D3CF09B727AE9B7A0095AAE3 /* SDWebImage in Frameworks */,
 			);
@@ -1004,8 +1000,6 @@
 			);
 			name = OkimochiApp;
 			packageProductDependencies = (
-				D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */,
-				D3CF09B027AE9B3E0095AAE3 /* RxSwift */,
 				D3CF09B327AE9B5B0095AAE3 /* PKHUD */,
 				D3CF09B627AE9B7A0095AAE3 /* SDWebImage */,
 				D3CF09B927AE9C590095AAE3 /* KeychainAccess */,
@@ -1083,7 +1077,6 @@
 			);
 			mainGroup = D38101FD272CF2CA003C7850;
 			packageReferences = (
-				D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */,
 				D3CF09B527AE9B7A0095AAE3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				D3CF09B827AE9C590095AAE3 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
@@ -1773,14 +1766,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pkluz/PKHUD.git";
@@ -1808,16 +1793,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D3CF09AE27AE9B3E0095AAE3 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		D3CF09B027AE9B3E0095AAE3 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3CF09AD27AE9B3E0095AAE3 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		D3CF09B327AE9B5B0095AAE3 /* PKHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3CF09B227AE9B5B0095AAE3 /* XCRemoteSwiftPackageReference "PKHUD" */;

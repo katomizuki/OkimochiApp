@@ -8,13 +8,13 @@
 final class LetterContentPresentar: LetterContentPresentable {
 
     struct DI {
-        var view: LetterContentViewable
-        var router: LetterContentWireframe
-        var interactor: LetterContentUseCase
+        let view: LetterContentViewable
+        let router: LetterContentWireframe
+        let interactor: LetterContentUseCase
     }
     weak var view: LetterContentViewable!
-    var router: LetterContentWireframe!
-    var interactor: LetterContentUseCase!
+    let router: LetterContentWireframe
+    let interactor: LetterContentUseCase
 
     init(DI: DI) {
         self.view = DI.view

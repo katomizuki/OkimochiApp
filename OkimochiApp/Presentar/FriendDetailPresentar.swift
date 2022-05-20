@@ -71,5 +71,4 @@ final class FriendDetailPresentar: FriendDetailPresentable {
     func onTapDismissButton() {
         router.transitionDismiss()
     }
-
 }
